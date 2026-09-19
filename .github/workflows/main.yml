@@ -19,6 +19,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add coulisses/guide.xml
+          git add coulisses/xmltv_tnt.xml
           git commit -m "Mise à jour automatique du XML" || exit 0
           git push
