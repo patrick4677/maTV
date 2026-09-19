@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Sélecteur M3U</title>
+<style>
+body { font-family: Arial; padding:10px; background:#f5f5f5; }
+h2 { text-align:center; }
+button { padding:8px 12px; margin:5px; }
+#list { margin-top:15px; }
+.item { padding:6px; background:#fff; margin-bottom:4px; border-radius:6px; }
+textarea { width:100%; height:120px; margin-top:10px; }
+</style>
+</head>
+<body>
+
+<h2>Sélecteur de chaînes M3U</h2>
+
+<button onclick="loadConfigAndM3U()">Charger les chaînes</button>
+<button onclick="exportWhitelist()">Télécharger whitelist.json</button>
+
+<div id="list"></div>
+
+<h3>Résultat :</h3>
+<textarea id="output"></textarea>
+
+<script>
+let channels = [];
+
+/* Charger config.json dans le même dossier /coulisses */
+async function loadConfigAndM3U(){
+  try{
+    const cfg = await fetch("config.json").then(r=>r.json());
+    const m3uUrl = cfg.m3u2;   // ex: "playlist.m3u"
+    await loadM3U(m3uUrl);
+  } catch(e){
+    alert("Impossible de charger config.json");
+  }
+}
+
+/* Charger le M3U dans le même dossier */
+async function loadM3U(url){
+  try{
+    const txt = await fetch(url).then(r=>r.text());
+    const lines = txt.split("\n");
+
+    channels = [];
+    let cur = {};
+
+    lines.forEach(line=>{
+      line=line.trim();
+
+      if(line.startsWith("#EXTINF")){
+        const name = line.split(",")[1]?.trim() || "";
+        cur = {name};
+      }
+
+      else if(line.startsWith("http")){
+        cur.stream = line;
+        channels.push(cur);
+        cur = {};
+      }
+    });
+
+    const div = document.getElementById("list");
+    div.innerHTML = "";
+
+    channels.forEach(ch=>{
+      div.innerHTML += `
+        <div class="item">
+          <label>
+            <input type="checkbox" class="chk" data-name="${ch.name}">
+            ${ch.name}
+          </label>
+        </div>`;
+    });
+
+    /* Auto-cocher si whitelist.json existe */
+    try {
+      const wl = await fetch("whitelist.json").then(r=>r.json());
+      document.querySelectorAll(".chk").forEach(box=>{
+        const name = box.getAttribute("data-name").trim().toLowerCase();
+        if(wl.some(w => w.trim().toLowerCase() === name)){
+          box.checked = true;
+        }
+      });
+    } catch(e){
+      // whitelist.json absent → rien à cocher
+    }
+
+  } catch(e){
+    alert("Erreur de chargement du M3U");
+  }
+}
+
+/* Export dans textarea + téléchargement */
+function exportWhitelist(){
+  const keep = [];
+  document.querySelectorAll(".chk").forEach(b=>{
+    if(b.checked) keep.push(b.getAttribute("data-name"));
+  });
+
+  const blob = new Blob([JSON.stringify(keep, null, 2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "whitelist.json";
+  a.click();
+
+  document.getElementById("output").value = JSON.stringify(keep, null, 2);
+}
+</script>
+
+</body>
+</html>
+
