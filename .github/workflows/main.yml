@@ -1,0 +1,24 @@
+name: Mise a jour du XML EPG
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # S'exécute tous les jours à 4h du matin
+  workflow_dispatch: # Permet de le lancer manuellement
+
+jobs:
+  update-xml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Télécharger le fichier XML
+        run: |
+          curl -s https://xmltvfr.fr/xmltv/xmltv_tnt.xml -o coulisses/xmltv_tnt.xml
+
+      - name: Sauvegarder les modifications
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add coulisses/guide.xml
+          git commit -m "Mise à jour automatique du XML" || exit 0
+          git push
