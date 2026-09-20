@@ -1,6 +1,6 @@
 <!-- ============================================================
-     FICHIER : maTV.html
-     VERSION : 1.4.0 (Chargement à la demande / Lazy Loading 7 jours)
+     FICHIER : index.html
+     VERSION : 1.5.0 (Optimisé pour Fire TV & Compact 2 Lignes)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,17 +9,17 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.4.0</title>
+<title>TNT + M3U – Version 1.5.0</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <!-- ============================================================
-     STYLES GLOBAUX
+     STYLES GLOBAUX & COMPACTAGE TV
      ============================================================ -->
 <style>
-body { font-family: Arial; background:#f5f5f5; padding:10px; }
-h1 { text-align:center; margin-bottom:10px; }
+body { font-family: Arial; background:#f5f5f5; padding:10px; margin:0; }
+h1 { text-align:center; margin-bottom:10px; font-size: 1.5rem; }
 
 /* Onglets */
 .tabs { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
@@ -35,7 +35,71 @@ h1 { text-align:center; margin-bottom:10px; }
 table { width:100%; border-collapse:collapse; background:#fff; font-size:13px; }
 th, td { border:1px solid #ccc; padding:4px; vertical-align:middle; }
 th { background:#eee; }
-img.logo { height:40px; cursor:pointer; }
+
+/* En-tête de chaîne sur 2 Lignes (Ultra Compact) */
+.channel-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 130px;
+  max-width: 160px;
+  gap: 2px;
+}
+
+.channel-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.channel-num {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.channel-name-link {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+
+.channel-play-icon {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.channel-row-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.channel-logo-img {
+  max-height: 24px;
+  max-width: 90px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Gestion de la sélection Fire TV / Télécommande */
+.focusable {
+  outline: none;
+}
+
+.focusable:focus, .focusable:focus-within {
+  outline: 3px solid #ff9800 !important;
+  background-color: rgba(255, 152, 0, 0.15) !important;
+  border-radius: 4px;
+}
 
 /* Barre de progression */
 .bar { width:100%; height:6px; background:#ddd; border-radius:3px; overflow:hidden; }
@@ -55,7 +119,6 @@ img.logo { height:40px; cursor:pointer; }
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Barre de déplacement MiniTV */
 #dragBar {
   width:100%;
   height:24px;
@@ -73,30 +136,30 @@ img.logo { height:40px; cursor:pointer; }
   background:#000;
 }
 
-/* Style de la boîte Popup (Déplaçable) */
+/* Boîte Popup (Optimisée Télécommande TV) */
 #popup {
   display: none;
   position: fixed;
-  top: 10%;
-  left: 20%;
+  top: 5%;
+  left: 5%;
   width: 90%;
-  max-width: 650px;
-  max-height: 80vh;
+  max-width: 700px;
+  max-height: 85vh;
   overflow-y: auto;
-  background: #222;
+  background: #1e1e1e;
   color: #fff;
   padding: 15px;
   border-radius: 10px;
   z-index: 10000;
-  box-shadow: 0 0 25px rgba(0,0,0,0.8);
-  border: 1px solid #444;
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
+  border: 1px solid #555;
 }
 
 #popupHeader {
   width: 100%;
   padding-bottom: 10px;
   cursor: move;
-  background: #333;
+  background: #2c2c2c;
   margin: -15px -15px 15px -15px;
   padding: 10px 15px;
   border-top-left-radius: 10px;
@@ -111,9 +174,9 @@ img.logo { height:40px; cursor:pointer; }
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -125,15 +188,15 @@ body.dark th { background:#444; color:#fff; }
 body.dark td { border-color:#555; }
 body.dark .bar { background:#555; }
 body.dark .fill { background:#4caf50; }
+body.dark .channel-name-link { color:#fff; }
 body.dark img.logo { filter:brightness(0.85); }
-body.dark img[src*="tv-blue"] { filter:brightness(1.1); }
 body.dark a { color:#9cf; }
 body.dark button { background:#444; color:#fff; border:1px solid #666; }
 
-/* Soirée reste clair en mode sombre */
 body.dark #evening table { background:white !important; color:black !important; }
 body.dark #evening th { background:#f0f0f0 !important; color:black !important; }
 body.dark #evening td { border-color:#ccc !important; color:black !important; }
+body.dark #evening .channel-name-link { color:#000 !important; }
 </style>
 </head>
 
@@ -142,18 +205,18 @@ body.dark #evening td { border-color:#ccc !important; color:black !important; }
 <h1>Programme TV</h1>
 <p id="status">Chargement…</p>
 
-<button onclick="toggleDark()">🌙 Mode sombre</button>
-<button onclick="updateTV()">🔄 Recharger</button>
-<button onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
+<button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
+<button class="focusable" onclick="updateTV()">🔄 Recharger</button>
+<button class="focusable" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
 
-<input id="search" type="text" placeholder="Rechercher une chaîne..."
+<input id="search" type="text" placeholder="Rechercher une chaîne..." class="focusable"
        style="padding:6px; width:100%; margin:10px 0; font-size:16px;">
 
 <div class="tabs">
-  <div class="tab active" onclick="showTab('compact')">Maintenant</div>
-  <div class="tab" onclick="showTab('evening')">Soirée</div>
-  <div class="tab" id="tab-full" onclick="showTab('full')" style="display:none;">Complet</div>
-  <div class="tab" onclick="showTab('xml')">Chaînes XMLTV</div>
+  <div class="tab active focusable" tabindex="0" onclick="showTab('compact')">Maintenant</div>
+  <div class="tab focusable" tabindex="0" onclick="showTab('evening')">Soirée</div>
+  <div class="tab focusable" tabindex="0" id="tab-full" onclick="showTab('full')" style="display:none;">Complet</div>
+  <div class="tab focusable" tabindex="0" onclick="showTab('xml')">Chaînes XMLTV</div>
 </div>
 
 <!-- MiniTV + barre de déplacement -->
@@ -167,15 +230,12 @@ body.dark #evening td { border-color:#ccc !important; color:black !important; }
     <table id="tv">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Logo</th>
           <th>Chaîne</th>
-          <th>TV</th>
           <th>Début</th>
           <th>Maintenant</th>
           <th>Thème</th>
           <th>Durée</th>
-          <th>Début suivant</th>
+          <th>Début suiv.</th>
           <th>Suivant</th>
           <th>Progression</th>
         </tr>
@@ -195,7 +255,7 @@ body.dark #evening td { border-color:#ccc !important; color:black !important; }
 <div id="popup">
   <div id="popupHeader">
     <span style="font-weight:bold;">Détails du programme</span>
-    <button class="popup-close-btn" onclick="closePopup()">✕</button>
+    <button class="popup-close-btn focusable" id="popupCloseBtn" onclick="closePopup()">✕</button>
   </div>
   <div id="popupContent"></div>
 </div>
@@ -205,9 +265,8 @@ let XML_URL = "";
 let M3U_URL = "";
 let hlsPlayer = null;
 let WHITELIST = [];
-let xmlDocCache = null; // Garde le document XML brut en mémoire vive pour le lazy-loading
+let xmlDocCache = null;
 
-/* Chargement de la whitelist M3U */
 async function loadWhitelist(){
   try{
     WHITELIST = await fetch("coulisses/whitelist.json").then(r=>r.json());
@@ -216,7 +275,6 @@ async function loadWhitelist(){
   }
 }
 
-/* Chargement de la config (XMLTV + M3U) */
 async function loadConfig(){
   try{
     const cfg = await fetch("coulisses/config.json").then(r=>r.json());
@@ -227,12 +285,10 @@ async function loadConfig(){
   }
 }
 
-/* Mode sombre */
 function toggleDark(){
   document.body.classList.toggle("dark");
 }
 
-/* Gestion des onglets */
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
@@ -240,7 +296,6 @@ function showTab(id){
   document.getElementById(id).classList.add('active');
 }
 
-/* MiniTV ON/OFF */
 function toggleMiniTV(){
   const box = document.getElementById("playerBox");
   if (box.style.display === "none" || box.style.display === "") {
@@ -250,7 +305,6 @@ function toggleMiniTV(){
   }
 }
 
-/* Fermeture propre MiniTV */
 function closeMiniTV(){
   const box = document.getElementById("playerBox");
   const video = document.getElementById("player");
@@ -271,7 +325,6 @@ function closeMiniTV(){
   box.style.display = "none";
 }
 
-/* Glisser-déposer MiniTV & Popup */
 function makeDraggable(element, handle) {
   let ox = 0, oy = 0;
   handle.addEventListener("mousedown", start);
@@ -304,7 +357,6 @@ function makeDraggable(element, handle) {
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
 
-/* Lecture HLS/M3U dans la MiniTV */
 function playStream(url){
   const box = document.getElementById("playerBox");
   box.style.display = "block";
@@ -325,7 +377,6 @@ function playStream(url){
   video.play();
 }
 
-/* Normalisation des IDs chaînes */
 function normalizeID(id){
   if(!id) return "";
   return id
@@ -337,7 +388,6 @@ function normalizeID(id){
     .replace(/[^a-z0-9]/g,"");
 }
 
-/* Liste TNT */
 let TNT = [
   {num:1, id:"TF1.fr", name:"TF1", logo:"coulisses/logos/tf1.png", link:"https://www.tf1.fr"},
   {num:2, id:"France2.fr", name:"France 2", logo:"coulisses/logos/france2.png", link:"https://www.france.tv"},
@@ -368,9 +418,6 @@ let TNT = [
 
 TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
-/* ============================================================
-   CHARGEMENT M3U
-   ============================================================ */
 async function loadM3U(url){
   try{
     const txt = await fetch(url).then(r=>r.text());
@@ -380,14 +427,12 @@ async function loadM3U(url){
 
     lines.forEach(line=>{
       line=line.trim();
-
       if(line.startsWith("#EXTINF")){
         const name = line.split(",")[1]?.trim() || "";
         const logoMatch = line.match(/tvg-logo="([^"]+)"/);
         const logo = logoMatch ? logoMatch[1] : "";
         cur = {name, logo};
       }
-
       else if(line.startsWith("http")){
         cur.stream = line;
         list.push(cur);
@@ -401,9 +446,6 @@ async function loadM3U(url){
   }
 }
 
-/* ============================================================
-   FUSION TNT + M3U
-   ============================================================ */
 function extendTNTwithM3U(m3uList){
   m3uList.forEach(m=>{
     const key = normalizeID(m.name);
@@ -439,9 +481,6 @@ function extendTNTwithM3U(m3uList){
   });
 }
 
-/* ============================================================
-   XMLTV — UTILITAIRES & PARSER INDIVIDUEL
-   ============================================================ */
 function parseDate(str){
   const m = str.match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/);
   return new Date(m[1], m[2]-1, m[3], m[4], m[5], m[6]);
@@ -513,9 +552,25 @@ function getEPGDateRange(programmes){
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
-/* ============================================================
-   XMLTV — LISTE DES CHAÎNES
-   ============================================================ */
+/* Génère la cellule de chaîne sur 2 lignes très compactes */
+function buildChannelCellHtml(ch) {
+  const playImg = ch.stream 
+    ? `<img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer le direct">` 
+    : '';
+
+  return `
+    <div class="channel-box">
+      <div class="channel-row-top">
+        <span class="channel-num">#${ch.num}</span>
+        <a href="${ch.link}" target="_blank" class="channel-name-link focusable" tabindex="0">${ch.name}</a>${playImg}
+      </div>
+      <div class="channel-row-bottom">
+        <img class="channel-logo-img focusable" tabindex="0" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')" alt="${ch.name}" title="Voir 7 jours">
+      </div>
+    </div>
+  `;
+}
+
 function renderXMLChannels(channels){
   const div = document.getElementById("xml");
   let html = "<h3>Chaînes présentes dans le XMLTV</h3>";
@@ -530,9 +585,6 @@ function renderXMLChannels(channels){
   div.innerHTML = html;
 }
 
-/* ============================================================
-   ONGLET SOIRÉE
-   ============================================================ */
 function renderEvening(channels){
   const container = document.getElementById("evening");
   const today = new Date().toLocaleDateString("fr-FR");
@@ -541,21 +593,19 @@ function renderEvening(channels){
   let html = `
   <div class="table-wrapper"><table>
   <thead><tr>
-    <th>#</th><th>Logo</th><th>Chaîne</th><th>TV</th>
+    <th>Chaîne</th>
     <th>Début</th><th>Programme de la soirée</th><th>Thème</th><th>Durée</th>
-    <th>Début suivant</th><th>Suivant</th><th>Progression</th>
+    <th>Début suiv.</th><th>Suivant</th><th>Progression</th>
   </tr></thead><tbody>`;
 
   TNT.forEach(ch=>{
     const list = channels[ch.normId];
+    const chanCellHtml = buildChannelCellHtml(ch);
 
     if(!list){
       html += `
       <tr>
-        <td>${ch.num}</td>
-        <td><img class="logo" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')"></td>
-        <td><a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></td>
-        <td>${ch.stream ? `<img src="coulisses/tv-blue.png" onclick="playStream('${ch.stream}')" style="height:58px;width:58px;cursor:pointer;">` : ""}</td>
+        <td>${chanCellHtml}</td>
         <td colspan="7" style="text-align:center;color:#888;">Pas de données XMLTV</td>
       </tr>`;
       return;
@@ -590,10 +640,7 @@ function renderEvening(channels){
     if(!evening){
       html += `
       <tr>
-        <td>${ch.num}</td>
-        <td><img class="logo" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')"></td>
-        <td><a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></td>
-        <td>${ch.stream ? `<img src="coulisses/tv-blue.png" onclick="playStream('${ch.stream}')" style="height:58px;width:58px;cursor:pointer;">` : ""}</td>
+        <td>${chanCellHtml}</td>
         <td colspan="7" style="text-align:center;color:#888;">Aucun programme soirée</td>
       </tr>`;
       return;
@@ -607,26 +654,24 @@ function renderEvening(channels){
     let nextIcon = next ? next.icon : "";
 
     const eveningImgHtml = eveningIcon 
-      ? `<img src="${eveningIcon}" style="height:60px; border-radius:6px;">` 
-      : `<span style="color:red; font-size:11px;">(Pas d'image dans le XMLTV)</span>`;
+      ? `<img src="${eveningIcon}" style="height:50px; border-radius:4px;">` 
+      : ``;
 
     const nextImgHtml = nextIcon 
-      ? `<img src="${nextIcon}" style="height:60px; border-radius:6px;">` 
-      : (next ? `<span style="color:red; font-size:11px;">(Pas d'image dans le XMLTV)</span>` : "");
+      ? `<img src="${nextIcon}" style="height:50px; border-radius:4px;">` 
+      : ``;
 
     html += `
     <tr>
-      <td>${ch.num}</td>
-      <td><img class="logo" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')"></td>
-      <td><a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></td>
-      <td>${ch.stream ? `<img src="coulisses/tv-blue.png" onclick="playStream('${ch.stream}')" style="height:58px;width:58px;cursor:pointer;">` : ""}</td>
+      <td>${chanCellHtml}</td>
       <td>${formatTime(evening.start)}</td>
 
-      <td class="popup-evening"
+      <td class="popup-evening focusable"
+          tabindex="0"
           data-chan="${ch.normId}"
           data-idx="${list.indexOf(evening)}"
           style="cursor:pointer;">
-        <div style="display:flex; align-items:center; gap:10px;">
+        <div style="display:flex; align-items:center; gap:8px;">
           ${eveningImgHtml}
           <span>${evening.title}</span>
         </div>
@@ -636,11 +681,12 @@ function renderEvening(channels){
       <td>${duration} min</td>
       <td>${next?formatTime(next.start):"—"}</td>
 
-      <td class="popup-evening"
+      <td class="popup-evening focusable"
+          tabindex="0"
           data-chan="${ch.normId}"
           data-idx="${next ? list.indexOf(next) : -1}"
           style="cursor:pointer;">
-        <div style="display:flex; align-items:center; gap:10px;">
+        <div style="display:flex; align-items:center; gap:8px;">
           ${nextImgHtml}
           <span>${next ? next.title : "—"}</span>
         </div>
@@ -654,14 +700,10 @@ function renderEvening(channels){
   container.innerHTML = html;
 }
 
-/* ============================================================
-   LAZY LOADING : SEMAINE COMPLÈTE À LA DEMANDE (CLIC CHAÎNE)
-   ============================================================ */
 function openFullProgramForChannel(normId) {
   const ch = TNT.find(c => c.normId === normId);
   if (!ch || !xmlDocCache) return;
 
-  // Extraction rapide des 7 jours UNIQUEMENT pour la chaîne sélectionnée
   const programmesNodes = xmlDocCache.querySelectorAll("programme");
   const fullList = [];
 
@@ -673,8 +715,8 @@ function openFullProgramForChannel(normId) {
   }
 
   let html = `
-  <h3>Programme complet (7 jours) – <a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></h3>
-  <input id="searchProg" type="text" placeholder="Rechercher une émission / film..." 
+  <h3>Programme complet (7 jours) – <a href="${ch.link}" target="_blank" class="focusable" tabindex="0" style="font-weight:bold;">${ch.name}</a></h3>
+  <input id="searchProg" type="text" placeholder="Rechercher une émission / film..." class="focusable"
          style="padding:6px; width:100%; margin-bottom:12px; font-size:14px;"
          oninput="filterFullPrograms()">
   <div id="view-full">`;
@@ -692,7 +734,7 @@ function openFullProgramForChannel(normId) {
           <strong>${p.start.toLocaleDateString("fr-FR")}</strong> 
           ${formatTime(p.start)}–${formatTime(p.stop)} 
           (${Math.round((p.stop - p.start) / 60000)} min)
-          <br><em class="prog-title">${p.title}</em> ${p.episode ? `<span style="font-size:11px; background:#444; padding:2px 4px; border-radius:3px;">${p.episode}</span>` : ''}
+          <br><em class="prog-title">${p.title}</em> ${p.episode ? `<span style="font-size:11px; background:#444; color:#fff; padding:2px 4px; border-radius:3px;">${p.episode}</span>` : ''}
           <br><span class="prog-desc" style="color:#666; font-size:12px;">${p.theme} ${p.desc ? ' - ' + p.desc : ''}</span>
         </div>
       </div>`;
@@ -718,20 +760,17 @@ function filterFullPrograms(){
   });
 }
 
-/* ============================================================
-   RECHERCHE / FILTRE CHAÎNES
-   ============================================================ */
 function filterChannels(){
   const q = document.getElementById("search").value.toLowerCase().trim();
 
   document.querySelectorAll("#tv tbody tr").forEach(row=>{
-    const nameCell = row.querySelector("td:nth-child(3)");
+    const nameCell = row.querySelector(".channel-name-link");
     if(!nameCell) return;
     row.style.display = nameCell.textContent.toLowerCase().includes(q) ? "" : "none";
   });
 
   document.querySelectorAll("#evening tbody tr").forEach(row=>{
-    const nameCell = row.querySelector("td:nth-child(3)");
+    const nameCell = row.querySelector(".channel-name-link");
     if(!nameCell) return;
     row.style.display = nameCell.textContent.toLowerCase().includes(q) ? "" : "none";
   });
@@ -739,9 +778,6 @@ function filterChannels(){
 
 document.getElementById("search").addEventListener("input", filterChannels);
 
-/* ============================================================
-   UPDATE TV — CHARGEMENT INITIAL ULTRA-RAPIDE (AUJOURD'HUI)
-   ============================================================ */
 async function updateTV(){
   try{
     document.getElementById("status").textContent = "Chargement EPG...";
@@ -754,7 +790,6 @@ async function updateTV(){
     const now = new Date();
     const todayStr = now.toLocaleDateString("fr-FR");
 
-    // Extraction rapide : uniquement aujourd'hui pour l'affichage initial
     for (let i = 0; i < programmesNodes.length; i++) {
       const p = programmesNodes[i];
       const rawStart = p.getAttribute("start");
@@ -778,18 +813,12 @@ async function updateTV(){
 
     TNT.forEach(ch=>{
       const list = channelsToday[ch.normId];
+      const chanCellHtml = buildChannelCellHtml(ch);
 
       if(!list){
         const tr = document.createElement("tr");
         tr.innerHTML = `
-          <td>${ch.num}</td>
-          <td><img class="logo" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')"></td>
-          <td><a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></td>
-          <td>${ch.stream ? `
-              <img src="coulisses/tv-blue.png"
-                   onclick="playStream('${ch.stream}')"
-                   style="height:58px;width:58px;cursor:pointer;">
-          ` : ""}</td>
+          <td>${chanCellHtml}</td>
           <td colspan="7" style="text-align:center;color:#888;">Pas de données XMLTV</td>
         `;
         tbody.appendChild(tr);
@@ -811,14 +840,7 @@ async function updateTV(){
       if(!current){
         const tr = document.createElement("tr");
         tr.innerHTML = `
-          <td>${ch.num}</td>
-          <td><img class="logo" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')"></td>
-          <td><a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></td>
-          <td>${ch.stream ? `
-              <img src="coulisses/tv-blue.png"
-                   onclick="playStream('${ch.stream}')"
-                   style="height:58px;width:58px;cursor:pointer;">
-          ` : ""}</td>
+          <td>${chanCellHtml}</td>
           <td colspan="7" style="text-align:center;color:#888;">Aucun programme en cours</td>
         `;
         tbody.appendChild(tr);
@@ -831,26 +853,17 @@ async function updateTV(){
 
       const tr = document.createElement("tr");
       tr.innerHTML = `
-        <td>${ch.num}</td>
-
-        <td><img class="logo" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')"></td>
-
-        <td><a href="${ch.link}" target="_blank" style="font-weight:bold;">${ch.name}</a></td>
-
-        <td>${ch.stream ? `
-            <img src="coulisses/tv-blue.png"
-                 onclick="playStream('${ch.stream}')"
-                 style="height:58px;width:58px;cursor:pointer;">
-        ` : ""}</td>
+        <td>${chanCellHtml}</td>
 
         <td>${formatTime(current.start)}</td>
 
-        <td class="popup-now"
+        <td class="popup-now focusable"
+            tabindex="0"
             data-chan="${ch.normId}"
             data-idx="${list.indexOf(current)}"
             style="cursor:pointer;">
-          <div style="display:flex; align-items:center; gap:10px;">
-            ${current && current.icon ? `<img src="${current.icon}" style="height:60px; border-radius:6px;" onerror="this.style.display='none'">` : ""}
+          <div style="display:flex; align-items:center; gap:8px;">
+            ${current && current.icon ? `<img src="${current.icon}" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
             <span>${current ? current.title : ""}</span>
           </div>
         </td>
@@ -860,12 +873,13 @@ async function updateTV(){
 
         <td>${next ? formatTime(next.start) : ""}</td>
 
-        <td class="popup-now"
+        <td class="popup-now focusable"
+            tabindex="0"
             data-chan="${ch.normId}"
             data-idx="${next ? list.indexOf(next) : -1}"
             style="cursor:pointer;">
-          <div style="display:flex; align-items:center; gap:10px;">
-            ${next && next.icon ? `<img src="${next.icon}" style="height:60px; border-radius:6px;" onerror="this.style.display='none'">` : ""}
+          <div style="display:flex; align-items:center; gap:8px;">
+            ${next && next.icon ? `<img src="${next.icon}" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
             <span>${next ? next.title : ""}</span>
           </div>
         </td>
@@ -879,27 +893,9 @@ async function updateTV(){
       tbody.appendChild(tr);
     });
 
-    document.querySelectorAll(".popup-now").forEach(cell=>{
-      const chan = cell.dataset.chan;
-      const idx = parseInt(cell.dataset.idx, 10);
-
-      if(!channelsToday[chan]) return;
-      if(!channelsToday[chan][idx]) return;
-
-      const prog = channelsToday[chan][idx];
-      cell.addEventListener("click", ()=>showProgramPopup(prog));
-    });
-
-    document.querySelectorAll(".popup-evening").forEach(cell=>{
-      const chan = cell.dataset.chan;
-      const idx = parseInt(cell.dataset.idx, 10);
-
-      if(!channelsToday[chan]) return;
-      if(!channelsToday[chan][idx]) return;
-
-      const prog = channelsToday[chan][idx];
-      cell.addEventListener("click", ()=>showProgramPopup(prog));
-    });
+    /* Attribution des événements de clic + Télécommande Fire TV */
+    bindPopupEvents(".popup-now", channelsToday);
+    bindPopupEvents(".popup-evening", channelsToday);
 
   } catch(e){
     console.error(e);
@@ -907,9 +903,29 @@ async function updateTV(){
   }
 }
 
-/* ============================================================
-   BOUCLE AUTO + FUSION M3U
-   ============================================================ */
+/* Attache les événements Clic ET Touche Entrée / OK de la télécommande */
+function bindPopupEvents(selector, channelsToday) {
+  document.querySelectorAll(selector).forEach(cell => {
+    const chan = cell.dataset.chan;
+    const idx = parseInt(cell.dataset.idx, 10);
+
+    if (!channelsToday[chan] || !channelsToday[chan][idx]) return;
+    const prog = channelsToday[chan][idx];
+
+    const openAction = (e) => {
+      e.preventDefault();
+      showProgramPopup(prog);
+    };
+
+    cell.addEventListener("click", openAction);
+    cell.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.keyCode === 13) {
+        openAction(e);
+      }
+    });
+  });
+}
+
 (async ()=>{
   await loadConfig();
   await loadWhitelist();
@@ -924,7 +940,7 @@ async function updateTV(){
 })();
 
 /* ============================================================
-   POP-UP PROGRAMME DÉTAILLÉ
+   POP-UP PROGRAMME DÉTAILLÉ (Optimisé Fire TV)
    ============================================================ */
 function showProgramPopup(prog){
   let detailsHtml = "";
@@ -939,7 +955,6 @@ function showProgramPopup(prog){
   if (prog.theme) detailsHtml += `<p><b>Thème :</b> ${prog.theme}</p>`;
   if (prog.rating) detailsHtml += `<p><b>Classification :</b> ${prog.rating}</p>`;
 
-  /* Construction du bloc Crédits */
   let creditsHtml = "";
   if (prog.credits) {
     const c = prog.credits;
@@ -954,13 +969,19 @@ function showProgramPopup(prog){
   const html = `
     <h2 style="margin-top:0; color:#4caf50;">${prog.title}</h2>
     ${detailsHtml}
-    ${prog.icon ? `<img src="${prog.icon}" style="max-width:100%; max-height:250px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
+    ${prog.icon ? `<img src="${prog.icon}" style="max-width:100%; max-height:220px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
     ${creditsHtml}
     <p><b>Résumé :</b><br><span style="line-height:1.4; color:#ccc;">${prog.desc || "Aucune description disponible."}</span></p>
   `;
 
   document.getElementById("popupContent").innerHTML = html;
-  document.getElementById("popup").style.display = "block";
+  const popup = document.getElementById("popup");
+  popup.style.display = "block";
+
+  // Met le focus automatiquement sur le bouton de fermeture pour la télécommande
+  setTimeout(() => {
+    document.getElementById("popupCloseBtn").focus();
+  }, 100);
 }
 
 function closePopup(){
