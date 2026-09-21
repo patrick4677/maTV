@@ -1,7 +1,7 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.5.0 (Optimisé pour Fire TV & Compact 2 Lignes +aide)
-     OBJET : Interface TV avec XMLTV + M3U + MiniTV
+     VERSION : 1.6.0 (Optimisé pour Fire TV & MiniTV + Google Cast)
+     OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast
      AUTEUR : Patrick
      ============================================================ -->
 
@@ -9,10 +9,13 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.5.0</title>
+<title>TNT + M3U – Version 1.6.0</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<!-- SDK GOOGLE CAST (Pour Chromecast / AirScreen Fire TV) -->
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 
 <!-- ============================================================
      STYLES GLOBAUX & COMPACTAGE TV
@@ -105,6 +108,29 @@ th { background:#eee; }
 .bar { width:100%; height:6px; background:#ddd; border-radius:3px; overflow:hidden; }
 .fill { height:100%; background:#4caf50; }
 
+/* Boutons Google Cast */
+google-cast-launcher {
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 4px;
+  padding: 2px;
+  --connected-color: #4caf50;
+  --disconnected-color: #333;
+}
+#dragBar google-cast-launcher {
+  float: right;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  margin-right: 6px;
+  background-color: transparent;
+  --disconnected-color: #fff;
+}
+
 /* Mini TV flottante */
 #playerBox {
   position: fixed;
@@ -128,6 +154,7 @@ th { background:#eee; }
   padding-left:6px;
   line-height:24px;
   cursor:move;
+  box-sizing: border-box;
 }
 
 #player {
@@ -239,6 +266,7 @@ body.dark .channel-name-link { color:#fff; }
 body.dark img.logo { filter:brightness(0.85); }
 body.dark a { color:#9cf; }
 body.dark button { background:#444; color:#fff; border:1px solid #666; }
+body.dark google-cast-launcher { background-color: #444; --disconnected-color: #fff; }
 
 body.dark #evening table { background:white !important; color:black !important; }
 body.dark #evening th { background:#f0f0f0 !important; color:black !important; }
@@ -267,6 +295,7 @@ body.dark .help-list li {
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
 <button class="focusable" onclick="updateTV()">🔄 Recharger</button>
 <button class="focusable" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
+<google-cast-launcher class="focusable" title="Caster vers TV"></google-cast-launcher>
 <button class="focusable" id="openHelpBtn">❓ Mode d'emploi</button>
 
 <input id="search" type="text" placeholder="Rechercher une chaîne..." class="focusable"
@@ -281,7 +310,10 @@ body.dark .help-list li {
 
 <!-- MiniTV + barre de déplacement -->
 <div id="playerBox">
-  <div id="dragBar">MiniTV</div>
+  <div id="dragBar">
+    MiniTV
+    <google-cast-launcher class="focusable" title="Caster la vidéo"></google-cast-launcher>
+  </div>
   <video id="player" controls autoplay></video>
 </div>
 
@@ -339,6 +371,16 @@ body.dark .help-list li {
 </div>
 
 <script>
+/* Initialisation de l'API Google Cast */
+window.__onGCastApiAvailable = function(isAvailable) {
+  if (isAvailable) {
+    cast.framework.CastContext.getInstance().setOptions({
+      receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+      autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+    });
+  }
+};
+
 let XML_URL = "";
 let M3U_URL = "";
 let hlsPlayer = null;
@@ -1090,4 +1132,4 @@ window.addEventListener("click", (event) => {
 </script>
 
 </body>
-</html>  
+</html>
