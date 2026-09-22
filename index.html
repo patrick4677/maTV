@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.0 (Correction Définitive Miniatures Odysee)
+     VERSION : 1.8.3 (Correction de l'affichage des miniatures Odysee)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.0</title>
+<title>TNT + M3U – Version 1.8.3</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -200,7 +200,7 @@ google-cast-launcher {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 340px;
+  width: 360px;
   max-height: 400px;
   overflow-y: auto;
   background: white;
@@ -226,11 +226,11 @@ google-cast-launcher {
 }
 
 .result-item img {
-  width: 64px;
-  height: 36px;
+  width: 90px;
+  height: 50px;
   object-fit: cover;
-  border-radius: 3px;
-  background-color: #1e1e1e;
+  border-radius: 4px;
+  background-color: #000;
   flex-shrink: 0;
 }
 
@@ -240,7 +240,7 @@ google-cast-launcher {
   line-height: 1.2;
 }
 
-/* Boîte Popup (Optimisée Télécommande TV) */
+/* Boîte Popup */
 #popup {
   display: none;
   position: fixed;
@@ -377,7 +377,7 @@ body.dark .help-list li {
   <div id="odysee-results" class="results-dropdown"></div>
 </div>
 
-<h1>Programme TV v1.8.0</h1>
+<h1>Programme TV v1.8.3</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -429,9 +429,7 @@ body.dark .help-list li {
 <div id="full" class="section"></div>
 <div id="xml" class="section"></div>
 
-<!-- ============================================================
-     POP-UP HTML DÉPLAÇABLE
-     ============================================================ -->
+<!-- Pop-up -->
 <div id="popup">
   <div id="popupHeader">
     <span style="font-weight:bold;">Détails du programme</span>
@@ -440,9 +438,7 @@ body.dark .help-list li {
   <div id="popupContent"></div>
 </div>
 
-<!-- ============================================================
-     MODE D'EMPLOI (MODALE)
-     ============================================================ -->
+<!-- Modale Mode d'emploi -->
 <div id="helpModal" class="modal">
   <div class="help-modal-content">
     <button class="popup-close-btn focusable" id="helpCloseBtn" style="position:absolute; top:12px; right:15px;">✕</button>
@@ -459,7 +455,6 @@ body.dark .help-list li {
 </div>
 
 <script>
-/* Initialisation de l'API Google Cast */
 window.__onGCastApiAvailable = function(isAvailable) {
   if (isAvailable) {
     cast.framework.CastContext.getInstance().setOptions({
@@ -474,9 +469,6 @@ let M3U_URL = "";
 let hlsPlayer = null;
 let WHITELIST = [];
 let xmlDocCache = null;
-
-// Miniature SVG par défaut
-const FALLBACK_THUMB = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='36' viewBox='0 0 64 36'><rect width='100%' height='100%' fill='%23222222'/><polygon points='26,10 44,18 26,26' fill='%23ef1c43'/></svg>";
 
 async function loadWhitelist(){
   try{
@@ -592,8 +584,29 @@ function playStream(url){
 }
 
 /* ============================================================
-   RECHERCHE ODYSEE & GESTION MINIATURES VIA PROXY (v1.8.0)
+   RECHERCHE ODYSEE & EXTRACTION PRÉCISE DES MINIATURES
    ============================================================ */
+function getOdyseeThumb(item) {
+  // 1. URL explicite renvoyée par la recherche
+  if (item.thumbnail_url && item.thumbnail_url.startsWith("http")) {
+    return item.thumbnail_url;
+  }
+  if (item.thumbnail && item.thumbnail.startsWith("http")) {
+    return item.thumbnail;
+  }
+  // 2. Construction dynamique via les serveurs de médias Odysee / LBRY
+  const claimId = item.claim_id || item.claimId;
+  const name = item.name;
+
+  if (claimId && name) {
+    return `https://thumbs.odysee.com/token/800x450/${claimId}/${encodeURIComponent(name)}`;
+  } else if (claimId) {
+    return `https://thumbs.odysee.com/token/800x450/${claimId}`;
+  }
+
+  return "";
+}
+
 async function searchOdysee() {
   const queryInput = document.getElementById('odysee-search-input');
   const query = queryInput ? queryInput.value.trim() : '';
@@ -608,9 +621,7 @@ async function searchOdysee() {
     const searchUrl = `https://lighthouse.odysee.com/search?s=${encodeURIComponent(query)}&size=10`;
     const response = await fetch(searchUrl);
 
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
 
     const data = await response.json();
 
@@ -633,30 +644,17 @@ function renderOdyseeResults(data) {
 
   data.forEach(item => {
     const title = item.title || item.name || "Vidéo sans titre";
-    const claimId = item.claim_id || item.claimId;
+    const claimId = item.claim_id || item.claimId || "";
     const name = item.name;
 
-    // Détermination de l'URL d'origine de l'image
-    let rawThumb = item.thumbnail_url || item.thumbnail || '';
-    if (!rawThumb && claimId) {
-      rawThumb = `https://thumbs.odysee.com/token/800x450/${claimId}`;
-    }
-
-    // Passation par un proxy d'images pour contourner définitivement les blocages CORS/Hotlink
-    let proxyThumb = FALLBACK_THUMB;
-    if (rawThumb) {
-      const cleanUrl = rawThumb.replace(/^https?:\/\//, '');
-      proxyThumb = `https://images.weserv.nl/?url=${encodeURIComponent(cleanUrl)}&w=128&h=72&fit=cover`;
-    }
+    const thumbUrl = getOdyseeThumb(item);
 
     const div = document.createElement('div');
     div.className = 'result-item focusable';
     div.tabIndex = 0;
 
     div.innerHTML = `
-      <img src="${proxyThumb}" 
-           alt="thumbnail" 
-           onerror="this.onerror=null; this.src='${FALLBACK_THUMB}';">
+      ${thumbUrl ? `<img src="${thumbUrl}" alt="miniature" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.visibility='hidden'">` : `<div style="width:90px; height:50px; background:#222; border-radius:4px;"></div>`}
       <div class="result-title">${title}</div>
     `;
 
@@ -674,27 +672,15 @@ function renderOdyseeResults(data) {
   });
 }
 
-// Résolution du flux direct Odysee
 async function resolveAndPlayOdysee(name, claimId) {
   if (!claimId || !name) {
     alert("Vidéo inaccessible.");
     return;
   }
-
   const streamUrl = `https://odysee.com/$/stream/${name}/${claimId}`;
-
-  try {
-    const checkRes = await fetch(streamUrl, { method: 'HEAD' });
-    if (checkRes.ok || checkRes.status === 302) {
-      playStream(streamUrl);
-      return;
-    }
-  } catch(e) {}
-
   playStream(streamUrl);
 }
 
-// Fermer le menu déroulant au clic extérieur
 document.addEventListener('click', function(e) {
   const container = document.querySelector('.search-container');
   if (container && !container.contains(e.target)) {
@@ -978,11 +964,11 @@ function renderEvening(channels){
     let nextIcon = next ? next.icon : "";
 
     const eveningImgHtml = eveningIcon 
-      ? `<img src="${eveningIcon}" style="height:50px; border-radius:4px;">` 
+      ? `<img src="${eveningIcon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` 
       : ``;
 
     const nextImgHtml = nextIcon 
-      ? `<img src="${nextIcon}" style="height:50px; border-radius:4px;">` 
+      ? `<img src="${nextIcon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` 
       : ``;
 
     html += `
@@ -1053,7 +1039,7 @@ function openFullProgramForChannel(normId) {
     fullList.forEach(p => {
       html += `
       <div class="prog-item" style="margin-bottom:12px; display:flex; align-items:center; gap:12px;">
-        ${p.icon ? `<img src="${p.icon}" style="height:60px; border-radius:6px; object-fit:cover;" onerror="this.style.display='none'">` : ""}
+        ${p.icon ? `<img src="${p.icon}" referrerpolicy="no-referrer" style="height:60px; border-radius:6px; object-fit:cover;" onerror="this.style.display='none'">` : ""}
         <div>
           <strong>${p.start.toLocaleDateString("fr-FR")}</strong> 
           ${formatTime(p.start)}–${formatTime(p.stop)} 
@@ -1187,7 +1173,7 @@ async function updateTV(){
             data-idx="${list.indexOf(current)}"
             style="cursor:pointer;">
           <div style="display:flex; align-items:center; gap:8px;">
-            ${current && current.icon ? `<img src="${current.icon}" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
+            ${current && current.icon ? `<img src="${current.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
             <span>${current ? current.title : ""}</span>
           </div>
         </td>
@@ -1203,7 +1189,7 @@ async function updateTV(){
             data-idx="${next ? list.indexOf(next) : -1}"
             style="cursor:pointer;">
           <div style="display:flex; align-items:center; gap:8px;">
-            ${next && next.icon ? `<img src="${next.icon}" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
+            ${next && next.icon ? `<img src="${next.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
             <span>${next ? next.title : ""}</span>
           </div>
         </td>
@@ -1288,7 +1274,7 @@ function showProgramPopup(prog){
   const html = `
     <h2 style="margin-top:0; color:#4caf50;">${prog.title}</h2>
     ${detailsHtml}
-    ${prog.icon ? `<img src="${prog.icon}" style="max-width:100%; max-height:220px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
+    ${prog.icon ? `<img src="${prog.icon}" referrerpolicy="no-referrer" style="max-width:100%; max-height:220px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
     ${creditsHtml}
     <p><b>Résumé :</b><br><span style="line-height:1.4; color:#ccc;">${prog.desc || "Aucune description disponible."}</span></p>
   `;
