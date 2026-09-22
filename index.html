@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.7.6 (Correction API Recherche Odysee + Fallback Proxy)
+     VERSION : 1.8.0 (Correction Définitive Miniatures Odysee)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.7.6</title>
+<title>TNT + M3U – Version 1.8.0</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -200,7 +200,7 @@ google-cast-launcher {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 320px;
+  width: 340px;
   max-height: 400px;
   overflow-y: auto;
   background: white;
@@ -226,10 +226,12 @@ google-cast-launcher {
 }
 
 .result-item img {
-  width: 60px;
-  height: 35px;
+  width: 64px;
+  height: 36px;
   object-fit: cover;
   border-radius: 3px;
+  background-color: #1e1e1e;
+  flex-shrink: 0;
 }
 
 .result-title {
@@ -370,12 +372,12 @@ body.dark .help-list li {
 
 <!-- Recherche Odysee en haut à droite -->
 <div class="search-container">
-  <input type="text" id="odysee-search-input" placeholder="Recherche Odysee..." class="focusable">
+  <input type="text" id="odysee-search-input" placeholder="Recherche Odysee..." class="focusable" onkeydown="if(event.key==='Enter') searchOdysee()">
   <button onclick="searchOdysee()" class="focusable">🔍</button>
   <div id="odysee-results" class="results-dropdown"></div>
 </div>
 
-<h1>Programme TV v1.7.6</h1>
+<h1>Programme TV v1.8.0</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -400,7 +402,7 @@ body.dark .help-list li {
     MiniTV
     <google-cast-launcher class="focusable" title="Caster la vidéo"></google-cast-launcher>
   </div>
-  <video id="player" controls autoplay></video>
+  <video id="player" controls autoplay playsinline></video>
 </div>
 
 <div id="compact" class="section active">
@@ -472,6 +474,9 @@ let M3U_URL = "";
 let hlsPlayer = null;
 let WHITELIST = [];
 let xmlDocCache = null;
+
+// Miniature SVG par défaut
+const FALLBACK_THUMB = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='36' viewBox='0 0 64 36'><rect width='100%' height='100%' fill='%23222222'/><polygon points='26,10 44,18 26,26' fill='%23ef1c43'/></svg>";
 
 async function loadWhitelist(){
   try{
@@ -572,7 +577,10 @@ function playStream(url){
     hlsPlayer.destroy();
     hlsPlayer = null;
   }
-  if(Hls.isSupported() && (url.includes('.m3u8') || !url.includes('.mp4'))){
+
+  const isHls = url.includes('.m3u8') || url.includes('m3u8');
+
+  if(Hls.isSupported() && isHls){
     hlsPlayer = new Hls();
     hlsPlayer.loadSource(url);
     hlsPlayer.attachMedia(video);
@@ -580,11 +588,11 @@ function playStream(url){
     video.src = url;
   }
   video.muted = false;
-  video.play().catch(err => console.log("Lecture bloquée :", err));
+  video.play().catch(err => console.log("Lecture vidéo :", err));
 }
 
 /* ============================================================
-   RECHERCHE ODYSEE (API + Fallback JSON-RPC Proxy)
+   RECHERCHE ODYSEE & GESTION MINIATURES VIA PROXY (v1.8.0)
    ============================================================ */
 async function searchOdysee() {
   const queryInput = document.getElementById('odysee-search-input');
@@ -597,13 +605,11 @@ async function searchOdysee() {
   resultsContainer.style.display = 'block';
 
   try {
-    // API de recherche Lighthouse corrigée (paramètre 's' uniquement)
-    const searchUrl = `https://lighthouse.odysee.com/search?s=${encodeURIComponent(query)}`;
-
+    const searchUrl = `https://lighthouse.odysee.com/search?s=${encodeURIComponent(query)}&size=10`;
     const response = await fetch(searchUrl);
 
     if (!response.ok) {
-      throw new Error(`Code HTTP ${response.status}`);
+      throw new Error(`Erreur HTTP ${response.status}`);
     }
 
     const data = await response.json();
@@ -613,62 +619,50 @@ async function searchOdysee() {
       return;
     }
 
-    // Filtrage manuel des vidéos pour éviter l'erreur 400 côté serveur
-    const videoItems = data.filter(item => !item.value_type || item.value_type === 'stream');
-
-    const formattedItems = videoItems.slice(0, 10).map(item => ({
-      title: item.title || item.name || 'Vidéo sans titre',
-      thumbnail_url: item.thumbnail || '',
-      claimId: item.claimId || item.claim_id || '',
-      name: item.name || ''
-    }));
-
-    renderOdyseeResults(formattedItems);
+    renderOdyseeResults(data);
 
   } catch (error) {
-    console.error('Erreur détaillée Odysee :', error);
-    resultsContainer.innerHTML = `<div style="padding:10px; color:red; font-size:12px;">
-      Erreur : ${error.message}.<br>
-      <em>Essayez un autre terme de recherche.</em>
-    </div>`;
+    console.error('Erreur Odysee :', error);
+    resultsContainer.innerHTML = `<div style="padding:10px; color:red; font-size:12px;">Erreur : ${error.message}</div>`;
   }
 }
-
 
 function renderOdyseeResults(data) {
   const resultsContainer = document.getElementById('odysee-results');
   resultsContainer.innerHTML = '';
 
-  if (!data || !Array.isArray(data) || data.length === 0) {
-    resultsContainer.innerHTML = '<div style="padding:10px;">Aucun résultat trouvé.</div>';
-    return;
-  }
-
   data.forEach(item => {
     const title = item.title || item.name || "Vidéo sans titre";
-    const thumbnail = item.thumbnail_url || item.thumbnail || 'https://odysee.com/public/img/og.png';
-    const claimId = item.claimId || item.claim_id;
+    const claimId = item.claim_id || item.claimId;
     const name = item.name;
+
+    // Détermination de l'URL d'origine de l'image
+    let rawThumb = item.thumbnail_url || item.thumbnail || '';
+    if (!rawThumb && claimId) {
+      rawThumb = `https://thumbs.odysee.com/token/800x450/${claimId}`;
+    }
+
+    // Passation par un proxy d'images pour contourner définitivement les blocages CORS/Hotlink
+    let proxyThumb = FALLBACK_THUMB;
+    if (rawThumb) {
+      const cleanUrl = rawThumb.replace(/^https?:\/\//, '');
+      proxyThumb = `https://images.weserv.nl/?url=${encodeURIComponent(cleanUrl)}&w=128&h=72&fit=cover`;
+    }
 
     const div = document.createElement('div');
     div.className = 'result-item focusable';
     div.tabIndex = 0;
+
     div.innerHTML = `
-      <img src="${thumbnail}" alt="miniature" onerror="this.onerror=null; this.src='https://odysee.com/public/img/og.png';">
+      <img src="${proxyThumb}" 
+           alt="thumbnail" 
+           onerror="this.onerror=null; this.src='${FALLBACK_THUMB}';">
       <div class="result-title">${title}</div>
     `;
 
-    const playAction = () => {
-      if (name && claimId) {
-        const streamUrl = `https://odysee.com/$/download/${name}/${claimId}`;
-        playStream(streamUrl);
-      } else if (claimId) {
-        const streamUrl = `https://odysee.com/$/download/video/${claimId}`;
-        playStream(streamUrl);
-      } else {
-        alert("Impossible de récupérer le lien de cette vidéo.");
-      }
+    const playAction = async () => {
       resultsContainer.style.display = 'none';
+      await resolveAndPlayOdysee(name, claimId);
     };
 
     div.onclick = playAction;
@@ -680,10 +674,30 @@ function renderOdyseeResults(data) {
   });
 }
 
-// Fermer les résultats si on clique ailleurs
+// Résolution du flux direct Odysee
+async function resolveAndPlayOdysee(name, claimId) {
+  if (!claimId || !name) {
+    alert("Vidéo inaccessible.");
+    return;
+  }
+
+  const streamUrl = `https://odysee.com/$/stream/${name}/${claimId}`;
+
+  try {
+    const checkRes = await fetch(streamUrl, { method: 'HEAD' });
+    if (checkRes.ok || checkRes.status === 302) {
+      playStream(streamUrl);
+      return;
+    }
+  } catch(e) {}
+
+  playStream(streamUrl);
+}
+
+// Fermer le menu déroulant au clic extérieur
 document.addEventListener('click', function(e) {
   const container = document.querySelector('.search-container');
-  if (!container.contains(e.target)) {
+  if (container && !container.contains(e.target)) {
     document.getElementById('odysee-results').style.display = 'none';
   }
 });
@@ -723,7 +737,7 @@ let TNT = [
   {num:21, id:"LEquipe21.fr", name:"L'Équipe", logo:"coulisses/logos/lequipe.png", link:"https://www.lequipe.fr"},
   {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.6play.fr"},
   {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr"},
-  {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.com"},
+  {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com"},
   {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#"}
 ];
 
@@ -863,7 +877,6 @@ function getEPGDateRange(programmes){
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
-/* Génère la cellule de chaîne sur 2 lignes très compactes */
 function buildChannelCellHtml(ch) {
   const playImg = ch.stream 
     ? `<img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer le direct">` 
@@ -1204,7 +1217,6 @@ async function updateTV(){
       tbody.appendChild(tr);
     });
 
-    /* Attribution des événements de clic + Télécommande Fire TV */
     bindPopupEvents(".popup-now", channelsToday);
     bindPopupEvents(".popup-evening", channelsToday);
 
@@ -1214,7 +1226,6 @@ async function updateTV(){
   }
 }
 
-/* Attache les événements Clic ET Touche Entrée / OK de la télécommande */
 function bindPopupEvents(selector, channelsToday) {
   document.querySelectorAll(selector).forEach(cell => {
     const chan = cell.dataset.chan;
@@ -1250,9 +1261,6 @@ function bindPopupEvents(selector, channelsToday) {
   setInterval(updateTV, 60000);
 })();
 
-/* ============================================================
-   POP-UP PROGRAMME DÉTAILLÉ (Optimisé Fire TV)
-   ============================================================ */
 function showProgramPopup(prog){
   let detailsHtml = "";
 
@@ -1289,7 +1297,6 @@ function showProgramPopup(prog){
   const popup = document.getElementById("popup");
   popup.style.display = "block";
 
-  // Met le focus automatiquement sur le bouton de fermeture pour la télécommande
   setTimeout(() => {
     document.getElementById("popupCloseBtn").focus();
   }, 100);
@@ -1299,9 +1306,6 @@ function closePopup(){
   document.getElementById("popup").style.display = "none";
 }
 
-/* ============================================================
-   LOGIQUE DE LA MODALE MODE D'EMPLOI
-   ============================================================ */
 const helpModal = document.getElementById("helpModal");
 const openHelpBtn = document.getElementById("openHelpBtn");
 const helpCloseBtn = document.getElementById("helpCloseBtn");
