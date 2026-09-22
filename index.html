@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.7.0 (Optimisé pour Fire TV & MiniTV + Google Cast + Recherche Odysee)
+     VERSION : 1.7.1 (Correction API Recherche Odysee + Fallback Proxy)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.7.0</title>
+<title>TNT + M3U – Version 1.7.1</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -584,10 +584,11 @@ function playStream(url){
 }
 
 /* ============================================================
-   RECHERCHE ODYSEE
+   RECHERCHE ODYSEE (API + Fallback JSON-RPC Proxy)
    ============================================================ */
 async function searchOdysee() {
-  const query = document.getElementById('odysee-search-input').value.trim();
+  const queryInput = document.getElementById('odysee-search-input');
+  const query = queryInput ? queryInput.value.trim() : '';
   const resultsContainer = document.getElementById('odysee-results');
 
   if (!query) return;
@@ -596,87 +597,102 @@ async function searchOdysee() {
   resultsContainer.style.display = 'block';
 
   try {
-    // 1. Utilisation de l'endpoint direct Lighthouse avec un User-Agent/mode permissive
-    const response = await fetch(`https://lighthouse.odysee.com/search?s=${encodeURIComponent(query)}&size=10&media_type=video`, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
+    // 1. Tentative via l'API Lighthouse avec des paramètres d'URL sécurisés
+    const url = new URL("https://lighthouse.odysee.com/search");
+    url.searchParams.append("s", query);
+    url.searchParams.append("size", "10");
+    url.searchParams.append("from", "0");
+    url.searchParams.append("claim_type", "stream");
 
+    let response = await fetch(url.toString());
+
+    // 2. Si Lighthouse échoue (erreur 400 ou autre), fallback sur l'API JSON-RPC Odysee
     if (!response.ok) {
-      throw new Error(`Code HTTP ${response.status}`);
-    }
+      response = await fetch("https://api.na-backend.odysee.com/api/v1/proxy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          method: "claim_search",
+          params: {
+            text: query,
+            claim_type: ["stream"],
+            stream_types: ["video"],
+            page: 1,
+            page_size: 10
+          }
+        })
+      });
 
-    const data = await response.json();
-    resultsContainer.innerHTML = '';
+      if (!response.ok) {
+        throw new Error(`Code HTTP ${response.status}`);
+      }
 
-    // Vérification de la présence des données
-    if (!data || !Array.isArray(data) || data.length === 0) {
-      resultsContainer.innerHTML = '<div style="padding:10px;">Aucun résultat trouvé.</div>';
+      const rpcData = await response.json();
+      const items = rpcData?.result?.items || [];
+      renderOdyseeResults(items.map(item => ({
+        title: item.value?.title || item.name,
+        thumbnail_url: item.value?.thumbnail?.url,
+        claimId: item.claim_id,
+        name: item.name
+      })));
       return;
     }
 
-    data.forEach(item => {
-      // Extraction sécurisée des titres et images
-      const title = item.title || item.name || "Vidéo sans titre";
-      const thumbnail = item.thumbnail_url || item.thumbnail || 'https://odysee.com/public/img/og.png';
-      
-      // Extraction universelle de l'identifiant (dépend de la version de l'API)
-      const claimId = item.claimId || item.claim_id;
-      const name = item.name;
-
-      const div = document.createElement('div');
-      div.className = 'result-item focusable';
-      div.tabIndex = 0;
-      div.innerHTML = `
-        <img src="${thumbnail}" alt="miniature" onerror="this.onerror=null; this.src='https://odysee.com/public/img/og.png';">
-        <div class="result-title">${title}</div>
-      `;
-
-      const playAction = () => {
-        if (name && claimId) {
-          // Construction du flux MP4 direct pour Odysee
-          const streamUrl = `https://odysee.com/$/download/${name}/${claimId}`;
-          playStream(streamUrl);
-        } else if (claimId) {
-          const streamUrl = `https://odysee.com/$/download/video/${claimId}`;
-          playStream(streamUrl);
-        } else {
-          alert("Impossible de récupérer le lien de cette vidéo.");
-        }
-        resultsContainer.style.display = 'none';
-      };
-
-      div.onclick = playAction;
-      div.onkeydown = (e) => {
-        if (e.key === 'Enter' || e.keyCode === 13) playAction();
-      };
-
-      resultsContainer.appendChild(div);
-    });
+    const data = await response.json();
+    renderOdyseeResults(data);
 
   } catch (error) {
     console.error('Erreur détaillée Odysee :', error);
-    
-    // Si l'API principale échoue (CORS ou réseau), on tente l'API de secours LBRY.tech
-    try {
-      const fallbackUrl = `https://api.lbry.tech/search?s=${encodeURIComponent(query)}&size=10&media_type=video`;
-      const fallbackRes = await fetch(fallbackUrl);
-      const fallbackData = await fallbackRes.json();
-      
-      if (fallbackData && fallbackData.data) {
-        // Redirection vers la nouvelle recherche si le fallback répond
-        renderOdyseeResults(fallbackData.data, resultsContainer);
-        return;
-      }
-    } catch(e) {}
-
     resultsContainer.innerHTML = `<div style="padding:10px; color:red; font-size:12px;">
       Erreur : ${error.message}.<br>
-      <em>Si tu es en local (file://), teste la page sur un serveur local ou via GitHub Pages.</em>
+      <em>Essayez avec un autre terme de recherche.</em>
     </div>`;
   }
+}
+
+function renderOdyseeResults(data) {
+  const resultsContainer = document.getElementById('odysee-results');
+  resultsContainer.innerHTML = '';
+
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    resultsContainer.innerHTML = '<div style="padding:10px;">Aucun résultat trouvé.</div>';
+    return;
+  }
+
+  data.forEach(item => {
+    const title = item.title || item.name || "Vidéo sans titre";
+    const thumbnail = item.thumbnail_url || item.thumbnail || 'https://odysee.com/public/img/og.png';
+    const claimId = item.claimId || item.claim_id;
+    const name = item.name;
+
+    const div = document.createElement('div');
+    div.className = 'result-item focusable';
+    div.tabIndex = 0;
+    div.innerHTML = `
+      <img src="${thumbnail}" alt="miniature" onerror="this.onerror=null; this.src='https://odysee.com/public/img/og.png';">
+      <div class="result-title">${title}</div>
+    `;
+
+    const playAction = () => {
+      if (name && claimId) {
+        const streamUrl = `https://odysee.com/$/download/${name}/${claimId}`;
+        playStream(streamUrl);
+      } else if (claimId) {
+        const streamUrl = `https://odysee.com/$/download/video/${claimId}`;
+        playStream(streamUrl);
+      } else {
+        alert("Impossible de récupérer le lien de cette vidéo.");
+      }
+      resultsContainer.style.display = 'none';
+    };
+
+    div.onclick = playAction;
+    div.onkeydown = (e) => {
+      if (e.key === 'Enter' || e.keyCode === 13) playAction();
+    };
+
+    resultsContainer.appendChild(div);
+  });
 }
 
 // Fermer les résultats si on clique ailleurs
