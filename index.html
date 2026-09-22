@@ -1,7 +1,7 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.6.0 (Optimisé pour Fire TV & MiniTV + Google Cast)
-     OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast
+     VERSION : 1.7.0 (Optimisé pour Fire TV & MiniTV + Google Cast + Recherche Odysee)
+     OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
 
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.6.0</title>
+<title>TNT + M3U – Version 1.7.0</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -163,6 +163,81 @@ google-cast-launcher {
   background:#000;
 }
 
+/* Module de Recherche Odysee (Haut à droite) */
+.search-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  gap: 4px;
+}
+
+.search-container input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+}
+
+.search-container button {
+  padding: 6px 12px;
+  background-color: #ef1c43;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.search-container button:hover {
+  background-color: #d01538;
+}
+
+.results-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  margin-top: 4px;
+  color: #333;
+}
+
+.result-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-item:hover {
+  background-color: #f5f5f5;
+}
+
+.result-item img {
+  width: 60px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.result-title {
+  font-size: 0.85rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
 /* Boîte Popup (Optimisée Télécommande TV) */
 #popup {
   display: none;
@@ -268,6 +343,10 @@ body.dark a { color:#9cf; }
 body.dark button { background:#444; color:#fff; border:1px solid #666; }
 body.dark google-cast-launcher { background-color: #444; --disconnected-color: #fff; }
 
+body.dark .results-dropdown { background: #333; color: #fff; border-color: #555; }
+body.dark .result-item { border-bottom-color: #444; }
+body.dark .result-item:hover { background-color: #444; }
+
 body.dark #evening table { background:white !important; color:black !important; }
 body.dark #evening th { background:#f0f0f0 !important; color:black !important; }
 body.dark #evening td { border-color:#ccc !important; color:black !important; }
@@ -288,6 +367,13 @@ body.dark .help-list li {
 </head>
 
 <body>
+
+<!-- Recherche Odysee en haut à droite -->
+<div class="search-container">
+  <input type="text" id="odysee-search-input" placeholder="Recherche Odysee..." class="focusable">
+  <button onclick="searchOdysee()" class="focusable">🔍</button>
+  <div id="odysee-results" class="results-dropdown"></div>
+</div>
 
 <h1>Programme TV</h1>
 <p id="status">Chargement…</p>
@@ -486,7 +572,7 @@ function playStream(url){
     hlsPlayer.destroy();
     hlsPlayer = null;
   }
-  if(Hls.isSupported()){
+  if(Hls.isSupported() && (url.includes('.m3u8') || !url.includes('.mp4'))){
     hlsPlayer = new Hls();
     hlsPlayer.loadSource(url);
     hlsPlayer.attachMedia(video);
@@ -494,8 +580,76 @@ function playStream(url){
     video.src = url;
   }
   video.muted = false;
-  video.play();
+  video.play().catch(err => console.log("Lecture bloquée :", err));
 }
+
+/* ============================================================
+   RECHERCHE ODYSEE
+   ============================================================ */
+async function searchOdysee() {
+  const query = document.getElementById('odysee-search-input').value.trim();
+  const resultsContainer = document.getElementById('odysee-results');
+
+  if (!query) return;
+
+  resultsContainer.innerHTML = '<div style="padding:10px;">Recherche en cours...</div>';
+  resultsContainer.style.display = 'block';
+
+  try {
+    const response = await fetch(`https://lighthouse.lbry.com/search?s=${encodeURIComponent(query)}&size=10&media_type=video`);
+    const data = await response.json();
+
+    resultsContainer.innerHTML = '';
+
+    if (!data || data.length === 0) {
+      resultsContainer.innerHTML = '<div style="padding:10px;">Aucun résultat trouvé.</div>';
+      return;
+    }
+
+    data.forEach(item => {
+      const title = item.title || item.name;
+      const thumbnail = item.thumbnail_url || 'https://odysee.com/public/img/og.png';
+
+      const div = document.createElement('div');
+      div.className = 'result-item focusable';
+      div.tabIndex = 0;
+      div.innerHTML = `
+        <img src="${thumbnail}" alt="miniature">
+        <div class="result-title">${title}</div>
+      `;
+
+      const playAction = () => {
+        const streamUrl = `https://odysee.com/$/download/${item.name}/${item.claimId}`;
+        playStream(streamUrl);
+        resultsContainer.style.display = 'none';
+      };
+
+      div.onclick = playAction;
+      div.onkeydown = (e) => {
+        if (e.key === 'Enter' || e.keyCode === 13) playAction();
+      };
+
+      resultsContainer.appendChild(div);
+    });
+  } catch (error) {
+    console.error('Erreur recherche Odysee :', error);
+    resultsContainer.innerHTML = '<div style="padding:10px; color:red;">Erreur de recherche.</div>';
+  }
+}
+
+document.getElementById('odysee-search-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    searchOdysee();
+  }
+});
+
+// Fermer les résultats si on clique ailleurs
+document.addEventListener('click', function(e) {
+  const container = document.querySelector('.search-container');
+  if (!container.contains(e.target)) {
+    document.getElementById('odysee-results').style.display = 'none';
+  }
+});
 
 function normalizeID(id){
   if(!id) return "";
