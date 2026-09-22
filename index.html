@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.4 (Correctif d'affichage strict des miniatures Odysee)
+     VERSION : 1.8.5 (Recherche Odysee directe & nettoyage API)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.4</title>
+<title>TNT + M3U – Version 1.8.5</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -196,63 +196,6 @@ google-cast-launcher {
   background-color: #d01538;
 }
 
-.results-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 360px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none;
-  margin-top: 4px;
-  color: #333;
-}
-
-.result-item {
-  padding: 8px;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.result-item:hover {
-  background-color: #f5f5f5;
-}
-
-.result-item img {
-  width: 90px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 4px;
-  background-color: #111;
-  flex-shrink: 0;
-}
-
-.thumb-placeholder {
-  width: 90px;
-  height: 50px;
-  background-color: #222;
-  border-radius: 4px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  font-size: 10px;
-}
-
-.result-title {
-  font-size: 0.85rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
 /* Boîte Popup */
 #popup {
   display: none;
@@ -358,10 +301,6 @@ body.dark a { color:#9cf; }
 body.dark button { background:#444; color:#fff; border:1px solid #666; }
 body.dark google-cast-launcher { background-color: #444; --disconnected-color: #fff; }
 
-body.dark .results-dropdown { background: #333; color: #fff; border-color: #555; }
-body.dark .result-item { border-bottom-color: #444; }
-body.dark .result-item:hover { background-color: #444; }
-
 body.dark #evening table { background:white !important; color:black !important; }
 body.dark #evening th { background:#f0f0f0 !important; color:black !important; }
 body.dark #evening td { border-color:#ccc !important; color:black !important; }
@@ -387,10 +326,9 @@ body.dark .help-list li {
 <div class="search-container">
   <input type="text" id="odysee-search-input" placeholder="Recherche Odysee..." class="focusable" onkeydown="if(event.key==='Enter') searchOdysee()">
   <button onclick="searchOdysee()" class="focusable">🔍</button>
-  <div id="odysee-results" class="results-dropdown"></div>
 </div>
 
-<h1>Programme TV v1.8.4</h1>
+<h1>Programme TV v1.8.5</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -597,113 +535,17 @@ function playStream(url){
 }
 
 /* ============================================================
-   RECHERCHE ODYSEE & EXTRACTION ROBOUSTE DES MINIATURES
+   RECHERCHE ODYSEE DIRECTE
    ============================================================ */
-function getOdyseeThumb(item) {
-  let url = item.thumbnail_url || item.thumbnail || item.fee_currency;
-
-  if (url && typeof url === 'string') {
-    if (url.startsWith('//')) return 'https:' + url;
-    if (url.startsWith('/')) return 'https://odysee.com' + url;
-    if (url.startsWith('http')) return url;
-  }
-
-  const claimId = item.claim_id || item.claimId;
-  const name = item.name;
-
-  if (claimId && name) {
-    return `https://thumbs.odysee.com/token/800x450/${claimId}/${encodeURIComponent(name)}`;
-  } else if (claimId) {
-    return `https://thumbs.odysee.com/token/800x450/${claimId}`;
-  }
-
-  return "";
-}
-
-async function searchOdysee() {
+function searchOdysee() {
   const queryInput = document.getElementById('odysee-search-input');
   const query = queryInput ? queryInput.value.trim() : '';
-  const resultsContainer = document.getElementById('odysee-results');
 
   if (!query) return;
 
-  resultsContainer.innerHTML = '<div style="padding:10px;">Recherche en cours...</div>';
-  resultsContainer.style.display = 'block';
-
-  try {
-    const searchUrl = `https://lighthouse.odysee.com/search?s=${encodeURIComponent(query)}&size=10`;
-    const response = await fetch(searchUrl);
-
-    if (!response.ok) throw new Error(`Erreur HTTP ${response.status}`);
-
-    const data = await response.json();
-
-    if (!Array.isArray(data) || data.length === 0) {
-      resultsContainer.innerHTML = '<div style="padding:10px;">Aucun résultat trouvé.</div>';
-      return;
-    }
-
-    renderOdyseeResults(data);
-
-  } catch (error) {
-    console.error('Erreur Odysee :', error);
-    resultsContainer.innerHTML = `<div style="padding:10px; color:red; font-size:12px;">Erreur : ${error.message}</div>`;
-  }
+  // Ouverture de la page de recherche officielle
+  window.open(`https://odysee.com/$/search?q=${encodeURIComponent(query)}`, '_blank');
 }
-
-function renderOdyseeResults(data) {
-  const resultsContainer = document.getElementById('odysee-results');
-  resultsContainer.innerHTML = '';
-
-  data.forEach(item => {
-    const title = item.title || item.name || "Vidéo sans titre";
-    const claimId = item.claim_id || item.claimId || "";
-    const name = item.name;
-
-    const thumbUrl = getOdyseeThumb(item);
-
-    const div = document.createElement('div');
-    div.className = 'result-item focusable';
-    div.tabIndex = 0;
-
-    const imgTag = thumbUrl 
-      ? `<img src="${thumbUrl}" alt="miniature" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=\\'thumb-placeholder\\'>📺</div>'">`
-      : `<div class="thumb-placeholder">📺</div>`;
-
-    div.innerHTML = `
-      ${imgTag}
-      <div class="result-title">${title}</div>
-    `;
-
-    const playAction = async () => {
-      resultsContainer.style.display = 'none';
-      await resolveAndPlayOdysee(name, claimId);
-    };
-
-    div.onclick = playAction;
-    div.onkeydown = (e) => {
-      if (e.key === 'Enter' || e.keyCode === 13) playAction();
-    };
-
-    resultsContainer.appendChild(div);
-  });
-}
-
-async function resolveAndPlayOdysee(name, claimId) {
-  if (!claimId || !name) {
-    alert("Vidéo inaccessible.");
-    return;
-  }
-  const streamUrl = `https://odysee.com/$/stream/${name}/${claimId}`;
-  playStream(streamUrl);
-}
-
-document.addEventListener('click', function(e) {
-  const container = document.querySelector('.search-container');
-  if (container && !container.contains(e.target)) {
-    document.getElementById('odysee-results').style.display = 'none';
-  }
-});
 
 function normalizeID(id){
   if(!id) return "";
