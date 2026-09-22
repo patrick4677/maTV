@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.3 (Correction de l'affichage des miniatures Odysee)
+     VERSION : 1.8.4 (Correctif d'affichage strict des miniatures Odysee)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.3</title>
+<title>TNT + M3U – Version 1.8.4</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -230,8 +230,21 @@ google-cast-launcher {
   height: 50px;
   object-fit: cover;
   border-radius: 4px;
-  background-color: #000;
+  background-color: #111;
   flex-shrink: 0;
+}
+
+.thumb-placeholder {
+  width: 90px;
+  height: 50px;
+  background-color: #222;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 10px;
 }
 
 .result-title {
@@ -377,7 +390,7 @@ body.dark .help-list li {
   <div id="odysee-results" class="results-dropdown"></div>
 </div>
 
-<h1>Programme TV v1.8.3</h1>
+<h1>Programme TV v1.8.4</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -584,17 +597,17 @@ function playStream(url){
 }
 
 /* ============================================================
-   RECHERCHE ODYSEE & EXTRACTION PRÉCISE DES MINIATURES
+   RECHERCHE ODYSEE & EXTRACTION ROBOUSTE DES MINIATURES
    ============================================================ */
 function getOdyseeThumb(item) {
-  // 1. URL explicite renvoyée par la recherche
-  if (item.thumbnail_url && item.thumbnail_url.startsWith("http")) {
-    return item.thumbnail_url;
+  let url = item.thumbnail_url || item.thumbnail || item.fee_currency;
+
+  if (url && typeof url === 'string') {
+    if (url.startsWith('//')) return 'https:' + url;
+    if (url.startsWith('/')) return 'https://odysee.com' + url;
+    if (url.startsWith('http')) return url;
   }
-  if (item.thumbnail && item.thumbnail.startsWith("http")) {
-    return item.thumbnail;
-  }
-  // 2. Construction dynamique via les serveurs de médias Odysee / LBRY
+
   const claimId = item.claim_id || item.claimId;
   const name = item.name;
 
@@ -653,8 +666,12 @@ function renderOdyseeResults(data) {
     div.className = 'result-item focusable';
     div.tabIndex = 0;
 
+    const imgTag = thumbUrl 
+      ? `<img src="${thumbUrl}" alt="miniature" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=\\'thumb-placeholder\\'>📺</div>'">`
+      : `<div class="thumb-placeholder">📺</div>`;
+
     div.innerHTML = `
-      ${thumbUrl ? `<img src="${thumbUrl}" alt="miniature" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.visibility='hidden'">` : `<div style="width:90px; height:50px; background:#222; border-radius:4px;"></div>`}
+      ${imgTag}
       <div class="result-title">${title}</div>
     `;
 
