@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.7.3 (Correction API Recherche Odysee + Fallback Proxy)
+     VERSION : 1.7.4 (Correction API Recherche Odysee + Fallback Proxy)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.7.3</title>
+<title>TNT + M3U – Version 1.7.4</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -375,7 +375,7 @@ body.dark .help-list li {
   <div id="odysee-results" class="results-dropdown"></div>
 </div>
 
-<h1>Programme TV v1.7.3</h1>
+<h1>Programme TV v1.7.4</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -597,36 +597,28 @@ async function searchOdysee() {
   resultsContainer.style.display = 'block';
 
   try {
-    // Utilisation du proxy CORS pour éviter les blocages du navigateur
-    const targetUrl = "https://api.na-backend.odysee.com/api/v1/proxy";
-    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(targetUrl);
+    // API de recherche dédiée Odysee via endpoint HTTP GET (évite les blocages CORS/403)
+    const searchUrl = `https://lighthouse.odysee.com/search?s=${encodeURIComponent(query)}&size=10&media_type=video`;
 
-    const response = await fetch(proxyUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        method: "claim_search",
-        params: {
-          text: query,
-          claim_type: ["stream"],
-          stream_types: ["video"],
-          page: 1,
-          page_size: 10
-        }
-      })
+    const response = await fetch(searchUrl, {
+      method: "GET"
     });
 
     if (!response.ok) {
       throw new Error(`Code HTTP ${response.status}`);
     }
 
-    const rpcData = await response.json();
-    const items = rpcData?.result?.items || [];
+    const items = await response.json();
+
+    if (!Array.isArray(items) || items.length === 0) {
+      resultsContainer.innerHTML = '<div style="padding:10px;">Aucun résultat trouvé.</div>';
+      return;
+    }
 
     renderOdyseeResults(items.map(item => ({
-      title: item.value?.title || item.name,
-      thumbnail_url: item.value?.thumbnail?.url,
-      claimId: item.claim_id,
+      title: item.title || item.name,
+      thumbnail_url: item.thumbnail,
+      claimId: item.claimId,
       name: item.name
     })));
 
@@ -634,7 +626,7 @@ async function searchOdysee() {
     console.error('Erreur détaillée Odysee :', error);
     resultsContainer.innerHTML = `<div style="padding:10px; color:red; font-size:12px;">
       Erreur : ${error.message}.<br>
-      <em>Vérifiez que la page est servie via un serveur web (http://localhost).</em>
+      <em>Essayez un autre terme de recherche.</em>
     </div>`;
   }
 }
