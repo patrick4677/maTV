@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.7.2 (Correction API Recherche Odysee + Fallback Proxy)
+     VERSION : 1.7.3 (Correction API Recherche Odysee + Fallback Proxy)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.7.2</title>
+<title>TNT + M3U – Version 1.7.3</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -375,7 +375,7 @@ body.dark .help-list li {
   <div id="odysee-results" class="results-dropdown"></div>
 </div>
 
-<h1>Programme TV v1.7.2</h1>
+<h1>Programme TV v1.7.3</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -597,8 +597,11 @@ async function searchOdysee() {
   resultsContainer.style.display = 'block';
 
   try {
-    // Interrogation directe de l'API JSON-RPC d'Odysee (autorisée en CORS)
-    const response = await fetch("https://api.na-backend.odysee.com/api/v1/proxy", {
+    // Utilisation du proxy CORS pour éviter les blocages du navigateur
+    const targetUrl = "https://api.na-backend.odysee.com/api/v1/proxy";
+    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(targetUrl);
+
+    const response = await fetch(proxyUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -631,7 +634,7 @@ async function searchOdysee() {
     console.error('Erreur détaillée Odysee :', error);
     resultsContainer.innerHTML = `<div style="padding:10px; color:red; font-size:12px;">
       Erreur : ${error.message}.<br>
-      <em>Vérifiez votre connexion ou essayez un autre terme.</em>
+      <em>Vérifiez que la page est servie via un serveur web (http://localhost).</em>
     </div>`;
   }
 }
