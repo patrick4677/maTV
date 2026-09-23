@@ -55,11 +55,11 @@ def get_session_token(headers):
     try:
         url = "https://api.pluto.tv/v1/auth/local"
         req = urllib.request.Request(url, headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=10) as resp:
+        with urllib.request.urlopen(req, timeout=5) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             return data.get("sessionToken")
     except Exception as e:
-        print(f"Avertissement : impossible de générer le jeton ({e})")
+        print(f"Auth contournée ({e})")
         return None
 
 def fetch_time_slice(start_dt, stop_dt, headers):
@@ -70,7 +70,8 @@ def fetch_time_slice(start_dt, stop_dt, headers):
     
     try:
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        # Timeout très court (5s) pour éviter que GitHub Actions ne gèle
+        with urllib.request.urlopen(req, timeout=5) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             channels = data if isinstance(data, list) else data.get('channels', [data])
             for ch in channels:
@@ -78,7 +79,7 @@ def fetch_time_slice(start_dt, stop_dt, headers):
                 if ch_id == INA70_PLUTO_ID or "INA" in str(ch.get('name', '')).upper():
                     return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
     except Exception as e:
-        print(f"Erreur sur la tranche {start_dt.strftime('%d/%m %H:%M')} : {e}")
+        print(f"Tranche {start_dt.strftime('%d/%m %H:%M')} ignorée ({e})")
     return [], None
 
 def main():
@@ -92,7 +93,6 @@ def main():
         'CF-IPCountry': 'FR'
     }
 
-    # Authentification préalable pour autoriser les requêtes sur service-channels
     token = get_session_token(headers)
     if token:
         headers['Authorization'] = f"Bearer {token}"
@@ -101,18 +101,17 @@ def main():
     all_programmes = {}
     logo_url = None
 
-    # Boucle sur 9 tranches de 8 heures (soit 72h au total)
-    for i in range(9):
+    # Réduction à 6 tranches de 8 heures (48 heures au total)
+    for i in range(6):
         start_dt = now + timedelta(hours=i * 8)
         stop_dt = start_dt + timedelta(hours=8)
-        print(f"Récupération : {start_dt.strftime('%d/%m à %H:%M')} -> {stop_dt.strftime('%d/%m à %H:%M')}...")
+        print(f"Tranche {i+1}/6 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
         
         timelines, icon = fetch_time_slice(start_dt, stop_dt, headers)
         if icon and not logo_url:
             logo_url = icon
             
         for item in timelines:
-            # Clé unique pour éviter les doublons aux frontières des tranches
             prog_key = f"{item.get('start')}_{item.get('title')}"
             all_programmes[prog_key] = item
 
@@ -178,7 +177,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes inscrits dans {OUTPUT_FILE}.")
+    print(f"Succès : {count} programmes inscrits dans {OUTPUT_FILE}.", flush=True)
 
 if __name__ == "__main__":
     main()
