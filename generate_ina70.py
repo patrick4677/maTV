@@ -8,23 +8,40 @@ import urllib.parse
 from datetime import datetime, timedelta, timezone
 
 CHANNEL_ID = "ina70.fr"
-# ID exact Pluto TV FR pour INA 70
 INA70_PLUTO_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
+
+# Calcul du décalage horaire français (UTC+2 en été, UTC+1 en hiver)
+def get_paris_tz():
+    # Détection simplifiée heure d'été / heure d'hiver pour la France
+    now = datetime.now(timezone.utc)
+    # Heure d'été en Europe : du dernier dimanche de mars au dernier dimanche d'octobre
+    year = now.year
+    march_last_sun = max(day for day in range(25, 32) if datetime(year, 3, day).weekday() == 6)
+    oct_last_sun = max(day for day in range(25, 32) if datetime(year, 10, day).weekday() == 6)
+    
+    dst_start = datetime(year, 3, march_last_sun, 1, tzinfo=timezone.utc)
+    dst_end = datetime(year, 10, oct_last_sun, 1, tzinfo=timezone.utc)
+    
+    if dst_start <= now < dst_end:
+        return timezone(timedelta(hours=2)), "+0200"
+    else:
+        return timezone(timedelta(hours=1)), "+0100"
+
+PARIS_TZ, PARIS_OFFSET_STR = get_paris_tz()
 
 def format_xmltv_date(date_str):
     if not date_str:
         return ""
     try:
-        # Nettoyage de la chaîne de date d'origine
         clean_str = date_str.split('.')[0].replace("Z", "")
         dt_utc = datetime.strptime(clean_str, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)
         
-        # Conversion automatique vers le fuseau horaire local (Europe/Paris)
-        # Gère automatiquement le passage heure d'été (+0200) / heure d'hiver (+0100)
-        dt_local = dt_utc.astimezone()
+        # Convertir directement l'heure en heure locale française
+        dt_paris = dt_utc.astimezone(PARIS_TZ)
         
-        return dt_local.strftime("%Y%m%d%H%M%S %z")
+        # Format XMLTV : YYYYMMDDHHMMSS +0200
+        return dt_paris.strftime("%Y%m%d%H%M%S") + f" {PARIS_OFFSET_STR}"
     except Exception as e:
         print(f"Erreur date ({date_str}): {e}")
         return ""
@@ -45,10 +62,10 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
     now = datetime.now(timezone.utc)
-    start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-    stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
+    # Demande d'une plage temporelle élargie (de -12h à +60h) sans minutes pour forcer Pluto TV à envoyer le guide complet
+    start_time = urllib.parse.quote((now - timedelta(hours=12)).strftime("%Y-%m-%dT00:00:00.000Z"))
+    stop_time = urllib.parse.quote((now + timedelta(hours=60)).strftime("%Y-%m-%dT23:59:59.000Z"))
 
-    # Utilisation des API de contenu Pluto TV FR avec contournement IP
     endpoints = [
         f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_time}&stop={stop_time}&channelIds={INA70_PLUTO_ID}&clientRegion=FR",
         f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={INA70_PLUTO_ID}&clientRegion=FR",
@@ -67,10 +84,10 @@ def main():
     logo_url = None
 
     for url in endpoints:
-        print(f"Tentative de connexion : {url[:75]}...")
+        print(f"Récupération de la grille complète : {url[:70]}...")
         try:
             req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=20) as resp:
+            with urllib.request.urlopen(req, timeout=25) as resp:
                 data = json.loads(resp.read().decode('utf-8'))
                 
                 channels = []
@@ -86,7 +103,7 @@ def main():
                     if ch_id == INA70_PLUTO_ID or ("INA" in ch_name and "INAZUMA" not in ch_name):
                         epg_data = ch.get('timelines', [])
                         logo_url = ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
-                        print(f"Chaîne FR trouvée ({ch.get('name')}) - {len(epg_data)} programmes récupérés.")
+                        print(f"Chaîne trouvée ({ch.get('name')}) - {len(epg_data)} programmes récupérés.")
                         break
 
                 if epg_data:
@@ -95,7 +112,7 @@ def main():
             print(f"Erreur endpoint : {e}")
 
     if not epg_data:
-        print("Erreur : Impossible d'obtenir la grille INA 70 depuis Pluto TV.")
+        print("Erreur : Aucun programme récupéré.")
         sys.exit(1)
 
     tv = ET.Element('tv', {
@@ -114,7 +131,6 @@ def main():
     for item in epg_data:
         title_text = str(item.get('title', ''))
         
-        # Filtre de sécurité
         if "INAZUMA" in title_text.upper():
             continue
 
