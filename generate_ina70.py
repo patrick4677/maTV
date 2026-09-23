@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
 import urllib.parse
+import uuid
 
 CHANNEL_ID = "ina70.fr"
 OUTPUT_FILE = "coulisses/ina70.xml"
@@ -17,8 +18,29 @@ def format_xmltv_date(date_str):
         dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
         return dt.strftime("%Y%m%d%H%M%S +0000")
     except Exception as e:
-        print(f"Erreur date ({date_str}): {e}")
+        print(f"Erreur formatage date ({date_str}): {e}")
         return ""
+
+def get_pluto_session_token():
+    """Obtient un token de session anonyme FR auprès de Pluto TV."""
+    device_id = str(uuid.uuid4())
+    session_url = f"https://api.pluto.tv/v1/auth/local/anonymous?appName=web&appVersion=8.0.0-assets&clientModelNumber=unknown&serverSide=true&deviceType=web&deviceId={device_id}&sid={device_id}"
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Origin': 'https://pluto.tv',
+        'Referer': 'https://pluto.tv/'
+    }
+
+    try:
+        req = urllib.request.Request(session_url, headers=headers, method='GET')
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            return data.get('sessionToken')
+    except Exception as e:
+        print(f"Erreur d'authentification Pluto TV : {e}")
+        return None
 
 def extract_image_url(item, episode_info):
     if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
@@ -39,45 +61,55 @@ def extract_image_url(item, episode_info):
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    # Endpoint global officiel Pluto TV avec catalogue FR
-    api_url = "https://service-channels.clusters.pluto.tv/v1/guide?lang=fr"
+    token = get_pluto_session_token()
+    if not token:
+        print("Impossible d'obtenir un jeton d'accès pour l'API Pluto TV.")
+        sys.exit(1)
+
+    now = datetime.now(timezone.utc)
+    start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
+    stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
+
+    # API des chaînes Pluto TV avec token d'accès
+    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Authorization': f'Bearer {token}',
         'Accept': 'application/json',
-        'Accept-Language': 'fr-FR,fr;q=0.9'
+        'Accept-Language': 'fr-FR,fr;q=0.9',
+        'Origin': 'https://pluto.tv',
+        'Referer': 'https://pluto.tv/'
     }
 
-    print("Récupération du guide Pluto TV...")
+    print("Téléchargement du programme TV...")
     try:
         req = urllib.request.Request(api_url, headers=headers)
         with urllib.request.urlopen(req, timeout=20) as response:
-            guide_data = json.loads(response.read().decode('utf-8'))
+            channels_data = json.loads(response.read().decode('utf-8'))
     except Exception as e:
-        print(f"Erreur API Pluto TV ({api_url}) : {e}")
+        print(f"Erreur API ({api_url}) : {e}")
         sys.exit(1)
 
-    channels = guide_data.get('channels', [])
     ina_channel = None
-
-    # Recherche dynamique de la chaîne INA 70 dans le catalogue FR
-    for ch in channels:
-        ch_name = ch.get('name', '').upper()
-        if "INA 70" in ch_name or "INA 70S" in ch_name or "INA - 70" in ch_name:
-            ina_channel = ch
-            print(f"Chaîne trouvée : {ch.get('name')} (ID: {ch.get('id') or ch.get('_id')})")
-            break
-
-    # Si introuvable par nom exact, recherche de secours sur "INA"
-    if not ina_channel:
-        for ch in channels:
-            if "INA" in ch.get('name', '').upper():
+    if isinstance(channels_data, list):
+        for ch in channels_data:
+            name = ch.get('name', '').upper()
+            if "INA 70" in name or "INA - 70" in name:
                 ina_channel = ch
-                print(f"Chaîne trouvée (secours) : {ch.get('name')}")
+                print(f"Chaîne identifiée : {ch.get('name')}")
                 break
 
     if not ina_channel:
-        print("Erreur : Impossible de trouver la chaîne INA dans le guide FR.")
+        # Recherche secondaire si le nom a un autre format
+        for ch in channels_data:
+            if "INA" in ch.get('name', '').upper():
+                ina_channel = ch
+                print(f"Chaîne identifiée (recherche souple) : {ch.get('name')}")
+                break
+
+    if not ina_channel:
+        print("Erreur : Chaîne INA 70 introuvable dans le guide de Pluto TV.")
         sys.exit(1)
 
     epg_data = ina_channel.get('timelines', [])
@@ -93,8 +125,7 @@ def main():
 
     logo_url = (
         ina_channel.get('featuredImage', {}).get('path') or 
-        ina_channel.get('logo', {}).get('path') or
-        ina_channel.get('colorLogoPNG', {}).get('path')
+        ina_channel.get('logo', {}).get('path')
     )
     if logo_url:
         ET.SubElement(channel, 'icon', src=logo_url)
@@ -141,7 +172,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes INA 70 générés en français.")
+    print(f"Succès : {count} programmes INA 70 générés avec succès.")
 
 if __name__ == "__main__":
     main()
