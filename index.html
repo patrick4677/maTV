@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.5 (Recherche Odysee directe & nettoyage API)
+     VERSION : 1.8.7 (Support Multi-XMLTV pour INA 70)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.5</title>
+<title>TNT + M3U – Version 1.8.7</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -328,7 +328,7 @@ body.dark .help-list li {
   <button onclick="searchOdysee()" class="focusable">🔍</button>
 </div>
 
-<h1>Programme TV v1.8.5</h1>
+<h1>Programme TV v1.8.7</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -416,6 +416,7 @@ window.__onGCastApiAvailable = function(isAvailable) {
 };
 
 let XML_URL = "";
+let XML_URL2 = ""; // Second fichier XML (ex: INA 70)
 let M3U_URL = "";
 let hlsPlayer = null;
 let WHITELIST = [];
@@ -433,6 +434,7 @@ async function loadConfig(){
   try{
     const cfg = await fetch("coulisses/config.json").then(r=>r.json());
     XML_URL = cfg.xml;
+    XML_URL2 = cfg.xml2 || "coulisses/ina70.xml"; // Utilise la clé 'xml2' ou le fichier local par défaut
     M3U_URL = cfg.m3u;
   } catch(e){
     document.getElementById("status").textContent = "Erreur config.json";
@@ -543,7 +545,6 @@ function searchOdysee() {
 
   if (!query) return;
 
-  // Ouverture de la page de recherche officielle
   window.open(`https://odysee.com/$/search?q=${encodeURIComponent(query)}`, '_blank');
 }
 
@@ -583,7 +584,15 @@ let TNT = [
   {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.6play.fr"},
   {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr"},
   {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com"},
-  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#"}
+  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#"},
+  {
+    num: 26,
+    id: "ina70.fr",
+    name: "INA 70",
+    logo: "https://images.pluto.tv/series/651fe0613099fc00084bd30e/featuredImage.jpg",
+    link: "#",
+    stream: "https://fast-rakuten.okast.tv/channels/34d82f76-b51f-4bf5-9b35-769fb5904e79/96f96405-90e7-489a-a1e6-8ede5d2b4933/media_ir_video1_1080p30.m3u8?bpkio_serviceid=fa2e8c4385712f9af3e719ec904b3543"
+  }
 ];
 
 TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
@@ -742,7 +751,7 @@ function buildChannelCellHtml(ch) {
 
 function renderXMLChannels(channels){
   const div = document.getElementById("xml");
-  let html = "<h3>Chaînes présentes dans le XMLTV</h3>";
+  let html = "<h3>Chaînes présentes dans les fichiers XMLTV</h3>";
 
   Object.keys(channels).forEach(id=>{
     html += `
@@ -950,8 +959,25 @@ document.getElementById("search").addEventListener("input", filterChannels);
 async function updateTV(){
   try{
     document.getElementById("status").textContent = "Chargement EPG...";
+    
+    // 1. Chargement du premier fichier XML (TNT)
     const xmlTxt = await fetch(XML_URL+"?t="+Date.now()).then(r=>r.text());
     xmlDocCache = new DOMParser().parseFromString(xmlTxt,"application/xml");
+
+    // 2. Fusion du second fichier XML (INA 70) si disponible
+    if (XML_URL2) {
+      try {
+        const xmlTxt2 = await fetch(XML_URL2+"?t="+Date.now()).then(r=>r.text());
+        const xmlDoc2 = new DOMParser().parseFromString(xmlTxt2,"application/xml");
+        
+        const extraProgrammes = xmlDoc2.querySelectorAll("programme");
+        extraProgrammes.forEach(p => {
+          xmlDocCache.documentElement.appendChild(p.cloneNode(true));
+        });
+      } catch(err) {
+        console.warn("Second fichier XML non chargé :", err);
+      }
+    }
 
     const programmesNodes = xmlDocCache.querySelectorAll("programme");
     const channelsToday = {};
