@@ -4,13 +4,6 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260923204500 +0200" stop="20260923230000 +0200" channel="ina70.fr">
-    <title lang="fr">El mensajero</title>
-    <sub-title lang="fr">El mensajero</sub-title>
-    <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
   <programme start="20260923230000 +0200" stop="20260924010000 +0200" channel="ina70.fr">
     <title lang="fr">Domino</title>
     <sub-title lang="fr">Domino</sub-title>
@@ -95,42 +88,42 @@
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/64a5bbdde1356600138b9024/poster_1789055642567.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260925000000 +0200" stop="20260925023000 +0200" channel="ina70.fr">
+  <programme start="20260925000000 +0200" stop="20260925030000 +0200" channel="ina70.fr">
     <title lang="fr">Cine adrenalina</title>
     <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
-  <programme start="20260925023000 +0200" stop="20260925063000 +0200" channel="ina70.fr">
+  <programme start="20260925030000 +0200" stop="20260925070000 +0200" channel="ina70.fr">
     <title lang="fr">Cine adrenalina</title>
     <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
-  <programme start="20260925063000 +0200" stop="20260925103000 +0200" channel="ina70.fr">
+  <programme start="20260925070000 +0200" stop="20260925110000 +0200" channel="ina70.fr">
     <title lang="fr">Cine adrenalina</title>
     <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
-  <programme start="20260925103000 +0200" stop="20260925143000 +0200" channel="ina70.fr">
+  <programme start="20260925110000 +0200" stop="20260925150000 +0200" channel="ina70.fr">
     <title lang="fr">Cine adrenalina</title>
     <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
-  <programme start="20260925143000 +0200" stop="20260925183000 +0200" channel="ina70.fr">
+  <programme start="20260925150000 +0200" stop="20260925190000 +0200" channel="ina70.fr">
     <title lang="fr">Cine adrenalina</title>
     <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
-  <programme start="20260925183000 +0200" stop="20260925223000 +0200" channel="ina70.fr">
+  <programme start="20260925190000 +0200" stop="20260925230000 +0200" channel="ina70.fr">
     <title lang="fr">Cine adrenalina</title>
     <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
