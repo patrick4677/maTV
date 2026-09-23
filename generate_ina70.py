@@ -8,7 +8,7 @@ import urllib.request
 import urllib.parse
 
 CHANNEL_ID = "ina70.fr"
-# ID correct de la chaîne INA 70 France sur Pluto TV
+# ID officiel de la chaîne INA 70 sur Pluto TV France
 PLUTO_CHANNEL_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
@@ -38,6 +38,24 @@ def extract_image_url(item, episode_info):
         return item['featuredImage']['path']
     return None
 
+def fetch_fr_timeline(start_iso, stop_iso):
+    """Requête directement l'API de chronologie de Pluto TV forcée sur la région FR."""
+    url = (
+        f"https://api.pluto.tv/v2/channels/{PLUTO_CHANNEL_ID}/timeline"
+        f"?start={start_iso}&stop={stop_iso}"
+        f"&lang=fr&clientRegion=FR&serverSide=true"
+    )
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'fr-FR,fr;q=0.9',
+        'X-Forwarded-For': '185.24.184.1'
+    }
+    
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return json.loads(resp.read().decode('utf-8'))
+
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
@@ -45,32 +63,13 @@ def main():
     start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # API directe de Pluto TV avec la chaîne FR
-    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={PLUTO_CHANNEL_ID}&lang=fr&clientRegion=FR"
-    
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'fr-FR,fr;q=0.9'
-    }
-
     try:
-        req = urllib.request.Request(api_url, headers=headers)
-        with urllib.request.urlopen(req, timeout=15) as response:
-            channels_data = json.loads(response.read().decode('utf-8'))
+        data = fetch_fr_timeline(start_time, stop_time)
     except Exception as e:
-        print(f"Erreur API ({api_url}) : {e}")
+        print(f"Erreur lors de la récupération de la grille FR ({e})")
         sys.exit(1)
 
-    ina_channel = None
-    if isinstance(channels_data, list) and len(channels_data) > 0:
-        ina_channel = channels_data[0]
-
-    if not ina_channel:
-        print("Erreur : Chaîne INA 70 FR introuvable.")
-        sys.exit(1)
-
-    epg_data = ina_channel.get('timelines', [])
+    epg_data = data.get('timelines', []) if isinstance(data, dict) else []
 
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
@@ -81,10 +80,7 @@ def main():
     display_name = ET.SubElement(channel, 'display-name', lang="fr")
     display_name.text = "INA 70"
 
-    logo_url = (
-        ina_channel.get('featuredImage', {}).get('path') or 
-        ina_channel.get('logo', {}).get('path')
-    )
+    logo_url = data.get('featuredImage', {}).get('path') or data.get('logo', {}).get('path') if isinstance(data, dict) else None
     if logo_url:
         ET.SubElement(channel, 'icon', src=logo_url)
 
@@ -130,7 +126,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes INA 70 FR générés.")
+    print(f"Succès : {count} programmes INA 70 générés.")
 
 if __name__ == "__main__":
     main()
