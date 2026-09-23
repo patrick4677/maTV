@@ -1,6 +1,84 @@
 <?xml version="1.0" ?>
-<tv generator-info-name="INA70-EPG-Generator" source-info-name="INA 70 France">
+<tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
     <display-name lang="fr">INA 70</display-name>
+    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
+  <programme start="20260923170000 +0000" stop="20260923174600 +0000" channel="ina70.fr">
+    <title lang="fr">Pluto TV Classic TV FR</title>
+    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+    <desc lang="fr">no info available</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+  </programme>
+  <programme start="20260923174600 +0000" stop="20260923191200 +0000" channel="ina70.fr">
+    <title lang="fr">House on Haunted Hill</title>
+    <sub-title lang="fr">House on Haunted Hill</sub-title>
+    <desc lang="fr">An eccentric millionaire invites five guests to spend the night in a haunted house, offering each $10,000 but only if they survive until morning! Starring Vincent Price. Restored and In Color!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c1aa102db91a8ec05bf3c36/poster_1787167802288.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923191200 +0000" stop="20260923205300 +0000" channel="ina70.fr">
+    <title lang="fr">Last Man On Earth</title>
+    <sub-title lang="fr">Last Man On Earth</sub-title>
+    <desc lang="fr">Vincent Price is the only survivor after a plague wipes out the human race, and struggles with loneliness. Restored and In Color!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c1aa4427af0e0ed4dfa36da/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923205300 +0000" stop="20260923223900 +0000" channel="ina70.fr">
+    <title lang="fr">My Dear Secretary</title>
+    <sub-title lang="fr">My Dear Secretary</sub-title>
+    <desc lang="fr">Owen Waterbury, bestselling novelist, recruits aspiring writer Stephanie 'Steve' Gaylord as his latest of many secretaries. Staring Kirk Douglas.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5b191206b0875c36c90cab17/poster_1787937491470.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923223900 +0000" stop="20260923235900 +0000" channel="ina70.fr">
+    <title lang="fr">Reefer Madness (in Color)</title>
+    <sub-title lang="fr">Reefer Madness (in Color)</sub-title>
+    <desc lang="fr">Teens partake of the "demon weed" and one puff plunges them into a web of murder, sex and lunacy. The 1930's cult classic - In Vibrant Color!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c7dfd85fcd48f563ff458f4/poster_1782309242438.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923235900 +0000" stop="20260924012000 +0000" channel="ina70.fr">
+    <title lang="fr">Sherlock Holmes Prelude To Murder</title>
+    <sub-title lang="fr">Sherlock Holmes Prelude To Murder (in Colour)</sub-title>
+    <desc lang="fr">A trio of music boxes contains the hidden secret to riches, and a group of criminals will kill for them. In Vibrant Colour!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c3ce265c33ebc13d108052d/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924012000 +0000" stop="20260924022800 +0000" channel="ina70.fr">
+    <title lang="fr">Sherlock Holmes Terror By Night</title>
+    <sub-title lang="fr">Sherlock Holmes Terror By Night (in colour)</sub-title>
+    <desc lang="fr">A murder mystery set on a speeding train, Holmes guards the transport of the 400-carat diamond. In Vibrant Colour!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c3cdea091a1a0127e95105e/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924022800 +0000" stop="20260924034400 +0000" channel="ina70.fr">
+    <title lang="fr">Sherlock Holmes Woman In Green</title>
+    <sub-title lang="fr">Sherlock Holmes Woman In Green (in Colour)</sub-title>
+    <desc lang="fr">Four women are brutally murdered, and Scotland Yard thinks it is the random work of a madman. In Vibrant Colour!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c380301c9fdffea2303bd76/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924034400 +0000" stop="20260924050400 +0000" channel="ina70.fr">
+    <title lang="fr">Sherlock Holmes and The Secret Weapon</title>
+    <sub-title lang="fr">Sherlock Holmes and The Secret Weapon (in Colour)</sub-title>
+    <desc lang="fr">Kidnappers of the inventor of a new wartime bombsight threaten to sell the invention to the Nazis. In Colour!</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c3ce0f341629b0c856e9be7/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924050400 +0000" stop="20260924054800 +0000" channel="ina70.fr">
+    <title lang="fr">Superman: The Complete Animated Series</title>
+    <sub-title lang="fr">Mad Scientist / The Mechanical Monsters / Billion Dollar Limited / Arctic Giant</sub-title>
+    <desc lang="fr">As the planet Krypton is destroyed, its leader, Jor-El, secures his infant son, Kal-El, in a rocket that will transport him to Earth. There, as Clark Kent, he discovers the truth about his interplanetary heritage and assumes the identity of Superman.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5dfb5143c81d29000951869e/poster_1758834214127.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924054800 +0000" stop="20260924062600 +0000" channel="ina70.fr">
+    <title lang="fr">Superman: The Complete Animated Series</title>
+    <sub-title lang="fr">The Bulleteers / The Magnetic Telescope  / Electric Earthquake / Volcano</sub-title>
+    <desc lang="fr">As the planet Krypton is destroyed, its leader, Jor-El, secures his infant son, Kal-El, in a rocket that will transport him to Earth. There, as Clark Kent, he discovers the truth about his interplanetary heritage and assumes the identity of Superman.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5dfb52929de85a00092fc094/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
 </tv>
