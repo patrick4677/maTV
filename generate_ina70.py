@@ -16,9 +16,17 @@ def format_xmltv_date(date_str):
     if not date_str:
         return ""
     try:
-        dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
-        return dt.strftime("%Y%m%d%H%M%S +0000")
-    except Exception:
+        # Nettoyage de la chaîne de date d'origine
+        clean_str = date_str.split('.')[0].replace("Z", "")
+        dt_utc = datetime.strptime(clean_str, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)
+        
+        # Conversion automatique vers le fuseau horaire local (Europe/Paris)
+        # Gère automatiquement le passage heure d'été (+0200) / heure d'hiver (+0100)
+        dt_local = dt_utc.astimezone()
+        
+        return dt_local.strftime("%Y%m%d%H%M%S %z")
+    except Exception as e:
+        print(f"Erreur date ({date_str}): {e}")
         return ""
 
 def extract_image_url(item, episode_info):
