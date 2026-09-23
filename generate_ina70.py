@@ -1,7 +1,6 @@
 import json
 import os
 import sys
-import uuid
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
@@ -9,6 +8,7 @@ import urllib.parse
 from datetime import datetime, timedelta, timezone
 
 CHANNEL_ID = "ina70.fr"
+INA70_PLUTO_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
 def get_paris_tz():
@@ -50,75 +50,63 @@ def extract_image_url(item, episode_info):
         return series_info['tile']['path']
     return None
 
-def get_pluto_session(headers):
-    device_id = str(uuid.uuid4())
-    url = f"https://api.pluto.tv/v2/config?appName=web&appVersion=7.9.0-0402ae52&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientModelNumber=1.0.0"
+def get_pluto_token(headers):
+    """Génère un jeton invité anonyme pour autoriser les requêtes API."""
     try:
-        req = urllib.request.Request(url, headers=headers)
+        url = "https://api.pluto.tv/v1/auth/local"
+        req = urllib.request.Request(url, headers=headers, method="POST")
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode('utf-8'))
-            return data.get("sessionToken"), data.get("sessionSessionId", device_id)
+            return data.get("sessionToken")
     except Exception as e:
-        print(f"Erreur d'initialisation : {e}", flush=True)
-        return None, device_id
-
-def fetch_chunk(start_dt, stop_dt, headers, session_token, sid):
-    start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
-    stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
-    
-    # Sans filtre channelIds pour récupérer tout le bouquet et chercher INA
-    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&clientRegion=FR&sid={sid}"
-    
-    req_headers = dict(headers)
-    if session_token:
-        req_headers['Authorization'] = f"Bearer {session_token}"
-
-    try:
-        req = urllib.request.Request(url, headers=req_headers)
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            channels = json.loads(resp.read().decode('utf-8'))
-            for ch in channels:
-                ch_name = str(ch.get('name', '')).upper()
-                # Détection de la chaîne INA (en excluant Inazuma)
-                if "INA" in ch_name and "INAZUMA" not in ch_name:
-                    found_id = ch.get('_id') or ch.get('id')
-                    print(f"Chaîne identifiée : {ch.get('name')} (ID: {found_id})", flush=True)
-                    return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
-    except Exception as e:
-        print(f"Erreur créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
-    return [], None
+        print(f"Impossible d'obtenir le jeton invité Pluto : {e}")
+        return None
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    base_headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
-        'Origin': 'https://pluto.tv',
-        'Referer': 'https://pluto.tv/'
+        'X-Forwarded-For': '185.24.184.1',
+        'CF-IPCountry': 'FR'
     }
 
-    session_token, sid = get_pluto_session(headers)
+    token = get_pluto_token(base_headers)
+    headers = dict(base_headers)
+    if token:
+        headers['Authorization'] = f"Bearer {token}"
+
     now = datetime.now(timezone.utc)
-    all_programmes = {}
+    start_str = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
+    stop_str = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
+
+    # Utilisation de l'API v2 /channels globale sans sous-créneaux stricts pour éviter les 401
+    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&clientRegion=FR"
+
+    print(f"Récupération de la grille Pluto TV...")
+    epg_data = []
     logo_url = None
 
-    for i in range(4):
-        start_dt = now + timedelta(hours=i * 12)
-        stop_dt = start_dt + timedelta(hours=12)
-        print(f"Recherche tranche {i+1}/4 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
-        
-        timelines, icon = fetch_chunk(start_dt, stop_dt, headers, session_token, sid)
-        if icon and not logo_url:
-            logo_url = icon
-            
-        for item in timelines:
-            prog_key = f"{item.get('start')}_{item.get('title')}"
-            all_programmes[prog_key] = item
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=25) as resp:
+            channels = json.loads(resp.read().decode('utf-8'))
+            for ch in channels:
+                ch_id = str(ch.get('_id') or ch.get('id') or '')
+                ch_name = str(ch.get('name', '')).upper()
 
-    if not all_programmes:
-        print("Erreur : La chaîne INA est introuvable sur Pluto TV FR.", flush=True)
+                if ch_id == INA70_PLUTO_ID or ("INA" in ch_name and "INAZUMA" not in ch_name):
+                    epg_data = ch.get('timelines', [])
+                    logo_url = ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
+                    print(f"Chaîne trouvée ({ch.get('name')}) - {len(epg_data)} programmes récupérés.")
+                    break
+    except Exception as e:
+        print(f"Erreur lors de la récupération : {e}")
+
+    if not epg_data:
+        print("Erreur : Aucun programme récupéré.")
         sys.exit(1)
 
     tv = ET.Element('tv', {
@@ -134,7 +122,7 @@ def main():
         ET.SubElement(channel, 'icon', src=logo_url)
 
     count = 0
-    for item in all_programmes.values():
+    for item in epg_data:
         title_text = str(item.get('title', ''))
         if "INAZUMA" in title_text.upper():
             continue
@@ -179,7 +167,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes inscrits dans {OUTPUT_FILE}.", flush=True)
+    print(f"Succès : {count} programmes inscrits dans {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
