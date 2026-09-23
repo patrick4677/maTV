@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.7 (Support Multi-XMLTV pour INA 70)
+     VERSION : 1.8.8 (Support Multi-XMLTV + Correctif programmes de nuit)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.7</title>
+<title>TNT + M3U – Version 1.8.8</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -328,7 +328,7 @@ body.dark .help-list li {
   <button onclick="searchOdysee()" class="focusable">🔍</button>
 </div>
 
-<h1>Programme TV v1.8.7</h1>
+<h1>Programme TV v1.8.8</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -985,13 +985,17 @@ async function updateTV(){
     const now = new Date();
     const todayStr = now.toLocaleDateString("fr-FR");
 
+    // Filtrage des programmes : intègre les émissions ayant commencé la veille et finissant aujourd'hui
     for (let i = 0; i < programmesNodes.length; i++) {
       const p = programmesNodes[i];
       const rawStart = p.getAttribute("start");
-      if (!rawStart) continue;
+      const rawStop = p.getAttribute("stop");
+      if (!rawStart || !rawStop) continue;
 
       const start = parseDate(rawStart);
-      if (start.toLocaleDateString("fr-FR") === todayStr) {
+      const stop = parseDate(rawStop);
+
+      if (start.toLocaleDateString("fr-FR") === todayStr || stop > now) {
         const id = normalizeID(p.getAttribute("channel"));
         if (!channelsToday[id]) channelsToday[id] = [];
         channelsToday[id].push(parseSingleProgrammeNode(p));
