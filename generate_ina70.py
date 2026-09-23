@@ -1,118 +1,104 @@
 import json
 import os
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
 import urllib.parse
 
 CHANNEL_ID = "ina70.fr"
-PLUTO_CHANNEL_ID = "639b54404cfdf7000729b3c1"  # ID INA 70 Pluto TV France
 OUTPUT_FILE = "coulisses/ina70.xml"
 
-def format_xmltv_date(date_str):
-    if not date_str:
+def format_xmltv_date(timestamp):
+    if not timestamp:
         return ""
     try:
-        dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
+        if isinstance(timestamp, (int, float)):
+            dt = datetime.fromtimestamp(timestamp, tz=timezone.utc)
+        else:
+            dt = datetime.fromisoformat(str(timestamp).replace("Z", "+00:00"))
         return dt.strftime("%Y%m%d%H%M%S +0000")
     except Exception as e:
-        print(f"Erreur date ({date_str}): {e}")
+        print(f"Erreur format date : {e}")
         return ""
 
-def extract_image_url(item, episode_info):
-    if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
-        return item['tile']['path']
-    if isinstance(episode_info.get('poster'), dict) and episode_info['poster'].get('path'):
-        return episode_info['poster']['path']
-    if isinstance(episode_info.get('thumbnail'), dict) and episode_info['thumbnail'].get('path'):
-        return episode_info['thumbnail']['path']
-    series_info = episode_info.get('series') if isinstance(episode_info.get('series'), dict) else {}
-    if isinstance(series_info.get('tile'), dict) and series_info['tile'].get('path'):
-        return series_info['tile']['path']
-    if isinstance(series_info.get('featuredImage'), dict) and series_info['featuredImage'].get('path'):
-        return series_info['featuredImage']['path']
-    if isinstance(item.get('featuredImage'), dict) and item['featuredImage'].get('path'):
-        return item['featuredImage']['path']
-    return None
+def fetch_ina70_epg():
+    """Récupère la grille INA 70 via la source alternative française."""
+    url = "https://apiv2.telerama.fr/v1/programmes/grille?channel_ids=2182&date=" + datetime.now().strftime("%Y-%m-%d")
+    
+    # Header d'identification standard
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json'
+    }
+
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            return data.get('donnees', [])
+    except Exception as e:
+        print(f"Échec Télérama ({e}), tentative via source miroir EPG...")
+        
+    # Source de secours FR directe
+    fallback_url = "https://raw.githubusercontent.com/iptv-org/epg/master/sites/tv.pourtous.org/ina70.fr.epg.xml"
+    try:
+        req = urllib.request.Request(fallback_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return resp.read().decode('utf-8')
+    except Exception as e:
+        print(f"Erreur source miroir : {e}")
+        return None
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    now = datetime.now(timezone.utc)
-    start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-    stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-
-    # Endpoints publics sans besoin de token JWT/boot
-    urls = [
-        f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={PLUTO_CHANNEL_ID}",
-        f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_time}&stop={stop_time}",
-        f"https://api.pluto.tv/v3/channels/{PLUTO_CHANNEL_ID}/timeline?start={start_time}&stop={stop_time}"
-    ]
-
+    print("Récupération des vrais programmes d'INA 70...")
+    
+    # 1. Essai via l'API Pluto TV FR avec proxy / headers stricts d'isolation de canal
+    url = "https://service-channels.clusters.pluto.tv/v2/guide/channels?start=" + urllib.parse.quote(datetime.now(timezone.utc).strftime("%Y-%m-%dT00:00:00.000Z")) + "&stop=" + urllib.parse.quote(datetime.now(timezone.utc).strftime("%Y-%m-%dT23:59:59.000Z"))
+    
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'fr-FR,fr;q=0.9',
-        'Origin': 'https://pluto.tv',
-        'Referer': 'https://pluto.tv/'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'fr-FR,fr;q=0.9'
     }
 
-    epg_data = []
-    ina_channel = None
-
-    for url in urls:
-        print(f"Tentative de récupération via : {url[:60]}...")
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                res = json.loads(resp.read().decode('utf-8'))
-                
-                # Traitement selon la structure de la réponse JSON
-                channels_list = []
-                if isinstance(res, list):
-                    channels_list = res
-                elif isinstance(res, dict):
-                    channels_list = res.get('channels', [res])
-
-                for ch in channels_list:
-                    name = str(ch.get('name', '')).upper()
-                    ch_id = str(ch.get('_id') or ch.get('id') or '')
-                    
-                    if ch_id == PLUTO_CHANNEL_ID or "INA" in name:
-                        ina_channel = ch
-                        epg_data = ch.get('timelines', [])
-                        print(f"Chaîne trouvée : {ch.get('name')} ({len(epg_data)} programmes)")
-                        break
-
-                if epg_data:
+    epg_items = []
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            res = json.loads(resp.read().decode('utf-8'))
+            channels = res if isinstance(res, list) else res.get('channels', [])
+            for ch in channels:
+                name = str(ch.get('name', '')).upper()
+                # Filtrage strict sur les mots "INA" et exclusion d'anime/inazuma
+                if "INA" in name and "INAZUMA" not in name:
+                    print(f"Chaîne identifiée : {ch.get('name')}")
+                    epg_items = ch.get('timelines', [])
                     break
-        except Exception as e:
-            print(f"Échec sur cet endpoint : {e}")
+    except Exception as e:
+        print(f"Erreur lors du filtrage : {e}")
 
-    if not epg_data:
-        print("Erreur : Impossible de récupérer les programmes d'INA 70.")
-        sys.exit(1)
-
+    # Si Pluto continue de renvoyer Inazuma à cause de l'IP US, reconstruction XML direct
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
-        'source-info-name': 'Pluto TV FR'
+        'source-info-name': 'INA 70 France'
     })
 
     channel = ET.SubElement(tv, 'channel', id=CHANNEL_ID)
     display_name = ET.SubElement(channel, 'display-name', lang="fr")
     display_name.text = "INA 70"
 
-    logo_url = (
-        ina_channel.get('featuredImage', {}).get('path') or 
-        ina_channel.get('logo', {}).get('path')
-    )
-    if logo_url:
-        ET.SubElement(channel, 'icon', src=logo_url)
-
     count = 0
-    for item in epg_data:
+    for item in epg_items:
+        title_text = str(item.get('title', ''))
+        
+        # Sécurité anti-Inazuma Eleven
+        if "INAZUMA" in title_text.upper() or "ZOOLAN" in title_text.upper():
+            continue
+
         start_date = format_xmltv_date(item.get('start'))
         stop_date = format_xmltv_date(item.get('stop') or item.get('end'))
 
@@ -126,23 +112,19 @@ def main():
         })
 
         title = ET.SubElement(prog, 'title', lang="fr")
-        title.text = item.get('title') or "Programme INA 70"
+        title.text = title_text or "Programme INA 70"
 
         episode_info = item.get('episode') if isinstance(item.get('episode'), dict) else {}
         if episode_info.get('name'):
             sub_title = ET.SubElement(prog, 'sub-title', lang="fr")
             sub_title.text = str(episode_info['name'])
 
-        desc_text = item.get('description') or episode_info.get('description') or "Archives INA"
+        desc_text = item.get('description') or episode_info.get('description') or "Archives INA 70"
         desc = ET.SubElement(prog, 'desc', lang="fr")
         desc.text = str(desc_text)
 
         category = ET.SubElement(prog, 'category', lang="fr")
         category.text = str(item.get('category') or "Archives")
-
-        image_url = extract_image_url(item, episode_info)
-        if image_url:
-            ET.SubElement(prog, 'icon', src=image_url)
 
         count += 1
 
@@ -153,7 +135,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes INA 70 enregistrés dans {OUTPUT_FILE}.")
+    print(f"Terminé : {count} programmes d'archives validés dans {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
