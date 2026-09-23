@@ -39,28 +39,43 @@ def format_xmltv_date(date_str):
     except Exception:
         return ""
 
-def get_pluto_session_v3(headers):
-    """Obtient un token de session explicitement ancré sur la région FR."""
+def extract_image_url(item, episode_info):
+    if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
+        return item['tile']['path']
+    if isinstance(episode_info.get('poster'), dict) and episode_info['poster'].get('path'):
+        return episode_info['poster']['path']
+    if isinstance(episode_info.get('thumbnail'), dict) and episode_info['thumbnail'].get('path'):
+        return episode_info['thumbnail']['path']
+    series_info = episode_info.get('series') if isinstance(episode_info.get('series'), dict) else {}
+    if isinstance(series_info.get('tile'), dict) and series_info['tile'].get('path'):
+        return series_info['tile']['path']
+    return None
+
+def get_pluto_french_session(headers):
+    """Obtient une session explicitement enregistrée en France sur Pluto TV."""
     device_id = str(uuid.uuid4())
-    url = f"https://api.pluto.tv/v3/config?appName=web&appVersion=7.9.0&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientRegion=FR&serverSideProfiles=true"
+    # URL de configuration spécifique à la France
+    url = f"https://api.pluto.tv/v2/config?appName=web&appVersion=7.9.0&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientRegion=FR&serverSideProfiles=true"
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             return data.get("sessionToken"), data.get("sessionSessionId", device_id)
     except Exception as e:
-        print(f"Erreur d'initialisation V3 : {e}", flush=True)
+        print(f"Erreur d'initialisation : {e}", flush=True)
         return None, device_id
 
-def fetch_timelines_v3(start_dt, stop_dt, headers, session_token, sid):
-    """Interroge la grille EPG via l'API V3/Gガイド de Pluto TV."""
+def fetch_chunk(start_dt, stop_dt, headers, session_token, sid):
     start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     
+    # Endpoint de grille avec forçage de la langue fr et région FR dans les paramètres
     url = (
-        f"https://api.pluto.tv/v3/channels/{INA70_PLUTO_ID}/timelines?"
+        f"https://api.pluto.tv/v2/channels?"
         f"start={start_str}&stop={stop_str}&"
-        f"clientRegion=FR&clientTimezone=Europe%2FParis&sid={sid}"
+        f"channelIds={INA70_PLUTO_ID}&"
+        f"clientRegion=FR&clientTimezone=Europe%2FParis&"
+        f"lang=fr&sid={sid}"
     )
     
     req_headers = dict(headers)
@@ -70,53 +85,42 @@ def fetch_timelines_v3(start_dt, stop_dt, headers, session_token, sid):
     try:
         req = urllib.request.Request(url, headers=req_headers)
         with urllib.request.urlopen(req, timeout=12) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-            return data.get('timelines', []), data.get('featuredImage', {}).get('path') or data.get('logo', {}).get('path')
+            channels = json.loads(resp.read().decode('utf-8'))
+            if isinstance(channels, dict):
+                channels = channels.get('channels', [channels])
+            for ch in channels:
+                ch_id = str(ch.get('_id') or ch.get('id') or '')
+                ch_name = str(ch.get('name', '')).upper()
+                if ch_id == INA70_PLUTO_ID or ("INA" in ch_name and "INAZUMA" not in ch_name):
+                    return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
     except Exception as e:
-        # Fallback sur l'endpoint v2 ciblé avec entêtes IP simulées si v3 échoue
-        fallback_url = (
-            f"https://api.pluto.tv/v2/channels?"
-            f"start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&"
-            f"clientRegion=FR&clientTimezone=Europe%2FParis&sid={sid}"
-        )
-        try:
-            req = urllib.request.Request(fallback_url, headers=req_headers)
-            with urllib.request.urlopen(req, timeout=12) as resp:
-                channels = json.loads(resp.read().decode('utf-8'))
-                if isinstance(channels, list) and len(channels) > 0:
-                    return channels[0].get('timelines', []), channels[0].get('logo', {}).get('path')
-        except Exception:
-            pass
-        print(f"Erreur sur le créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
+        print(f"Erreur créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
     return [], None
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    # Forçage des en-têtes géographiques et de langue
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*',
+        'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
         'X-Accept-Language': 'fr-FR',
-        'X-Forwarded-For': '185.24.184.1',  # IP française pour leurrer la géolocalisation
-        'CF-IPCountry': 'FR',
         'Origin': 'https://pluto.tv',
         'Referer': 'https://pluto.tv/fr/live-tv/'
     }
 
-    session_token, sid = get_pluto_session_v3(headers)
+    session_token, sid = get_pluto_french_session(headers)
     now = datetime.now(timezone.utc)
     all_programmes = {}
     logo_url = None
 
-    # Boucle sur 12 tranches de 4 heures (48 heures au total)
+    # Extraction sur 48 heures (12 tranches de 4h)
     for i in range(12):
         start_dt = now + timedelta(hours=i * 4)
         stop_dt = start_dt + timedelta(hours=4)
         print(f"Tranche {i+1}/12 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
         
-        timelines, icon = fetch_timelines_v3(start_dt, stop_dt, headers, session_token, sid)
+        timelines, icon = fetch_chunk(start_dt, stop_dt, headers, session_token, sid)
         if icon and not logo_url:
             logo_url = icon
             
@@ -173,10 +177,9 @@ def main():
         category = ET.SubElement(prog, 'category', lang="fr")
         category.text = str(item.get('category') or "Archives")
 
-        # Extraction visuel
-        tile = item.get('tile') or episode_info.get('poster') or episode_info.get('thumbnail')
-        if isinstance(tile, dict) and tile.get('path'):
-            ET.SubElement(prog, 'icon', src=tile['path'])
+        img_url = extract_image_url(item, episode_info)
+        if img_url:
+            ET.SubElement(prog, 'icon', src=img_url)
 
         count += 1
 
