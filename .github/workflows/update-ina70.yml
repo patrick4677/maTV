@@ -1,71 +1,29 @@
-import json
-from datetime import datetime
-import xml.etree.ElementTree as ET
-from xml.dom import minidom
-import urllib.request
-import os
+name: Mise a jour automatique EPG INA 70
 
-# Configuration
-CHANNEL_ID = "ina70.fr"
-PLUTO_CHANNEL_ID = "651fe0613099fc00084bd30e"
-API_URL = f"https://api.pluto.tv/v2/channels/{PLUTO_CHANNEL_ID}/guide"
-OUTPUT_FILE = "coulisses/ina70.xml"
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
 
-def format_xmltv_date(date_str):
-    dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
-    return dt.strftime("%Y%m%d%H%M%S +0000")
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-def main():
-    # 1. S'assurer que le dossier de destination existe
-    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    steps:
+      - name: Recuperer le code du depot
+        uses: actions/checkout@v4
 
-    # 2. Récupération des données API
-    req = urllib.request.Request(
-        API_URL, 
-        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    )
-    with urllib.request.urlopen(req) as response:
-        epg_data = json.loads(response.read().decode())
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-    # 3. Création du XMLTV
-    tv = ET.Element('tv', generator_info_name="INA70-EPG-Generator")
+      - name: Executer le script de generation
+        run: python generate_ina70.py
 
-    channel = ET.SubElement(tv, 'channel', id=CHANNEL_ID)
-    display_name = ET.SubElement(channel, 'display-name', lang="fr")
-    display_name.text = "INA 70"
-    ET.SubElement(channel, 'icon', src="https://images.pluto.tv/series/651fe0613099fc00084bd30e/featuredImage.jpg")
-
-    for item in epg_data:
-        prog = ET.SubElement(tv, 'programme', {
-            'start': format_xmltv_date(item['start']),
-            'stop': format_xmltv_date(item['end']),
-            'channel': CHANNEL_ID
-        })
-
-        title = ET.SubElement(prog, 'title', lang="fr")
-        title.text = item.get('title', 'Programme INA 70')
-
-        episode_info = item.get('episode')
-        if episode_info and episode_info.get('name'):
-            sub_title = ET.SubElement(prog, 'sub-title', lang="fr")
-            sub_title.text = episode_info['name']
-
-        desc = ET.SubElement(prog, 'desc', lang="fr")
-        desc.text = item.get('description') or (episode_info.get('description') if episode_info else '') or "Archives INA"
-
-        category = ET.SubElement(prog, 'category', lang="fr")
-        category.text = item.get('category', 'Archives')
-
-        tile = item.get('tile', {}).get('path') or (episode_info.get('series', {}).get('tile', {}).get('path') if episode_info else None)
-        if tile:
-            ET.SubElement(prog, 'icon', src=tile)
-
-    # 4. Écriture dans le fichier
-    xml_str = minidom.parseString(ET.tostring(tv)).toprettyxml(indent="  ")
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write(xml_str)
-
-    print(f"OK : Fichier {OUTPUT_FILE} généré ({len(epg_data)} programmes).")
-
-if __name__ == "__main__":
-    main()
+      - name: Commit et Push des modifications
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add coulisses/ina70.xml
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update INA 70 EPG" && git push)
