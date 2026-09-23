@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+import uuid
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
@@ -50,15 +51,32 @@ def extract_image_url(item, episode_info):
         return series_info['tile']['path']
     return None
 
-def fetch_chunk(start_dt, stop_dt, headers):
+def get_pluto_session(headers):
+    """Génère un identifiant de session (sid) et un jeton valide."""
+    device_id = str(uuid.uuid4())
+    url = f"https://api.pluto.tv/v2/config?appName=web&appVersion=7.9.0-0402ae52&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientModelNumber=1.0.0"
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            return data.get("sessionToken"), data.get("sessionSessionId", device_id)
+    except Exception as e:
+        print(f"Erreur d'initialisation de session : {e}", flush=True)
+        return None, device_id
+
+def fetch_chunk(start_dt, stop_dt, headers, session_token, sid):
     start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     
-    # Endpoint public v2/channels sans besoin de token Bearer
-    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR"
+    # Construction de l'URL avec session ID obligatoire
+    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR&sid={sid}"
     
+    req_headers = dict(headers)
+    if session_token:
+        req_headers['Authorization'] = f"Bearer {session_token}"
+
     try:
-        req = urllib.request.Request(url, headers=headers)
+        req = urllib.request.Request(url, headers=req_headers)
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             channels = data if isinstance(data, list) else data.get('channels', [data])
@@ -67,7 +85,7 @@ def fetch_chunk(start_dt, stop_dt, headers):
                 if ch_id == INA70_PLUTO_ID or "INA" in str(ch.get('name', '')).upper():
                     return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
     except Exception as e:
-        print(f"Créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
+        print(f"Erreur créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
     return [], None
 
 def main():
@@ -77,21 +95,24 @@ def main():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
-        'X-Forwarded-For': '185.24.184.1',
-        'CF-IPCountry': 'FR'
+        'Origin': 'https://pluto.tv',
+        'Referer': 'https://pluto.tv/'
     }
+
+    print("Initialisation de la session Pluto TV...", flush=True)
+    session_token, sid = get_pluto_session(headers)
 
     now = datetime.now(timezone.utc)
     all_programmes = {}
     logo_url = None
 
-    # Requêtes par tranches de 12 heures sur 48h
+    # Extraction par tranches de 12 heures sur 48h
     for i in range(4):
         start_dt = now + timedelta(hours=i * 12)
         stop_dt = start_dt + timedelta(hours=12)
         print(f"Récupération tranche {i+1}/4 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
         
-        timelines, icon = fetch_chunk(start_dt, stop_dt, headers)
+        timelines, icon = fetch_chunk(start_dt, stop_dt, headers, session_token, sid)
         if icon and not logo_url:
             logo_url = icon
             
