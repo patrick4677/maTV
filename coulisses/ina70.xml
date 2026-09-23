@@ -2,104 +2,97 @@
 <tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
     <display-name lang="fr">INA 70</display-name>
-    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260923230000 +0200" stop="20260924010000 +0200" channel="ina70.fr">
-    <title lang="fr">Domino</title>
-    <sub-title lang="fr">Domino</sub-title>
-    <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
+  <programme start="20260923205900 +0200" stop="20260923233400 +0200" channel="ina70.fr">
+    <title lang="fr">Au théâtre ce soir</title>
+    <sub-title lang="fr">Doris</sub-title>
+    <desc lang="fr">Doris, une inquiétante et charmante jeune fille, ne peut s'empêcher de mentir, au point de douter de sa sincérité. Amoureuse, elle va tout faire pour parvenir à ses fins. Cependant, tous ces mensonges vont la mener à la catastrophe.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6945fde8fcbc144bb6925ead/poster_1766194665261.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924010000 +0200" stop="20260924030000 +0200" channel="ina70.fr">
-    <title lang="fr">El gran asalto</title>
-    <sub-title lang="fr">El gran asalto</sub-title>
-    <desc lang="fr">En una patrulla, un policía veterano y su compañero quedan atrapados con un pasajero en un enfrentamiento con exmercenarios que roban un banco.</desc>
+  <programme start="20260923233400 +0200" stop="20260924010500 +0200" channel="ina70.fr">
+    <title lang="fr">La petite valise</title>
+    <sub-title lang="fr">La petite valise</sub-title>
+    <desc lang="fr">Un jeune clerc de notaire de province connaît quelques soucis d'argent. Un jour, il découvre dans le journal que son billet de loterie a remporté le gros lot. Valise à la main, il part récupérer son gain sans se douter qu'une erreur a été commise.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/69a8856c6d7de5ca3647cc80/poster_1772652423758.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6a9e06b9b60195e27e3a33c3/poster_1788741310084.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924030000 +0200" stop="20260924051500 +0200" channel="ina70.fr">
-    <title lang="fr">El mensajero</title>
-    <sub-title lang="fr">El mensajero</sub-title>
-    <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
+  <programme start="20260924010500 +0200" stop="20260924015900 +0200" channel="ina70.fr">
+    <title lang="fr">La femme en blanc</title>
+    <sub-title lang="fr">2ème épisode</sub-title>
+    <desc lang="fr">Walter Hartright rencontre son élève Laura Fairlie qui ressemble à la mystérieuse femme en blanc. Il découvre la vie à Limmeridge House. Des sentiments naissent entre le jeune professeur et Laura pourtant fiancée à un autre.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6aa34d113830afefd5a1b76d/poster_1789086994491.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924051500 +0200" stop="20260924071500 +0200" channel="ina70.fr">
-    <title lang="fr">Yo, el halcón</title>
-    <sub-title lang="fr">Yo, el halcón</sub-title>
-    <desc lang="fr">Un título de campeón, un gran premio en metálico y el amor de su hijo: el premio más grande de todos, corren peligro cuando Hawk se enfrenta a su mayor enemigo por todo lo que siempre ha querido.</desc>
+  <programme start="20260924015900 +0200" stop="20260924025800 +0200" channel="ina70.fr">
+    <title lang="fr">Aujourd'hui Madame</title>
+    <sub-title lang="fr">Le jardin d'Othilie</sub-title>
+    <desc lang="fr">Partons à la rencontre de l'univers d'Othilie Bailly, botaniste auteure du livre Le jardinier du dimanche. Depuis son jardin près de Provins, elle donne des conseils pratiques pour concevoir, planter et entretenir un jardin.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/624758edfc8de900130f9899/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/683594e5afe56ba72e2d2048/poster_1748341992149.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924071500 +0200" stop="20260924091500 +0200" channel="ina70.fr">
-    <title lang="fr">Domino</title>
-    <sub-title lang="fr">Domino</sub-title>
-    <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
+  <programme start="20260924025800 +0200" stop="20260924050800 +0200" channel="ina70.fr">
+    <title lang="fr">Au théâtre ce soir</title>
+    <sub-title lang="fr">Deux fois deux font cinq</sub-title>
+    <desc lang="fr">Philippe Baron, un homme instable, trompe son épouse avec une autre femme. Ne pouvant choisir entre elles, il demande conseil à un ami. Celui-ci, croyant lui venir en aide, propose une solution qui, finalement, ne satisfera personne.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6aa34d143830afefd5a1d551/poster_1789086996786.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924091500 +0200" stop="20260924110000 +0200" channel="ina70.fr">
-    <title lang="fr">Transpecos (ESP)</title>
-    <sub-title lang="fr">Transpecos (ESP)</sub-title>
-    <desc lang="fr">Para tres agentes de la Guardia Fronteriza de los EE. UU., el contenido de un auto revela un oscuro secreto en el interior de su unidad que podría costarle toda su vida.</desc>
+  <programme start="20260924050800 +0200" stop="20260924054700 +0200" channel="ina70.fr">
+    <title lang="fr">Des chiffres et des lettres</title>
+    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
+    <desc lang="fr">Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/612d078986e1e0001672cf69/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6aa34d143830afefd5a1d58b/poster_1789086997487.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924110000 +0200" stop="20260924123000 +0200" channel="ina70.fr">
-    <title lang="fr">La suburban dorada</title>
-    <sub-title lang="fr">La suburban dorada</sub-title>
-    <desc lang="fr">Un policía judicial es acusado de estar relacionado con el narcotráfico sólo por ayudar a su primo. Las circunstancias lo convierten en un fugitivo de la ley y por recuperar a su hijo tiene que involucrase con el narco.</desc>
+  <programme start="20260924054700 +0200" stop="20260924061200 +0200" channel="ina70.fr">
+    <title lang="fr">Des chiffres et des lettres</title>
+    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
+    <desc lang="fr">Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/60120aa6b2c9b7001a3ecb1c/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6827d8f903a2ab14da3b89f6/poster_1747441917388.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924123000 +0200" stop="20260924141500 +0200" channel="ina70.fr">
-    <title lang="fr">Transpecos (ESP)</title>
-    <sub-title lang="fr">Transpecos (ESP)</sub-title>
-    <desc lang="fr">Para tres agentes de la Guardia Fronteriza de los EE. UU., el contenido de un auto revela un oscuro secreto en el interior de su unidad que podría costarle toda su vida.</desc>
+  <programme start="20260924061200 +0200" stop="20260924063700 +0200" channel="ina70.fr">
+    <title lang="fr">Des chiffres et des lettres</title>
+    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
+    <desc lang="fr">Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/612d078986e1e0001672cf69/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6827d8f903a2ab14da3b89f6/poster_1747441917388.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924141500 +0200" stop="20260924161500 +0200" channel="ina70.fr">
-    <title lang="fr">Actos de venganza</title>
-    <sub-title lang="fr">Actos de venganza</sub-title>
-    <desc lang="fr">Un abogado de hablar rápido (Antonio Banderas) transforma su cuerpo y toma un voto de silencio, que no se romperá hasta que descubra quién mató a su esposa e hija y tenga su venganza.</desc>
+  <programme start="20260924063700 +0200" stop="20260924073000 +0200" channel="ina70.fr">
+    <title lang="fr">Aujourd'hui Madame</title>
+    <sub-title lang="fr">Qu'en pensez-vous ?</sub-title>
+    <desc lang="fr">Trois téléspectatrices donnent leurs avis sur le paiement des chèques bancaires, les carnets de notes scolaires et la séparation du couple princier d'Angleterre.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/66d6123a6ec6ad0013613439/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d5ca/poster_1789086998457.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924161500 +0200" stop="20260924191500 +0200" channel="ina70.fr">
-    <title lang="fr">13 horas: los soldados secretos de Bengasi</title>
-    <sub-title lang="fr">13 horas: los soldados secretos de Bengasi</sub-title>
-    <desc lang="fr">Del director Michael Bay, 13 horas es la historia de un grupo élite de seis exmilitares asignados para proteger a la CIA, que lucharon cuando los terroristas atacaron un complejo diplomático estadounidense el 11 de septiembre de 2012.</desc>
+  <programme start="20260924073000 +0200" stop="20260924084600 +0200" channel="ina70.fr">
+    <title lang="fr">L'école des fans</title>
+    <sub-title lang="fr">Mort Shuman</sub-title>
+    <desc lang="fr">Mort Shuman écoute avec beaucoup d'attention les petits chanteurs en herbe qui reprennent ses chansons : "Shami-Sha", "Petite pomme de Chinois", etc. Puis, il chante "Un été de porcelaine" à leur suite.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/601d9ca218a184001aff6d2d/poster_1778000762188.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d5f1/poster_1789087001372.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924191500 +0200" stop="20260924214500 +0200" channel="ina70.fr">
-    <title lang="fr">Hostage</title>
-    <sub-title lang="fr">Bajo amenaza</sub-title>
-    <desc lang="fr">Un negociador de la policía fracasado que se convierte en un oficial de una pequeña ciudad debe salvar a una familia secuestrada, lo que lo conduce a una situación muy peligrosa.</desc>
+  <programme start="20260924084600 +0200" stop="20260924092100 +0200" channel="ina70.fr">
+    <title lang="fr">La femme en blanc</title>
+    <sub-title lang="fr">10ème épisode</sub-title>
+    <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/65f8ce7f4927ad00148fef72/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924214500 +0200" stop="20260925000000 +0200" channel="ina70.fr">
-    <title lang="fr">Equilibrium (ESP)</title>
-    <sub-title lang="fr">Equilibrium (ESP)</sub-title>
-    <desc lang="fr">En el futuro, la humanidad ha prohibido cosas que producen emociones como la literatura, la música y el arte, para mantenerlo, un grupo especial de policías eliminará a los transgresores. Christian Bale protagoniza esta increíble película de acción.</desc>
+  <programme start="20260924092100 +0200" stop="20260924093900 +0200" channel="ina70.fr">
+    <title lang="fr">François Gaillard ou la vie des autres</title>
+    <sub-title lang="fr">René : 4e épisode</sub-title>
+    <desc lang="fr">René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/64a5bbdde1356600138b9024/poster_1789055642567.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d627/poster_1789086999647.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260925000000 +0200" stop="20260925110000 +0200" channel="ina70.fr">
-    <title lang="fr">Cine adrenalina</title>
-    <sub-title lang="fr">Cine adrenalina</sub-title>
-    <desc lang="fr">no info available</desc>
+  <programme start="20260924093900 +0200" stop="20260924111800 +0200" channel="ina70.fr">
+    <title lang="fr">Apostrophes</title>
+    <sub-title lang="fr">Apostrophes</sub-title>
+    <desc lang="fr">À l'invitation de Bernard Pivot, qui les reçoit sur son plateau, plusieurs personnalités, écrivains, artistes, historiens, linguistes, penseurs, échangent, avec délectation, autour de leurs idées et de leurs oeuvres.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260925110000 +0200" stop="20260925230000 +0200" channel="ina70.fr">
-    <title lang="fr">Cine adrenalina</title>
-    <sub-title lang="fr">Cine adrenalina</sub-title>
-    <desc lang="fr">no info available</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/episodes/6a9cb4e420b6387cd0664a9d/poster_1788654823036.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
