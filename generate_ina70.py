@@ -50,28 +50,16 @@ def extract_image_url(item, episode_info):
         return series_info['tile']['path']
     return None
 
-def get_session_token(headers):
-    """Génère un token JWT valide auprès du service d'auth Pluto TV."""
-    try:
-        url = "https://api.pluto.tv/v1/auth/local"
-        req = urllib.request.Request(url, headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=5) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-            return data.get("sessionToken")
-    except Exception as e:
-        print(f"Auth contournée ({e})")
-        return None
-
-def fetch_time_slice(start_dt, stop_dt, headers):
+def fetch_chunk(start_dt, stop_dt, headers):
     start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     
-    url = f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR"
+    # Endpoint public v2/channels sans besoin de token Bearer
+    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR"
     
     try:
         req = urllib.request.Request(url, headers=headers)
-        # Timeout très court (5s) pour éviter que GitHub Actions ne gèle
-        with urllib.request.urlopen(req, timeout=5) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             channels = data if isinstance(data, list) else data.get('channels', [data])
             for ch in channels:
@@ -79,35 +67,31 @@ def fetch_time_slice(start_dt, stop_dt, headers):
                 if ch_id == INA70_PLUTO_ID or "INA" in str(ch.get('name', '')).upper():
                     return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
     except Exception as e:
-        print(f"Tranche {start_dt.strftime('%d/%m %H:%M')} ignorée ({e})")
+        print(f"Créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
     return [], None
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
         'X-Forwarded-For': '185.24.184.1',
         'CF-IPCountry': 'FR'
     }
 
-    token = get_session_token(headers)
-    if token:
-        headers['Authorization'] = f"Bearer {token}"
-
     now = datetime.now(timezone.utc)
     all_programmes = {}
     logo_url = None
 
-    # Réduction à 6 tranches de 8 heures (48 heures au total)
-    for i in range(6):
-        start_dt = now + timedelta(hours=i * 8)
-        stop_dt = start_dt + timedelta(hours=8)
-        print(f"Tranche {i+1}/6 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
+    # Requêtes par tranches de 12 heures sur 48h
+    for i in range(4):
+        start_dt = now + timedelta(hours=i * 12)
+        stop_dt = start_dt + timedelta(hours=12)
+        print(f"Récupération tranche {i+1}/4 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
         
-        timelines, icon = fetch_time_slice(start_dt, stop_dt, headers)
+        timelines, icon = fetch_chunk(start_dt, stop_dt, headers)
         if icon and not logo_url:
             logo_url = icon
             
@@ -116,7 +100,7 @@ def main():
             all_programmes[prog_key] = item
 
     if not all_programmes:
-        print("Erreur : Aucun programme récupéré.")
+        print("Erreur : Aucun programme récupéré.", flush=True)
         sys.exit(1)
 
     tv = ET.Element('tv', {
