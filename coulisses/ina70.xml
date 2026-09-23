@@ -2,5 +2,216 @@
 <tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
     <display-name lang="fr">INA 70</display-name>
+    <icon src="https://images.pluto.tv/channels/611e75226b7f420007c3f319/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
+  <programme start="20260923160000 +0000" stop="20260923165500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven</title>
+    <sub-title lang="fr">Inazuma Eleven</sub-title>
+    <desc lang="fr">no info available</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/channels/611e75226b7f420007c3f319/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+  </programme>
+  <programme start="20260923165500 +0000" stop="20260923172100 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Le réveil du souvenir. Toute la vérité sur Camellia !</title>
+    <sub-title lang="fr">Le réveil du souvenir. Toute la vérité sur Camellia !</sub-title>
+    <desc lang="fr">Camellia est aux petits soins pour les joueurs de l'équipe. Mais petit à petit, ses souvenirs refont surface. S'évanouissant, elle se retrouve à l'hôpital.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30c4/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923172100 +0000" stop="20260923174700 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Le match décisif approche ! La décision de Paolo !</title>
+    <sub-title lang="fr">Le match décisif approche ! La décision de Paolo !</sub-title>
+    <desc lang="fr">Inazuma Japon se prépare à affronter l'équipe Italienne Orphée. Ils doivent gagner afin de conserver leur deuxième position au classement et être qualifiés pour la phase finale.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d309a/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923174700 +0000" stop="20260923181300 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La plus puissante des supertactiques ! La contre-attaque catenaccio !</title>
+    <sub-title lang="fr">La plus puissante des supertactiques ! La contre-attaque catenaccio !</sub-title>
+    <desc lang="fr">Suite du match entre Inazuma Japon et les Italiens d'Orphée. Les joueurs d'Orphée sont toujours aussi désorganisés car ils ne font pas confiance à leur capitaine Paolo.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3070/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923181300 +0000" stop="20260923183900 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Les esprits s'échauffent ! Mark contre Paolo !</title>
+    <sub-title lang="fr">Les esprits s'échauffent ! Mark contre Paolo !</sub-title>
+    <desc lang="fr">La première mi-temps entre Orphée et Inazuma Japon continue avec à la clé, la qualification pour la phase finale du tournoi.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30a4/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923183900 +0000" stop="20260923190500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: L'ultime défi de Ray Dark !</title>
+    <sub-title lang="fr">L'ultime défi de Ray Dark !</sub-title>
+    <desc lang="fr">Seconde mi-temps du match opposant Orphée à Inazuma Japon. Hide Nakata, le véritable capitaine de l'équipe italienne fait son entrée sur le terrain. Il permet à son équipe de mener 3 à 2 grâce à sa supertechnique.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30b5/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923190500 +0000" stop="20260923193100 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Le dernier cahier du grand-père</title>
+    <sub-title lang="fr">Le dernier cahier du grand-père</sub-title>
+    <desc lang="fr">Grâce à la défaite des USA contre l'Argentine, le Japon est qualifié pour la phase finale du tournoi.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30a9/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923193100 +0000" stop="20260923195700 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La légende de Liocott</title>
+    <sub-title lang="fr">La légende de Liocott</sub-title>
+    <desc lang="fr">Nelly raconte la légende de Liocott aux garçons. Dans l'antiquité, les habitants de Démonica et de Célestia se sont affrontés lors d'un match de foot pour le pouvoir. Les joueurs de Célestia ont gagné et le roi des Démons a été enfermé.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d308b/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923195700 +0000" stop="20260923202300 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La Sky Team</title>
+    <sub-title lang="fr">La Sky Team</sub-title>
+    <desc lang="fr">Mark et ses amis sont en route pour délivrer Sue des griffes de la Sky Team. Ces derniers veulent l'obliger à épouser le roi des Démons afin qu'il replonge dans un profond sommeil. Le destin de Sue va se jouer lors d'un match de football.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3062/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923202300 +0000" stop="20260923204900 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La Dark Team</title>
+    <sub-title lang="fr">La Dark Team</sub-title>
+    <desc lang="fr">L'équipe blanche de Jude affronte la Dark Team lors d'un match de foot pour sauver Célia du sacrifice auquel elle est promise afin de ressusciter le roi des Démons.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4f766f2a00142d30eb/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923204900 +0000" stop="20260923211500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La Dark Sky : le réveil du Roi des Démons !</title>
+    <sub-title lang="fr">La Dark Sky : le réveil du Roi des Démons !</sub-title>
+    <desc lang="fr">Mark et ses amis doivent affronter la Dark Sky, une équipe composée des joueurs de la Sky Team et de la Dark Team. Mark trouve Sael changé, et pour cause, il est sous l'emprise du mal.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d304e/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923211500 +0000" stop="20260923214100 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La face cachée des Rois du Football  !</title>
+    <sub-title lang="fr">La face cachée des Rois du Football  !</sub-title>
+    <desc lang="fr">En demi-finale, Inazuma Japon aura pour adversaire l'équipe brésilienne, les Rois du Football. Mark est impatient de les affronter. Mais voilà que Mac Robingo, le capitaine brésilien, vient le voir pour lui demander de les laisser gagner.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30ae/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923214100 +0000" stop="20260923220700 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La conspiration de Zoolan Rice</title>
+    <sub-title lang="fr">La conspiration de Zoolan Rice</sub-title>
+    <desc lang="fr">Seymour explique aux enfants que Zoolan Rice a organisé le tournoi FFI pour déclencher une guerre entre les pays participants.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30ba/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923220700 +0000" stop="20260923223300 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Inazuma Japon contre les Rois du Football</title>
+    <sub-title lang="fr">Inazuma Japon contre les Rois du Football</sub-title>
+    <desc lang="fr">La première demi-finale du tournoi est lancée. Elle oppose le Brésil au Japon. Robingo a un comportement très étrange. Il joue perso, jusqu'à tacler ses propres coéquipiers. Le joueur brésilien marque un but juste avant la fin de la première période.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30c9/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923223300 +0000" stop="20260923225900 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La contre-attaque des Rois du Football</title>
+    <sub-title lang="fr">La contre-attaque des Rois du Football</sub-title>
+    <desc lang="fr">Zoolan Rice est arrêté par la police mais les Rois du Football continuent à pratiquer un jeu timoré. Ils ont peur pour leurs familles, Rice étant le propriétaire des entreprises dans lesquelles elles travaillent.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3080/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923225900 +0000" stop="20260923232500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: L'extraordinaire équipe des Little Gigantes</title>
+    <sub-title lang="fr">L'extraordinaire équipe des Little Gigantes</sub-title>
+    <desc lang="fr">Mark et son équipe arrivent à la fin de la deuxième demi-finale du tournoi et constatent que les Little Giants ont écrasé l'équipe de Paolo. Mark apprend que Zoolan Rice s'est échappé et que Nelly travaille maintenant pour les Little Giants.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d30bf/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923232500 +0000" stop="20260923235100 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Les joueurs de dernière génération !</title>
+    <sub-title lang="fr">Les joueurs de dernière génération !</sub-title>
+    <desc lang="fr">Le quartier de Costail est attaqué ! Toute l'équipe d'Inazuma Japon se rend sur place en compagnie de l'entraîneur de Costail, Mister Arrows. Ils découvrent que l'abominable Zoolan Rice est derrière tout ça.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d309f/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923235100 +0000" stop="20260924001700 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La Redoutable Zoolan Team !</title>
+    <sub-title lang="fr">La Redoutable Zoolan Team !</sub-title>
+    <desc lang="fr">Inazuma Japon lutte de toutes ses forces contre la Zoolan Team mais rien n'y fait. À la mi-temps, le score est de deux à zéro en faveur de l'équipe de Zoolan Rice.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3095/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924001700 +0000" stop="20260924004300 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Le plus fort des adversaires</title>
+    <sub-title lang="fr">Le plus fort des adversaires</sub-title>
+    <desc lang="fr">Mark se retrouve avec son grand-père qui lui explique pourquoi il s'est caché pendant tout ce temps. Il lui apprend aussi que Hector Hélio, gardien de but des Petits Géants, est le meilleur joueur du monde.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3085/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924004300 +0000" stop="20260924010900 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Entraînement spécial avec Paolo</title>
+    <sub-title lang="fr">Entraînement spécial avec Paolo</sub-title>
+    <desc lang="fr">Orphée éliminée en demi-finale par les Little Gigantes, Gigi propose de préparer Inazuma Japon à leur futur adversaire. Un match d'entraînement s'engage avec une équipe italienne qui joue à la façon de l'équipe de Costail.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4f766f2a00142d30f0/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924010900 +0000" stop="20260924013500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Onze règles pour gagner le mondial</title>
+    <sub-title lang="fr">Onze règles pour gagner le mondial</sub-title>
+    <desc lang="fr">Lors d'une vidéoconférence surprise, les joueurs du club de foot de Raimon montrent leur soutien à Inazuma Japon.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3038/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924013500 +0000" stop="20260924020000 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Le dernier duel d'Inazuma Japon</title>
+    <sub-title lang="fr">Le dernier duel d'Inazuma Japon</sub-title>
+    <desc lang="fr">Derniers échauffements avant la finale. Derniers mots échangés. Juste avant le match, sur le terrain, les Little Gigantes se débarrassent de poids de vingt kilos qu'ils portaient autour de la taille depuis le début du tournoi.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4f766f2a00142d30e1/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924020000 +0000" stop="20260924022500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Duel au sommet contre les Little Gigantes, première partie</title>
+    <sub-title lang="fr">Duel au sommet contre les Little Gigantes, première partie</sub-title>
+    <desc lang="fr">Les Littles Gigantes mènent un but à zéro face à Inazuma Japon. Costail enchaîne les frappes et Mark n'arrive pas à accomplir son Arrêt Céleste. Heureusement, ses coéquipiers sont là en renfort.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4f766f2a00142d30f5/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924022500 +0000" stop="20260924025000 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Duel au sommet contre les Little Gigantes, seconde partie</title>
+    <sub-title lang="fr">Duel au sommet contre les Little Gigantes, seconde partie</sub-title>
+    <desc lang="fr">À la fin de la première mi-temps, le score est de un partout. À la pause, les Little Gigantes procèdent à un changement de taille : Hector se retrouve au poste d'attaquant.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d3067/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924025000 +0000" stop="20260924031500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Enfin le dénouement ! Les champions du monde !</title>
+    <sub-title lang="fr">Enfin le dénouement ! Les champions du monde !</sub-title>
+    <desc lang="fr">Little Gigantes. Ces derniers accaparent la balle et les frappes au but fusent. Mark, aidé de ses coéquipiers, s'en sort tant bien que mal. Percy demande alors à ses joueurs de s'amuser.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4e766f2a00142d307a/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924031500 +0000" stop="20260924034000 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: La cérémonie de remise des diplômes</title>
+    <sub-title lang="fr">La cérémonie de remise des diplômes</sub-title>
+    <desc lang="fr">Aujourd'hui, Mark et ses amis vont recevoir leur diplômes. Pour fêter leur dernier jour au Collège Raimon, Nelly a organisé un match en l'honneur des diplômés réunissant tous les anciens joueurs de l'équipe.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d4f766f2a00142d30d6/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924034000 +0000" stop="20260924040500 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven: Le coup d'envoi de notre avenir !</title>
+    <sub-title lang="fr">Le coup d'envoi de notre avenir !</sub-title>
+    <desc lang="fr">C'est le dernier match pour Mark et ses amis avant d'entrer au lycée. Chacun des joueurs sur la pelouse se donne à fond, et c'est l'occasion de voir un florilège de supertechniques.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/61385d7d766f2a00142d3fe9/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924040500 +0000" stop="20260924043100 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven Go: Un vent nouveau !</title>
+    <sub-title lang="fr">Un vent nouveau !</sub-title>
+    <desc lang="fr">Durant sa première matinée à Raimon, Arion est tellement excité qu'il délaisse les modalités d'admission pour aller jeter un œil sur le terrain de football. Mais là, il découvre  que tous les membres de l'équipe se tordent de douleur au.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6482fdce91275e001a4379dd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924043100 +0000" stop="20260924045700 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven Go: Les esprits guerriers !</title>
+    <sub-title lang="fr">Les esprits guerriers !</sub-title>
+    <desc lang="fr">Après qu'Arion ait réussi à prendre le ballon au mystérieux Victor Blade, ce dernier le vise d'un shoot terrible. Mais son ballon est soudainement dévié par un tir de Riccardo Di Rigo…</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/64830091f2a541001b1291fd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924045700 +0000" stop="20260924052300 +0000" channel="ina70.fr">
+    <title lang="fr">Inazuma Eleven Go: Le club de Raimon menacé !</title>
+    <sub-title lang="fr">Le club de Raimon menacé !</sub-title>
+    <desc lang="fr">Il existe une légende dans le monde du football. L’énergie d’un joueur, quand elle est parfaitement maîtrisée, peut prendre une forme visible: “l’esprit guerrier”. La légende devient réalité lorsque Victor Blade fait apparaître son propre esprit guerrier.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/64830099f2a541001b1292ee/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
 </tv>
