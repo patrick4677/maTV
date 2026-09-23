@@ -21,25 +21,13 @@ def format_xmltv_date(date_str):
         print(f"Erreur date ({date_str}): {e}")
         return ""
 
-def get_french_session():
-    """Génère une session Pluto TV explicitement configurée pour la France."""
+def get_pluto_session():
+    """Génère une session valide Pluto TV."""
     device_id = str(uuid.uuid4())
     sid = str(uuid.uuid4())
     
-    # URL d'initialisation de session Pluto TV avec paramètres régionaux FR
-    boot_url = (
-        "https://boot.pluto.tv/v4/start"
-        "?appName=web"
-        "&appVersion=8.0.0"
-        "&deviceType=web"
-        "&deviceMake=Chrome"
-        "&deviceModel=Web"
-        f"&deviceId={device_id}"
-        f"&sid={sid}"
-        "&clientRegion=FR"
-        "&country=FR"
-        "&locale=fr-FR"
-    )
+    # URL boot strictement valide sans paramètres superflus
+    boot_url = f"https://boot.pluto.tv/v4/start?appName=web&appVersion=8.0.0&deviceType=web&deviceId={device_id}&sid={sid}"
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -52,10 +40,9 @@ def get_french_session():
         req = urllib.request.Request(boot_url, headers=headers)
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read().decode('utf-8'))
-            token = data.get('sessionToken')
-            return token
+            return data.get('sessionToken')
     except Exception as e:
-        print(f"Erreur lors de la création de session FR : {e}")
+        print(f"Erreur lors de la création de session : {e}")
         return None
 
 def extract_image_url(item, episode_info):
@@ -77,17 +64,17 @@ def extract_image_url(item, episode_info):
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    token = get_french_session()
+    token = get_pluto_session()
     if not token:
-        print("Impossible d'obtenir une session française Pluto TV.")
+        print("Impossible d'obtenir une session Pluto TV.")
         sys.exit(1)
 
     now = datetime.now(timezone.utc)
     start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # Utilisation du token de session FR avec filtrage explicite par mot-clé dans toute la grille FR
-    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}"
+    # Forçage de la région FR dans l'URL d'extraction des chaînes
+    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&clientRegion=FR&country=FR&locale=fr-FR"
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -107,16 +94,24 @@ def main():
 
     ina_channel = None
     if isinstance(channels_data, list):
-        # 1. Recherche exacte "INA 70" ou "INA" dans le catalogue FR
         for ch in channels_data:
             name = ch.get('name', '').upper()
-            if "INA 70" in name or "INA - 70" in name or "INA" in name:
+            if "INA 70" in name or "INA - 70" in name or "INA 70S" in name:
                 ina_channel = ch
-                print(f"Chaîne identifiée : {ch.get('name')} (ID: {ch.get('_id')})")
+                print(f"Chaîne trouvée : {ch.get('name')} (ID: {ch.get('_id')})")
+                break
+
+    # Deuxième passage plus large si nom spécifique non trouvé
+    if not ina_channel and isinstance(channels_data, list):
+        for ch in channels_data:
+            name = ch.get('name', '').upper()
+            if "INA" in name:
+                ina_channel = ch
+                print(f"Chaîne trouvée (recherche souple) : {ch.get('name')} (ID: {ch.get('_id')})")
                 break
 
     if not ina_channel:
-        print("Erreur : La chaîne INA est introuvable dans le catalogue retourné par l'API.")
+        print("Erreur : La chaîne INA est introuvable dans le catalogue d'API.")
         sys.exit(1)
 
     epg_data = ina_channel.get('timelines', [])
