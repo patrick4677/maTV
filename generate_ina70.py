@@ -8,7 +8,8 @@ import urllib.request
 import urllib.parse
 
 CHANNEL_ID = "ina70.fr"
-PLUTO_CHANNEL_ID = "651fe0613099fc00084bd30e"
+# ID correct de la chaîne INA 70 France sur Pluto TV
+PLUTO_CHANNEL_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
 def format_xmltv_date(date_str):
@@ -37,44 +38,21 @@ def extract_image_url(item, episode_info):
         return item['featuredImage']['path']
     return None
 
-def get_fr_session_token():
-    """Génère un token de session authentifié en France pour forcer les réponses en français."""
-    url = "https://boot.pluto.tv/v4/start?appName=web&appVersion=7.0.0-fr&deviceMake=Chrome&deviceModel=Chrome&deviceType=web&clientModelNumber=1.0.0"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept': 'application/json',
-        'X-Forwarded-For': '185.24.184.1' # IP arbitraire localisée en France
-    }
-    try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-            return data.get('sessionToken')
-    except Exception as e:
-        print(f"Avertissement : impossible d'obtenir le sessionToken FR ({e})")
-        return None
-
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-
-    token = get_fr_session_token()
 
     now = datetime.now(timezone.utc)
     start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # Construction de l'URL forcée en français
+    # API directe de Pluto TV avec la chaîne FR
     api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={PLUTO_CHANNEL_ID}&lang=fr&clientRegion=FR"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
         'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'fr-FR,fr;q=0.9',
-        'X-Forwarded-For': '185.24.184.1' # Simulation de provenance IP française
+        'Accept-Language': 'fr-FR,fr;q=0.9'
     }
-    
-    if token:
-        headers['Authorization'] = f"Bearer {token}"
 
     try:
         req = urllib.request.Request(api_url, headers=headers)
@@ -85,14 +63,11 @@ def main():
         sys.exit(1)
 
     ina_channel = None
-    if isinstance(channels_data, list):
-        for ch in channels_data:
-            if ch.get('_id') == PLUTO_CHANNEL_ID or "INA" in ch.get('name', '').upper():
-                ina_channel = ch
-                break
+    if isinstance(channels_data, list) and len(channels_data) > 0:
+        ina_channel = channels_data[0]
 
     if not ina_channel:
-        print("Erreur : Chaîne INA 70 introuvable.")
+        print("Erreur : Chaîne INA 70 FR introuvable.")
         sys.exit(1)
 
     epg_data = ina_channel.get('timelines', [])
@@ -155,7 +130,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes générés en Français.")
+    print(f"Succès : {count} programmes INA 70 FR générés.")
 
 if __name__ == "__main__":
     main()
