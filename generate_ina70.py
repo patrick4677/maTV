@@ -52,9 +52,8 @@ def extract_image_url(item, episode_info):
     return None
 
 def get_pluto_session(headers):
-    """Obtient un sid et un token valides via /v2/config pour éviter les erreurs 401/409."""
     device_id = str(uuid.uuid4())
-    url = f"https://api.pluto.tv/v2/config?appName=web&appVersion=7.9.0-0402ae52&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientModelNumber=1.0.0"
+    url = f"https://api.pluto.tv/v2/config?appName=web&appVersion=7.9.0-0402ae52&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientModelNumber=1.0.0&clientRegion=FR"
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=10) as resp:
@@ -68,7 +67,14 @@ def fetch_chunk(start_dt, stop_dt, headers, session_token, sid):
     start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     
-    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR&sid={sid}"
+    # Paramètres de localisation explicites pour forcer la France
+    url = (
+        f"https://api.pluto.tv/v2/channels?"
+        f"start={start_str}&stop={stop_str}&"
+        f"channelIds={INA70_PLUTO_ID}&"
+        f"clientRegion=FR&clientTimezone=Europe%2FParis&"
+        f"serverSideProfiles=true&sid={sid}"
+    )
     
     req_headers = dict(headers)
     if session_token:
@@ -96,6 +102,7 @@ def main():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
+        'X-Accept-Language': 'fr-FR',
         'Origin': 'https://pluto.tv',
         'Referer': 'https://pluto.tv/'
     }
@@ -105,7 +112,6 @@ def main():
     all_programmes = {}
     logo_url = None
 
-    # 12 tranches de 4h = 48 heures au total
     for i in range(12):
         start_dt = now + timedelta(hours=i * 4)
         stop_dt = start_dt + timedelta(hours=4)
