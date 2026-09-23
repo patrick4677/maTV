@@ -50,8 +50,8 @@ def extract_image_url(item, episode_info):
         return series_info['tile']['path']
     return None
 
-def get_pluto_token(headers):
-    """Génère un jeton invité anonyme pour autoriser les requêtes API."""
+def get_session_token(headers):
+    """Génère un token JWT valide auprès du service d'auth Pluto TV."""
     try:
         url = "https://api.pluto.tv/v1/auth/local"
         req = urllib.request.Request(url, headers=headers, method="POST")
@@ -59,13 +59,32 @@ def get_pluto_token(headers):
             data = json.loads(resp.read().decode('utf-8'))
             return data.get("sessionToken")
     except Exception as e:
-        print(f"Impossible d'obtenir le jeton invité Pluto : {e}")
+        print(f"Avertissement : impossible de générer le jeton ({e})")
         return None
+
+def fetch_time_slice(start_dt, stop_dt, headers):
+    start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
+    stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
+    
+    url = f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR"
+    
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            channels = data if isinstance(data, list) else data.get('channels', [data])
+            for ch in channels:
+                ch_id = str(ch.get('_id') or ch.get('id') or '')
+                if ch_id == INA70_PLUTO_ID or "INA" in str(ch.get('name', '')).upper():
+                    return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
+    except Exception as e:
+        print(f"Erreur sur la tranche {start_dt.strftime('%d/%m %H:%M')} : {e}")
+    return [], None
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    base_headers = {
+    headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
@@ -73,39 +92,31 @@ def main():
         'CF-IPCountry': 'FR'
     }
 
-    token = get_pluto_token(base_headers)
-    headers = dict(base_headers)
+    # Authentification préalable pour autoriser les requêtes sur service-channels
+    token = get_session_token(headers)
     if token:
         headers['Authorization'] = f"Bearer {token}"
 
     now = datetime.now(timezone.utc)
-    start_str = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-    stop_str = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-
-    # Utilisation de l'API v2 /channels globale sans sous-créneaux stricts pour éviter les 401
-    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&clientRegion=FR"
-
-    print(f"Récupération de la grille Pluto TV...")
-    epg_data = []
+    all_programmes = {}
     logo_url = None
 
-    try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=25) as resp:
-            channels = json.loads(resp.read().decode('utf-8'))
-            for ch in channels:
-                ch_id = str(ch.get('_id') or ch.get('id') or '')
-                ch_name = str(ch.get('name', '')).upper()
+    # Boucle sur 9 tranches de 8 heures (soit 72h au total)
+    for i in range(9):
+        start_dt = now + timedelta(hours=i * 8)
+        stop_dt = start_dt + timedelta(hours=8)
+        print(f"Récupération : {start_dt.strftime('%d/%m à %H:%M')} -> {stop_dt.strftime('%d/%m à %H:%M')}...")
+        
+        timelines, icon = fetch_time_slice(start_dt, stop_dt, headers)
+        if icon and not logo_url:
+            logo_url = icon
+            
+        for item in timelines:
+            # Clé unique pour éviter les doublons aux frontières des tranches
+            prog_key = f"{item.get('start')}_{item.get('title')}"
+            all_programmes[prog_key] = item
 
-                if ch_id == INA70_PLUTO_ID or ("INA" in ch_name and "INAZUMA" not in ch_name):
-                    epg_data = ch.get('timelines', [])
-                    logo_url = ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
-                    print(f"Chaîne trouvée ({ch.get('name')}) - {len(epg_data)} programmes récupérés.")
-                    break
-    except Exception as e:
-        print(f"Erreur lors de la récupération : {e}")
-
-    if not epg_data:
+    if not all_programmes:
         print("Erreur : Aucun programme récupéré.")
         sys.exit(1)
 
@@ -122,7 +133,7 @@ def main():
         ET.SubElement(channel, 'icon', src=logo_url)
 
     count = 0
-    for item in epg_data:
+    for item in all_programmes.values():
         title_text = str(item.get('title', ''))
         if "INAZUMA" in title_text.upper():
             continue
