@@ -18,13 +18,13 @@ def format_xmltv_date(date_str):
         dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
         return dt.strftime("%Y%m%d%H%M%S +0000")
     except Exception as e:
-        print(f"Erreur formatage date ({date_str}): {e}")
+        print(f"Erreur date ({date_str}): {e}")
         return ""
 
-def get_pluto_session_token():
-    """Obtient un token de session anonyme FR auprès de Pluto TV."""
+def get_pluto_jwt():
+    """Récupère un jeton JWT valide via l'API boot de Pluto TV."""
     device_id = str(uuid.uuid4())
-    session_url = f"https://api.pluto.tv/v1/auth/local/anonymous?appName=web&appVersion=8.0.0-assets&clientModelNumber=unknown&serverSide=true&deviceType=web&deviceId={device_id}&sid={device_id}"
+    url = f"https://boot.pluto.tv/v4/start?appName=web&appVersion=8.0.0&deviceType=web&deviceId={device_id}&deviceMake=Chrome&deviceModel=Web&sid={device_id}"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -34,12 +34,12 @@ def get_pluto_session_token():
     }
 
     try:
-        req = urllib.request.Request(session_url, headers=headers, method='GET')
+        req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             return data.get('sessionToken')
     except Exception as e:
-        print(f"Erreur d'authentification Pluto TV : {e}")
+        print(f"Erreur lors de la récupération du jeton JWT : {e}")
         return None
 
 def extract_image_url(item, episode_info):
@@ -61,28 +61,25 @@ def extract_image_url(item, episode_info):
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    token = get_pluto_session_token()
-    if not token:
-        print("Impossible d'obtenir un jeton d'accès pour l'API Pluto TV.")
+    jwt_token = get_pluto_jwt()
+    if not jwt_token:
+        print("Échec d'obtention du token d'accès.")
         sys.exit(1)
 
     now = datetime.now(timezone.utc)
     start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # API des chaînes Pluto TV avec token d'accès
+    # API v2 avec le jeton valide
     api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Authorization': f'Bearer {token}',
-        'Accept': 'application/json',
-        'Accept-Language': 'fr-FR,fr;q=0.9',
-        'Origin': 'https://pluto.tv',
-        'Referer': 'https://pluto.tv/'
+        'Authorization': f'Bearer {jwt_token}',
+        'Accept': 'application/json'
     }
 
-    print("Téléchargement du programme TV...")
+    print("Téléchargement de la grille TV...")
     try:
         req = urllib.request.Request(api_url, headers=headers)
         with urllib.request.urlopen(req, timeout=20) as response:
@@ -97,19 +94,18 @@ def main():
             name = ch.get('name', '').upper()
             if "INA 70" in name or "INA - 70" in name:
                 ina_channel = ch
-                print(f"Chaîne identifiée : {ch.get('name')}")
+                print(f"Chaîne trouvée : {ch.get('name')}")
                 break
 
-    if not ina_channel:
-        # Recherche secondaire si le nom a un autre format
+    if not ina_channel and isinstance(channels_data, list):
         for ch in channels_data:
             if "INA" in ch.get('name', '').upper():
                 ina_channel = ch
-                print(f"Chaîne identifiée (recherche souple) : {ch.get('name')}")
+                print(f"Chaîne trouvée (recherche souple) : {ch.get('name')}")
                 break
 
     if not ina_channel:
-        print("Erreur : Chaîne INA 70 introuvable dans le guide de Pluto TV.")
+        print("Erreur : Chaîne INA introuvable.")
         sys.exit(1)
 
     epg_data = ina_channel.get('timelines', [])
