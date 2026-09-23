@@ -6,9 +6,9 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
 import urllib.parse
+import uuid
 
 CHANNEL_ID = "ina70.fr"
-PLUTO_CHANNEL_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
 def format_xmltv_date(date_str):
@@ -20,6 +20,43 @@ def format_xmltv_date(date_str):
     except Exception as e:
         print(f"Erreur date ({date_str}): {e}")
         return ""
+
+def get_french_session():
+    """Génère une session Pluto TV explicitement configurée pour la France."""
+    device_id = str(uuid.uuid4())
+    sid = str(uuid.uuid4())
+    
+    # URL d'initialisation de session Pluto TV avec paramètres régionaux FR
+    boot_url = (
+        "https://boot.pluto.tv/v4/start"
+        "?appName=web"
+        "&appVersion=8.0.0"
+        "&deviceType=web"
+        "&deviceMake=Chrome"
+        "&deviceModel=Web"
+        f"&deviceId={device_id}"
+        f"&sid={sid}"
+        "&clientRegion=FR"
+        "&country=FR"
+        "&locale=fr-FR"
+    )
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Origin': 'https://pluto.tv',
+        'Referer': 'https://pluto.tv/'
+    }
+
+    try:
+        req = urllib.request.Request(boot_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            token = data.get('sessionToken')
+            return token
+    except Exception as e:
+        print(f"Erreur lors de la création de session FR : {e}")
+        return None
 
 def extract_image_url(item, episode_info):
     if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
@@ -40,65 +77,49 @@ def extract_image_url(item, episode_info):
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
+    token = get_french_session()
+    if not token:
+        print("Impossible d'obtenir une session française Pluto TV.")
+        sys.exit(1)
+
     now = datetime.now(timezone.utc)
     start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # Endpoint d'API Stitch/Guide V2 qui contourne le géoblocage des runners GitHub
-    urls_to_try = [
-        f"https://service-channels.clusters.pluto.tv/v2/guide/channels/{PLUTO_CHANNEL_ID}?start={start_time}&stop={stop_time}",
-        f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={PLUTO_CHANNEL_ID}&clientRegion=FR"
-    ]
+    # Utilisation du token de session FR avec filtrage explicite par mot-clé dans toute la grille FR
+    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}"
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Authorization': f'Bearer {token}',
         'Accept': 'application/json',
-        'Accept-Language': 'fr-FR,fr;q=0.9',
-        'X-Forwarded-For': '185.24.184.1',  # IP française pour forcer le catalogue FR
-        'Origin': 'https://pluto.tv',
-        'Referer': 'https://pluto.tv/'
+        'Accept-Language': 'fr-FR,fr;q=0.9'
     }
 
-    epg_data = []
-    ina_channel = None
-
-    for url in urls_to_try:
-        print(f"Interrogation de l'API : {url}")
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=20) as response:
-                res_data = json.loads(response.read().decode('utf-8'))
-                
-                # Format 1 : Objet unique renvoyé par /v2/guide/channels/<ID>
-                if isinstance(res_data, dict):
-                    if 'timelines' in res_data:
-                        epg_data = res_data.get('timelines', [])
-                        ina_channel = res_data
-                        break
-                    elif 'channels' in res_data:
-                        for ch in res_data['channels']:
-                            if str(ch.get('_id') or ch.get('id')) == PLUTO_CHANNEL_ID or "INA" in ch.get('name', '').upper():
-                                epg_data = ch.get('timelines', [])
-                                ina_channel = ch
-                                break
-                        if epg_data:
-                            break
-
-                # Format 2 : Liste de chaînes renvoyée par /v2/channels
-                elif isinstance(res_data, list):
-                    for ch in res_data:
-                        if str(ch.get('_id') or ch.get('id')) == PLUTO_CHANNEL_ID or "INA" in ch.get('name', '').upper():
-                            epg_data = ch.get('timelines', [])
-                            ina_channel = ch
-                            break
-                    if epg_data:
-                        break
-        except Exception as e:
-            print(f"Échec sur {url} : {e}")
-
-    if not epg_data:
-        print("Erreur : Impossible de récupérer les programmes pour INA 70.")
+    print("Téléchargement de la grille Pluto TV FR...")
+    try:
+        req = urllib.request.Request(api_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=25) as response:
+            channels_data = json.loads(response.read().decode('utf-8'))
+    except Exception as e:
+        print(f"Erreur API ({api_url}) : {e}")
         sys.exit(1)
+
+    ina_channel = None
+    if isinstance(channels_data, list):
+        # 1. Recherche exacte "INA 70" ou "INA" dans le catalogue FR
+        for ch in channels_data:
+            name = ch.get('name', '').upper()
+            if "INA 70" in name or "INA - 70" in name or "INA" in name:
+                ina_channel = ch
+                print(f"Chaîne identifiée : {ch.get('name')} (ID: {ch.get('_id')})")
+                break
+
+    if not ina_channel:
+        print("Erreur : La chaîne INA est introuvable dans le catalogue retourné par l'API.")
+        sys.exit(1)
+
+    epg_data = ina_channel.get('timelines', [])
 
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
@@ -109,9 +130,10 @@ def main():
     display_name = ET.SubElement(channel, 'display-name', lang="fr")
     display_name.text = "INA 70"
 
-    logo_url = None
-    if isinstance(ina_channel, dict):
-        logo_url = ina_channel.get('featuredImage', {}).get('path') or ina_channel.get('logo', {}).get('path')
+    logo_url = (
+        ina_channel.get('featuredImage', {}).get('path') or 
+        ina_channel.get('logo', {}).get('path')
+    )
     if logo_url:
         ET.SubElement(channel, 'icon', src=logo_url)
 
@@ -157,7 +179,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes INA 70 générés avec succès.")
+    print(f"Succès : {count} programmes générés pour {ina_channel.get('name')}.")
 
 if __name__ == "__main__":
     main()
