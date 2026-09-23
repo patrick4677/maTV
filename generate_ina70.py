@@ -1,140 +1,74 @@
-import json
 import os
 import sys
-from datetime import datetime, timedelta, timezone
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
-import urllib.parse
 
 CHANNEL_ID = "ina70.fr"
-PLUTO_CHANNEL_ID = "639b54404cfdf7000729b3c1"  # ID exact d'INA 70 sur Pluto TV
 OUTPUT_FILE = "coulisses/ina70.xml"
 
-def format_xmltv_date(date_str):
-    if not date_str:
-        return ""
-    try:
-        dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
-        return dt.strftime("%Y%m%d%H%M%S +0000")
-    except Exception as e:
-        print(f"Erreur date ({date_str}): {e}")
-        return ""
-
-def extract_image_url(item, episode_info):
-    if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
-        return item['tile']['path']
-    if isinstance(episode_info.get('poster'), dict) and episode_info['poster'].get('path'):
-        return episode_info['poster']['path']
-    if isinstance(episode_info.get('thumbnail'), dict) and episode_info['thumbnail'].get('path'):
-        return episode_info['thumbnail']['path']
-    series_info = episode_info.get('series') if isinstance(episode_info.get('series'), dict) else {}
-    if isinstance(series_info.get('tile'), dict) and series_info['tile'].get('path'):
-        return series_info['tile']['path']
-    if isinstance(series_info.get('featuredImage'), dict) and series_info['featuredImage'].get('path'):
-        return series_info['featuredImage']['path']
-    if isinstance(item.get('featuredImage'), dict) and item['featuredImage'].get('path'):
-        return item['featuredImage']['path']
-    return None
+# Sources EPG françaises hébergeant le guide d'INA 70
+EPG_SOURCES = [
+    "https://raw.githubusercontent.com/iptv-org/epg/master/sites/tv.pourtous.org/ina70.fr.epg.xml",
+    "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
+]
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    now = datetime.now(timezone.utc)
-    start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-    stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
-
-    # Endpoints publics de Pluto TV
-    urls = [
-        f"https://service-channels.clusters.pluto.tv/v2/guide/channels/{PLUTO_CHANNEL_ID}?start={start_time}&stop={stop_time}",
-        f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={PLUTO_CHANNEL_ID}"
-    ]
-
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'application/json',
-        'Accept-Language': 'fr-FR,fr;q=0.9',
-        'X-Forwarded-For': '185.24.184.1'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     }
 
-    epg_data = []
-    ina_channel = None
-
-    for url in urls:
-        print(f"Interrogation : {url[:70]}...")
+    xml_content = None
+    for source in EPG_SOURCES:
+        print(f"Téléchargement du guide depuis : {source}")
         try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                res = json.loads(resp.read().decode('utf-8'))
-                
-                if isinstance(res, dict):
-                    epg_data = res.get('timelines', [])
-                    ina_channel = res
-                elif isinstance(res, list) and len(res) > 0:
-                    epg_data = res[0].get('timelines', [])
-                    ina_channel = res[0]
-
-                if epg_data:
-                    print(f"Données récupérées ({len(epg_data)} entrées).")
+            req = urllib.request.Request(source, headers=headers)
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                xml_content = resp.read()
+                if xml_content:
+                    print("Guide récupéré avec succès.")
                     break
         except Exception as e:
-            print(f"Échec sur {url} : {e}")
+            print(f"Échec sur {source} : {e}")
 
+    if not xml_content:
+        print("Erreur : Impossible de récupérer le guide depuis les sources FR.")
+        sys.exit(1)
+
+    try:
+        root = ET.fromstring(xml_content)
+    except Exception as e:
+        print(f"Erreur d'analyse XML : {e}")
+        sys.exit(1)
+
+    # Reconstruction d'un fichier XMLTV propre et ciblé pour INA 70
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
-        'source-info-name': 'Pluto TV FR'
+        'source-info-name': 'EPG FR'
     })
 
     channel = ET.SubElement(tv, 'channel', id=CHANNEL_ID)
     display_name = ET.SubElement(channel, 'display-name', lang="fr")
     display_name.text = "INA 70"
 
-    logo_url = None
-    if isinstance(ina_channel, dict):
-        logo_url = ina_channel.get('featuredImage', {}).get('path') or ina_channel.get('logo', {}).get('path')
-    if logo_url:
-        ET.SubElement(channel, 'icon', src=logo_url)
-
     count = 0
-    for item in epg_data:
-        title_text = str(item.get('title', ''))
+    for prog in root.findall('programme'):
+        # On vérifie si le programme appartient à INA 70
+        prog_channel = prog.get('channel', '').lower()
+        if 'ina70' in prog_channel or 'ina' in prog_channel:
+            # Réécriture avec l'ID de chaîne local
+            prog.set('channel', CHANNEL_ID)
+            tv.append(prog)
+            count += 1
 
-        # Exclusion des anomalies de grille
-        if "INAZUMA" in title_text.upper():
-            continue
-
-        start_date = format_xmltv_date(item.get('start'))
-        stop_date = format_xmltv_date(item.get('stop') or item.get('end'))
-
-        if not start_date or not stop_date:
-            continue
-
-        prog = ET.SubElement(tv, 'programme', {
-            'start': start_date,
-            'stop': stop_date,
-            'channel': CHANNEL_ID
-        })
-
-        title = ET.SubElement(prog, 'title', lang="fr")
-        title.text = title_text or "Programme INA 70"
-
-        episode_info = item.get('episode') if isinstance(item.get('episode'), dict) else {}
-        if episode_info.get('name'):
-            sub_title = ET.SubElement(prog, 'sub-title', lang="fr")
-            sub_title.text = str(episode_info['name'])
-
-        desc_text = item.get('description') or episode_info.get('description') or "Archives INA 70"
-        desc = ET.SubElement(prog, 'desc', lang="fr")
-        desc.text = str(desc_text)
-
-        category = ET.SubElement(prog, 'category', lang="fr")
-        category.text = str(item.get('category') or "Archives")
-
-        image_url = extract_image_url(item, episode_info)
-        if image_url:
-            ET.SubElement(prog, 'icon', src=image_url)
-
-        count += 1
+    # Si aucun programme spécifique n'est filtré, on copie tous les programmes de la source dédiée
+    if count == 0 and len(root.findall('programme')) > 0:
+        for prog in root.findall('programme'):
+            prog.set('channel', CHANNEL_ID)
+            tv.append(prog)
+            count += 1
 
     xml_bytes = ET.tostring(tv, encoding='utf-8')
     parsed = minidom.parseString(xml_bytes)
@@ -143,7 +77,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes inscrits dans {OUTPUT_FILE}.")
+    print(f"Succès : {count} programmes en français écrits dans {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
