@@ -1,80 +1,147 @@
-import gzip
+import json
 import os
 import sys
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
+import urllib.parse
+from datetime import datetime, timedelta, timezone
 
 CHANNEL_ID = "ina70.fr"
+# ID exact Pluto TV FR pour INA 70
+INA70_PLUTO_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
-# Mots-clés d'identification de la chaîne dans le fichier XML global
-MATCH_KEYWORDS = ["ina70", "ina-70", "ina 70", "plutotvina70"]
-
-def fetch_from_epgshare():
-    """Récupère et décompresse l'EPG global FR d'EPGShare."""
-    url = "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz"
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    
+def format_xmltv_date(date_str):
+    if not date_str:
+        return ""
     try:
-        print("Téléchargement de la grille EPGShare FR...")
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=40) as resp:
-            compressed_data = resp.read()
-            return gzip.decompress(compressed_data)
-    except Exception as e:
-        print(f"Échec du téléchargement EPGShare : {e}")
-        return None
+        dt = datetime.strptime(date_str.split('.')[0], "%Y-%m-%dT%H:%M:%S")
+        return dt.strftime("%Y%m%d%H%M%S +0000")
+    except Exception:
+        return ""
+
+def extract_image_url(item, episode_info):
+    if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
+        return item['tile']['path']
+    if isinstance(episode_info.get('poster'), dict) and episode_info['poster'].get('path'):
+        return episode_info['poster']['path']
+    if isinstance(episode_info.get('thumbnail'), dict) and episode_info['thumbnail'].get('path'):
+        return episode_info['thumbnail']['path']
+    series_info = episode_info.get('series') if isinstance(episode_info.get('series'), dict) else {}
+    if isinstance(series_info.get('tile'), dict) and series_info['tile'].get('path'):
+        return series_info['tile']['path']
+    return None
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    xml_bytes = fetch_from_epgshare()
-    if not xml_bytes:
-        print("Erreur : Impossible de télécharger l'EPG.")
-        sys.exit(1)
+    now = datetime.now(timezone.utc)
+    start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
+    stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    try:
-        print("Analyse du fichier XML...")
-        root = ET.fromstring(xml_bytes)
-    except Exception as e:
-        print(f"Erreur de lecture du XML : {e}")
-        sys.exit(1)
+    # Utilisation des API de contenu Pluto TV FR avec contournement IP
+    endpoints = [
+        f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_time}&stop={stop_time}&channelIds={INA70_PLUTO_ID}&clientRegion=FR",
+        f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={INA70_PLUTO_ID}&clientRegion=FR",
+        f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_time}&stop={stop_time}"
+    ]
 
-    # 1. Identification de l'ID exact attribué à INA 70 dans le XML source
-    target_channel_ids = set()
-    for channel in root.findall('channel'):
-        ch_id = channel.get('id', '')
-        display_names = [dn.text.lower() for dn in channel.findall('display-name') if dn.text]
-        
-        # Test sur l'ID ou le nom d'affichage
-        if any(kw in ch_id.lower() for kw in MATCH_KEYWORDS) or any(any(kw in dn for kw in MATCH_KEYWORDS) for dn in display_names):
-            target_channel_ids.add(ch_id)
-            print(f"Chaîne INA 70 identifiée dans le XML source (ID : {ch_id})")
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'fr-FR,fr;q=0.9',
+        'X-Forwarded-For': '185.24.184.1',
+        'CF-IPCountry': 'FR'
+    }
+
+    epg_data = []
+    logo_url = None
+
+    for url in endpoints:
+        print(f"Tentative de connexion : {url[:75]}...")
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                data = json.loads(resp.read().decode('utf-8'))
+                
+                channels = []
+                if isinstance(data, list):
+                    channels = data
+                elif isinstance(data, dict):
+                    channels = data.get('channels', [data])
+
+                for ch in channels:
+                    ch_id = str(ch.get('_id') or ch.get('id') or '')
+                    ch_name = str(ch.get('name', '')).upper()
+
+                    if ch_id == INA70_PLUTO_ID or ("INA" in ch_name and "INAZUMA" not in ch_name):
+                        epg_data = ch.get('timelines', [])
+                        logo_url = ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
+                        print(f"Chaîne FR trouvée ({ch.get('name')}) - {len(epg_data)} programmes récupérés.")
+                        break
+
+                if epg_data:
+                    break
+        except Exception as e:
+            print(f"Erreur endpoint : {e}")
+
+    if not epg_data:
+        print("Erreur : Impossible d'obtenir la grille INA 70 depuis Pluto TV.")
+        sys.exit(1)
 
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
-        'source-info-name': 'EPGShare FR'
+        'source-info-name': 'Pluto TV FR'
     })
 
-    channel_elem = ET.SubElement(tv, 'channel', id=CHANNEL_ID)
-    display_name = ET.SubElement(channel_elem, 'display-name', lang="fr")
+    channel = ET.SubElement(tv, 'channel', id=CHANNEL_ID)
+    display_name = ET.SubElement(channel, 'display-name', lang="fr")
     display_name.text = "INA 70"
 
-    count = 0
-    # 2. Extraire tous les programmes associés
-    for prog in root.findall('programme'):
-        prog_ch = prog.get('channel', '')
-        
-        # Si la chaîne correspond à un ID trouvé ou contient ina70
-        if prog_ch in target_channel_ids or any(kw in prog_ch.lower() for kw in MATCH_KEYWORDS):
-            prog.set('channel', CHANNEL_ID)
-            tv.append(prog)
-            count += 1
+    if logo_url:
+        ET.SubElement(channel, 'icon', src=logo_url)
 
-    if count == 0:
-        print("Erreur : La chaîne INA 70 n'a pas été trouvée dans la grille EPGShare.")
-        sys.exit(1)
+    count = 0
+    for item in epg_data:
+        title_text = str(item.get('title', ''))
+        
+        # Filtre de sécurité
+        if "INAZUMA" in title_text.upper():
+            continue
+
+        start_date = format_xmltv_date(item.get('start'))
+        stop_date = format_xmltv_date(item.get('stop') or item.get('end'))
+
+        if not start_date or not stop_date:
+            continue
+
+        prog = ET.SubElement(tv, 'programme', {
+            'start': start_date,
+            'stop': stop_date,
+            'channel': CHANNEL_ID
+        })
+
+        title = ET.SubElement(prog, 'title', lang="fr")
+        title.text = title_text or "Programme INA 70"
+
+        episode_info = item.get('episode') if isinstance(item.get('episode'), dict) else {}
+        if episode_info.get('name'):
+            sub_title = ET.SubElement(prog, 'sub-title', lang="fr")
+            sub_title.text = str(episode_info['name'])
+
+        desc_text = item.get('description') or episode_info.get('description') or "Archives INA"
+        desc = ET.SubElement(prog, 'desc', lang="fr")
+        desc.text = str(desc_text)
+
+        category = ET.SubElement(prog, 'category', lang="fr")
+        category.text = str(item.get('category') or "Archives")
+
+        img_url = extract_image_url(item, episode_info)
+        if img_url:
+            ET.SubElement(prog, 'icon', src=img_url)
+
+        count += 1
 
     xml_out = ET.tostring(tv, encoding='utf-8')
     parsed = minidom.parseString(xml_out)
