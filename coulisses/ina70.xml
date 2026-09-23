@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV">
+<tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
@@ -9,41 +9,48 @@
     <sub-title lang="fr">Bad Ass</sub-title>
     <desc lang="fr">A Vietnam veteran who becomes a local hero after saving a man from attackers on a city bus decides to take action when his best friend is murdered and the police show little interest in solving the crime.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/5c14468e496da7ae46a00b82/poster_1771451641775.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260923144500 +0000" stop="20260923164500 +0000" channel="ina70.fr">
     <title lang="fr">Yo, el halcón</title>
     <sub-title lang="fr">Yo, el halcón</sub-title>
     <desc lang="fr">Un título de campeón, un gran premio en metálico y el amor de su hijo: el premio más grande de todos, corren peligro cuando Hawk se enfrenta a su mayor enemigo por todo lo que siempre ha querido.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/624758edfc8de900130f9899/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260923164500 +0000" stop="20260923184500 +0000" channel="ina70.fr">
     <title lang="fr">El gran asalto</title>
     <sub-title lang="fr">El gran asalto</sub-title>
     <desc lang="fr">En una patrulla, un policía veterano y su compañero quedan atrapados con un pasajero en un enfrentamiento con exmercenarios que roban un banco.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/69a8856c6d7de5ca3647cc80/poster_1772652423758.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260923184500 +0000" stop="20260923210000 +0000" channel="ina70.fr">
     <title lang="fr">El mensajero</title>
     <sub-title lang="fr">El mensajero</sub-title>
     <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260923210000 +0000" stop="20260923230000 +0000" channel="ina70.fr">
     <title lang="fr">Domino</title>
     <sub-title lang="fr">Domino</sub-title>
     <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260923230000 +0000" stop="20260924010000 +0000" channel="ina70.fr">
     <title lang="fr">El gran asalto</title>
     <sub-title lang="fr">El gran asalto</sub-title>
     <desc lang="fr">En una patrulla, un policía veterano y su compañero quedan atrapados con un pasajero en un enfrentamiento con exmercenarios que roban un banco.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/69a8856c6d7de5ca3647cc80/poster_1772652423758.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260924010000 +0000" stop="20260924031500 +0000" channel="ina70.fr">
     <title lang="fr">El mensajero</title>
     <sub-title lang="fr">El mensajero</sub-title>
     <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
     <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
