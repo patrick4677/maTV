@@ -2,6 +2,111 @@
 <tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
     <display-name lang="fr">INA 70</display-name>
-    <icon src="https://images.pluto.tv/channels/611e75226b7f420007c3f319/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
+  <programme start="20260923204500 +0200" stop="20260923230000 +0200" channel="ina70.fr">
+    <title lang="fr">El mensajero</title>
+    <sub-title lang="fr">El mensajero</sub-title>
+    <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260923230000 +0200" stop="20260924010000 +0200" channel="ina70.fr">
+    <title lang="fr">Domino</title>
+    <sub-title lang="fr">Domino</sub-title>
+    <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924010000 +0200" stop="20260924030000 +0200" channel="ina70.fr">
+    <title lang="fr">El gran asalto</title>
+    <sub-title lang="fr">El gran asalto</sub-title>
+    <desc lang="fr">En una patrulla, un policía veterano y su compañero quedan atrapados con un pasajero en un enfrentamiento con exmercenarios que roban un banco.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/69a8856c6d7de5ca3647cc80/poster_1772652423758.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924030000 +0200" stop="20260924051500 +0200" channel="ina70.fr">
+    <title lang="fr">El mensajero</title>
+    <sub-title lang="fr">El mensajero</sub-title>
+    <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924051500 +0200" stop="20260924071500 +0200" channel="ina70.fr">
+    <title lang="fr">Yo, el halcón</title>
+    <sub-title lang="fr">Yo, el halcón</sub-title>
+    <desc lang="fr">Un título de campeón, un gran premio en metálico y el amor de su hijo: el premio más grande de todos, corren peligro cuando Hawk se enfrenta a su mayor enemigo por todo lo que siempre ha querido.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/624758edfc8de900130f9899/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924071500 +0200" stop="20260924091500 +0200" channel="ina70.fr">
+    <title lang="fr">Domino</title>
+    <sub-title lang="fr">Domino</sub-title>
+    <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924091500 +0200" stop="20260924110000 +0200" channel="ina70.fr">
+    <title lang="fr">Transpecos (ESP)</title>
+    <sub-title lang="fr">Transpecos (ESP)</sub-title>
+    <desc lang="fr">Para tres agentes de la Guardia Fronteriza de los EE. UU., el contenido de un auto revela un oscuro secreto en el interior de su unidad que podría costarle toda su vida.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/612d078986e1e0001672cf69/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924110000 +0200" stop="20260924123000 +0200" channel="ina70.fr">
+    <title lang="fr">La suburban dorada</title>
+    <sub-title lang="fr">La suburban dorada</sub-title>
+    <desc lang="fr">Un policía judicial es acusado de estar relacionado con el narcotráfico sólo por ayudar a su primo. Las circunstancias lo convierten en un fugitivo de la ley y por recuperar a su hijo tiene que involucrase con el narco.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/60120aa6b2c9b7001a3ecb1c/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924123000 +0200" stop="20260924141500 +0200" channel="ina70.fr">
+    <title lang="fr">Transpecos (ESP)</title>
+    <sub-title lang="fr">Transpecos (ESP)</sub-title>
+    <desc lang="fr">Para tres agentes de la Guardia Fronteriza de los EE. UU., el contenido de un auto revela un oscuro secreto en el interior de su unidad que podría costarle toda su vida.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/612d078986e1e0001672cf69/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924141500 +0200" stop="20260924161500 +0200" channel="ina70.fr">
+    <title lang="fr">Actos de venganza</title>
+    <sub-title lang="fr">Actos de venganza</sub-title>
+    <desc lang="fr">Un abogado de hablar rápido (Antonio Banderas) transforma su cuerpo y toma un voto de silencio, que no se romperá hasta que descubra quién mató a su esposa e hija y tenga su venganza.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/66d6123a6ec6ad0013613439/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924161500 +0200" stop="20260924191500 +0200" channel="ina70.fr">
+    <title lang="fr">13 horas: los soldados secretos de Bengasi</title>
+    <sub-title lang="fr">13 horas: los soldados secretos de Bengasi</sub-title>
+    <desc lang="fr">Del director Michael Bay, 13 horas es la historia de un grupo élite de seis exmilitares asignados para proteger a la CIA, que lucharon cuando los terroristas atacaron un complejo diplomático estadounidense el 11 de septiembre de 2012.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/601d9ca218a184001aff6d2d/poster_1778000762188.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924191500 +0200" stop="20260924214500 +0200" channel="ina70.fr">
+    <title lang="fr">Hostage</title>
+    <sub-title lang="fr">Bajo amenaza</sub-title>
+    <desc lang="fr">Un negociador de la policía fracasado que se convierte en un oficial de una pequeña ciudad debe salvar a una familia secuestrada, lo que lo conduce a una situación muy peligrosa.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/65f8ce7f4927ad00148fef72/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924214500 +0200" stop="20260925000000 +0200" channel="ina70.fr">
+    <title lang="fr">Equilibrium (ESP)</title>
+    <sub-title lang="fr">Equilibrium (ESP)</sub-title>
+    <desc lang="fr">En el futuro, la humanidad ha prohibido cosas que producen emociones como la literatura, la música y el arte, para mantenerlo, un grupo especial de policías eliminará a los transgresores. Christian Bale protagoniza esta increíble película de acción.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/64a5bbdde1356600138b9024/poster_1789055642567.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260925000000 +0200" stop="20260925103000 +0200" channel="ina70.fr">
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
+    <desc lang="fr">no info available</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+  </programme>
+  <programme start="20260925103000 +0200" stop="20260925223000 +0200" channel="ina70.fr">
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
+    <desc lang="fr">no info available</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+  </programme>
 </tv>
