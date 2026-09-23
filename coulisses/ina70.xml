@@ -2,202 +2,132 @@
 <tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
     <display-name lang="fr">INA 70</display-name>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/logo.png?fit=fill&amp;fm=png&amp;h=80&amp;w=280"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260923225300 +0200" stop="20260924003900 +0200" channel="ina70.fr">
-    <title lang="fr">My Dear Secretary</title>
-    <sub-title lang="fr">My Dear Secretary</sub-title>
-    <desc lang="fr">Owen Waterbury, bestselling novelist, recruits aspiring writer Stephanie 'Steve' Gaylord as his latest of many secretaries. Staring Kirk Douglas.</desc>
+  <programme start="20260923230000 +0200" stop="20260924010000 +0200" channel="ina70.fr">
+    <title lang="fr">Domino</title>
+    <sub-title lang="fr">Domino</sub-title>
+    <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5b191206b0875c36c90cab17/poster_1787937491470.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924003900 +0200" stop="20260924015900 +0200" channel="ina70.fr">
-    <title lang="fr">Reefer Madness (in Color)</title>
-    <sub-title lang="fr">Reefer Madness (in Color)</sub-title>
-    <desc lang="fr">Teens partake of the "demon weed" and one puff plunges them into a web of murder, sex and lunacy. The 1930's cult classic - In Vibrant Color!</desc>
+  <programme start="20260924010000 +0200" stop="20260924030000 +0200" channel="ina70.fr">
+    <title lang="fr">El gran asalto</title>
+    <sub-title lang="fr">El gran asalto</sub-title>
+    <desc lang="fr">En una patrulla, un policía veterano y su compañero quedan atrapados con un pasajero en un enfrentamiento con exmercenarios que roban un banco.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c7dfd85fcd48f563ff458f4/poster_1782309242438.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/69a8856c6d7de5ca3647cc80/poster_1772652423758.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924015900 +0200" stop="20260924032000 +0200" channel="ina70.fr">
-    <title lang="fr">Sherlock Holmes Prelude To Murder</title>
-    <sub-title lang="fr">Sherlock Holmes Prelude To Murder (in Colour)</sub-title>
-    <desc lang="fr">A trio of music boxes contains the hidden secret to riches, and a group of criminals will kill for them. In Vibrant Colour!</desc>
+  <programme start="20260924030000 +0200" stop="20260924051500 +0200" channel="ina70.fr">
+    <title lang="fr">El mensajero</title>
+    <sub-title lang="fr">El mensajero</sub-title>
+    <desc lang="fr">El ganador del Oscar Gary Oldman y Olga Kurylenko protagonizan un thriller de acción sobre una mensajera que pelea contra los secuaces de un jefe criminal sádico para proteger al único testigo capaz de hundirlo.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c3ce265c33ebc13d108052d/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/6a45921c7a3bd954b756db9f/poster_1783363333357.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924032000 +0200" stop="20260924042800 +0200" channel="ina70.fr">
-    <title lang="fr">Sherlock Holmes Terror By Night</title>
-    <sub-title lang="fr">Sherlock Holmes Terror By Night (in colour)</sub-title>
-    <desc lang="fr">A murder mystery set on a speeding train, Holmes guards the transport of the 400-carat diamond. In Vibrant Colour!</desc>
+  <programme start="20260924051500 +0200" stop="20260924071500 +0200" channel="ina70.fr">
+    <title lang="fr">Yo, el halcón</title>
+    <sub-title lang="fr">Yo, el halcón</sub-title>
+    <desc lang="fr">Un título de campeón, un gran premio en metálico y el amor de su hijo: el premio más grande de todos, corren peligro cuando Hawk se enfrenta a su mayor enemigo por todo lo que siempre ha querido.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c3cdea091a1a0127e95105e/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/624758edfc8de900130f9899/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924042800 +0200" stop="20260924054400 +0200" channel="ina70.fr">
-    <title lang="fr">Sherlock Holmes Woman In Green</title>
-    <sub-title lang="fr">Sherlock Holmes Woman In Green (in Colour)</sub-title>
-    <desc lang="fr">Four women are brutally murdered, and Scotland Yard thinks it is the random work of a madman. In Vibrant Colour!</desc>
+  <programme start="20260924071500 +0200" stop="20260924091500 +0200" channel="ina70.fr">
+    <title lang="fr">Domino</title>
+    <sub-title lang="fr">Domino</sub-title>
+    <desc lang="fr">Para buscar justicia por el asesinato de su compañero, un agente de policía de Copenhague (Nikolaj Coster-Waldau) y un compañero se embarcan en una misión mortal para dar caza a un misterioso hombre en este trepidante thriller de acción.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c380301c9fdffea2303bd76/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/679a7c5eff93e00013e0758e/poster_1779890401695.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924054400 +0200" stop="20260924070400 +0200" channel="ina70.fr">
-    <title lang="fr">Sherlock Holmes and The Secret Weapon</title>
-    <sub-title lang="fr">Sherlock Holmes and The Secret Weapon (in Colour)</sub-title>
-    <desc lang="fr">Kidnappers of the inventor of a new wartime bombsight threaten to sell the invention to the Nazis. In Colour!</desc>
+  <programme start="20260924091500 +0200" stop="20260924110000 +0200" channel="ina70.fr">
+    <title lang="fr">Transpecos (ESP)</title>
+    <sub-title lang="fr">Transpecos (ESP)</sub-title>
+    <desc lang="fr">Para tres agentes de la Guardia Fronteriza de los EE. UU., el contenido de un auto revela un oscuro secreto en el interior de su unidad que podría costarle toda su vida.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c3ce0f341629b0c856e9be7/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/612d078986e1e0001672cf69/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924070400 +0200" stop="20260924074800 +0200" channel="ina70.fr">
-    <title lang="fr">Superman: The Complete Animated Series</title>
-    <sub-title lang="fr">Mad Scientist / The Mechanical Monsters / Billion Dollar Limited / Arctic Giant</sub-title>
-    <desc lang="fr">As the planet Krypton is destroyed, its leader, Jor-El, secures his infant son, Kal-El, in a rocket that will transport him to Earth. There, as Clark Kent, he discovers the truth about his interplanetary heritage and assumes the identity of Superman.</desc>
+  <programme start="20260924110000 +0200" stop="20260924123000 +0200" channel="ina70.fr">
+    <title lang="fr">La suburban dorada</title>
+    <sub-title lang="fr">La suburban dorada</sub-title>
+    <desc lang="fr">Un policía judicial es acusado de estar relacionado con el narcotráfico sólo por ayudar a su primo. Las circunstancias lo convierten en un fugitivo de la ley y por recuperar a su hijo tiene que involucrase con el narco.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfb5143c81d29000951869e/poster_1758834214127.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/60120aa6b2c9b7001a3ecb1c/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924074800 +0200" stop="20260924082600 +0200" channel="ina70.fr">
-    <title lang="fr">Superman: The Complete Animated Series</title>
-    <sub-title lang="fr">The Bulleteers / The Magnetic Telescope  / Electric Earthquake / Volcano</sub-title>
-    <desc lang="fr">As the planet Krypton is destroyed, its leader, Jor-El, secures his infant son, Kal-El, in a rocket that will transport him to Earth. There, as Clark Kent, he discovers the truth about his interplanetary heritage and assumes the identity of Superman.</desc>
+  <programme start="20260924123000 +0200" stop="20260924141500 +0200" channel="ina70.fr">
+    <title lang="fr">Transpecos (ESP)</title>
+    <sub-title lang="fr">Transpecos (ESP)</sub-title>
+    <desc lang="fr">Para tres agentes de la Guardia Fronteriza de los EE. UU., el contenido de un auto revela un oscuro secreto en el interior de su unidad que podría costarle toda su vida.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfb52929de85a00092fc094/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/612d078986e1e0001672cf69/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924082600 +0200" stop="20260924084600 +0200" channel="ina70.fr">
-    <title lang="fr">The Three Stooges</title>
-    <sub-title lang="fr">Disorder In the Court</sub-title>
-    <desc lang="fr">The Stooges are back in these hilarious episodes, where you’ll see Larry, Curly, Moe and Shemp perform the comedy that made them famous. Remastered from the original 35mm film elements, these classic Three Stooges shorts are fully restored and in color!</desc>
+  <programme start="20260924141500 +0200" stop="20260924161500 +0200" channel="ina70.fr">
+    <title lang="fr">Actos de venganza</title>
+    <sub-title lang="fr">Actos de venganza</sub-title>
+    <desc lang="fr">Un abogado de hablar rápido (Antonio Banderas) transforma su cuerpo y toma un voto de silencio, que no se romperá hasta que descubra quién mató a su esposa e hija y tenga su venganza.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfa512928a26200093299c9/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/66d6123a6ec6ad0013613439/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924084600 +0200" stop="20260924090600 +0200" channel="ina70.fr">
-    <title lang="fr">The Three Stooges</title>
-    <sub-title lang="fr">Brideless Groom</sub-title>
-    <desc lang="fr">The Stooges are back in these hilarious episodes, where you’ll see Larry, Curly, Moe and Shemp perform the comedy that made them famous. Remastered from the original 35mm film elements, these classic Three Stooges shorts are fully restored and in color!</desc>
+  <programme start="20260924161500 +0200" stop="20260924191500 +0200" channel="ina70.fr">
+    <title lang="fr">13 horas: los soldados secretos de Bengasi</title>
+    <sub-title lang="fr">13 horas: los soldados secretos de Bengasi</sub-title>
+    <desc lang="fr">Del director Michael Bay, 13 horas es la historia de un grupo élite de seis exmilitares asignados para proteger a la CIA, que lucharon cuando los terroristas atacaron un complejo diplomático estadounidense el 11 de septiembre de 2012.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfa523e14c70700096d67d6/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/601d9ca218a184001aff6d2d/poster_1778000762188.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924090600 +0200" stop="20260924092600 +0200" channel="ina70.fr">
-    <title lang="fr">The Three Stooges</title>
-    <sub-title lang="fr">Sing a Song of Six Pants</sub-title>
-    <desc lang="fr">The Stooges are back in these hilarious episodes, where you’ll see Larry, Curly, Moe and Shemp perform the comedy that made them famous. Remastered from the original 35mm film elements, these classic Three Stooges shorts are fully restored and in color!</desc>
+  <programme start="20260924191500 +0200" stop="20260924214500 +0200" channel="ina70.fr">
+    <title lang="fr">Hostage</title>
+    <sub-title lang="fr">Bajo amenaza</sub-title>
+    <desc lang="fr">Un negociador de la policía fracasado que se convierte en un oficial de una pequeña ciudad debe salvar a una familia secuestrada, lo que lo conduce a una situación muy peligrosa.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfa499ab162610009a5df20/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/65f8ce7f4927ad00148fef72/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924092600 +0200" stop="20260924094600 +0200" channel="ina70.fr">
-    <title lang="fr">The Three Stooges</title>
-    <sub-title lang="fr">Malice in the Palace</sub-title>
-    <desc lang="fr">The Stooges are back in these hilarious episodes, where you’ll see Larry, Curly, Moe and Shemp perform the comedy that made them famous. Remastered from the original 35mm film elements, these classic Three Stooges shorts are fully restored and in color!</desc>
+  <programme start="20260924214500 +0200" stop="20260925000000 +0200" channel="ina70.fr">
+    <title lang="fr">Equilibrium (ESP)</title>
+    <sub-title lang="fr">Equilibrium (ESP)</sub-title>
+    <desc lang="fr">En el futuro, la humanidad ha prohibido cosas que producen emociones como la literatura, la música y el arte, para mantenerlo, un grupo especial de policías eliminará a los transgresores. Christian Bale protagoniza esta increíble película de acción.</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfa4d4ee2191900097bb86b/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/episodes/64a5bbdde1356600138b9024/poster_1789055642567.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
-  <programme start="20260924094600 +0200" stop="20260924100600 +0200" channel="ina70.fr">
-    <title lang="fr">The Three Stooges</title>
-    <sub-title lang="fr">Heavenly Daze</sub-title>
-    <desc lang="fr">The Stooges are back in these hilarious episodes, where you’ll see Larry, Curly, Moe and Shemp perform the comedy that made them famous. Remastered from the original 35mm film elements, these classic Three Stooges shorts are fully restored and in color!</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5dfa4f72313e7500092a3e97/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924100600 +0200" stop="20260924113400 +0200" channel="ina70.fr">
-    <title lang="fr">Abbott &amp; Costello: Abbott &amp; Costello Volume 1</title>
-    <sub-title lang="fr">Abbott &amp; Costello Volume 1</sub-title>
-    <desc lang="fr">Join the most popular comedy team in history with a collection of their most loved classic skits!</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c088742c980d7476a6fd055/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924113400 +0200" stop="20260924124400 +0200" channel="ina70.fr">
-    <title lang="fr">Abbott &amp; Costello: Abbott &amp; Costello Volume 2</title>
-    <sub-title lang="fr">Abbott &amp; Costello Volume 2</sub-title>
-    <desc lang="fr">Join the most popular comedy team in history with another collection of their most loved classic skits!</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c54bf3acecd89e7161b26c6/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924124400 +0200" stop="20260924143500 +0200" channel="ina70.fr">
-    <title lang="fr">Boy in the Plastic Bubble</title>
-    <sub-title lang="fr">Boy in the Plastic Bubble</sub-title>
-    <desc lang="fr">The girl next door makes a teen (John Travolta) born with immune deficiencies want to leave his germ-free bubble. Starring: John Travolta, Glynnis O'Connor, Robert Reed</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5d519c33ea150ac2f6183522/poster_1776718804229.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924143500 +0200" stop="20260924165000 +0200" channel="ina70.fr">
-    <title lang="fr">Classic Movie Bloopers: Uncensored</title>
-    <sub-title lang="fr">Classic Movie Bloopers: Uncensored (2011)</sub-title>
-    <desc lang="fr">Laugh along with Hollywood's brightest stars in this hilarious compilation of bloopers from some of the biggest movies in history.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5b190e66b0875c36c90c5fc4/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924165000 +0200" stop="20260924181700 +0200" channel="ina70.fr">
-    <title lang="fr">Creature from the Haunted Sea</title>
-    <sub-title lang="fr">Creature from the Haunted Sea</sub-title>
-    <desc lang="fr">In this spoof of horror and spy thrillers, American gangster Renzo Capetto decides to kill members of his bungling crew and blame their deaths on a legendary sea creature. What he doesn't know is that the creature is actually out there!</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5b191257b0875c36c90cb3af/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924181700 +0200" stop="20260924193400 +0200" channel="ina70.fr">
-    <title lang="fr">Glen Or Glenda</title>
-    <sub-title lang="fr">Glen Or Glenda</sub-title>
-    <desc lang="fr">Glen loves Barbara, but he has a terrible secret which threatens to destroy all of his hopes for a happily-ever-after with his lady...  A true cult classic by director Ed Wood.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c9d436edfbc22855bf2b34a/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924193400 +0200" stop="20260924210000 +0200" channel="ina70.fr">
-    <title lang="fr">House on Haunted Hill</title>
-    <sub-title lang="fr">House on Haunted Hill</sub-title>
-    <desc lang="fr">An eccentric millionaire invites five guests to spend the night in a haunted house, offering each $10,000 but only if they survive until morning! Starring Vincent Price. Restored and In Color!</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c1aa102db91a8ec05bf3c36/poster_1787167802288.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924210000 +0200" stop="20260924224100 +0200" channel="ina70.fr">
-    <title lang="fr">Last Man On Earth</title>
-    <sub-title lang="fr">Last Man On Earth</sub-title>
-    <desc lang="fr">Vincent Price is the only survivor after a plague wipes out the human race, and struggles with loneliness. Restored and In Color!</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/5c1aa4427af0e0ed4dfa36da/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924224100 +0200" stop="20260924230000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+  <programme start="20260925000000 +0200" stop="20260925030000 +0200" channel="ina70.fr">
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260924230000 +0200" stop="20260925030000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
-    <desc lang="fr">no info available</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
   <programme start="20260925030000 +0200" stop="20260925070000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
   <programme start="20260925070000 +0200" stop="20260925110000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
   <programme start="20260925110000 +0200" stop="20260925150000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
   <programme start="20260925150000 +0200" stop="20260925190000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
   <programme start="20260925190000 +0200" stop="20260925230000 +0200" channel="ina70.fr">
-    <title lang="fr">Pluto TV Classic TV FR</title>
-    <sub-title lang="fr">Pluto TV Classic TV FR</sub-title>
+    <title lang="fr">Cine adrenalina</title>
+    <sub-title lang="fr">Cine adrenalina</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/channels/5e46ae801f347500099d461a/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    <icon src="https://images.pluto.tv/channels/5d8d164d92e97a5e107638d2/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
 </tv>
