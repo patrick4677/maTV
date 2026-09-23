@@ -1,0 +1,31 @@
+name: Mise à jour automatique EPG INA 70
+
+on:
+  schedule:
+    # S'exécute tous les jours à 4h00 UTC
+    - cron: '0 4 * * *'
+  # Permet aussi de lancer l'action manuellement depuis l'interface GitHub
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Récupérer le code du dépôt
+      uses: actions/checkout@v4
+
+    - name: Configurer Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Exécuter le script de génération
+      run: python generate_ina70.py
+
+    - name: Commit et Push des modifications
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add coulisses/ina70.xml
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update INA 70 EPG" && git push)
