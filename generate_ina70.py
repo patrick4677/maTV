@@ -20,31 +20,40 @@ def format_xmltv_date(date_str):
         print(f"Erreur date ({date_str}): {e}")
         return ""
 
-def main():
-    # 1. Création du dossier de destination s'il n'existe pas
-    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-
-    # 2. Construction de l'URL avec plage de temps obligatoire pour Pluto TV
+def get_epg_data():
     now = datetime.now(timezone.utc)
     start_time = (now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z")
     stop_time = (now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z")
 
-    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}"
+    # Tentative 1 : API avec paramètres temporels
+    urls = [
+        f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}",
+        "https://api.pluto.tv/v2/channels"
+    ]
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'application/json'
     }
 
-    try:
-        req = urllib.request.Request(api_url, headers=headers)
-        with urllib.request.urlopen(req) as response:
-            channels_data = json.loads(response.read().decode('utf-8'))
-    except Exception as e:
-        print(f"Erreur lors de la requête API Pluto TV ({api_url}) : {e}")
+    for url in urls:
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req) as response:
+                return json.loads(response.read().decode('utf-8'))
+        except Exception as e:
+            print(f"Échec sur {url} : {e}")
+
+    return None
+
+def main():
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+
+    channels_data = get_epg_data()
+    if not channels_data:
+        print("Erreur : Impossible de contacter l'API Pluto TV.")
         sys.exit(1)
 
-    # 3. Recherche de la chaîne INA 70
     ina_channel = None
     for ch in channels_data:
         if ch.get('_id') == PLUTO_CHANNEL_ID or "INA 70" in ch.get('name', '').upper():
@@ -52,12 +61,11 @@ def main():
             break
 
     if not ina_channel:
-        print("Erreur : Chaîne INA 70 introuvable dans le flux Pluto TV.")
+        print("Erreur : Chaîne INA 70 non trouvée.")
         sys.exit(1)
 
     epg_data = ina_channel.get('timelines', [])
 
-    # 4. Génération de l'arborescence XMLTV
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
         'source-info-name': 'Pluto TV'
@@ -71,7 +79,6 @@ def main():
     if icon_url:
         ET.SubElement(channel, 'icon', src=icon_url)
 
-    # 5. Traitement des programmes
     for item in epg_data:
         start_date = format_xmltv_date(item.get('start'))
         stop_date = format_xmltv_date(item.get('stop') or item.get('end'))
@@ -100,7 +107,6 @@ def main():
         category = ET.SubElement(prog, 'category', lang="fr")
         category.text = str(item.get('category') or "Archives")
 
-    # 6. Écriture du fichier
     xml_bytes = ET.tostring(tv, encoding='utf-8')
     parsed = minidom.parseString(xml_bytes)
     pretty_xml = parsed.toprettyxml(indent="  ")
@@ -108,7 +114,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {len(epg_data)} programmes générés dans {OUTPUT_FILE}.")
+    print(f"Succès : {len(epg_data)} programmes générés.")
 
 if __name__ == "__main__":
     main()
