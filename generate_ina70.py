@@ -11,11 +11,8 @@ CHANNEL_ID = "ina70.fr"
 INA70_PLUTO_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
-# Calcul du décalage horaire français (UTC+2 en été, UTC+1 en hiver)
 def get_paris_tz():
-    # Détection simplifiée heure d'été / heure d'hiver pour la France
     now = datetime.now(timezone.utc)
-    # Heure d'été en Europe : du dernier dimanche de mars au dernier dimanche d'octobre
     year = now.year
     march_last_sun = max(day for day in range(25, 32) if datetime(year, 3, day).weekday() == 6)
     oct_last_sun = max(day for day in range(25, 32) if datetime(year, 10, day).weekday() == 6)
@@ -36,14 +33,9 @@ def format_xmltv_date(date_str):
     try:
         clean_str = date_str.split('.')[0].replace("Z", "")
         dt_utc = datetime.strptime(clean_str, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)
-        
-        # Convertir directement l'heure en heure locale française
         dt_paris = dt_utc.astimezone(PARIS_TZ)
-        
-        # Format XMLTV : YYYYMMDDHHMMSS +0200
         return dt_paris.strftime("%Y%m%d%H%M%S") + f" {PARIS_OFFSET_STR}"
-    except Exception as e:
-        print(f"Erreur date ({date_str}): {e}")
+    except Exception:
         return ""
 
 def extract_image_url(item, episode_info):
@@ -58,60 +50,56 @@ def extract_image_url(item, episode_info):
         return series_info['tile']['path']
     return None
 
+def fetch_chunk(start_dt, stop_dt, headers):
+    start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
+    stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
+    
+    url = f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR"
+    
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            channels = data if isinstance(data, list) else data.get('channels', [data])
+            for ch in channels:
+                ch_id = str(ch.get('_id') or ch.get('id') or '')
+                if ch_id == INA70_PLUTO_ID or "INA" in str(ch.get('name', '')).upper():
+                    return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
+    except Exception as e:
+        print(f"Erreur créneau {start_dt.strftime('%H:%M')} : {e}")
+    return [], None
+
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-    now = datetime.now(timezone.utc)
-    # Demande d'une plage temporelle élargie (de -12h à +60h) sans minutes pour forcer Pluto TV à envoyer le guide complet
-    start_time = urllib.parse.quote((now - timedelta(hours=12)).strftime("%Y-%m-%dT00:00:00.000Z"))
-    stop_time = urllib.parse.quote((now + timedelta(hours=60)).strftime("%Y-%m-%dT23:59:59.000Z"))
-
-    endpoints = [
-        f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_time}&stop={stop_time}&channelIds={INA70_PLUTO_ID}&clientRegion=FR",
-        f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&channelIds={INA70_PLUTO_ID}&clientRegion=FR",
-        f"https://service-channels.clusters.pluto.tv/v2/guide/channels?start={start_time}&stop={stop_time}"
-    ]
-
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         'Accept': 'application/json',
         'Accept-Language': 'fr-FR,fr;q=0.9',
         'X-Forwarded-For': '185.24.184.1',
         'CF-IPCountry': 'FR'
     }
 
-    epg_data = []
+    now = datetime.now(timezone.utc)
+    all_programmes = {}
     logo_url = None
 
-    for url in endpoints:
-        print(f"Récupération de la grille complète : {url[:70]}...")
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=25) as resp:
-                data = json.loads(resp.read().decode('utf-8'))
-                
-                channels = []
-                if isinstance(data, list):
-                    channels = data
-                elif isinstance(data, dict):
-                    channels = data.get('channels', [data])
+    # Découpage sur 36h par tranches de 6 heures pour contourner la limite de l'API Pluto
+    for i in range(6):
+        start_dt = now + timedelta(hours=i * 6)
+        stop_dt = start_dt + timedelta(hours=6)
+        print(f"Interrogation du créneau {start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')}...")
+        
+        timelines, icon = fetch_chunk(start_dt, stop_dt, headers)
+        if icon and not logo_url:
+            logo_url = icon
+            
+        for item in timelines:
+            # Clé unique par programme pour éviter les doublons entre les tranches
+            prog_id = f"{item.get('start')}_{item.get('title')}"
+            all_programmes[prog_id] = item
 
-                for ch in channels:
-                    ch_id = str(ch.get('_id') or ch.get('id') or '')
-                    ch_name = str(ch.get('name', '')).upper()
-
-                    if ch_id == INA70_PLUTO_ID or ("INA" in ch_name and "INAZUMA" not in ch_name):
-                        epg_data = ch.get('timelines', [])
-                        logo_url = ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
-                        print(f"Chaîne trouvée ({ch.get('name')}) - {len(epg_data)} programmes récupérés.")
-                        break
-
-                if epg_data:
-                    break
-        except Exception as e:
-            print(f"Erreur endpoint : {e}")
-
-    if not epg_data:
+    if not all_programmes:
         print("Erreur : Aucun programme récupéré.")
         sys.exit(1)
 
@@ -128,9 +116,8 @@ def main():
         ET.SubElement(channel, 'icon', src=logo_url)
 
     count = 0
-    for item in epg_data:
+    for item in all_programmes.values():
         title_text = str(item.get('title', ''))
-        
         if "INAZUMA" in title_text.upper():
             continue
 
