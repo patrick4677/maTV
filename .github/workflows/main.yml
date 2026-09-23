@@ -1,4 +1,4 @@
-name: Mise a jour du XML EPG
+name: Mise a jour du XML EPG et m3u
 
 on:
   schedule:
@@ -14,6 +14,10 @@ jobs:
       - name: Télécharger le fichier XML
         run: |
           curl -s https://xmltvfr.fr/xmltv/xmltv_tnt.xml -o coulisses/xmltv_tnt.xml
+
+      - name: Télécharger le fichier M3U
+        run: |
+          curl -sL "https://tvradiozap.eu/live/d/tvzeu.m3u" -o coulisses/tvrz.m3u
 
       - name: Sauvegarder les modifications
         run: |
