@@ -4,26 +4,12 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260923170000 +0000" stop="20260923174900 +0000" channel="ina70.fr">
+  <programme start="20260923180000 +0000" stop="20260923185900 +0000" channel="ina70.fr">
     <title lang="fr">INA 70</title>
     <sub-title lang="fr">INA 70</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260923174900 +0000" stop="20260923184200 +0000" channel="ina70.fr">
-    <title lang="fr">Les jeux de 20 heures</title>
-    <sub-title lang="fr">Les jeux de 20 heures à Biarritz</sub-title>
-    <desc lang="fr">Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Biarritz s'affrontent en duplex sur des jeux de la langue française. C'est l'intraitable maître Capello qui arbitre le jeu !</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa1fb26291eac08d14998ba/poster_1789000490264.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260923184200 +0000" stop="20260923185900 +0000" channel="ina70.fr">
-    <title lang="fr">Réponse à tout</title>
-    <sub-title lang="fr">Réponse à tout</sub-title>
-    <desc lang="fr">Deux candidats s'affrontent sur des questions conçues et posées par des téléspectateurs.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/695e368d287ec44e148d73e9/poster_1767788603667.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260923185900 +0000" stop="20260923213400 +0000" channel="ina70.fr">
     <title lang="fr">Au théâtre ce soir</title>
@@ -94,5 +80,12 @@
     <desc lang="fr">Mort Shuman écoute avec beaucoup d'attention les petits chanteurs en herbe qui reprennent ses chansons : "Shami-Sha", "Petite pomme de Chinois", etc. Puis, il chante "Un été de porcelaine" à leur suite.</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d5f1/poster_1789087001372.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924064600 +0000" stop="20260924072100 +0000" channel="ina70.fr">
+    <title lang="fr">La femme en blanc</title>
+    <sub-title lang="fr">10ème épisode</sub-title>
+    <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
