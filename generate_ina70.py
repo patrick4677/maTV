@@ -9,6 +9,7 @@ import urllib.parse
 import uuid
 
 CHANNEL_ID = "ina70.fr"
+PLUTO_CHANNEL_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
 def format_xmltv_date(date_str):
@@ -20,27 +21,6 @@ def format_xmltv_date(date_str):
     except Exception as e:
         print(f"Erreur date ({date_str}): {e}")
         return ""
-
-def get_pluto_jwt():
-    """Récupère un jeton JWT valide via l'API boot de Pluto TV."""
-    device_id = str(uuid.uuid4())
-    url = f"https://boot.pluto.tv/v4/start?appName=web&appVersion=8.0.0&deviceType=web&deviceId={device_id}&deviceMake=Chrome&deviceModel=Web&sid={device_id}"
-    
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Accept': 'application/json',
-        'Origin': 'https://pluto.tv',
-        'Referer': 'https://pluto.tv/'
-    }
-
-    try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-            return data.get('sessionToken')
-    except Exception as e:
-        print(f"Erreur lors de la récupération du jeton JWT : {e}")
-        return None
 
 def extract_image_url(item, episode_info):
     if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
@@ -58,57 +38,110 @@ def extract_image_url(item, episode_info):
         return item['featuredImage']['path']
     return None
 
+def fetch_data_with_boot():
+    """Tente d'obtenir un jeton JWT via l'API v4 boot."""
+    device_id = str(uuid.uuid4())
+    client_time = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    
+    params = urllib.parse.urlencode({
+        'appName': 'web',
+        'appVersion': '8.0.0-assets',
+        'deviceType': 'web',
+        'deviceId': device_id,
+        'clientModelNumber': 'chrome',
+        'serverSide': 'true',
+        'clientTime': client_time
+    })
+    
+    url = f"https://boot.pluto.tv/v4/start?{params}"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json'
+    }
+
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        boot_data = json.loads(resp.read().decode('utf-8'))
+        token = boot_data.get('sessionToken')
+        return token
+
+def fetch_epg_direct(start_time, stop_time, jwt_token=None):
+    """Interroge l'API des chaînes avec ou sans jeton."""
+    url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}&lang=fr&clientRegion=FR"
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'fr-FR,fr;q=0.9'
+    }
+    
+    if jwt_token:
+        headers['Authorization'] = f'Bearer {jwt_token}'
+
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return json.loads(resp.read().decode('utf-8'))
+
+def fetch_timeline_direct(start_time, stop_time):
+    """Recherche spécifique sur la chaîne INA 70 via endpoint direct timeline."""
+    url = f"https://api.pluto.tv/v2/channels/{PLUTO_CHANNEL_ID}/timeline?start={start_time}&stop={stop_time}&lang=fr"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json'
+    }
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return json.loads(resp.read().decode('utf-8'))
+
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-
-    jwt_token = get_pluto_jwt()
-    if not jwt_token:
-        print("Échec d'obtention du token d'accès.")
-        sys.exit(1)
 
     now = datetime.now(timezone.utc)
     start_time = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_time = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # API v2 avec le jeton valide
-    api_url = f"https://api.pluto.tv/v2/channels?start={start_time}&stop={stop_time}"
-    
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Authorization': f'Bearer {jwt_token}',
-        'Accept': 'application/json'
-    }
-
-    print("Téléchargement de la grille TV...")
+    jwt_token = None
     try:
-        req = urllib.request.Request(api_url, headers=headers)
-        with urllib.request.urlopen(req, timeout=20) as response:
-            channels_data = json.loads(response.read().decode('utf-8'))
+        jwt_token = fetch_data_with_boot()
+        print("Jeton JWT récupéré avec succès.")
     except Exception as e:
-        print(f"Erreur API ({api_url}) : {e}")
-        sys.exit(1)
+        print(f"Information : Impossible d'obtenir le token boot ({e}), passage en mode direct.")
 
+    channels_data = None
+    try:
+        print("Téléchargement du guide des chaînes...")
+        channels_data = fetch_epg_direct(start_time, stop_time, jwt_token)
+    except Exception as e:
+        print(f"Avertissement : Échec de la récupération globale ({e}). Tentative via Timeline direct...")
+
+    epg_data = []
     ina_channel = None
+
     if isinstance(channels_data, list):
         for ch in channels_data:
             name = ch.get('name', '').upper()
-            if "INA 70" in name or "INA - 70" in name:
+            ch_id = str(ch.get('_id') or ch.get('id') or '')
+            if "INA 70" in name or "INA - 70" in name or ch_id == PLUTO_CHANNEL_ID:
                 ina_channel = ch
                 print(f"Chaîne trouvée : {ch.get('name')}")
                 break
 
-    if not ina_channel and isinstance(channels_data, list):
-        for ch in channels_data:
-            if "INA" in ch.get('name', '').upper():
-                ina_channel = ch
-                print(f"Chaîne trouvée (recherche souple) : {ch.get('name')}")
-                break
+    if ina_channel:
+        epg_data = ina_channel.get('timelines', [])
+    else:
+        # Secours via timeline directe
+        try:
+            timeline_res = fetch_timeline_direct(start_time, stop_time)
+            if isinstance(timeline_res, dict):
+                epg_data = timeline_res.get('timelines', [])
+                ina_channel = timeline_res
+                print("Données récupérées via l'API timeline spécifique.")
+        except Exception as e:
+            print(f"Erreur timeline secours : {e}")
 
-    if not ina_channel:
-        print("Erreur : Chaîne INA introuvable.")
+    if not epg_data:
+        print("Erreur : Aucun programme trouvé pour la chaîne INA 70.")
         sys.exit(1)
-
-    epg_data = ina_channel.get('timelines', [])
 
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
@@ -119,10 +152,9 @@ def main():
     display_name = ET.SubElement(channel, 'display-name', lang="fr")
     display_name.text = "INA 70"
 
-    logo_url = (
-        ina_channel.get('featuredImage', {}).get('path') or 
-        ina_channel.get('logo', {}).get('path')
-    )
+    logo_url = None
+    if isinstance(ina_channel, dict):
+        logo_url = ina_channel.get('featuredImage', {}).get('path') or ina_channel.get('logo', {}).get('path')
     if logo_url:
         ET.SubElement(channel, 'icon', src=logo_url)
 
