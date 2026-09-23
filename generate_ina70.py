@@ -9,7 +9,6 @@ import urllib.parse
 from datetime import datetime, timedelta, timezone
 
 CHANNEL_ID = "ina70.fr"
-INA70_PLUTO_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
 def get_paris_tz():
@@ -52,7 +51,6 @@ def extract_image_url(item, episode_info):
     return None
 
 def get_pluto_session(headers):
-    """Génère un identifiant de session (sid) et un jeton valide."""
     device_id = str(uuid.uuid4())
     url = f"https://api.pluto.tv/v2/config?appName=web&appVersion=7.9.0-0402ae52&deviceVersion=124.0.0.0&deviceModel=web&deviceMake=chrome&deviceType=web&clientID={device_id}&clientModelNumber=1.0.0"
     try:
@@ -61,15 +59,15 @@ def get_pluto_session(headers):
             data = json.loads(resp.read().decode('utf-8'))
             return data.get("sessionToken"), data.get("sessionSessionId", device_id)
     except Exception as e:
-        print(f"Erreur d'initialisation de session : {e}", flush=True)
+        print(f"Erreur d'initialisation : {e}", flush=True)
         return None, device_id
 
 def fetch_chunk(start_dt, stop_dt, headers, session_token, sid):
     start_str = urllib.parse.quote(start_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     stop_str = urllib.parse.quote(stop_dt.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
     
-    # Construction de l'URL avec session ID obligatoire
-    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&channelIds={INA70_PLUTO_ID}&clientRegion=FR&sid={sid}"
+    # Sans filtre channelIds pour récupérer tout le bouquet et chercher INA
+    url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&clientRegion=FR&sid={sid}"
     
     req_headers = dict(headers)
     if session_token:
@@ -77,12 +75,14 @@ def fetch_chunk(start_dt, stop_dt, headers, session_token, sid):
 
     try:
         req = urllib.request.Request(url, headers=req_headers)
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-            channels = data if isinstance(data, list) else data.get('channels', [data])
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            channels = json.loads(resp.read().decode('utf-8'))
             for ch in channels:
-                ch_id = str(ch.get('_id') or ch.get('id') or '')
-                if ch_id == INA70_PLUTO_ID or "INA" in str(ch.get('name', '')).upper():
+                ch_name = str(ch.get('name', '')).upper()
+                # Détection de la chaîne INA (en excluant Inazuma)
+                if "INA" in ch_name and "INAZUMA" not in ch_name:
+                    found_id = ch.get('_id') or ch.get('id')
+                    print(f"Chaîne identifiée : {ch.get('name')} (ID: {found_id})", flush=True)
                     return ch.get('timelines', []), ch.get('featuredImage', {}).get('path') or ch.get('logo', {}).get('path')
     except Exception as e:
         print(f"Erreur créneau {start_dt.strftime('%d/%m %H:%M')} : {e}", flush=True)
@@ -99,18 +99,15 @@ def main():
         'Referer': 'https://pluto.tv/'
     }
 
-    print("Initialisation de la session Pluto TV...", flush=True)
     session_token, sid = get_pluto_session(headers)
-
     now = datetime.now(timezone.utc)
     all_programmes = {}
     logo_url = None
 
-    # Extraction par tranches de 12 heures sur 48h
     for i in range(4):
         start_dt = now + timedelta(hours=i * 12)
         stop_dt = start_dt + timedelta(hours=12)
-        print(f"Récupération tranche {i+1}/4 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
+        print(f"Recherche tranche {i+1}/4 ({start_dt.strftime('%d/%m %H:%M')} -> {stop_dt.strftime('%d/%m %H:%M')})...", flush=True)
         
         timelines, icon = fetch_chunk(start_dt, stop_dt, headers, session_token, sid)
         if icon and not logo_url:
@@ -121,7 +118,7 @@ def main():
             all_programmes[prog_key] = item
 
     if not all_programmes:
-        print("Erreur : Aucun programme récupéré.", flush=True)
+        print("Erreur : La chaîne INA est introuvable sur Pluto TV FR.", flush=True)
         sys.exit(1)
 
     tv = ET.Element('tv', {
