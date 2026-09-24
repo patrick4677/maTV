@@ -4,33 +4,12 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260924025800 +0200" stop="20260924050800 +0200" channel="ina70.fr">
-    <title lang="fr">Au théâtre ce soir</title>
-    <sub-title lang="fr">Deux fois deux font cinq</sub-title>
-    <desc lang="fr">Philippe Baron, un homme instable, trompe son épouse avec une autre femme. Ne pouvant choisir entre elles, il demande conseil à un ami. Celui-ci, croyant lui venir en aide, propose une solution qui, finalement, ne satisfera personne.</desc>
+  <programme start="20260924060000 +0200" stop="20260924063700 +0200" channel="ina70.fr">
+    <title lang="fr">INA 70</title>
+    <sub-title lang="fr">INA 70</sub-title>
+    <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d143830afefd5a1d551/poster_1789086996786.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924050800 +0200" stop="20260924054700 +0200" channel="ina70.fr">
-    <title lang="fr">Des chiffres et des lettres</title>
-    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
-    <desc lang="fr">Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d143830afefd5a1d58b/poster_1789086997487.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924054700 +0200" stop="20260924061200 +0200" channel="ina70.fr">
-    <title lang="fr">Des chiffres et des lettres</title>
-    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
-    <desc lang="fr">Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6827d8f903a2ab14da3b89f6/poster_1747441917388.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924061200 +0200" stop="20260924063700 +0200" channel="ina70.fr">
-    <title lang="fr">Des chiffres et des lettres</title>
-    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
-    <desc lang="fr">Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6827d8f903a2ab14da3b89f6/poster_1747441917388.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+    <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </programme>
   <programme start="20260924063700 +0200" stop="20260924073000 +0200" channel="ina70.fr">
     <title lang="fr">Aujourd'hui Madame</title>
@@ -129,5 +108,33 @@
     <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924173200 +0200" stop="20260924175000 +0200" channel="ina70.fr">
+    <title lang="fr">François Gaillard ou la vie des autres</title>
+    <sub-title lang="fr">René : 4e épisode</sub-title>
+    <desc lang="fr">René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d627/poster_1789086999647.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924175000 +0200" stop="20260924182200 +0200" channel="ina70.fr">
+    <title lang="fr">Des chiffres et des lettres</title>
+    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
+    <desc lang="fr">Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa34d163830afefd5a1d701/poster_1789087002798.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924182200 +0200" stop="20260924184800 +0200" channel="ina70.fr">
+    <title lang="fr">Des chiffres et des lettres</title>
+    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
+    <desc lang="fr">Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/682fc22803a2ab14daef7b56/poster_1763744964194.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924184800 +0200" stop="20260924193500 +0200" channel="ina70.fr">
+    <title lang="fr">À bout portant</title>
+    <sub-title lang="fr">Salvatore Adamo</sub-title>
+    <desc lang="fr">Dès les années 1960 souffle un air de dolce vita sur les scènes francophones : âgé d'à peine 20 ans, le chanteur Salvatore Adamo touche le succès du bout des lèvres. La vedette se prête à une passionnante rétrospective de sa carrière artistique.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/67d235c2fdba35b583f4b69d/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
