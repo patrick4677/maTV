@@ -4,40 +4,12 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260924060000 +0200" stop="20260924063700 +0200" channel="ina70.fr">
+  <programme start="20260924090000 +0200" stop="20260924093900 +0200" channel="ina70.fr">
     <title lang="fr">INA 70</title>
     <sub-title lang="fr">INA 70</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260924063700 +0200" stop="20260924073000 +0200" channel="ina70.fr">
-    <title lang="fr">Aujourd'hui Madame</title>
-    <sub-title lang="fr">Qu'en pensez-vous ?</sub-title>
-    <desc lang="fr">Trois téléspectatrices donnent leurs avis sur le paiement des chèques bancaires, les carnets de notes scolaires et la séparation du couple princier d'Angleterre.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d5ca/poster_1789086998457.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924073000 +0200" stop="20260924084600 +0200" channel="ina70.fr">
-    <title lang="fr">L'école des fans</title>
-    <sub-title lang="fr">Mort Shuman</sub-title>
-    <desc lang="fr">Mort Shuman écoute avec beaucoup d'attention les petits chanteurs en herbe qui reprennent ses chansons : "Shami-Sha", "Petite pomme de Chinois", etc. Puis, il chante "Un été de porcelaine" à leur suite.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d5f1/poster_1789087001372.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924084600 +0200" stop="20260924092100 +0200" channel="ina70.fr">
-    <title lang="fr">La femme en blanc</title>
-    <sub-title lang="fr">10ème épisode</sub-title>
-    <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924092100 +0200" stop="20260924093900 +0200" channel="ina70.fr">
-    <title lang="fr">François Gaillard ou la vie des autres</title>
-    <sub-title lang="fr">René : 4e épisode</sub-title>
-    <desc lang="fr">René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d627/poster_1789086999647.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260924093900 +0200" stop="20260924111800 +0200" channel="ina70.fr">
     <title lang="fr">Apostrophes</title>
@@ -136,5 +108,26 @@
     <desc lang="fr">Dès les années 1960 souffle un air de dolce vita sur les scènes francophones : âgé d'à peine 20 ans, le chanteur Salvatore Adamo touche le succès du bout des lèvres. La vedette se prête à une passionnante rétrospective de sa carrière artistique.</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/67d235c2fdba35b583f4b69d/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924193500 +0200" stop="20260924203400 +0200" channel="ina70.fr">
+    <title lang="fr">Les jeux de 20 heures</title>
+    <sub-title lang="fr">Les jeux de 20 heures à Albi</sub-title>
+    <desc lang="fr">Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Albi s'affrontent en duplex sur des jeux de la langue française.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa34d183830afefd5a1d750/poster_1789087001528.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924203400 +0200" stop="20260924205300 +0200" channel="ina70.fr">
+    <title lang="fr">Réponse à tout</title>
+    <sub-title lang="fr">Réponse à tout</sub-title>
+    <desc lang="fr">Jeu télévisé lors duquel deux candidats s'affrontent sur des questions de culture générale, conçues et posées par des téléspectateurs. Un seul participant pourra sortir vainqueur de chaque match amical.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/695f20bb6a5d6e38600cd0d0/poster_1767841992792.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924205300 +0200" stop="20260924220300 +0200" channel="ina70.fr">
+    <title lang="fr">Alain Decaux raconte</title>
+    <sub-title lang="fr">La fin de Rommel</sub-title>
+    <desc lang="fr">Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa34d183830afefd5a1d77f/poster_1789087002644.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
