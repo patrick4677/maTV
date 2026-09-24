@@ -7,7 +7,12 @@ from datetime import datetime, timedelta, timezone
 
 OUTPUT_FILE = "coulisses/ina70.xml"
 PLUTO_XML_URL = "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/PlutoTV/fr.xml"
-TARGET_ID = "639b54404cfdf7000729b3c1"
+
+# Mapping des ID Pluto TV réels vers les ID cibles de ton application
+TARGET_CHANNELS = {
+    "639b54404cfdf7000729b3c1": "ina70.fr",         # INA 70
+    "63b579961bdba100071214cb": "cestpassorcier.fr" # C'est pas sorcier (ID M3U à jour)
+}
 
 def get_paris_tz():
     now = datetime.now(timezone.utc)
@@ -38,7 +43,7 @@ def convert_date(date_str):
 
 def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    print("Téléchargement du fichier pluto.xml global...")
+    print("Téléchargement du flux Pluto TV...")
 
     try:
         req = urllib.request.Request(PLUTO_XML_URL, headers={'User-Agent': 'Mozilla/5.0'})
@@ -48,28 +53,28 @@ def main():
         print(f"Erreur de téléchargement : {e}")
         sys.exit(1)
 
-    print("Extraction des programmes INA 70...")
+    print("Extraction d'INA 70 et C'est pas sorcier...")
     root = ET.fromstring(xml_data)
 
     tv = ET.Element('tv', {
-        'generator-info-name': 'INA70-EPG-Generator',
+        'generator-info-name': 'FAST-EPG-Generator',
         'source-info-name': 'Pluto TV FR'
     })
 
-    # Recherche du canal
+    # Traitement des canaux
     for channel in root.findall('channel'):
-        if channel.get('id') == TARGET_ID:
-            channel.set('id', 'ina70.fr')
+        ch_id = channel.get('id')
+        if ch_id in TARGET_CHANNELS:
+            channel.set('id', TARGET_CHANNELS[ch_id])
             tv.append(channel)
-            break
 
+    # Traitement des programmes
     count = 0
-    # Extraction des programmes
     for prog in root.findall('programme'):
-        if prog.get('channel') == TARGET_ID:
-            prog.set('channel', 'ina70.fr')
+        ch_id = prog.get('channel')
+        if ch_id in TARGET_CHANNELS:
+            prog.set('channel', TARGET_CHANNELS[ch_id])
             
-            # Conversion des heures vers le fuseau français
             start = prog.get('start')
             stop = prog.get('stop')
             if start: prog.set('start', convert_date(start))
@@ -85,7 +90,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(pretty_xml)
 
-    print(f"Succès : {count} programmes INA 70 extraits du XML Pluto.")
+    print(f"Succès : {count} programmes extraits dans {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
