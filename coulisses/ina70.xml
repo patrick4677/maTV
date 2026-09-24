@@ -4,40 +4,12 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260924120000 +0200" stop="20260924125100 +0200" channel="ina70.fr">
+  <programme start="20260924150000 +0200" stop="20260924154600 +0200" channel="ina70.fr">
     <title lang="fr">INA 70</title>
     <sub-title lang="fr">INA 70</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260924125100 +0200" stop="20260924135100 +0200" channel="ina70.fr">
-    <title lang="fr">Aujourd'hui Madame</title>
-    <sub-title lang="fr">Les arts ménagers</sub-title>
-    <desc lang="fr">Visite du Salon des Arts ménagers avec quatre téléspectatrices venues découvrir les dernières nouveautés. L'une d'entre elles a un avis bien arrêté : les appareils sont de plus en plus perfectionnés, mais tombent de plus en plus en panne.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/683594d2afe56ba72e2c987c/poster_1748341973178.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924135100 +0200" stop="20260924142600 +0200" channel="ina70.fr">
-    <title lang="fr">La femme en blanc</title>
-    <sub-title lang="fr">10ème épisode</sub-title>
-    <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924142600 +0200" stop="20260924144300 +0200" channel="ina70.fr">
-    <title lang="fr">François Gaillard ou la vie des autres</title>
-    <sub-title lang="fr">René : 4e épisode</sub-title>
-    <desc lang="fr">René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d163830afefd5a1d690/poster_1789086998889.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924144300 +0200" stop="20260924154600 +0200" channel="ina70.fr">
-    <title lang="fr">À bout portant</title>
-    <sub-title lang="fr">Gilbert Becaud</sub-title>
-    <desc lang="fr">Portrait de Gilbert Bécaud, celui que l'on surnommait Monsieur 100 000 volts. Et dont les chansons et l'incroyable sens du rythme ont électrisé les années 50 et 60.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d163830afefd5a1d6c3/poster_1789086999626.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260924154600 +0200" stop="20260924165700 +0200" channel="ina70.fr">
     <title lang="fr">Aujourd'hui Madame</title>
@@ -115,5 +87,26 @@
     <desc lang="fr">Torturé puis brûlé vif séquestré dans une grange. Bernard, handicapé mental, a eu le tort de croiser la route de Lezay et de son complice au café du village. La cruauté sur personne fragile est sévèrement punie. Le procès va-t-il être exemplaire ?</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/683594d3afe56ba72e2c98db/poster_1750305828469.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260925012600 +0200" stop="20260925015600 +0200" channel="ina70.fr">
+    <title lang="fr">La femme en blanc</title>
+    <sub-title lang="fr">La femme en blanc</sub-title>
+    <desc lang="fr">Au cimetière, Walter rencontre la femme en blanc qui loge dans la région. Effrayée par un possible retour à l'asile, elle l'est aussi par Sir Percival Glyde.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa49ef44996e40ab2c0a1c5/poster_1789173493692.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260925015600 +0200" stop="20260925030600 +0200" channel="ina70.fr">
+    <title lang="fr">Aujourd'hui Madame</title>
+    <sub-title lang="fr">Histoire de l'amour au Moyen Âge</sub-title>
+    <desc lang="fr">Une découverte de l'amour au Moyen Âge. Plusieurs thèmes sont abordés, entre le cliché de l'amour courtois platonique, le récit réaliste de la sexualité dans l'amour médiéval et la place des femmes dans la société de l'époque.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa49ef54996e40ab2c0a1ed/poster_1789173493848.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260925030600 +0200" stop="20260925040100 +0200" channel="ina70.fr">
+    <title lang="fr">Alain Decaux raconte</title>
+    <sub-title lang="fr">Le Ku Klux Klan</sub-title>
+    <desc lang="fr">Le 24 décembre 1865, six anciens combattants de la guerre de Sécession se réunissent à Pulaski, une petite localité du Tennessee. La guerre terminée, désœuvrés, ils décident de créer une organisation raciste, qu'ils appellent Ku Klux Klan...</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/667a87881e15340013a9e60d/poster_1754064277286.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
