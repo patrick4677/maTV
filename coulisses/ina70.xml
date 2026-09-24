@@ -4,40 +4,12 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260924090000 +0200" stop="20260924093900 +0200" channel="ina70.fr">
+  <programme start="20260924120000 +0200" stop="20260924125100 +0200" channel="ina70.fr">
     <title lang="fr">INA 70</title>
     <sub-title lang="fr">INA 70</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260924093900 +0200" stop="20260924111800 +0200" channel="ina70.fr">
-    <title lang="fr">Apostrophes</title>
-    <sub-title lang="fr">Apostrophes</sub-title>
-    <desc lang="fr">À l'invitation de Bernard Pivot, qui les reçoit sur son plateau, plusieurs personnalités, écrivains, artistes, historiens, linguistes, penseurs, échangent, avec délectation, autour de leurs idées et de leurs oeuvres.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6a9cb4e420b6387cd0664a9d/poster_1788654823036.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924111800 +0200" stop="20260924113600 +0200" channel="ina70.fr">
-    <title lang="fr">Réponse à tout</title>
-    <sub-title lang="fr">Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
-    <desc lang="fr">Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck. Deux candidats s'affrontent sur des questions de culture générale, conçues et posées par des téléspectateurs. Lequel des joueurs sortira vainqueur de ce match amical ?</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/67b5ba405e644ca0d7c813f1/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924113600 +0200" stop="20260924122500 +0200" channel="ina70.fr">
-    <title lang="fr">À bout portant</title>
-    <sub-title lang="fr">Michel de la Vega</sub-title>
-    <desc lang="fr">Rencontre avec un maître de l'illusion qui dit croire à des forces magiques. Dans ce portrait de Michel de La Vega, des extraits de spectacles, un impressionnant numéro d'hypnose avec la speakerine Jacqueline Huet, et des entretiens avec le magicien.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6659a0186ae03e00136da75c/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924122500 +0200" stop="20260924125100 +0200" channel="ina70.fr">
-    <title lang="fr">Des chiffres et des lettres</title>
-    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
-    <desc lang="fr">Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/68098e1930b839eca5ba0ce1/poster_1745456722980.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260924125100 +0200" stop="20260924135100 +0200" channel="ina70.fr">
     <title lang="fr">Aujourd'hui Madame</title>
@@ -129,5 +101,19 @@
     <desc lang="fr">Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/6aa34d183830afefd5a1d77f/poster_1789087002644.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924220300 +0200" stop="20260924231100 +0200" channel="ina70.fr">
+    <title lang="fr">Alain Decaux raconte</title>
+    <sub-title lang="fr">La fin de Rommel</sub-title>
+    <desc lang="fr">Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/66def23e38c4a000132cfb51/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924231100 +0200" stop="20260925012600 +0200" channel="ina70.fr">
+    <title lang="fr">Messieurs les jurés</title>
+    <sub-title lang="fr">L'Affaire Lezay</sub-title>
+    <desc lang="fr">Torturé puis brûlé vif séquestré dans une grange. Bernard, handicapé mental, a eu le tort de croiser la route de Lezay et de son complice au café du village. La cruauté sur personne fragile est sévèrement punie. Le procès va-t-il être exemplaire ?</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/683594d3afe56ba72e2c98db/poster_1750305828469.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
