@@ -4,19 +4,12 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260924150000 +0200" stop="20260924154600 +0200" channel="ina70.fr">
+  <programme start="20260924160000 +0200" stop="20260924165700 +0200" channel="ina70.fr">
     <title lang="fr">INA 70</title>
     <sub-title lang="fr">INA 70</sub-title>
     <desc lang="fr">no info available</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
-  </programme>
-  <programme start="20260924154600 +0200" stop="20260924165700 +0200" channel="ina70.fr">
-    <title lang="fr">Aujourd'hui Madame</title>
-    <sub-title lang="fr">L'héritage de mai 68</sub-title>
-    <desc lang="fr">Bilan des événements de mai 68, 10 ans après les faits. Débat réunissant un sociologue, un philosophe, un homme politique et un écrivain. Pour Jacques Delors, mai 68 a permis de comprendre que la société civile pouvait changer toute la société.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/672cba6d8d00c60014510471/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
   <programme start="20260924165700 +0200" stop="20260924173200 +0200" channel="ina70.fr">
     <title lang="fr">La femme en blanc</title>
@@ -108,5 +101,19 @@
     <desc lang="fr">Le 24 décembre 1865, six anciens combattants de la guerre de Sécession se réunissent à Pulaski, une petite localité du Tennessee. La guerre terminée, désœuvrés, ils décident de créer une organisation raciste, qu'ils appellent Ku Klux Klan...</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/667a87881e15340013a9e60d/poster_1754064277286.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260925040100 +0200" stop="20260925045800 +0200" channel="ina70.fr">
+    <title lang="fr">Alain Decaux raconte</title>
+    <sub-title lang="fr">La mort de Trotsky</sub-title>
+    <desc lang="fr">Plus de 30 ans après l'assassinat de Léon Trotski, les circonstances tragiques de l'événement persistent à alimenter nombre de curiosités. Le clivage qui opposa Staline au fondateur de l'idéologie trotskiste aurait pu dégénérer en duel à mort.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/68067aed03a2ab14da7535f8/poster_1745255149786.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260925045800 +0200" stop="20260925053500 +0200" channel="ina70.fr">
+    <title lang="fr">Les jeux de 20 heures</title>
+    <sub-title lang="fr">Les jeux de 20 heures à Monthermé</sub-title>
+    <desc lang="fr">Émission présentée par Jacques Solness et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Monthermé s'affrontent en duplex sur des jeux de la langue française. C'est l'intraitable maître Capello qui arbitre le jeu !</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/696634fc262748e858ed0230/poster_1768324580934.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
