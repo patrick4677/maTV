@@ -4,27 +4,6 @@
     <display-name lang="fr">INA 70</display-name>
     <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
   </channel>
-  <programme start="20260923233400 +0200" stop="20260924010500 +0200" channel="ina70.fr">
-    <title lang="fr">La petite valise</title>
-    <sub-title lang="fr">La petite valise</sub-title>
-    <desc lang="fr">Un jeune clerc de notaire de province connaît quelques soucis d'argent. Un jour, il découvre dans le journal que son billet de loterie a remporté le gros lot. Valise à la main, il part récupérer son gain sans se douter qu'une erreur a été commise.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6a9e06b9b60195e27e3a33c3/poster_1788741310084.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924010500 +0200" stop="20260924015900 +0200" channel="ina70.fr">
-    <title lang="fr">La femme en blanc</title>
-    <sub-title lang="fr">2ème épisode</sub-title>
-    <desc lang="fr">Walter Hartright rencontre son élève Laura Fairlie qui ressemble à la mystérieuse femme en blanc. Il découvre la vie à Limmeridge House. Des sentiments naissent entre le jeune professeur et Laura pourtant fiancée à un autre.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d113830afefd5a1b76d/poster_1789086994491.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
-  <programme start="20260924015900 +0200" stop="20260924025800 +0200" channel="ina70.fr">
-    <title lang="fr">Aujourd'hui Madame</title>
-    <sub-title lang="fr">Le jardin d'Othilie</sub-title>
-    <desc lang="fr">Partons à la rencontre de l'univers d'Othilie Bailly, botaniste auteure du livre Le jardinier du dimanche. Depuis son jardin près de Provins, elle donne des conseils pratiques pour concevoir, planter et entretenir un jardin.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/683594e5afe56ba72e2d2048/poster_1748341992149.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
-  </programme>
   <programme start="20260924025800 +0200" stop="20260924050800 +0200" channel="ina70.fr">
     <title lang="fr">Au théâtre ce soir</title>
     <sub-title lang="fr">Deux fois deux font cinq</sub-title>
@@ -115,5 +94,33 @@
     <desc lang="fr">Visite du Salon des Arts ménagers avec quatre téléspectatrices venues découvrir les dernières nouveautés. L'une d'entre elles a un avis bien arrêté : les appareils sont de plus en plus perfectionnés, mais tombent de plus en plus en panne.</desc>
     <category lang="fr">Archives</category>
     <icon src="https://images.pluto.tv/episodes/683594d2afe56ba72e2c987c/poster_1748341973178.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924135100 +0200" stop="20260924142600 +0200" channel="ina70.fr">
+    <title lang="fr">La femme en blanc</title>
+    <sub-title lang="fr">10ème épisode</sub-title>
+    <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924142600 +0200" stop="20260924144300 +0200" channel="ina70.fr">
+    <title lang="fr">François Gaillard ou la vie des autres</title>
+    <sub-title lang="fr">René : 4e épisode</sub-title>
+    <desc lang="fr">René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa34d163830afefd5a1d690/poster_1789086998889.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924144300 +0200" stop="20260924154600 +0200" channel="ina70.fr">
+    <title lang="fr">À bout portant</title>
+    <sub-title lang="fr">Gilbert Becaud</sub-title>
+    <desc lang="fr">Portrait de Gilbert Bécaud, celui que l'on surnommait Monsieur 100 000 volts. Et dont les chansons et l'incroyable sens du rythme ont électrisé les années 50 et 60.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/6aa34d163830afefd5a1d6c3/poster_1789086999626.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  </programme>
+  <programme start="20260924154600 +0200" stop="20260924165700 +0200" channel="ina70.fr">
+    <title lang="fr">Aujourd'hui Madame</title>
+    <sub-title lang="fr">L'héritage de mai 68</sub-title>
+    <desc lang="fr">Bilan des événements de mai 68, 10 ans après les faits. Débat réunissant un sociologue, un philosophe, un homme politique et un écrivain. Pour Jacques Delors, mai 68 a permis de comprendre que la société civile pouvait changer toute la société.</desc>
+    <category lang="fr">Archives</category>
+    <icon src="https://images.pluto.tv/episodes/672cba6d8d00c60014510471/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
   </programme>
 </tv>
