@@ -1,119 +1,750 @@
 <?xml version="1.0" ?>
 <tv generator-info-name="INA70-EPG-Generator" source-info-name="Pluto TV FR">
   <channel id="ina70.fr">
-    <display-name lang="fr">INA 70</display-name>
-    <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600"/>
+    
+    
+    <display-name>INA 70</display-name>
+    
+    
+    <icon src="https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/colorLogoPNG.png"/>
+    
+  
   </channel>
-  <programme start="20260924154600 +0200" stop="20260924165700 +0200" channel="ina70.fr">
-    <title lang="fr">Aujourd'hui Madame</title>
-    <sub-title lang="fr">L'héritage de mai 68</sub-title>
-    <desc lang="fr">Bilan des événements de mai 68, 10 ans après les faits. Débat réunissant un sociologue, un philosophe, un homme politique et un écrivain. Pour Jacques Delors, mai 68 a permis de comprendre que la société civile pouvait changer toute la société.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/672cba6d8d00c60014510471/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924165700 +0200" stop="20260924173200 +0200">
+    
+    
+    <title>La femme en blanc</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924145700 +0000</episode-num>
+    
+    
+    <desc>Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/66f6c93ba2922a0013265239/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
+    
+    
+    <sub-title>10ème épisode</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924165700 +0200" stop="20260924173200 +0200" channel="ina70.fr">
-    <title lang="fr">La femme en blanc</title>
-    <sub-title lang="fr">10ème épisode</sub-title>
-    <desc lang="fr">Laura apprend avec surprise que Marian est partie pour Londres avec le Comte et la Comtesse de Fosco. Laura veut la rejoindre directement à Limmeridge House, mais Percival insiste pour qu'elle fasse également halte à Londres, chez les Fosco...</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/67070c12a4b22d00144320cd/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924173200 +0200" stop="20260924175000 +0200">
+    
+    
+    <title>François Gaillard ou la vie des autres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924153200 +0000</episode-num>
+    
+    
+    <desc>René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c000144590aa/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4be764c000144590aa</series-id>
+    
+    
+    <sub-title>René : 4e épisode</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924173200 +0200" stop="20260924175000 +0200" channel="ina70.fr">
-    <title lang="fr">François Gaillard ou la vie des autres</title>
-    <sub-title lang="fr">René : 4e épisode</sub-title>
-    <desc lang="fr">René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d153830afefd5a1d627/poster_1789086999647.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924175000 +0200" stop="20260924182200 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924155000 +0000</episode-num>
+    
+    
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924175000 +0200" stop="20260924182200 +0200" channel="ina70.fr">
-    <title lang="fr">Des chiffres et des lettres</title>
-    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
-    <desc lang="fr">Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d163830afefd5a1d701/poster_1789087002798.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924182200 +0200" stop="20260924184800 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924162200 +0000</episode-num>
+    
+    
+    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924182200 +0200" stop="20260924184800 +0200" channel="ina70.fr">
-    <title lang="fr">Des chiffres et des lettres</title>
-    <sub-title lang="fr">Des chiffres et des lettres</sub-title>
-    <desc lang="fr">Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/682fc22803a2ab14daef7b56/poster_1763744964194.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924184800 +0200" stop="20260924193500 +0200">
+    
+    
+    <title>À bout portant</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924164800 +0000</episode-num>
+    
+    
+    <desc>Dès les années 1960 souffle un air de dolce vita sur les scènes francophones : âgé d'à peine 20 ans, le chanteur Salvatore Adamo touche le succès du bout des lèvres. La vedette se prête à une passionnante rétrospective de sa carrière artistique.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
+    
+    
+    <sub-title>Salvatore Adamo</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924184800 +0200" stop="20260924193500 +0200" channel="ina70.fr">
-    <title lang="fr">À bout portant</title>
-    <sub-title lang="fr">Salvatore Adamo</sub-title>
-    <desc lang="fr">Dès les années 1960 souffle un air de dolce vita sur les scènes francophones : âgé d'à peine 20 ans, le chanteur Salvatore Adamo touche le succès du bout des lèvres. La vedette se prête à une passionnante rétrospective de sa carrière artistique.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/67d235c2fdba35b583f4b69d/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924193500 +0200" stop="20260924203400 +0200">
+    
+    
+    <title>Les jeux de 20 heures</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924173500 +0000</episode-num>
+    
+    
+    <desc>Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Albi s'affrontent en duplex sur des jeux de la langue française.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ce764c000144592b9/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ce764c000144592b9</series-id>
+    
+    
+    <sub-title>Les jeux de 20 heures à Albi</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924193500 +0200" stop="20260924203400 +0200" channel="ina70.fr">
-    <title lang="fr">Les jeux de 20 heures</title>
-    <sub-title lang="fr">Les jeux de 20 heures à Albi</sub-title>
-    <desc lang="fr">Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Albi s'affrontent en duplex sur des jeux de la langue française.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d183830afefd5a1d750/poster_1789087001528.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924203400 +0200" stop="20260924205300 +0200">
+    
+    
+    <title>Réponse à tout</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924183400 +0000</episode-num>
+    
+    
+    <desc>Jeu télévisé lors duquel deux candidats s'affrontent sur des questions de culture générale, conçues et posées par des téléspectateurs. Un seul participant pourra sortir vainqueur de chaque match amical.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65e84d1303625d001315cdbf/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65e84d1303625d001315cdbf</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924203400 +0200" stop="20260924205300 +0200" channel="ina70.fr">
-    <title lang="fr">Réponse à tout</title>
-    <sub-title lang="fr">Réponse à tout</sub-title>
-    <desc lang="fr">Jeu télévisé lors duquel deux candidats s'affrontent sur des questions de culture générale, conçues et posées par des téléspectateurs. Un seul participant pourra sortir vainqueur de chaque match amical.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/695f20bb6a5d6e38600cd0d0/poster_1767841992792.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924205300 +0200" stop="20260924220300 +0200">
+    
+    
+    <title>Alain Decaux raconte</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924185300 +0000</episode-num>
+    
+    
+    <desc>Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da3459/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c122d9a40ff70013da3459</series-id>
+    
+    
+    <sub-title>La fin de Rommel</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924205300 +0200" stop="20260924220300 +0200" channel="ina70.fr">
-    <title lang="fr">Alain Decaux raconte</title>
-    <sub-title lang="fr">La fin de Rommel</sub-title>
-    <desc lang="fr">Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa34d183830afefd5a1d77f/poster_1789087002644.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924220300 +0200" stop="20260924231100 +0200">
+    
+    
+    <title>Alain Decaux raconte</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924200300 +0000</episode-num>
+    
+    
+    <desc>Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da3459/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c122d9a40ff70013da3459</series-id>
+    
+    
+    <sub-title>La fin de Rommel</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924220300 +0200" stop="20260924231100 +0200" channel="ina70.fr">
-    <title lang="fr">Alain Decaux raconte</title>
-    <sub-title lang="fr">La fin de Rommel</sub-title>
-    <desc lang="fr">Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/66def23e38c4a000132cfb51/poster.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260924231100 +0200" stop="20260925012600 +0200">
+    
+    
+    <title>Messieurs les jurés</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924211100 +0000</episode-num>
+    
+    
+    <desc>Torturé puis brûlé vif séquestré dans une grange. Bernard, handicapé mental, a eu le tort de croiser la route de Lezay et de son complice au café du village. La cruauté sur personne fragile est sévèrement punie. Le procès va-t-il être exemplaire ?</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fb9/tile_1759553827798.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fb9</series-id>
+    
+    
+    <sub-title>L'Affaire Lezay</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260924231100 +0200" stop="20260925012600 +0200" channel="ina70.fr">
-    <title lang="fr">Messieurs les jurés</title>
-    <sub-title lang="fr">L'Affaire Lezay</sub-title>
-    <desc lang="fr">Torturé puis brûlé vif séquestré dans une grange. Bernard, handicapé mental, a eu le tort de croiser la route de Lezay et de son complice au café du village. La cruauté sur personne fragile est sévèrement punie. Le procès va-t-il être exemplaire ?</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/683594d3afe56ba72e2c98db/poster_1750305828469.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260925012600 +0200" stop="20260925015600 +0200">
+    
+    
+    <title>La femme en blanc</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924232600 +0000</episode-num>
+    
+    
+    <desc>Au cimetière, Walter rencontre la femme en blanc qui loge dans la région. Effrayée par un possible retour à l'asile, elle l'est aussi par Sir Percival Glyde.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/66f6c93ba2922a0013265239/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260925012600 +0200" stop="20260925015600 +0200" channel="ina70.fr">
-    <title lang="fr">La femme en blanc</title>
-    <sub-title lang="fr">La femme en blanc</sub-title>
-    <desc lang="fr">Au cimetière, Walter rencontre la femme en blanc qui loge dans la région. Effrayée par un possible retour à l'asile, elle l'est aussi par Sir Percival Glyde.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa49ef44996e40ab2c0a1c5/poster_1789173493692.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260925015600 +0200" stop="20260925030600 +0200">
+    
+    
+    <title>Aujourd'hui Madame</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260924235600 +0000</episode-num>
+    
+    
+    <desc>Une découverte de l'amour au Moyen Âge. Plusieurs thèmes sont abordés, entre le cliché de l'amour courtois platonique, le récit réaliste de la sexualité dans l'amour médiéval et la place des femmes dans la société de l'époque.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    
+    
+    <sub-title>Histoire de l'amour au Moyen Âge</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260925015600 +0200" stop="20260925030600 +0200" channel="ina70.fr">
-    <title lang="fr">Aujourd'hui Madame</title>
-    <sub-title lang="fr">Histoire de l'amour au Moyen Âge</sub-title>
-    <desc lang="fr">Une découverte de l'amour au Moyen Âge. Plusieurs thèmes sont abordés, entre le cliché de l'amour courtois platonique, le récit réaliste de la sexualité dans l'amour médiéval et la place des femmes dans la société de l'époque.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/6aa49ef54996e40ab2c0a1ed/poster_1789173493848.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260925030600 +0200" stop="20260925040100 +0200">
+    
+    
+    <title>Alain Decaux raconte</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925010600 +0000</episode-num>
+    
+    
+    <desc>Le 24 décembre 1865, six anciens combattants de la guerre de Sécession se réunissent à Pulaski, une petite localité du Tennessee. La guerre terminée, désœuvrés, ils décident de créer une organisation raciste, qu'ils appellent Ku Klux Klan...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da3459/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c122d9a40ff70013da3459</series-id>
+    
+    
+    <sub-title>Le Ku Klux Klan</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260925030600 +0200" stop="20260925040100 +0200" channel="ina70.fr">
-    <title lang="fr">Alain Decaux raconte</title>
-    <sub-title lang="fr">Le Ku Klux Klan</sub-title>
-    <desc lang="fr">Le 24 décembre 1865, six anciens combattants de la guerre de Sécession se réunissent à Pulaski, une petite localité du Tennessee. La guerre terminée, désœuvrés, ils décident de créer une organisation raciste, qu'ils appellent Ku Klux Klan...</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/667a87881e15340013a9e60d/poster_1754064277286.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260925040100 +0200" stop="20260925045800 +0200">
+    
+    
+    <title>Alain Decaux raconte</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925020100 +0000</episode-num>
+    
+    
+    <desc>Plus de 30 ans après l'assassinat de Léon Trotski, les circonstances tragiques de l'événement persistent à alimenter nombre de curiosités. Le clivage qui opposa Staline au fondateur de l'idéologie trotskiste aurait pu dégénérer en duel à mort.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da3459/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c122d9a40ff70013da3459</series-id>
+    
+    
+    <sub-title>La mort de Trotsky</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260925040100 +0200" stop="20260925045800 +0200" channel="ina70.fr">
-    <title lang="fr">Alain Decaux raconte</title>
-    <sub-title lang="fr">La mort de Trotsky</sub-title>
-    <desc lang="fr">Plus de 30 ans après l'assassinat de Léon Trotski, les circonstances tragiques de l'événement persistent à alimenter nombre de curiosités. Le clivage qui opposa Staline au fondateur de l'idéologie trotskiste aurait pu dégénérer en duel à mort.</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/68067aed03a2ab14da7535f8/poster_1745255149786.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260925045800 +0200" stop="20260925053500 +0200">
+    
+    
+    <title>Les jeux de 20 heures</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925025800 +0000</episode-num>
+    
+    
+    <desc>Émission présentée par Jacques Solness et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Monthermé s'affrontent en duplex sur des jeux de la langue française. C'est l'intraitable maître Capello qui arbitre le jeu !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ce764c000144592b9/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ce764c000144592b9</series-id>
+    
+    
+    <sub-title>Les jeux de 20 heures à Monthermé</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
-  <programme start="20260925045800 +0200" stop="20260925053500 +0200" channel="ina70.fr">
-    <title lang="fr">Les jeux de 20 heures</title>
-    <sub-title lang="fr">Les jeux de 20 heures à Monthermé</sub-title>
-    <desc lang="fr">Émission présentée par Jacques Solness et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Monthermé s'affrontent en duplex sur des jeux de la langue française. C'est l'intraitable maître Capello qui arbitre le jeu !</desc>
-    <category lang="fr">Archives</category>
-    <icon src="https://images.pluto.tv/episodes/696634fc262748e858ed0230/poster_1768324580934.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=1000&amp;q=75&amp;w=694"/>
+  
+  
+  <programme channel="ina70.fr" start="20260925053500 +0200" stop="20260925060100 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925033500 +0000</episode-num>
+    
+    
+    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
   </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260925060100 +0200" stop="20260925062700 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925040100 +0000</episode-num>
+    
+    
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260925062700 +0200" stop="20260925065300 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925042700 +0000</episode-num>
+    
+    
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260925065300 +0200" stop="20260925080000 +0200">
+    
+    
+    <title>Aujourd'hui Madame</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925045300 +0000</episode-num>
+    
+    
+    <desc>La prise de parole en public peut effrayer ou rebute nombre de personnes. Aujourd'hui, l'émission propose des astuces pour combattre la timidité et l'appréhension avant de s'adresser à un public.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    
+    
+    <sub-title>Oser prendre la parole</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260925080000 +0200" stop="20260925084600 +0200">
+    
+    
+    <title>L'école des fans</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925060000 +0000</episode-num>
+    
+    
+    <desc>Mort Shuman écoute avec beaucoup d'attention les petits chanteurs en herbe qui reprennent ses chansons : "Shami-Sha", "Petite pomme de Chinois", etc. Puis, il chante "Un été de porcelaine" à leur suite.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014459050/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014459050</series-id>
+    
+    
+    <sub-title>Mort Shuman</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260925084600 +0200" stop="20260925092100 +0200">
+    
+    
+    <title>La femme en blanc</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925064600 +0000</episode-num>
+    
+    
+    <desc>Laura est traumatisée, mais bien vivante. Seuls Marian et Walter Hartright le savent. Marian est désormais déterminée à reconstituer toute l'histoire pour rétablir la vérité, et que Laura récupère ainsi son identité et son héritage.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/66f6c93ba2922a0013265239/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
+    
+    
+    <sub-title>11ème épisode</sub-title>
+    
+    
+    <category>Entertainment</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
 </tv>
