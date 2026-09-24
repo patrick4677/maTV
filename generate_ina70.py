@@ -1,4 +1,3 @@
-
 import json
 import os
 import sys
@@ -8,11 +7,13 @@ import urllib.request
 import urllib.parse
 from datetime import datetime, timedelta, timezone
 
+# Configuration des identifiants et fichiers
 CHANNEL_ID = "ina70.fr"
 INA70_PLUTO_ID = "639b54404cfdf7000729b3c1"
 OUTPUT_FILE = "coulisses/ina70.xml"
 
 def get_paris_tz():
+    """Calcule dynamiquement le décalage horaire de Paris (Heure d'été/hiver)."""
     now = datetime.now(timezone.utc)
     year = now.year
     march_last_sun = max(day for day in range(25, 32) if datetime(year, 3, day).weekday() == 6)
@@ -29,6 +30,7 @@ def get_paris_tz():
 PARIS_TZ, PARIS_OFFSET_STR = get_paris_tz()
 
 def format_xmltv_date(date_str):
+    """Formate une date ISO en format XMLTV compatible avec décalage local."""
     if not date_str:
         return ""
     try:
@@ -40,6 +42,7 @@ def format_xmltv_date(date_str):
         return ""
 
 def extract_image_url(item, episode_info):
+    """Récupère l'URL de l'image disponible la plus pertinente."""
     if isinstance(item.get('tile'), dict) and item['tile'].get('path'):
         return item['tile']['path']
     if isinstance(episode_info.get('poster'), dict) and episode_info['poster'].get('path'):
@@ -52,7 +55,7 @@ def extract_image_url(item, episode_info):
     return None
 
 def get_pluto_token(headers):
-    """Génère un jeton invité anonyme pour autoriser les requêtes API."""
+    """Génère un jeton invité anonyme pour autoriser les requêtes à l'API Pluto TV."""
     try:
         url = "https://api.pluto.tv/v1/auth/local"
         req = urllib.request.Request(url, headers=headers, method="POST")
@@ -83,10 +86,10 @@ def main():
     start_str = urllib.parse.quote((now - timedelta(hours=2)).strftime("%Y-%m-%dT%H:00:00.000Z"))
     stop_str = urllib.parse.quote((now + timedelta(hours=48)).strftime("%Y-%m-%dT%H:00:00.000Z"))
 
-    # Utilisation de l'API v2 /channels globale sans sous-créneaux stricts pour éviter les 401
+    # Requête de la grille horaire globale
     url = f"https://api.pluto.tv/v2/channels?start={start_str}&stop={stop_str}&clientRegion=FR"
 
-    print(f"Récupération de la grille Pluto TV...")
+    print("Récupération de la grille Pluto TV...")
     epg_data = []
     logo_url = None
 
@@ -110,6 +113,7 @@ def main():
         print("Erreur : Aucun programme récupéré.")
         sys.exit(1)
 
+    # Construction de l'arbre XMLTV
     tv = ET.Element('tv', {
         'generator-info-name': 'INA70-EPG-Generator',
         'source-info-name': 'Pluto TV FR'
@@ -161,6 +165,7 @@ def main():
 
         count += 1
 
+    # Formatage et écriture dans le fichier
     xml_out = ET.tostring(tv, encoding='utf-8')
     parsed = minidom.parseString(xml_out)
     pretty_xml = parsed.toprettyxml(indent="  ")
