@@ -24,111 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260924193500 +0200" stop="20260924203400 +0200">
-    
-    
-    <title>Les jeux de 20 heures</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260924173500 +0000</episode-num>
-    
-    
-    <desc>Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Albi s'affrontent en duplex sur des jeux de la langue française.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ce764c000144592b9/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ce764c000144592b9</series-id>
-    
-    
-    <sub-title>Les jeux de 20 heures à Albi</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260924203400 +0200" stop="20260924205300 +0200">
-    
-    
-    <title>Réponse à tout</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260924183400 +0000</episode-num>
-    
-    
-    <desc>Jeu télévisé lors duquel deux candidats s'affrontent sur des questions de culture générale, conçues et posées par des téléspectateurs. Un seul participant pourra sortir vainqueur de chaque match amical.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65e84d1303625d001315cdbf/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65e84d1303625d001315cdbf</series-id>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260924205300 +0200" stop="20260924220300 +0200">
-    
-    
-    <title>Alain Decaux raconte</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260924185300 +0000</episode-num>
-    
-    
-    <desc>Soupçonné d'avoir trempé dans le complot du 20 juillet 1944 contre Hitler, le maréchal Erwin Rommel, qui joua un rôle majeur dans la Seconde Guerre mondiale, a le choix entre le Tribunal du peuple ou la mort par empoisonnement. Il choisit le poison.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da3459/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c122d9a40ff70013da3459</series-id>
-    
-    
-    <sub-title>La fin de Rommel</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260924220300 +0200" stop="20260924231100 +0200">
     
     
@@ -156,10 +51,10 @@
     <sub-title>La fin de Rommel</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -192,10 +87,10 @@
     <sub-title>L'Affaire Lezay</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -225,10 +120,10 @@
     <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -261,10 +156,10 @@
     <sub-title>Histoire de l'amour au Moyen Âge</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -297,10 +192,10 @@
     <sub-title>Le Ku Klux Klan</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -333,10 +228,10 @@
     <sub-title>La mort de Trotsky</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -369,10 +264,10 @@
     <sub-title>Les jeux de 20 heures à Monthermé</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -402,10 +297,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -435,10 +330,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -468,10 +363,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -504,10 +399,10 @@
     <sub-title>Oser prendre la parole</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -540,10 +435,10 @@
     <sub-title>Mort Shuman</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -576,10 +471,10 @@
     <sub-title>11ème épisode</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -612,10 +507,10 @@
     <sub-title>René : 5e et dernier épisode</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -648,10 +543,10 @@
     <sub-title>C'est malin</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -684,262 +579,187 @@
     <sub-title>Annabel</sub-title>
     
     
+    <category>Entertainment</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260925122600 +0200" stop="20260925125300 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260925102600 +0000</episode-num>
+    
+    
+    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
     <category>Entertainment</category>
     
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260924192908 +0200" stop="20260924200108 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Plus gros navires du monde</title>
-    
-    
-    <episode-num system="onscreen">S01E02</episode-num>
-    
-    
-    <episode-num system="pluto">6464dc9117da09001a0f491d</episode-num>
-    
-    
-    <episode-num system="original-air-date">19940101000000 +0000</episode-num>
-    
-    
-    <desc>Paquebots, cargos ou supertankers. Ils sont en acier et pèsent des dizaines de milliers de tonnes, et pourtant ils flottent ?</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19940101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Plus gros navires du monde</sub-title>
-    
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260924200108 +0200" stop="20260924203308 +0200">
+  <programme channel="ina70.fr" start="20260925125300 +0200" stop="20260925140100 +0200">
     
     
-    <title>C'est Pas Sorcier: La Peinture</title>
+    <title>Aujourd'hui Madame</title>
     
     
-    <episode-num system="onscreen">S01E160</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">646756bd17da09001a1e8a0a</episode-num>
+    <episode-num system="original-air-date">20260925105300 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
+    <desc>L'évolution des modèles économiques pourrait conditionner le développement de l'écologie. Les invités, parmi lesquels René Dumont, apportent leur éclairage sur la place de l'écologie au niveau mondial.</desc>
     
     
-    <desc>Jamy a transformé le camion en atelier d'artiste : il veut devenir peintre ! Pour aider son compagnon de route, Fred part à la rencontre de spécialistes qui nous dévoilent de petites choses essentielles sur les couleurs, les supports, les techniques.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19980101</date>
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Pourquoi l'écologie ?</sub-title>
     
     
-    <sub-title>La Peinture</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260924203308 +0200" stop="20260924210508 +0200">
+  <programme channel="ina70.fr" start="20260925140100 +0200" stop="20260925143700 +0200">
     
     
-    <title>C'est Pas Sorcier: Les eaux minérales</title>
+    <title>La femme en blanc</title>
     
     
-    <episode-num system="onscreen">S01E361</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6470751e13c2c2001a521721</episode-num>
+    <episode-num system="original-air-date">20260925120100 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    <desc>Laura est traumatisée, mais bien vivante. Seuls Marian et Walter Hartright le savent. Marian est désormais déterminée à reconstituer toute l'histoire pour rétablir la vérité, et que Laura récupère ainsi son identité et son héritage.</desc>
     
     
-    <desc>Minérales, de source ou du robinet quelles routes les eaux que nous consommons empruntent-elles avant d'atterrir dans nos verres ? Quels filtres naturels vont agir sur l'eau de pluie pour la transformer en une eau parfaitement pure ?</desc>
+    <icon src="https://images.pluto.tv/series/66f6c93ba2922a0013265239/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20060101</date>
+    <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>11ème épisode</sub-title>
     
     
-    <sub-title>Les eaux minérales</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260924210508 +0200" stop="20260924213708 +0200">
+  <programme channel="ina70.fr" start="20260925143700 +0200" stop="20260925145400 +0200">
     
     
-    <title>C'est Pas Sorcier: La grande lessive</title>
+    <title>François Gaillard ou la vie des autres</title>
     
     
-    <episode-num system="onscreen">S01E190</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">64675c54f2a541001b8c9e3a</episode-num>
+    <episode-num system="original-air-date">20260925123700 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20000101000000 +0000</episode-num>
+    <desc>René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
     
     
-    <desc>Fred, Sabine et Jamy nous dévoilent les formules chimiques et magiques des lessives et savons d'hier et d'aujourd'hui.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c000144590aa/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20000101</date>
+    <series-id system="pluto">65c0ea4be764c000144590aa</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>René : 5e et dernier épisode</sub-title>
     
     
-    <sub-title>La grande lessive</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260924213708 +0200" stop="20260924220808 +0200">
+  <programme channel="ina70.fr" start="20260925145400 +0200" stop="20260925155500 +0200">
     
     
-    <title>C'est Pas Sorcier: Métro</title>
+    <title>À bout portant</title>
     
     
-    <episode-num system="onscreen">S01E79</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6467338f91275e001ab7f34c</episode-num>
+    <episode-num system="original-air-date">20260925125400 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
+    <desc>Serge Reggiani était un jeune coiffeur quand il a commencé à faire de la figuration, avant de devenir comédien, puis chanteur à 42 ans. Les caméras suivent l'artiste dans les coulisses de ses concerts, et recueillent ses confidences.</desc>
     
     
-    <desc>Fred et Jamy nous font découvrir le fonctionnement du métro parisien, qui accueille chaque jour une moyenne de 5 millions de passagers.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19960101</date>
+    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Serge Reggiani</sub-title>
     
     
-    <sub-title>Métro</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260924220808 +0200" stop="20260924224008 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Au nom de la loi</title>
-    
-    
-    <episode-num system="onscreen">S01E91</episode-num>
-    
-    
-    <episode-num system="pluto">64673932f2a541001b8b35fa</episode-num>
-    
-    
-    <episode-num system="original-air-date">19970101000000 +0000</episode-num>
-    
-    
-    <desc>Fred et Jamy nous emmènent au Palais de Justice de Créteil pour nous expliquer comment fonctionne la justice en France. Fred est accusé d'un vol qu'il n'a pas commis.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19970101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Au nom de la loi</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1053,10 +873,10 @@
     <sub-title>L'ascension du mont blanc</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1134,10 +954,10 @@
     <sub-title>Vol à voile</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1176,10 +996,10 @@
     <sub-title>Electricité quand les branches disjonctent</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1218,10 +1038,10 @@
     <sub-title>Les algues</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1260,10 +1080,10 @@
     <sub-title>Poulpes fiction céphalopodes</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1381,10 +1201,10 @@
     <sub-title>Déchets nucléaires</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1423,10 +1243,10 @@
     <sub-title>Les félins</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1465,10 +1285,10 @@
     <sub-title>Parachutes parapentes grand frisson</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1585,10 +1405,10 @@
     <sub-title>Imprimerie noir sur blanc</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1627,10 +1447,10 @@
     <sub-title>Le désert d'Atacama</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1669,10 +1489,10 @@
     <sub-title>La dissuasion nucléaire</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1711,10 +1531,10 @@
     <sub-title>L'eau ça coule de source</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1753,10 +1573,10 @@
     <sub-title>Grand Schuss</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1795,10 +1615,10 @@
     <sub-title>Une seconde vie pour nos poubelles</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1837,10 +1657,10 @@
     <sub-title>Sous le soleil de Versailles</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1879,10 +1699,10 @@
     <sub-title>La forêt enchantée ca vous branche</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
@@ -1960,10 +1780,259 @@
     <sub-title>Rally dans le désert</sub-title>
     
     
+    <category>Science</category>
+    
+    
     <category>Series</category>
     
     
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260925120309 +0200" stop="20260925123509 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les Trésors : baie d'Alexandrie</title>
+    
+    
+    <episode-num system="onscreen">S01E400</episode-num>
+    
+    
+    <episode-num system="pluto">64708605a7ef77001aa7e059</episode-num>
+    
+    
+    <episode-num system="original-air-date">20070101000000 +0000</episode-num>
+    
+    
+    <desc>Pour saluer les Journées du patrimoine, C’est pas sorcier décide de remonter le temps. Sabine et Jamy plongent au 6ème siècle avant Jésus-Christ et nous entraînent à la découverte du port d’Alexandrie et des cités englouties de la baie d’Aboukir.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20070101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les Trésors : baie d'Alexandrie</sub-title>
+    
+    
     <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260925123509 +0200" stop="20260925130909 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Néolithique</title>
+    
+    
+    <episode-num system="onscreen">S01E202</episode-num>
+    
+    
+    <episode-num system="pluto">6467700c91275e001ab9b2c8</episode-num>
+    
+    
+    <episode-num system="original-air-date">20000101000000 +0000</episode-num>
+    
+    
+    <desc>Tout ce que nous sommes aujourd’hui, nous le devons aux hommes qui vécurent au Néolithique. A la frontière entre préhistoire et Histoire, ces hommes ont construit les premières maisons, ils ont inventé l’agriculture, l’élevage, la céramique...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20000101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Néolithique</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260925130909 +0200" stop="20260925134109 +0200">
+    
+    
+    <title>C'est Pas Sorcier</title>
+    
+    
+    <episode-num system="onscreen">S01E511</episode-num>
+    
+    
+    <episode-num system="pluto">67475014882f6d001347d68a</episode-num>
+    
+    
+    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    
+    
+    <desc>Un fémur long de 2,40 m a récemment été découvert dans une carrière de sable, à Angeac, près d’Angoulême. Il appartenait à un dinosaure qui devait mesurer pas moins de 35 mètres de long.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20120101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Des dinosaures sous nos pieds</sub-title>
+    
+    
+    <category>Documentary</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260925134109 +0200" stop="20260925141309 +0200">
+    
+    
+    <title>C'est Pas Sorcier: La nutrition</title>
+    
+    
+    <episode-num system="onscreen">S01E203</episode-num>
+    
+    
+    <episode-num system="pluto">64677172649e97001b3cf85c</episode-num>
+    
+    
+    <episode-num system="original-air-date">20000101000000 +0000</episode-num>
+    
+    
+    <desc>Fred, Jamy et Sabine nous expliquent les règles d'or d'une alimentation équilibrée. Trop de gras et pas assez de vitamines ? Mal manger peut entraîner des maladies graves et favoriser l'obésité.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20000101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>La nutrition</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260925141309 +0200" stop="20260925144609 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les dirigeables</title>
+    
+    
+    <episode-num system="onscreen">S01E227</episode-num>
+    
+    
+    <episode-num system="pluto">646c7551188649001a4e368d</episode-num>
+    
+    
+    <episode-num system="original-air-date">20010101000000 +0000</episode-num>
+    
+    
+    <desc>L’équipe de C’est pas sorcier a eu le privilège de voler à bord du Zeppelin NT, un dirigeable dernier cri. Sabine a survolé la vallée de la Seine à bord de cet engin qui peut atteindre 130 km/h.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20010101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les dirigeables</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260925144609 +0200" stop="20260925151909 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Le plancher des vaches</title>
+    
+    
+    <episode-num system="onscreen">S01E03</episode-num>
+    
+    
+    <episode-num system="pluto">6464dc9717da09001a0f4b75</episode-num>
+    
+    
+    <episode-num system="original-air-date">19940101000000 +0000</episode-num>
+    
+    
+    <desc>Lait, céréales, oeufs, viande... Tous ces produits alimentaires que nous consommons chaque jour viennent de la ferme. Mais qui fabrique quoi ?</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19940101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Le plancher des vaches</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
