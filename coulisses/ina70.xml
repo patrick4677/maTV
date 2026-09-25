@@ -24,111 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260925093900 +0200" stop="20260925113800 +0200">
-    
-    
-    <title>Au théâtre ce soir</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925073900 +0000</episode-num>
-    
-    
-    <desc>Rencontre explosive et cocasse entre un curé de campagne et un séduisant et mystérieux jeune diable venu se confesser.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da357e/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c122d9a40ff70013da357e</series-id>
-    
-    
-    <sub-title>C'est malin</sub-title>
-    
-    
-    <category>Entertainment</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260925113800 +0200" stop="20260925122600 +0200">
-    
-    
-    <title>À bout portant</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925093800 +0000</episode-num>
-    
-    
-    <desc>Annabel, chanteuse, muse de Bernard Buffet, connaissait bien le milieu artistique parisien qu'elle n'hésitait pas à écorcher dans ses entretiens. Portrait sensible et mélancolique dans lequel l'artiste se livre et se délivre.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
-    
-    
-    <sub-title>Annabel</sub-title>
-    
-    
-    <category>Entertainment</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260925122600 +0200" stop="20260925125300 +0200">
-    
-    
-    <title>Des chiffres et des lettres</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925102600 +0000</episode-num>
-    
-    
-    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
-    
-    
-    <category>Entertainment</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260925125300 +0200" stop="20260925140100 +0200">
     
     
@@ -156,10 +51,10 @@
     <sub-title>Pourquoi l'écologie ?</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -192,10 +87,10 @@
     <sub-title>11ème épisode</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -228,10 +123,10 @@
     <sub-title>René : 5e et dernier épisode</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -264,10 +159,10 @@
     <sub-title>Serge Reggiani</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -300,10 +195,10 @@
     <sub-title>Les églises parallèles : sectes</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -336,10 +231,10 @@
     <sub-title>11ème épisode</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -372,10 +267,10 @@
     <sub-title>René : 5e et dernier épisode</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -405,10 +300,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -438,10 +333,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -474,10 +369,10 @@
     <sub-title>Georges Moustaki</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -510,10 +405,10 @@
     <sub-title>Les jeux de 20 heures à Lens</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -546,10 +441,10 @@
     <sub-title>Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -582,10 +477,10 @@
     <sub-title>Maigret en vacances</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -618,10 +513,10 @@
     <sub-title>Le spectacle est dans les livres</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -654,10 +549,10 @@
     <sub-title>Le racisme</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -687,217 +582,118 @@
     <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
+    <category>Series</category>
+    
+    
     <category>Entertainment</category>
     
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260926020300 +0200" stop="20260926025600 +0200">
+    
+    
+    <title>Aujourd'hui Madame</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260926000300 +0000</episode-num>
+    
+    
+    <desc>Découverte du fonctionnement du cerveau humain. L'émission explore cette véritable usine miniature, une machine au fonctionnement très complexe, en compagnie d'un éminent neurologue.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    
+    
+    <sub-title>Le cerveau</sub-title>
+    
     
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925095509 +0200" stop="20260925102709 +0200">
+  <programme channel="ina70.fr" start="20260926025600 +0200" stop="20260926043800 +0200">
     
     
-    <title>C'est Pas Sorcier: Sous le soleil de Versailles</title>
+    <title>Les enquêtes du commissaire Maigret</title>
     
     
-    <episode-num system="onscreen">S01E292</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6474774b91275e001afddb04</episode-num>
+    <episode-num system="original-air-date">20260926005600 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    <desc>Léonie, postière à la retraite, a été tuée d'un coup de carabine. L'instituteur Gastin, fin tireur, est le suspect idéal. La postière était détestée, mais Gastin et sa femme le sont encore plus. Le commissaire Maigret va devoir trier le vrai du faux.</desc>
     
     
-    <desc>Fred, Jamy et Sabine sont au Château de Versailles. Ils nous font découvrir le somptueux parc que Le Nôtre dessina en l'honneur d'un roi alors tout puissant Louis XIV, le Roi Soleil. Dans les jardins de Versailles, tout est démesure.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea50e764c00014459b8a/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20030101</date>
+    <series-id system="pluto">65c0ea50e764c00014459b8a</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Sous le soleil de Versailles</sub-title>
-    
-    
-    <category>Science</category>
+    <sub-title>Maigret à l'école</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Educational</category>
+    <category>Entertainment</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925102709 +0200" stop="20260925105909 +0200">
+  <programme channel="ina70.fr" start="20260926043800 +0200" stop="20260926051300 +0200">
     
     
-    <title>C'est Pas Sorcier: La forêt enchantée ca vous branche</title>
+    <title>Les jeux de 20 heures</title>
     
     
-    <episode-num system="onscreen">S01E36</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6464e4ec274ca8001af5f88c</episode-num>
+    <episode-num system="original-air-date">20260926023800 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
+    <desc>Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Cannes s'affrontent en duplex sur des jeux de la langue française. C'est l'intraitable maître Capello qui arbitre le jeu !</desc>
     
     
-    <desc>En compagnie des gardes forestiers de l'Office National des Forêts, le camion de C'est pas sorcier pénètre dans la forêt de Fontainebleau pour y découvrir une grande variété d'espèces animales et végétales et tout comprendre sur l'écosystème forestier.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ce764c000144592b9/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19950101</date>
+    <series-id system="pluto">65c0ea4ce764c000144592b9</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>La forêt enchantée ca vous branche</sub-title>
-    
-    
-    <category>Science</category>
+    <sub-title>Les jeux de 20 heures à Cannes</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925105909 +0200" stop="20260925113109 +0200">
-    
-    
-    <title>C'est Pas Sorcier</title>
-    
-    
-    <episode-num system="onscreen">S01E533</episode-num>
-    
-    
-    <episode-num system="pluto">67482748e835570013ee2a9f</episode-num>
-    
-    
-    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
-    
-    
-    <desc>Depuis janvier, le ZooParc de Beauval accueille deux pensionnaires d’exception : des pandas géants, originaires de Chine. Ce sont les seuls visibles en France !</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20120101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Pandas : des géants super star !</sub-title>
-    
-    
-    <category>Documentary</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925113109 +0200" stop="20260925120309 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Rally dans le désert</title>
-    
-    
-    <episode-num system="onscreen">S01E354</episode-num>
-    
-    
-    <episode-num system="pluto">647070deeead4c001b607f4c</episode-num>
-    
-    
-    <episode-num system="original-air-date">20050101000000 +0000</episode-num>
-    
-    
-    <desc>Le Rallye du désert, c'est une centaine de véhicules qui se lancent sur 2300 kilomètres à travers le désert égyptien. A bord de leurs 4x4, de leurs motos, de leurs camions ou même de leurs quads les pilotes s'embarquent sous l'oeil du Sphinx.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20050101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Rally dans le désert</sub-title>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925120309 +0200" stop="20260925123509 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Les Trésors : baie d'Alexandrie</title>
-    
-    
-    <episode-num system="onscreen">S01E400</episode-num>
-    
-    
-    <episode-num system="pluto">64708605a7ef77001aa7e059</episode-num>
-    
-    
-    <episode-num system="original-air-date">20070101000000 +0000</episode-num>
-    
-    
-    <desc>Pour saluer les Journées du patrimoine, C’est pas sorcier décide de remonter le temps. Sabine et Jamy plongent au 6ème siècle avant Jésus-Christ et nous entraînent à la découverte du port d’Alexandrie et des cités englouties de la baie d’Aboukir.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20070101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les Trésors : baie d'Alexandrie</sub-title>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Educational</category>
+    <category>Entertainment</category>
     
   
   </programme>
@@ -975,10 +771,10 @@
     <sub-title>Des dinosaures sous nos pieds</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1392,10 +1188,10 @@
     <sub-title>Vivre 100 ans</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1515,10 +1311,10 @@
     <sub-title>Notre coeur, un muscle fragile ?</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1638,10 +1434,10 @@
     <sub-title>Littoral, la mer attaque la terre</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1677,10 +1473,10 @@
     <sub-title>Les acrobates du ciel : les voltigeurs de la patrouille de France</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1716,10 +1512,10 @@
     <sub-title>Peut-on améliorer sa mémoire</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1930,6 +1726,255 @@
     
     
     <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926020409 +0200" stop="20260926023609 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les incas empire du soleil</title>
+    
+    
+    <episode-num system="onscreen">S01E402</episode-num>
+    
+    
+    <episode-num system="pluto">647085fda7ef77001aa7ddd1</episode-num>
+    
+    
+    <episode-num system="original-air-date">20070101000000 +0000</episode-num>
+    
+    
+    <desc>Nous découvrons avec eux comment des hommes et des femmes qui ne connaissaient ni la roue, ni l’écriture, ni le fer sont parvenus à construire des cités hors des communes nichées à plus de 3000 mètres d’altitude.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20070101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les incas empire du soleil</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926023609 +0200" stop="20260926030809 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les biocarburants roulez plus propre</title>
+    
+    
+    <episode-num system="onscreen">S01E291</episode-num>
+    
+    
+    <episode-num system="pluto">6474774b91275e001afddb1f</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>De tous les moyens de transport, ce sont les voitures qui polluent le plus. Particules de suie, gaz toxiques, dioxyde de carbone. Nos pots d’échappement recrachent de bien dangereux cocktails !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les biocarburants roulez plus propre</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926030809 +0200" stop="20260926034009 +0200">
+    
+    
+    <title>C'est Pas Sorcier: La ville lumière</title>
+    
+    
+    <episode-num system="onscreen">S01E408</episode-num>
+    
+    
+    <episode-num system="pluto">647088c4eead4c001b60c53f</episode-num>
+    
+    
+    <episode-num system="original-air-date">20070101000000 +0000</episode-num>
+    
+    
+    <desc>Jusqu’au XIXème siècle, c’est l’éclairage au gaz qui domine, même s’il est parfois remplacé par les lampes à pétrole. En 1881 c’est la révolution : Thomas Edison présente au monde la lampe à incandescence.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20070101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>La ville lumière</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926034009 +0200" stop="20260926041209 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les baleines, cétacés menacés</title>
+    
+    
+    <episode-num system="onscreen">S01E367</episode-num>
+    
+    
+    <episode-num system="pluto">647081c5f2a541001bbc9b5e</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy sont partis à la rencontre des baleines à bosse et des cachalots, dans leur aire de reproduction, les Caraïbes. Ils nous expliquent pourquoi les cétacés sont en danger et quelles solutions peuvent être proposées afin de les protéger.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les baleines, cétacés menacés</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926041209 +0200" stop="20260926044409 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Grands vaisseaux rois</title>
+    
+    
+    <episode-num system="onscreen">S01E249</episode-num>
+    
+    
+    <episode-num system="pluto">646c7995274ca8001a1b007a</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Fred, Jamy et Sabine sont à Rochefort. Ils suivent la construction d'une réplique parfaite de la frégate qui emporta La Fayette vers les insurgés américains : l'Hermione.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Grands vaisseaux rois</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926044409 +0200" stop="20260926051609 +0200">
+    
+    
+    <title>C'est Pas Sorcier</title>
+    
+    
+    <episode-num system="onscreen">S01E534</episode-num>
+    
+    
+    <episode-num system="pluto">674828a13b8ac600135a6584</episode-num>
+    
+    
+    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    
+    
+    <desc>Libération d’otages, lutte contre la piraterie, soutien des troupes aux sols. Leurs actions sont déterminantes. Mais qui sont ces hommes de l’ombre qui agissent dans la plus grande discrétion ?</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20120101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Dans le secret des commandos</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
