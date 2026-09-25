@@ -11,9 +11,50 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Configuration de Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
       - name: Télécharger le fichier XML
         run: |
           curl -s https://xmltvfr.fr/xmltv/xmltv_tnt.xml -o coulisses/xmltv_tnt.xml
+
+      - name: Optimiser et alléger le fichier XML (-12h à +48h)
+        run: |
+          python -c '
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timedelta, timezone
+
+          file_path = "coulisses/xmltv_tnt.xml"
+          print("Début du filtrage de xmltv_tnt.xml...")
+          
+          tree = ET.parse(file_path)
+          root = tree.getroot()
+
+          now = datetime.now(timezone.utc)
+          min_date = now - timedelta(hours=12)
+          max_date = now + timedelta(days=2)
+
+          kept, removed = 0, 0
+
+          for prog in root.findall("programme"):
+              start_str = prog.get("start")
+              if start_str:
+                  try:
+                      clean_date = start_str.split()[0]
+                      dt_prog = datetime.strptime(clean_date, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+                      if not (min_date <= dt_prog <= max_date):
+                          root.remove(prog)
+                          removed += 1
+                      else:
+                          kept += 1
+                  except Exception:
+                      pass
+
+          tree.write(file_path, encoding="utf-8", xml_declaration=True)
+          print(f"Optimisation terminée : {kept} programmes conservés, {removed} supprimés.")
+          '
 
       - name: Télécharger le fichier M3U
         run: |
@@ -23,6 +64,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add coulisses/xmltv_tnt.xml
-          git commit -m "Mise à jour automatique du XML" || exit 0
+          git add coulisses/xmltv_tnt.xml coulisses/tvrz.m3u
+          git commit -m "Mise à jour et optimisation automatique du XML et M3U" || exit 0
           git push
