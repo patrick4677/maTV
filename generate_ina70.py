@@ -68,17 +68,31 @@ def main():
             channel.set('id', TARGET_CHANNELS[ch_id])
             tv.append(channel)
 
-    # Traitement des programmes
+    # Traitement des programmes (conservation uniquement des programmes récents/à venir)
     count = 0
+    now = datetime.now(timezone.utc)
+    min_date = now - timedelta(hours=12) # Conservation de 12h dans le passé
+    max_date = now + timedelta(days=2)   # Conservation de 48h dans le futur
+
     for prog in root.findall('programme'):
         ch_id = prog.get('channel')
         if ch_id in TARGET_CHANNELS:
-            prog.set('channel', TARGET_CHANNELS[ch_id])
+            start_str = prog.get('start')
+            stop_str = prog.get('stop')
             
-            start = prog.get('start')
-            stop = prog.get('stop')
-            if start: prog.set('start', convert_date(start))
-            if stop: prog.set('stop', convert_date(stop))
+            # Vérification de la plage horaire avant traitement
+            if start_str:
+                try:
+                    clean = start_str.split()[0]
+                    dt_prog = datetime.strptime(clean, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+                    if not (min_date <= dt_prog <= max_date):
+                        continue
+                except Exception:
+                    pass
+
+            prog.set('channel', TARGET_CHANNELS[ch_id])
+            if start_str: prog.set('start', convert_date(start_str))
+            if stop_str: prog.set('stop', convert_date(stop_str))
 
             tv.append(prog)
             count += 1
