@@ -24,150 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260925125300 +0200" stop="20260925140100 +0200">
-    
-    
-    <title>Aujourd'hui Madame</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925105300 +0000</episode-num>
-    
-    
-    <desc>L'évolution des modèles économiques pourrait conditionner le développement de l'écologie. Les invités, parmi lesquels René Dumont, apportent leur éclairage sur la place de l'écologie au niveau mondial.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
-    
-    
-    <sub-title>Pourquoi l'écologie ?</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260925140100 +0200" stop="20260925143700 +0200">
-    
-    
-    <title>La femme en blanc</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925120100 +0000</episode-num>
-    
-    
-    <desc>Laura est traumatisée, mais bien vivante. Seuls Marian et Walter Hartright le savent. Marian est désormais déterminée à reconstituer toute l'histoire pour rétablir la vérité, et que Laura récupère ainsi son identité et son héritage.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/66f6c93ba2922a0013265239/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
-    
-    
-    <sub-title>11ème épisode</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260925143700 +0200" stop="20260925145400 +0200">
-    
-    
-    <title>François Gaillard ou la vie des autres</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925123700 +0000</episode-num>
-    
-    
-    <desc>René, fils de boucher aux Abattoirs de Paris, découvre qu'il a été adopté. Furieux contre ceux qui l'ont élevé, il demande à l'avocat François Gaillard de l'aider à retrouver l'identité de ses vrais parents.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c000144590aa/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c000144590aa</series-id>
-    
-    
-    <sub-title>René : 5e et dernier épisode</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260925145400 +0200" stop="20260925155500 +0200">
-    
-    
-    <title>À bout portant</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925125400 +0000</episode-num>
-    
-    
-    <desc>Serge Reggiani était un jeune coiffeur quand il a commencé à faire de la figuration, avant de devenir comédien, puis chanteur à 42 ans. Les caméras suivent l'artiste dans les coulisses de ses concerts, et recueillent ses confidences.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
-    
-    
-    <sub-title>Serge Reggiani</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260925155500 +0200" stop="20260925165500 +0200">
     
     
@@ -195,10 +51,10 @@
     <sub-title>Les églises parallèles : sectes</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -231,10 +87,10 @@
     <sub-title>11ème épisode</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -267,10 +123,10 @@
     <sub-title>René : 5e et dernier épisode</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -300,10 +156,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -333,10 +189,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -369,10 +225,10 @@
     <sub-title>Georges Moustaki</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -405,10 +261,10 @@
     <sub-title>Les jeux de 20 heures à Lens</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -441,10 +297,10 @@
     <sub-title>Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -477,10 +333,10 @@
     <sub-title>Maigret en vacances</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -513,10 +369,10 @@
     <sub-title>Le spectacle est dans les livres</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -549,10 +405,10 @@
     <sub-title>Le racisme</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -582,10 +438,10 @@
     <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -618,10 +474,10 @@
     <sub-title>Le cerveau</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -654,10 +510,10 @@
     <sub-title>Maigret à l'école</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -690,259 +546,181 @@
     <sub-title>Les jeux de 20 heures à Cannes</sub-title>
     
     
+    <category>Entertainment</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260926051300 +0200" stop="20260926055000 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260926031300 +0000</episode-num>
+    
+    
+    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
     <category>Entertainment</category>
     
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925123509 +0200" stop="20260925130909 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Néolithique</title>
-    
-    
-    <episode-num system="onscreen">S01E202</episode-num>
-    
-    
-    <episode-num system="pluto">6467700c91275e001ab9b2c8</episode-num>
-    
-    
-    <episode-num system="original-air-date">20000101000000 +0000</episode-num>
-    
-    
-    <desc>Tout ce que nous sommes aujourd’hui, nous le devons aux hommes qui vécurent au Néolithique. A la frontière entre préhistoire et Histoire, ces hommes ont construit les premières maisons, ils ont inventé l’agriculture, l’élevage, la céramique...</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20000101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Néolithique</sub-title>
-    
-    
-    <category>Science</category>
-    
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925130909 +0200" stop="20260925134109 +0200">
+  <programme channel="ina70.fr" start="20260926055000 +0200" stop="20260926061700 +0200">
     
     
-    <title>C'est Pas Sorcier</title>
+    <title>Des chiffres et des lettres</title>
     
     
-    <episode-num system="onscreen">S01E511</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">67475014882f6d001347d68a</episode-num>
+    <episode-num system="original-air-date">20260926035000 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
     
     
-    <desc>Un fémur long de 2,40 m a récemment été découvert dans une carrière de sable, à Angeac, près d’Angoulême. Il appartenait à un dinosaure qui devait mesurer pas moins de 35 mètres de long.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20120101</date>
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Des dinosaures sous nos pieds</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Documentary</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925134109 +0200" stop="20260925141309 +0200">
+  <programme channel="ina70.fr" start="20260926061700 +0200" stop="20260926064200 +0200">
     
     
-    <title>C'est Pas Sorcier: La nutrition</title>
+    <title>Des chiffres et des lettres</title>
     
     
-    <episode-num system="onscreen">S01E203</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">64677172649e97001b3cf85c</episode-num>
+    <episode-num system="original-air-date">20260926041700 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20000101000000 +0000</episode-num>
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
     
     
-    <desc>Fred, Jamy et Sabine nous expliquent les règles d'or d'une alimentation équilibrée. Trop de gras et pas assez de vitamines ? Mal manger peut entraîner des maladies graves et favoriser l'obésité.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20000101</date>
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>La nutrition</sub-title>
-    
-    
-    <category>Science</category>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925141309 +0200" stop="20260925144609 +0200">
+  <programme channel="ina70.fr" start="20260926064200 +0200" stop="20260926073500 +0200">
     
     
-    <title>C'est Pas Sorcier: Les dirigeables</title>
+    <title>À bout portant</title>
     
     
-    <episode-num system="onscreen">S01E227</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">646c7551188649001a4e368d</episode-num>
+    <episode-num system="original-air-date">20260926044200 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20010101000000 +0000</episode-num>
+    <desc>Le chanteur de "Elle était si jolie", alors au sommet de sa carrière, continue de remplir les salles. Reportage sur la tournée d'Alain Barrière avec des images de l'artiste sur scène, des extraits d'interviews et de moments filmés en coulisse.</desc>
     
     
-    <desc>L’équipe de C’est pas sorcier a eu le privilège de voler à bord du Zeppelin NT, un dirigeable dernier cri. Sabine a survolé la vallée de la Seine à bord de cet engin qui peut atteindre 130 km/h.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20010101</date>
+    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Alain Barrière</sub-title>
     
     
-    <sub-title>Les dirigeables</sub-title>
-    
-    
-    <category>Science</category>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925144609 +0200" stop="20260925151909 +0200">
+  <programme channel="ina70.fr" start="20260926073500 +0200" stop="20260926084800 +0200">
     
     
-    <title>C'est Pas Sorcier: Le plancher des vaches</title>
+    <title>À bout portant</title>
     
     
-    <episode-num system="onscreen">S01E03</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6464dc9717da09001a0f4b75</episode-num>
+    <episode-num system="original-air-date">20260926053500 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19940101000000 +0000</episode-num>
+    <desc>Il est à la fois clown surdoué, mime et jongleur de mots. Avec toute sa finesse d'esprit, Raymond Devos, monstre sacré de l'humour, accepte de se confier sur les passions qui l'animent et sur sa vision éminemment philosophique du métier.</desc>
     
     
-    <desc>Lait, céréales, oeufs, viande... Tous ces produits alimentaires que nous consommons chaque jour viennent de la ferme. Mais qui fabrique quoi ?</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19940101</date>
+    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Raymond Devos</sub-title>
     
     
-    <sub-title>Le plancher des vaches</sub-title>
-    
-    
-    <category>Science</category>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925151909 +0200" stop="20260925155109 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Les araignées</title>
-    
-    
-    <episode-num system="onscreen">S01E205</episode-num>
-    
-    
-    <episode-num system="pluto">6467716c649e97001b3cf68a</episode-num>
-    
-    
-    <episode-num system="original-air-date">20000101000000 +0000</episode-num>
-    
-    
-    <desc>Fred, Jamy et Sabine nous entraînent cette semaine à la découverte des araignées. Il y a 300 millions d'années, les araignées étaient déjà présentes sur Terre, avant les dinosaures.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20000101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les araignées</sub-title>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -978,13 +756,13 @@
     <sub-title>Clef a molette smoking cambouis</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1020,13 +798,13 @@
     <sub-title>Bébés histoire d'une naissance</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1062,13 +840,13 @@
     <sub-title>Produits laitiers</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1104,13 +882,13 @@
     <sub-title>Tunnel sous la manche</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1146,13 +924,13 @@
     <sub-title>Les Coraux</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1188,10 +966,10 @@
     <sub-title>Vivre 100 ans</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1227,13 +1005,13 @@
     <sub-title>Les antibiotiques</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1269,13 +1047,13 @@
     <sub-title>Du blé et du pain</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1311,10 +1089,10 @@
     <sub-title>Notre coeur, un muscle fragile ?</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1350,13 +1128,13 @@
     <sub-title>Les sorciers taillent la route</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1392,13 +1170,13 @@
     <sub-title>Automne</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1434,10 +1212,10 @@
     <sub-title>Littoral, la mer attaque la terre</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1473,10 +1251,10 @@
     <sub-title>Les acrobates du ciel : les voltigeurs de la patrouille de France</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1512,10 +1290,10 @@
     <sub-title>Peut-on améliorer sa mémoire</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1551,13 +1329,13 @@
     <sub-title>L'année des sorciers best of</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1593,13 +1371,13 @@
     <sub-title>Serpents</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1635,13 +1413,13 @@
     <sub-title>Le Bambou</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1677,13 +1455,13 @@
     <sub-title>Les avions de chasse</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1719,13 +1497,13 @@
     <sub-title>Remettons les pendules a l'heure</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1761,13 +1539,13 @@
     <sub-title>Les incas empire du soleil</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1803,13 +1581,13 @@
     <sub-title>Les biocarburants roulez plus propre</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1845,13 +1623,13 @@
     <sub-title>La ville lumière</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1887,13 +1665,13 @@
     <sub-title>Les baleines, cétacés menacés</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1929,13 +1707,13 @@
     <sub-title>Grands vaisseaux rois</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1971,10 +1749,220 @@
     <sub-title>Dans le secret des commandos</sub-title>
     
     
+    <category>Documentary</category>
+    
+    
     <category>Series</category>
     
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926051609 +0200" stop="20260926054809 +0200">
     
-    <category>Documentary</category>
+    
+    <title>C'est Pas Sorcier: De la vigne au vin</title>
+    
+    
+    <episode-num system="onscreen">S01E81</episode-num>
+    
+    
+    <episode-num system="pluto">6467365f649e97001b3b36ad</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy nous emmènent faire les vendanges en Bourgogne et nous révèlent les secrets de fabrication du vin. Vendanges, fermentation et macération dans les cuves, notions de terroir et influence du climat.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>De la vigne au vin</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926054809 +0200" stop="20260926062309 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Mayas</title>
+    
+    
+    <episode-num system="onscreen">S01E180</episode-num>
+    
+    
+    <episode-num system="pluto">64675afb91275e001ab88d60</episode-num>
+    
+    
+    <episode-num system="original-air-date">19990101000000 +0000</episode-num>
+    
+    
+    <desc>Cette semaine, Fred, Jamy et Sabine sont à Calakmul, au beau milieu de la jungle mexicaine. Depuis ce site extraordinaire qui vit l’apogée de l’une des plus grandes cités mayas, nos trois compères retracent l’histoire de cette civilisation.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19990101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Mayas</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926062309 +0200" stop="20260926065509 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les fourmis</title>
+    
+    
+    <episode-num system="onscreen">S01E74</episode-num>
+    
+    
+    <episode-num system="pluto">64673236274ca8001a07258b</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy nous emmènent observer les fourmis. Leur camion prend la direction de Mulhouse et s'arrête dans une forêt de conifères où vivent des fourmis des bois. Fred nous dévoile les caractéristiques d'une fourmilière et de ses habitantes.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les fourmis</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926065509 +0200" stop="20260926073009 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Noël a Saint Veran</title>
+    
+    
+    <episode-num system="onscreen">S01E87</episode-num>
+    
+    
+    <episode-num system="pluto">646737d15348f4001a6582e7</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
+    
+    
+    <desc>La veille de Noël, Fred et Jamy abandonnent leur camion-atelier pour un voyage pittoresque au cœur du Queyras, dans le village de Saint-Véran.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Noël a Saint Veran</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926073009 +0200" stop="20260926080209 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Le recul des glaciers</title>
+    
+    
+    <episode-num system="onscreen">S01E371</episode-num>
+    
+    
+    <episode-num system="pluto">647081cbf2a541001bbc9d37</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy sont partis explorer les glaciers les plus grandioses du massif alpin pour tenter de comprendre avec nous pourquoi la plupart des glaciers de la planète se mettent à reculer.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Le recul des glaciers</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
