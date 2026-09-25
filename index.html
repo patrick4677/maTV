@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.9 (Nettoyé & Optimisé)
+     VERSION : 1.9.0 (Correctif Anti-Cache, HTTPS & Compatibility)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.9</title>
+<title>TNT + M3U – Version 1.9.0</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -328,7 +328,7 @@ body.dark .help-list li {
   <button onclick="searchOdysee()" class="focusable">🔍</button>
 </div>
 
-<h1>Programme TV v1.8.9</h1>
+<h1>Programme TV v1.9.0</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -414,7 +414,7 @@ window.__onGCastApiAvailable = function(isAvailable) {
 };
 
 let XML_URL = "";
-let XML_URL2 = ""; // Second fichier XML (ex: INA 70)
+let XML_URL2 = ""; 
 let M3U_URL = "";
 let hlsPlayer = null;
 let WHITELIST = [];
@@ -422,15 +422,17 @@ let xmlDocCache = null;
 
 async function loadWhitelist(){
   try{
-    WHITELIST = await fetch("coulisses/whitelist.json").then(r=>r.json());
+    // Anti-cache pour forcer GitHub Pages à charger le fichier à jour
+    WHITELIST = await fetch("coulisses/whitelist.json?t=" + Date.now()).then(r=>r.json());
   } catch(e){
+    console.warn("Whitelist non disponible ou vide :", e);
     WHITELIST = [];
   }
 }
 
 async function loadConfig(){
   try{
-    const cfg = await fetch("coulisses/config.json").then(r=>r.json());
+    const cfg = await fetch("coulisses/config.json?t=" + Date.now()).then(r=>r.json());
     XML_URL = cfg.xml;
     XML_URL2 = cfg.xml2 || "coulisses/ina70.xml";
     M3U_URL = cfg.m3u;
@@ -512,6 +514,11 @@ makeDraggable(document.getElementById("playerBox"), document.getElementById("dra
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
 
 function playStream(url){
+  // Protection Mixed Content pour GitHub Pages (HTTPS -> HTTPS)
+  if (window.location.protocol === 'https:' && url.startsWith('http://')) {
+    url = url.replace('http://', 'https://');
+  }
+
   const box = document.getElementById("playerBox");
   box.style.display = "block";
   const video = document.getElementById("player");
@@ -555,31 +562,31 @@ function normalizeID(id){
 }
 
 let TNT = [
-  {num:1, id:"TF1.fr", name:"TF1", logo:"coulisses/logos/tf1.png", link:"https://www.tf1.fr"},
-  {num:2, id:"France2.fr", name:"France 2", logo:"coulisses/logos/france2.png", link:"https://www.france.tv"},
-  {num:3, id:"France3.fr", name:"France 3", logo:"coulisses/logos/france3.png", link:"https://www.france.tv"},
-  {num:4, id:"France4.fr", name:"France 4", logo:"coulisses/logos/france4.png", link:"https://www.france.tv"},
-  {num:5, id:"France5.fr", name:"France 5", logo:"coulisses/logos/france5.png", link:"https://www.france.tv"},
-  {num:6, id:"M6.fr", name:"M6", logo:"coulisses/logos/m6.png", link:"https://www.6play.fr"},
-  {num:7, id:"Arte.fr", name:"Arte", logo:"coulisses/logos/arte.png", link:"https://www.arte.tv"},
-  {num:8, id:"LaChaîneParlementaire.fr", name:"LCP", logo:"coulisses/logos/lcp.png", link:"https://www.lcp.fr", aliases:["lcppublicsenat", "lcp"]},
-  {num:9, id:"W9.fr", name:"W9", logo:"coulisses/logos/w9.png", link:"https://www.6play.fr"},
-  {num:10, id:"TMC.fr", name:"TMC", logo:"coulisses/logos/tmc.png", link:"https://www.tf1.fr"},
-  {num:11, id:"NT1.fr", name:"TFX", logo:"coulisses/logos/tfx.png", link:"https://www.tf1.fr"},
-  {num:12, id:"Gulli.fr", name:"Gulli", logo:"coulisses/logos/gulli.png", link:"https://www.gulli.fr"},
-  {num:13, id:"BFMTV.fr", name:"BFM TV", logo:"coulisses/logos/bfmtv.png", link:"https://www.bfmtv.com"},
-  {num:14, id:"CNews.fr", name:"CNEWS", logo:"coulisses/logos/cnews.png", link:"https://www.cnews.fr"},
-  {num:15, id:"LCI.fr", name:"LCI", logo:"coulisses/logos/lci.png", link:"https://www.tf1.fr"},
-  {num:16, id:"FranceInfo.fr", name:"Franceinfo", logo:"coulisses/logos/franceinfo.png", link:"https://www.francetvinfo.fr"},
-  {num:17, id:"CStar.fr", name:"CSTAR", logo:"coulisses/logos/cstar.png", link:"https://www.cstar.fr"},
-  {num:18, id:"T18.fr", name:"T18", logo:"coulisses/logos/t18.png", link:"#"},
-  {num:19, id:"NOVO19.fr", name:"NOVO 19", logo:"coulisses/logos/novo19.png", link:"#"},
-  {num:20, id:"TF1SeriesFilms.fr", name:"TF1 Séries Films", logo:"coulisses/logos/tf1seriesfilms.png", link:"https://www.tf1.fr"},
-  {num:21, id:"LEquipe21.fr", name:"L'Équipe", logo:"coulisses/logos/lequipe.png", link:"https://www.lequipe.fr"},
-  {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.6play.fr"},
-  {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr"},
-  {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com"},
-  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#"},
+  {num:1, id:"TF1.fr", name:"TF1", logo:"coulisses/logos/tf1.png", link:"https://www.tf1.fr", aliases:["tf1", "tf1hd"]},
+  {num:2, id:"France2.fr", name:"France 2", logo:"coulisses/logos/france2.png", link:"https://www.france.tv", aliases:["france2", "france2hd", "frfrance2"]},
+  {num:3, id:"France3.fr", name:"France 3", logo:"coulisses/logos/france3.png", link:"https://www.france.tv", aliases:["france3", "france3hd", "frfrance3"]},
+  {num:4, id:"France4.fr", name:"France 4", logo:"coulisses/logos/france4.png", link:"https://www.france.tv", aliases:["france4", "france4hd", "frfrance4"]},
+  {num:5, id:"France5.fr", name:"France 5", logo:"coulisses/logos/france5.png", link:"https://www.france.tv", aliases:["france5", "france5hd", "frfrance5"]},
+  {num:6, id:"M6.fr", name:"M6", logo:"coulisses/logos/m6.png", link:"https://www.6play.fr", aliases:["m6", "m6hd"]},
+  {num:7, id:"Arte.fr", name:"Arte", logo:"coulisses/logos/arte.png", link:"https://www.arte.tv", aliases:["arte", "artefr"]},
+  {num:8, id:"LaChaîneParlementaire.fr", name:"LCP", logo:"coulisses/logos/lcp.png", link:"https://www.lcp.fr", aliases:["lcppublicsenat", "lcp", "lcpsenat"]},
+  {num:9, id:"W9.fr", name:"W9", logo:"coulisses/logos/w9.png", link:"https://www.6play.fr", aliases:["w9"]},
+  {num:10, id:"TMC.fr", name:"TMC", logo:"coulisses/logos/tmc.png", link:"https://www.tf1.fr", aliases:["tmc"]},
+  {num:11, id:"NT1.fr", name:"TFX", logo:"coulisses/logos/tfx.png", link:"https://www.tf1.fr", aliases:["tfx", "nt1"]},
+  {num:12, id:"Gulli.fr", name:"Gulli", logo:"coulisses/logos/gulli.png", link:"https://www.gulli.fr", aliases:["gulli"]},
+  {num:13, id:"BFMTV.fr", name:"BFM TV", logo:"coulisses/logos/bfmtv.png", link:"https://www.bfmtv.com", aliases:["bfmtv", "bfm"]},
+  {num:14, id:"CNews.fr", name:"CNEWS", logo:"coulisses/logos/cnews.png", link:"https://www.cnews.fr", aliases:["cnews", "itanim24"]},
+  {num:15, id:"LCI.fr", name:"LCI", logo:"coulisses/logos/lci.png", link:"https://www.tf1.fr", aliases:["lci"]},
+  {num:16, id:"FranceInfo.fr", name:"Franceinfo", logo:"coulisses/logos/franceinfo.png", link:"https://www.francetvinfo.fr", aliases:["franceinfo", "frfranceinfo"]},
+  {num:17, id:"CStar.fr", name:"CSTAR", logo:"coulisses/logos/cstar.png", link:"https://www.cstar.fr", aliases:["cstar", "d17"]},
+  {num:18, id:"T18.fr", name:"T18", logo:"coulisses/logos/t18.png", link:"#", aliases:["t18"]},
+  {num:19, id:"NOVO19.fr", name:"NOVO 19", logo:"coulisses/logos/novo19.png", link:"#", aliases:["novo19"]},
+  {num:20, id:"TF1SeriesFilms.fr", name:"TF1 Séries Films", logo:"coulisses/logos/tf1seriesfilms.png", link:"https://www.tf1.fr", aliases:["tf1seriesfilms", "hd1"]},
+  {num:21, id:"LEquipe21.fr", name:"L'Équipe", logo:"coulisses/logos/lequipe.png", link:"https://www.lequipe.fr", aliases:["lequipe21", "lequipe"]},
+  {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.6play.fr", aliases:["6ter"]},
+  {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr", aliases:["rmcstory", "numero23"]},
+  {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com", aliases:["rmcdecouverte"]},
+  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#", aliases:["rmclife", "cherie25"]},
   {
     num: 26,
     id: "ina70.fr",
@@ -603,7 +610,8 @@ TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
 async function loadM3U(url){
   try{
-    const txt = await fetch(url).then(r=>r.text());
+    // Anti-cache sur le fichier M3U
+    const txt = await fetch(url + "?t=" + Date.now()).then(r=>r.text());
     const lines = txt.split("\n");
     const list = [];
     let cur = {};
@@ -883,7 +891,7 @@ function openFullProgramForChannel(normId) {
   }
 
   let html = `
-  <h3>Programme complet (7 jours) – <a href="${ch.link}" target="_blank" class="focusable" tabindex="0" style="font-weight:bold;">${ch.name}</a></h3>
+  <h3>Programme complet – <a href="${ch.link}" target="_blank" class="focusable" tabindex="0" style="font-weight:bold;">${ch.name}</a></h3>
   <input id="searchProg" type="text" placeholder="Rechercher une émission / film..." class="focusable"
          style="padding:6px; width:100%; margin-bottom:12px; font-size:14px;"
          oninput="filterFullPrograms()">
