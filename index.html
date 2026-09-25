@@ -636,14 +636,14 @@ async function loadM3U(url){
     return [];
   }
 }
-
 function extendTNTwithM3U(m3uList){
   m3uList.forEach(m=>{
     const key = normalizeID(m.name);
 
+    // Filtrage Whitelist plus tolérant
     if(WHITELIST.length > 0){
-      const name = m.name.trim().toLowerCase();
-      const allowed = WHITELIST.some(w => w.trim().toLowerCase() === name);
+      const nameNorm = normalizeID(m.name);
+      const allowed = WHITELIST.some(w => normalizeID(w) === nameNorm);
       if(!allowed) return;
     }
 
@@ -651,7 +651,7 @@ function extendTNTwithM3U(m3uList){
       normalizeID(ch.name) === key ||
       normalizeID(ch.id) === key ||
       ch.normId === key ||
-      (ch.aliases && ch.aliases.includes(key))
+      (ch.aliases && ch.aliases.some(a => normalizeID(a) === key))
     );
 
     if(exists){
