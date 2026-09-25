@@ -1261,34 +1261,6 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925030000 +0200" stop="20260925032500 +0200" channel="France2.fr">
-    <title lang="fr">13h15, le samedi...</title>
-    <sub-title lang="fr">Les aveux de Cédric Jubillar</sub-title>
-    <desc lang="fr">Accusé d'avoir tué sa femme, le peintre plaquiste Cédric Jubillar clamait son innocence depuis la disparition de Delphine il y a plus de cinq ans. Mais en juillet dernier, le père de famille est passé aux aveux. Demeurent des questions et pour les enquêteurs à reconstituer pas à pas la terrible mécanique du meurtre.</desc>
-    <credits>
-      <guest>Laurent Delahousse</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Information</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/2F4F51020BEF0F377AEE2E46F7E6A6A7.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925032500 +0200" stop="20260925033000 +0200" channel="France2.fr">
-    <title lang="fr">Journal Météo climat outre-mer</title>
-    <desc lang="fr">Un point météo complet sur la météo dans les Outre-mer, avec les prévisions de températures et la force des vents.</desc>
-    <date>2026</date>
-    <category lang="fr">Services</category>
-    <category lang="fr">Météo</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/B52ADC67D15A40199C3BA251F6EDD3BB.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925033000 +0200" stop="20260925043000 +0200" channel="France2.fr">
     <title lang="fr">Ça commence aujourd'hui</title>
     <sub-title lang="fr">Nudité, hypersexualisation : elles ont grandi dans un climat incestuel</sub-title>
@@ -2952,43 +2924,6 @@
     <category lang="fr">Spéciale</category>
     <icon src="https://img.bouygtel.fr/CMS/images/22CCE90FCACD74005B9F071BB5B706A0.jpg" />
     <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925025500 +0200" stop="20260925030000 +0200" channel="France3.fr">
-    <title lang="fr">La p'tite librairie</title>
-    <sub-title lang="fr">Oeuvres romanesques, de Claire de Duras</sub-title>
-    <desc lang="fr">François Busnel propose chaque jour de découvrir ou redécouvrir une oeuvre française ou étrangère : roman, essai, grand classique ou encore bande dessinée.</desc>
-    <credits>
-      <guest>François Busnel</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Culture</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/9B8D6C1525B28F1099EA7E8DF7FB8C88.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925030000 +0200" stop="20260925035000 +0200" channel="France3.fr">
-    <title lang="fr">La France des villages</title>
-    <sub-title lang="fr">Vivre en Occitanie</sub-title>
-    <desc lang="fr">Au sommaire : "Rieux-Volvestre : Le tir au Papogaye, une tradition médiévale au coeur du village". La cité médiévale de Rieux-Volvestre vibre au rythme d'un rituel unique et ancien : faire tomber un perroquet de bois et de fer perché à 45 mètres de haut pour désigner le nouveau roi du village. - "Aguessac : une maître verrier au chevet des petites églises de village". Derrière le clocher de l'église d'Aguessac, une rosace représentant la Vierge s'apprêtait à tomber dans l'oubli. - "L'Ariège : Le pari fou d'un sac 100 % local en laine de brebis". Dans le piémont ariégeois, Olivia Bertrand veut revaloriser la laine rustique des brebis locales. - "Saint-Félix-Lauragais : Les secrets de la championne du monde de cassoulet". Céline Taffarello, championne du monde de cassoulet en 2022, veut faire perdurer la recette familiale.</desc>
-    <credits>
-      <director>Valentine Amado</director>
-      <producer>Christophe Koszarek</producer>
-      <guest>France Télévisions</guest>
-      <guest>Centre national du cinéma et de l'image animée</guest>
-      <guest>Jara Prod</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Documentaire</category>
-    <category lang="fr">Découvertes</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/AA244F9C69BF27DFBBCFCC2B957C9658.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.1.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -6340,74 +6275,6 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925025500 +0200" stop="20260925030700 +0200" channel="CanalPlus.fr">
-    <title lang="fr">On y était</title>
-    <desc lang="fr">En Inde, trois retraités luttent contre le remplacement des hommes par des machines. Tout s'écroule quand l'enfant de l'un d'eux est recruté par une société spécialisée dans l'IA.</desc>
-    <credits>
-      <director>Pranav Bhasin</director>
-      <actor>Devendra Dodke</actor>
-      <actor>Kalpana Gagdekar</actor>
-      <actor>Shubham Kujur</actor>
-      <actor>Arindol Bagchi</actor>
-      <actor>Yash Gonsai</actor>
-      <actor>Satish Kashyap</actor>
-      <adapter>Pranav Bhasin</adapter>
-      <producer>Vaibhav Bundhoo</producer>
-      <producer>Supavitra Babul</producer>
-      <producer>Rahul Bharti</producer>
-      <producer>Devaiah Bopanna</producer>
-      <producer>Yash Gonsai</producer>
-      <guest>Early Man Film</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Film</category>
-    <category lang="fr">Court métrage</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/8CBAD05033BF8B8CB2FE973659A1E991.jpg" />
-    <country lang="fr">Inde</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925030700 +0200" stop="20260925052900 +0200" channel="CanalPlus.fr">
-    <title lang="fr">Mektoub my Love : Canto Due</title>
-    <desc lang="fr">Amin revient à Sète auprès de sa famille après ses études à Paris, rêvant toujours de cinéma. Croisant par chance la route d'un producteur américain en vacances, il en profite pour lui présenter son projet, intitulé "Les principes essentiels de l'existence universelle". Le producteur est très intéressé par le film et veut que sa femme, Jess, en soit l'héroïne. Mais le destin, capricieux, impose bientôt ses propres règles...</desc>
-    <credits>
-      <director>Abdellatif Kechiche</director>
-      <actor>Alexia Chardard</actor>
-      <actor>Lou Luttiau</actor>
-      <actor>Kamel Saadi</actor>
-      <actor>Andre Jacobs</actor>
-      <actor>Delinda Kechiche</actor>
-      <actor>Ophélie Bau</actor>
-      <actor>Marie Bernard</actor>
-      <actor>Shaïn Boumedine</actor>
-      <actor>Salim Kechiouche</actor>
-      <actor>Dany Martial</actor>
-      <actor>Jessica Pennington</actor>
-      <actor>Hafsia Herzi</actor>
-      <adapter>Ghalia Lacroix</adapter>
-      <adapter>Abdellatif Kechiche</adapter>
-      <producer>Riccardo Marchegiani</producer>
-      <producer>Abdellatif Kechiche</producer>
-      <producer>Michel Merkt</producer>
-      <guest>Pathé Films</guest>
-      <guest>Bling Flamingo</guest>
-      <guest> Goodfellas</guest>
-      <guest> Canal+</guest>
-      <guest>Ciné+ OCS</guest>
-      <guest>Quat'sous Films</guest>
-      <guest>Why Not Productions</guest>
-    </credits>
-    <date>2025</date>
-    <category lang="fr">Film</category>
-    <category lang="fr">Comédie</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/F12DEF33D3B4525B84178CCA4DE3F44A.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>-10</value>
-      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
-    </rating>
-  </programme>
   <programme start="20260925053200 +0200" stop="20260925060600 +0200" channel="CanalPlus.fr">
     <title lang="fr">Qui peut battre l'expert cinéma ?</title>
     <desc lang="fr">4 challengers défient l'Expert cinéma de CANAL+ dans un quiz qui teste leurs connaissances ciné. 5 manches, 5 thématiques, 5 mécaniques de jeu et autant d'occasions de le détrôner.</desc>
@@ -8547,31 +8414,6 @@
     <rating system="CSA">
       <value>-12</value>
       <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Moins12.svg/250px-Moins12.svg.png" />
-    </rating>
-  </programme>
-  <programme start="20260925025000 +0200" stop="20260925034000 +0200" channel="France5.fr">
-    <title lang="fr">Primates</title>
-    <sub-title lang="fr">Secrets de survie</sub-title>
-    <desc lang="fr">Les primates sont agiles, curieux, intrépides, inventifs et savent parfaitement s'adapter à l'environnement qui les entoure. Ils sont dotés d'une intelligence remarquable qui leur permet d'affronter les prédateurs et d'utiliser à leur avantage les outils les plus singuliers que leur offre la nature. Certains savent comment se soigner, d'autres élaborent des stratégies exceptionnelles pour trouver de quoi se nourrir. Ils rivalisent d'ingéniosité pour trouver leur proie. Mais leur plus grand atout est sans aucun doute la force du clan. C'est toujours ensemble, groupés, unis qu'ils avancent, se protègent et apprennent les uns des autres. Il suffit que l'un d'entre eux joue le rôle d'innovateur pour que son comportement s'étende au reste du groupe. Gorilles des montagnes, lémurs, ou encore sajous font preuve de capacités étonnantes.</desc>
-    <credits>
-      <director>Nikki Waldron</director>
-      <director>Nick Easton</director>
-      <producer>Nikki Waldron</producer>
-      <producer>Michael Gunton</producer>
-      <producer>Gavin Boyland</producer>
-      <guest>British Broadcasting Corporation</guest>
-      <guest>BBC Studios</guest>
-      <guest>Public Broadcasting Service</guest>
-      <guest>Thirteen Productions</guest>
-    </credits>
-    <date>2020</date>
-    <category lang="fr">Nature</category>
-    <category lang="fr">Animalier</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/CBBC44C08982EA7A64E741F7AB198C97.jpg" />
-    <country lang="fr">Grande-Bretagne</country>
-    <episode-num system="xmltv_ns">0.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
     </rating>
   </programme>
   <programme start="20260925034000 +0200" stop="20260925042900 +0200" channel="France5.fr">
@@ -14827,23 +14669,16 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925024500 +0200" stop="20260925034500 +0200" channel="Arte.fr">
-    <title lang="fr">Tchernobyl, anatomie d'une catastrophe</title>
-    <sub-title lang="fr">Responsabilité</sub-title>
-    <desc lang="fr">À la conférence de l'Agence internationale de l'énergie atomique de Vienne, en août 1986, l'URSS se défausse de sa responsabilité, invoquant des erreurs humaines commises par le personnel de la centrale. Ces mêmes arguments aboutissent l'année suivante à de lourdes condamnations mais le masque se fissure. Nikolaï Steinberg, qui a supervisé la construction du sarcophage, mène une enquête obstinée et rétablit la vérité : le réacteur souffrait d'un vice de conception connu des autorités bien avant la catastrophe. Une épine supplémentaire dans le flanc d'un empire vacillant, qui contribue à précipiter sa chute, en décembre 1991.</desc>
-    <credits>
-      <director>Tom Cook</director>
-      <director>Erica Jensen</director>
-      <guest>National Geographic</guest>
-      <guest> CNN</guest>
-      <guest>Windfall Films</guest>
-    </credits>
+  <programme start="20260928145000 +0200" stop="20260928155000 +0200" channel="M6.fr">
+    <title lang="fr">Un jour, un doc</title>
+    <sub-title lang="fr">Grand Frais : les recettes secrètes du supermarché qui fait craquer les Français (2/2)</sub-title>
+    <desc lang="fr">Grands débats de société, nouvelles tendances, retour sur des évènements marquants et des faits divers hors normes, ou encore récits de vie des people et des têtes couronnées, " Un jour, un doc " propose tous les après-midis une grande variété de documentaires et de sujets qui font vibrer le cœur des Français. Chaque jour, partez à la découverte d'histoires et de personnages incroyables en France ou à l'étranger.</desc>
     <date>2026</date>
-    <category lang="fr">Documentaire</category>
-    <category lang="fr">Histoire</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/A32DFD39CC81C857AB129D472AAF2371.jpg" />
-    <country lang="fr">Grande-Bretagne</country>
-    <episode-num system="xmltv_ns">0.2.</episode-num>
+    <category lang="fr">Magazine</category>
+    <category lang="fr">Information</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/6CB74A0B25E897367071B310B0A37892.jpg" />
+    <country lang="fr">France</country>
+    <episode-num system="xmltv_ns">4.0.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -17003,13 +16838,22 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925031000 +0200" stop="20260925060000 +0200" channel="W9.fr">
-    <title lang="fr">Programmes de la nuit</title>
-    <desc lang="fr">A suivre, des rediffusions des émissions de la chaîne, ainsi que des documentaires et autres reportages destinés à divertir les couche-tard comme les lève-tôt.</desc>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Programme indéterminé</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/611B52CD73AB6BCF0E8FA80EB8015F5E.jpg" />
+  <programme start="20260928152000 +0200" stop="20260928155000 +0200" channel="Arte.fr">
+    <title lang="fr">Nomade des mers, les escales de l'innovation</title>
+    <sub-title lang="fr">Malaisie, Rawang</sub-title>
+    <desc lang="fr">En Malaisie, Corentin découvre un système efficace pour se débarrasser des déchets : l'utilisation de larves de mouche qui décomposent la matière organique.</desc>
+    <credits>
+      <director>Vincent Lefebvre</director>
+      <guest>Arte France</guest>
+      <guest> Interscoop</guest>
+      <guest>Low-tech Lab</guest>
+    </credits>
+    <date>2021</date>
+    <category lang="fr">Documentaire</category>
+    <category lang="fr">Découvertes</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/6C29CD257BD0F97638B86C71534F4F22.jpg" />
     <country lang="fr">France</country>
+    <episode-num system="xmltv_ns">1.0.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -20005,6 +19849,48 @@
       <value>Tout public</value>
     </rating>
   </programme>
+  <programme start="20260928144500 +0200" stop="20260928153500 +0200" channel="TMC.fr">
+    <title lang="fr">Mentalist</title>
+    <sub-title lang="fr">Coup monté</sub-title>
+    <desc lang="fr">Le CBI enquête sur le meurtre d'un agent de sécurité dans une banlieue de Sacramento. Lisbon rencontre Isaac Goodwin, dont le comportement est jugé anormal par Patrick Jane. Une prise d'otage a eu lieu chez les Goodwin et un couple d'amis a été enlevé à la place de Brenda et Marcus. Une rançon de cinq millions de dollars est réclamée. Pendant ce temps, Patrick Jane interroge les conducteurs de fourgons de prisonniers pour trouver le complice de John le Rouge qui a aidé Lorelei Martins à s'échapper de prison...</desc>
+    <credits>
+      <director>John F. Showalter</director>
+      <actor>Tim Kang</actor>
+      <actor>J.R. Cacia</actor>
+      <actor>Holly Kaplan</actor>
+      <actor>Owain Yeoman</actor>
+      <actor>Wes Chatham</actor>
+      <actor>Anne Dudek</actor>
+      <actor>Michael Shamus Wiles</actor>
+      <actor>Simon Baker</actor>
+      <actor>Amanda Righetti</actor>
+      <actor>Robin Tunney</actor>
+      <actor>Neil Hopkins</actor>
+      <actor>Brooke Langton</actor>
+      <adapter>David Appelbaum</adapter>
+      <producer>Bruno Heller</producer>
+      <producer>Simon Baker</producer>
+      <producer>Eoghan Mahony</producer>
+      <producer>Matthew Carlisle</producer>
+      <producer>Chris Long</producer>
+      <producer>Tom Szentgyorgyi</producer>
+      <producer>Daniel Cerone</producer>
+      <composer>Blake Neely</composer>
+      <editor>Bruno Heller</editor>
+      <guest>Warner Bros. Television</guest>
+      <guest>Primrose Hill Productions</guest>
+    </credits>
+    <date>2012</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Policier</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/76CD209B4A8F7ED931BFD9038DBC101E.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">4.5.</episode-num>
+    <rating system="CSA">
+      <value>-10</value>
+      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
+    </rating>
+  </programme>
   <programme start="20260925065500 +0200" stop="20260925084000 +0200" channel="NT1.fr">
     <title lang="fr">TFou</title>
     <desc lang="fr">Hello Kitty super style ! ST / Ruben &amp; cie ST / Paw Patrol, la Pat'Patrouille ST / Les Schtroumpfs ST</desc>
@@ -22519,16 +22405,39 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925032800 +0200" stop="20260925033100 +0200" channel="LaChaineParlementaire.fr">
-    <title lang="fr">Construire pour l'avenir</title>
-    <sub-title lang="fr">Vieux bâtiments : comment réussir le défi de la rénovation énergétique</sub-title>
-    <desc lang="fr">Un projet béton : quand les nouvelles techniques de fabrication du ciment engendrent un béton plus durable.</desc>
-    <date>2024</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Information</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/5A9DCDA27845317DDF4D0F90BBD4CEC3.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.5.</episode-num>
+  <programme start="20260928151500 +0200" stop="20260928161000 +0200" channel="NT1.fr">
+    <title lang="fr">Les frères Scott</title>
+    <sub-title lang="fr">Nos vies rêvées</sub-title>
+    <desc lang="fr">Lucas ramène son bébé à la maison, Peyton se réveille du coma. Brooke compte sur Julian pour l'aider. Mia prépare son nouvel album et est amoureuse de Chase. Dan demande pardon à Whitey et souhaite prendre sa petite-fille dans ses bras. Nathan est recruté par les Bobcats de Charlotte. Milicent choisit de rester à Tree Hill avec Micro. Julian part pour Los Angeles après une nuit avec Brooke. Brooke renoue avec sa mère et avoue ses sentiments à Julian...</desc>
+    <credits>
+      <director>Mark Schwahn</director>
+      <actor>James Lafferty</actor>
+      <actor>Daphne Zuniga</actor>
+      <actor>Jackson Brundage</actor>
+      <actor>Paul Johansson</actor>
+      <actor>Hilarie Burton</actor>
+      <actor>Sophia Bush</actor>
+      <actor>Bethany Joy Lenz</actor>
+      <actor>Lisa Goldstein Kirsch</actor>
+      <actor>Ashley Rickards</actor>
+      <actor>Chad Michael Murray</actor>
+      <actor>Lee Norris</actor>
+      <actor>Antwon Tanner</actor>
+      <adapter>Mark Schwahn</adapter>
+      <producer>Mark Schwahn</producer>
+      <producer>Michael Tollin</producer>
+      <editor>David Handelman</editor>
+      <editor>Mark Schwahn</editor>
+      <guest>Warner Bros. Television</guest>
+      <guest>Robbins Productions</guest>
+      <guest>Tollin/Robbins Productions</guest>
+    </credits>
+    <date>2009</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Drame</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/FA936BE60B49CC73FAA8A34F3EF17354.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">5.23.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -24327,18 +24236,36 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925024000 +0200" stop="20260925035500 +0200" channel="France4.fr">
-    <title lang="fr">Festival des Francofolies</title>
-    <sub-title lang="fr">Vladimir Cauchemar</sub-title>
-    <desc lang="fr">Evoluant entre l'univers rap et électro, Vladimir Cauchemar sait donner de l'énergie lors de ses shows scéniques, comme le prouve son passage aux Francofolies.</desc>
-    <credits>
-      <director>Julien Faustino</director>
-    </credits>
+  <programme start="20260928145800 +0200" stop="20260928150200 +0200" channel="LaChaineParlementaire.fr">
+    <title lang="fr">Plus verte ma PME</title>
+    <sub-title lang="fr">Bureau de demain : comment concilier écologie et performances ?</sub-title>
+    <desc lang="fr">Quand un architecte applique d'abord à ses propres bureaux les règles de bonne conduite en matière d'environnement.</desc>
     <date>2024</date>
-    <category lang="fr">Spectacle</category>
-    <category lang="fr">Pop &amp; Rock</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/B30F79292ECCAC9EBEF83A3DEFB18163.jpg" />
+    <category lang="fr">Magazine</category>
+    <category lang="fr">Société</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/0BFA022D852355758D6D981A07019AD6.jpg" />
     <country lang="fr">France</country>
+    <episode-num system="xmltv_ns">0.4.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928150200 +0200" stop="20260928160100 +0200" channel="LaChaineParlementaire.fr">
+    <title lang="fr">VIP Very Important Paysans</title>
+    <sub-title lang="fr">La carotte, un légume très aimable !</sub-title>
+    <desc lang="fr">La carotte, un légume que les Français adorent, disponible toute l'année, rend paraît-il aimable. Les invités évoquent aussi les lentilles, une légumineuse bonne pour la planète.</desc>
+    <credits>
+      <guest>Patrick Larrère</guest>
+      <guest>Hélène Laporte</guest>
+      <guest>Frédérique Courtadon</guest>
+      <guest>Romuald Carrouge</guest>
+    </credits>
+    <date>2026</date>
+    <category lang="fr">Magazine</category>
+    <category lang="fr">Talk show</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/150D5C6F3D7CE3B60B42567BFFDC6BBA.jpg" />
+    <country lang="fr">France</country>
+    <episode-num system="xmltv_ns">0.4.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -30822,6 +30749,125 @@
       <value>Tout public</value>
     </rating>
   </programme>
+  <programme start="20260928143800 +0200" stop="20260928145900 +0200" channel="France4.fr">
+    <title lang="fr">Trop cool, Scooby-Doo !</title>
+    <sub-title lang="fr">Bouh-garou</sub-title>
+    <desc lang="fr">Scooby se sent mal et est conduit par ses amis dans la clinique vétérinaire du Dr Dunsbury où ils rencontrent Madame Tuckle venue pour l'accouchement de sa précieuse chatte Lulu. Là ils apprennent qu'un loup-garou rôde dans la clinique. Fred propose au docteur leur aide pour résoudre ce mystère...</desc>
+    <credits>
+      <director>James Krenzke</director>
+      <adapter>Jon Colton Barry</adapter>
+      <producer>Jeff Mednikow</producer>
+      <producer>Zac Moncrief</producer>
+      <producer>Charlie Sweitzer</producer>
+      <composer>The Gifted</composer>
+      <composer>Jake Monaco</composer>
+      <editor>Ken Spears</editor>
+      <guest>Candi Milo</guest>
+      <guest>Edward Bosco</guest>
+      <guest>Frank Welker</guest>
+      <guest>Christian Lanz</guest>
+      <guest>Kate Micucci</guest>
+      <guest>Grey Griffin</guest>
+      <guest>Warner Bros.</guest>
+      <guest>Phil Morris</guest>
+      <guest>Matthew Lillard</guest>
+    </credits>
+    <date>2017</date>
+    <category lang="fr">Dessin animé</category>
+    <category lang="fr">Jeunesse</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/5D0995997D9F6B216B8535F375BB98C6.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">1.1.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928145900 +0200" stop="20260928151200 +0200" channel="France4.fr">
+    <title lang="fr">Trop cool, Scooby-Doo !</title>
+    <sub-title lang="fr">Le festival de la peur</sub-title>
+    <desc lang="fr">Le petit clan se rend à une fête organisée dans le village où Velma a grandi. Un esprit mal intentionné vient perturber le rassemblement...</desc>
+    <credits>
+      <director>Andy Thom</director>
+      <adapter>Ben Joseph</adapter>
+      <producer>Charlie Sweitzer</producer>
+      <producer>Mark Banker</producer>
+      <producer>Jeff Mednikow</producer>
+      <producer>Zac Moncrief</producer>
+      <composer>The Gifted</composer>
+      <composer>Jake Monaco</composer>
+      <editor>Ken Spears</editor>
+      <guest>Warner Bros. Animation</guest>
+      <guest>John DiMaggio</guest>
+      <guest>Matthew Lillard</guest>
+      <guest>Troy Baker</guest>
+      <guest>Robin Atkin Downes</guest>
+    </credits>
+    <date>2017</date>
+    <category lang="fr">Dessin animé</category>
+    <category lang="fr">Jeunesse</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/F67AD370DEFA485CC76D9F52889FDBDD.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">1.2.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928151200 +0200" stop="20260928152300 +0200" channel="France4.fr">
+    <title lang="fr">Molusco</title>
+    <sub-title lang="fr">La mairie en folie</sub-title>
+    <desc lang="fr">La série préférée de Coco est annulée et Coco est déterminé à aller convaincre le maire de son erreur. Il parvient à hypnotiser le maire mais malheureusement son système a trop bien marché...</desc>
+    <credits>
+      <director>Damien Barrau</director>
+      <director>Fabien Limousin</director>
+      <producer>Camille Serceau</producer>
+      <producer>Franck Ekinci</producer>
+      <composer>Denis Vautrin</composer>
+      <composer>Alexis Pecharman</composer>
+      <guest>Emmanuel Garijo</guest>
+      <guest>SUPER RIGHTS</guest>
+      <guest>Caroline Mozzone</guest>
+      <guest>Marc Bretonnière</guest>
+      <guest>Yoann Sover</guest>
+      <guest>Donald Reignoux</guest>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Animation</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/DD1B59B80DC602F2683A2B6369E5A9AA.jpg" />
+    <country lang="fr">Etats-Unis - France</country>
+    <episode-num system="xmltv_ns">0.48.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928152300 +0200" stop="20260928154300 +0200" channel="France4.fr">
+    <title lang="fr">Molusco</title>
+    <sub-title lang="fr">Molusclone</sub-title>
+    <desc lang="fr">Molusco est obsédé par son nouveau jeu vidéo, au point qu'il ne veut plus rien faire d'autre. Par chance, il découvre que quand il se roule dans l'engrais d'Eugène cela fait naître un clone, que Coco est ravi d'étudier...</desc>
+    <credits>
+      <director>Damien Barrau</director>
+      <director>Fabien Limousin</director>
+      <producer>Camille Serceau</producer>
+      <producer>Franck Ekinci</producer>
+      <composer>Denis Vautrin</composer>
+      <composer>Alexis Pecharman</composer>
+      <guest>Emmanuel Garijo</guest>
+      <guest>SUPER RIGHTS</guest>
+      <guest>Caroline Mozzone</guest>
+      <guest>Marc Bretonnière</guest>
+      <guest>Yoann Sover</guest>
+      <guest>Donald Reignoux</guest>
+    </credits>
+    <date>2014</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Animation</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/8B0B46F5B24D5293F3BCD4478C0C01D8.jpg" />
+    <country lang="fr">Etats-Unis - France</country>
+    <episode-num system="xmltv_ns">0.49.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
   <programme start="20260925043000 +0200" stop="20260925060000 +0200" channel="BFMTV.fr">
     <title lang="fr">BFM Première : Pré-matinale</title>
     <desc lang="fr">Un nouveau tandem prend les commandes du rdv tv d'Informations le plus matinal de France. Dès 4h30, ils accompagnent les Français qui se lèvent tôt en présentant les informations qui feront l'actualité de la journée.</desc>
@@ -31448,90 +31494,6 @@
     <category lang="fr">Information</category>
     <icon src="https://img.bouygtel.fr/CMS/images/16004ECF9EA71608F08B6A023BCDD7B9.jpg" />
     <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925025000 +0200" stop="20260925025200 +0200" channel="CNews.fr">
-    <title lang="fr">La sélection</title>
-    <desc lang="fr">Bienvenue dans La Sélection CNEWS, l'agenda des événements du moment à ne pas manquer : culture, cinéma, théâtre, spectacle, exposition, festival, concert…</desc>
-    <date>2026</date>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Divertissement</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/6ADF1D13BE7966D0EF36D56D1AE19DA3.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.134.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925025200 +0200" stop="20260925025400 +0200" channel="CNews.fr">
-    <title lang="fr">Météo</title>
-    <sub-title lang="fr">Prévisions pour le lendemain</sub-title>
-    <desc lang="fr">Les prévisions météo pour le lendemain</desc>
-    <date>2026</date>
-    <category lang="fr">Services</category>
-    <category lang="fr">Météo</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/25D35CC47A2B46B435C94A8D079ADCA9.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925025400 +0200" stop="20260925031600 +0200" channel="CNews.fr">
-    <title lang="fr">Edition de la nuit</title>
-    <desc lang="fr">Un journal télévisé complet qui revient en détails sur toute l'actualité et les faits marquants de la journée </desc>
-    <credits>
-      <guest>Julien Pasquet</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Information</category>
-    <category lang="fr">Journal</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/229E594829C14631A3BA074019D7A259.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.1123.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925031600 +0200" stop="20260925031800 +0200" channel="CNews.fr">
-    <title lang="fr">La sélection</title>
-    <desc lang="fr">Bienvenue dans La Sélection CNEWS, l'agenda des événements du moment à ne pas manquer : culture, cinéma, théâtre, spectacle, exposition, festival, concert…</desc>
-    <date>2026</date>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Divertissement</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/02C8658FD9FEA71B21029BC7808AC294.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.134.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925031800 +0200" stop="20260925031900 +0200" channel="CNews.fr">
-    <title lang="fr">Météo</title>
-    <sub-title lang="fr">Prévisions pour le lendemain</sub-title>
-    <desc lang="fr">Les prévisions météo pour le lendemain</desc>
-    <date>2026</date>
-    <category lang="fr">Services</category>
-    <category lang="fr">Météo</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/877D77A173CD4704A7473C91323FD68E.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925031900 +0200" stop="20260925034100 +0200" channel="CNews.fr">
-    <title lang="fr">Edition de la nuit</title>
-    <desc lang="fr">Un journal télévisé complet qui revient en détails sur toute l'actualité et les faits marquants de la journée </desc>
-    <credits>
-      <guest>Julien Pasquet</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Information</category>
-    <category lang="fr">Journal</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/9493169449A8CBAE7FC927CC809AA883.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.1123.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -34094,25 +34056,13 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925031900 +0200" stop="20260925032100 +0200" channel="CStar.fr">
+  <programme start="20260928145700 +0200" stop="20260928160000 +0200" channel="CNews.fr">
     <title lang="fr">L'éphéméride</title>
     <desc lang="fr">Une courte présentation de l'histoire du saint du jour qui se conclut par un dicton.</desc>
     <date>2026</date>
     <category lang="fr">Magazine</category>
     <category lang="fr">Découvertes</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/25741E782764227AC9DA42C32E8EB04E.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925032100 +0200" stop="20260925045900 +0200" channel="CStar.fr">
-    <title lang="fr">Nuit rap français</title>
-    <desc lang="fr">Le rap français est à l'honneur, avec une sélection des meilleurs clips du moment.</desc>
-    <date>2026</date>
-    <category lang="fr">Musique</category>
-    <category lang="fr">Clips</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/28439D78D55B5D8130B3CBDFEA0BD8EB.jpg" />
+    <icon src="https://img.bouygtel.fr/CMS/images/D0EA0071F28B288FBFAADF7639FA48A4.jpg" />
     <country lang="fr">France</country>
     <rating system="CSA">
       <value>Tout public</value>
@@ -38094,18 +38044,83 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925030500 +0200" stop="20260925033500 +0200" channel="T18.fr">
-    <title lang="fr">Pour tout dire</title>
-    <desc lang="fr">De l'expertise, de l'humeur et des convictions : c'est le cocktail de "Pour tout dire", un rendez-vous qui permet à Matthieu Croissandeau et ses invités de débattre des petits et grands sujets qui font l'actualité, avec une grande liberté de ton. Du lundi au vendredi, en deuxième partie de soirée, le journaliste politique anime ce regard pointu sur les réalités de l'époque actuelle. Un moment d'échange instructif et distrayant.</desc>
+  <programme start="20260928144000 +0200" stop="20260928151000 +0200" channel="Gulli.fr">
+    <title lang="fr">Notre belle famille</title>
+    <sub-title lang="fr">Mark joue au base-ball</sub-title>
+    <desc lang="fr">Frank entraîne l'équipe de base-ball de ses enfants pour participer au match de ligue. Il est rapidement confronté à des problèmes de dernière minute.</desc>
     <credits>
-      <guest>Matthieu Croissandeau</guest>
+      <director>Patrick A. Duffy</director>
+      <actor>Christopher Castile</actor>
+      <actor>Angela Watson</actor>
+      <actor>Brandon Call</actor>
+      <actor>Christine Lakin</actor>
+      <actor>Patrick A. Duffy</actor>
+      <actor>Suzanne Somers</actor>
+      <actor>Staci Keanan</actor>
+      <adapter>Bob Rosenfarb</adapter>
+      <producer>Michael Warren</producer>
+      <producer>Ross Brown</producer>
+      <producer>William Bickley</producer>
+      <producer>Robert L. Boyett</producer>
+      <producer>Thomas L. Miller</producer>
+      <producer>Ronny Hallin</producer>
+      <composer>Gary Boren</composer>
+      <editor>William Bickley</editor>
+      <editor>Michael Warren</editor>
+      <guest>Lorimar Television</guest>
+      <guest>Bickley-Warren Productions</guest>
+      <guest>Miller/Boyett Productions</guest>
     </credits>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Information</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/344D3E7C83681C1A6399442598436C08.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">1.0.</episode-num>
+    <date>1993</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Comédie</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/C8E0D24BAE13111B764C91D957BB5784.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">1.20.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928151000 +0200" stop="20260928153000 +0200" channel="Gulli.fr">
+    <title lang="fr">Notre belle famille</title>
+    <sub-title lang="fr">Voyance</sub-title>
+    <desc lang="fr">Après qu'une diseuse de bonne aventure a prédit que JT serait assassiné aux douze coups de minuit, JT et Cody en viennent à soupçonner Karen d'être l'instigatrice du meurtre.</desc>
+    <credits>
+      <director>Patrick Duffy</director>
+      <director>Joel Zwick</director>
+      <actor>Brandon Call</actor>
+      <actor>Staci Keanan</actor>
+      <actor>Patrick Duffy</actor>
+      <actor>Suzanne Somers</actor>
+      <actor>Patrika Darbo</actor>
+      <actor>Peggy Rea</actor>
+      <actor>Sasha Mitchell</actor>
+      <actor>Angela Watson</actor>
+      <actor>Christine Lakin</actor>
+      <actor>Suanne Spoke</actor>
+      <actor>Christopher Castile</actor>
+      <actor>Josh Byrne</actor>
+      <adapter>Julia Newton</adapter>
+      <adapter>William Bickley</adapter>
+      <producer>Michael Warren</producer>
+      <producer>Ronny Hallin</producer>
+      <producer>Thomas L. Miller</producer>
+      <producer>William Bickley</producer>
+      <producer>Robert L. Boyett</producer>
+      <producer>Ross Brown</producer>
+      <composer>Gary Boren</composer>
+      <editor>Michael Warren</editor>
+      <editor>William Bickley</editor>
+      <guest>Bickley-Warren Productions</guest>
+      <guest>Miller/Boyett Productions</guest>
+      <guest>Lorimar Television</guest>
+    </credits>
+    <date>1993</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Comédie</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/F9A8E9C00A744A039D2F3B3AF2088D10.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">1.21.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -40891,6 +40906,21 @@
     <category lang="fr">Documentaire</category>
     <category lang="fr">Justice</category>
     <icon src="https://img.bouygtel.fr/CMS/images/06E82570F35AD7EA4155A383A31759AF.jpg" />
+    <country lang="fr">France</country>
+    <episode-num system="xmltv_ns">0.0.</episode-num>
+    <rating system="CSA">
+      <value>-10</value>
+      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
+    </rating>
+  </programme>
+  <programme start="20260928152000 +0200" stop="20260928171000 +0200" channel="NOVO19.fr">
+    <title lang="fr">Les visages du crime en région</title>
+    <sub-title lang="fr">Crimes en Auvergne-Rhône-Alpes</sub-title>
+    <desc lang="fr">Au sommaire : "Scandale au collège". - A 22 ans, Camille revient à Moulins et accuse Jean-Philippe, 36 ans, de viols répétés alors qu'elle était mineure. - "L'effroyable machination". En 2014, Jérôme signale la disparition de sa compagne Magali, mère de famille. - "Un étrange suicide". En 2016, Christian découvre le corps sans vie de son épouse Fabienne dans leur appartement.</desc>
+    <date>2021</date>
+    <category lang="fr">Documentaire</category>
+    <category lang="fr">Justice</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/971EC5475ED1D84EE3B585609162525E.jpg" />
     <country lang="fr">France</country>
     <episode-num system="xmltv_ns">0.0.</episode-num>
     <rating system="CSA">
@@ -44233,6 +44263,50 @@
     <icon src="https://img.bouygtel.fr/CMS/images/A1574B930EBA16CC13E5CD6E8ED0F3F8.jpg" />
     <country lang="fr">Etats-Unis</country>
     <episode-num system="xmltv_ns">3.12.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928151500 +0200" stop="20260928161500 +0200" channel="TF1SeriesFilms.fr">
+    <title lang="fr">Beverly Hills</title>
+    <sub-title lang="fr">Un vent de panique</sub-title>
+    <desc lang="fr">David et Donna dînent en amoureux lorsque les parents de Donna lui rendent une petite visite impromptue. Lasse de devoir toujours mentir, Donna leur avoue que David vit avec elle. Steve est arrêté par la police dans le bureau du professeur Randall...</desc>
+    <credits>
+      <director>Gilbert M. Shilton</director>
+      <actor>Jason Priestley</actor>
+      <actor>Tori Spelling</actor>
+      <actor>Carol Potter</actor>
+      <actor>James Eckhouse</actor>
+      <actor>Dina Meyer</actor>
+      <actor>Joe E. Tata</actor>
+      <actor>Gabrielle Carteris</actor>
+      <actor>Jennie Garth</actor>
+      <actor>Brian Austin Green</actor>
+      <actor>Luke Perry</actor>
+      <actor>Shannen Doherty</actor>
+      <actor>Ian Ziering</actor>
+      <adapter>Richard Gollance</adapter>
+      <adapter>Larry Mollin</adapter>
+      <adapter>Darren Star</adapter>
+      <producer>Paul Waigner</producer>
+      <producer>Charles Rosin</producer>
+      <producer>Darren Star</producer>
+      <producer>David Semel</producer>
+      <producer>Larry Mollin</producer>
+      <producer>Aaron Spelling</producer>
+      <composer>John E. Davis</composer>
+      <editor>Chip Johannessen</editor>
+      <editor>Jennifer Flackett</editor>
+      <editor>Darren Star</editor>
+      <guest>Torand Productions</guest>
+      <guest>Spelling Television</guest>
+    </credits>
+    <date>1993</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Drame</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/048D70E98FEF84977C31C0B9060AFD20.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">3.13.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -49206,6 +49280,23 @@
       <value>Tout public</value>
     </rating>
   </programme>
+  <programme start="20260928150000 +0200" stop="20260928153000 +0200" channel="Numero23.fr">
+    <title lang="fr">Au coeur des douanes : Espagne</title>
+    <desc lang="fr">Dans le port d'Algésiras, la garde civile et la douane interceptent un conteneur qui pourrait renfermer des marchandises de contrebande.</desc>
+    <credits>
+      <producer>Juan Antonio Domínguez</producer>
+      <guest> Croptv</guest>
+    </credits>
+    <date>2016</date>
+    <category lang="fr">Documentaire</category>
+    <category lang="fr">Société</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/8775AA7C49F43F1D2CA76C20610FBC32.jpg" />
+    <country lang="fr">Espagne</country>
+    <episode-num system="xmltv_ns">0.6.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
   <programme start="20260925062500 +0200" stop="20260925075000 +0200" channel="RMCDecouverte.fr">
     <title lang="fr">Flic story</title>
     <sub-title lang="fr">Gendarmes des autoroutes du sud : épisode 1</sub-title>
@@ -50883,6 +50974,17 @@
     <category lang="fr">Téléréalité</category>
     <icon src="http://static-cdn.tv.sfr.net/data/img/pl/9/9/6/15840699.jpg" />
     <episode-num system="xmltv_ns">9.9.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20260928145000 +0200" stop="20260928155000 +0200" channel="RMCDecouverte.fr">
+    <title lang="fr">Alaska : La ruée vers l'or</title>
+    <sub-title lang="fr">L'ère des machines</sub-title>
+    <desc lang="fr">Rick Ness tente de maîtriser un équipement qui semble doté d'un esprit propre ; Parker, lui, est impatient de tester un nouvel outil qui accélère l'extraction de l'or.</desc>
+    <category lang="fr">Téléréalité</category>
+    <icon src="http://static-cdn.tv.sfr.net/data/img/pl/9/9/6/15840699.jpg" />
+    <episode-num system="xmltv_ns">9.10.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -53733,17 +53835,6 @@
       <value>Tout public</value>
     </rating>
   </programme>
-  <programme start="20260925031500 +0200" stop="20260925070000 +0200" channel="ParisPremiere.fr">
-    <title lang="fr">Programmes de la nuit</title>
-    <desc lang="fr">A suivre, des rediffusions des émissions de la chaîne, ainsi que des documentaires et autres reportages destinés à divertir les couche-tard comme les lève-tôt.</desc>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Programme indéterminé</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/CC7911737228689FF5CC076A98C27C6F.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925070000 +0200" stop="20260925111500 +0200" channel="ParisPremiere.fr">
     <title lang="fr">Caméra café</title>
     <desc lang="fr">Devant la machine à café défile tout le personnel de l'entreprise GES, qui s'y retrouve pour évoquer ses tracas d'ordre professionnel ou privé. Parmi les employés, on compte notamment le délégué syndical Hervé Dumont, le truculent commercial Jean-Claude Convenant, Sylvain Müller, le comptable naïf, et son alter ego Maeva Capucin, Jeanne Bignon, qui élève seule ses trois enfants ou encore Jean-Guy Lecointre, DRH de l'entreprise âgé d'une cinquantaine d'années. Déclinée en 570 épisodes, cette série qui aborde la vie en entreprise par le biais de l'humour a connu un franc succès et a même eu droit à un long métrage intitulé "Espace détente".</desc>
@@ -55509,15 +55600,98 @@
       <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
     </rating>
   </programme>
-  <programme start="20260925030500 +0200" stop="20260925060500 +0200" channel="CanalPlusSport.fr">
-    <title lang="fr">Fin des programmes</title>
-    <desc lang="fr">Fermeture de l'antenne à la fin des diffusions de la journée.</desc>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Fin</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/5A793D9BCDAA4CAE6AAA21B4780F49E2.jpg" />
-    <country lang="fr">France</country>
+  <programme start="20260928144000 +0200" stop="20260928152500 +0200" channel="ParisPremiere.fr">
+    <title lang="fr">Elementary</title>
+    <sub-title lang="fr">Diaboliquement vôtre</sub-title>
+    <desc lang="fr">La petite fille d'une famille aisée est kidnappée. Sherlock prend l'affaire en main. Lors de la demande de rançon, il reconnaît la voix du commanditaire : il s'agit d'un des lieutenants de Moriarty. Persuadé qu'elle est à l'origine de l'enlèvement, Sherlock demande à rencontrer la criminelle avec qui il continue d'entretenir une correspondance. Incarcérée, celle-ci a obtenu certains avantages en échange d'informations, et propose sa collaboration dans cette enquête. Joan Watson craint les conséquences éventuelles de retrouvailles entre le détective et la criminelle...</desc>
+    <credits>
+      <director>Larry Teng</director>
+      <actor>Jon Michael Hill</actor>
+      <actor>Aidan Quinn</actor>
+      <actor>Lucy Liu</actor>
+      <actor>Romell Witherspoon</actor>
+      <actor>Jeffrey C. Hawkins</actor>
+      <actor>Jonny Lee Miller</actor>
+      <actor>Natalie Dormer</actor>
+      <actor>Andrew Howard</actor>
+      <actor>Rachel Pickup</actor>
+      <actor>Andy Murray</actor>
+      <actor>Faran Tahir</actor>
+      <actor>Dion Mucciacito</actor>
+      <adapter>Robert Doherty</adapter>
+      <adapter>Craig Sweeny</adapter>
+      <producer>Jonathan Filley</producer>
+      <producer>Robert Doherty</producer>
+      <producer>Carl Beverly</producer>
+      <producer>Christopher Hollier</producer>
+      <producer>Craig Sweeny</producer>
+      <producer>Sarah Timberman</producer>
+      <composer>Sean Callery</composer>
+      <editor>Robert Doherty</editor>
+      <guest>CBS Television Studios</guest>
+      <guest>Timberman-Beverly Productions</guest>
+      <guest>Hill of Beans Productions</guest>
+    </credits>
+    <date>2014</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Policier</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/A5BB1CD4C028A0A8D9917E7C4F3B137F.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">1.11.</episode-num>
     <rating system="CSA">
-      <value>Tout public</value>
+      <value>-10</value>
+      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
+    </rating>
+  </programme>
+  <programme start="20260928152500 +0200" stop="20260928161500 +0200" channel="ParisPremiere.fr">
+    <title lang="fr">Elementary</title>
+    <sub-title lang="fr">Guerre des étoiles</sub-title>
+    <desc lang="fr">Nell Solange, une danseuse étoile, est retrouvée morte sur une scène, égorgée et le corps tranché en deux. La principale suspecte est Iris Lanzer, sa collègue qui interprète le rôle titre du ballet en répétition. Mais Sherlock est persuadé que la jeune femme est innocente. Joan et Sherlock tentent d'en savoir davantage. Watson se consacre quant à elle à une affaire que le détective juge sans intérêt : la disparition d'un vétéran de la Guerre du Golfe, devenu SDF après un stress post-traumatique. Watson profite de cette occasion pour parler à son collègue de son père biologique, atteint de schizophrénie, et qui vivrait également dans la rue...</desc>
+    <credits>
+      <director>Jean de Segonzac</director>
+      <actor>Jon Michael Hill</actor>
+      <actor>Aidan Quinn</actor>
+      <actor>Lucy Liu</actor>
+      <actor>Curtis McClarin</actor>
+      <actor>Tally Sessions</actor>
+      <actor>Alec Beard</actor>
+      <actor>Jonny Lee Miller</actor>
+      <actor>Dan Cooney</actor>
+      <actor>Aleksa Palladino</actor>
+      <actor>Scott Cohen</actor>
+      <actor>Bill Sage</actor>
+      <actor>David A. Gregory</actor>
+      <adapter>Brian Rodenbeck</adapter>
+      <adapter>Liz Friedman</adapter>
+      <adapter>Robert Doherty</adapter>
+      <producer>Christopher Hollier</producer>
+      <producer>Craig Sweeny</producer>
+      <producer>Geoffrey Hemwall</producer>
+      <producer>Kammie Mann</producer>
+      <producer>Chris Leanza</producer>
+      <producer>Sarah Timberman</producer>
+      <producer>David Yoneshige</producer>
+      <producer>Jonathan Filley</producer>
+      <producer>Robert Doherty</producer>
+      <producer>Alysse Bezahler</producer>
+      <producer>Carl Beverly</producer>
+      <composer>Zoe Keating</composer>
+      <composer>Sean Callery</composer>
+      <editor>Jeffrey Paul King</editor>
+      <editor>Robert Doherty</editor>
+      <guest>CBS Television Studios</guest>
+      <guest>Timberman-Beverly Productions</guest>
+      <guest>Hill of Beans Productions</guest>
+    </credits>
+    <date>2014</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Policier</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/5CA1FE2695E95F7B053F0E345A4751D7.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">1.14.</episode-num>
+    <rating system="CSA">
+      <value>-10</value>
+      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
     </rating>
   </programme>
   <programme start="20260925060500 +0200" stop="20260925070500 +0200" channel="CanalPlusSport.fr">
@@ -58285,11 +58459,51 @@
       <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Moins12.svg/250px-Moins12.svg.png" />
     </rating>
   </programme>
-  <programme start="20260925030900 +0200" stop="20260925060900 +0200" channel="PlanetePlus.fr">
-    <title lang="fr">Champs-Elysées (Le temple de la mode) S1 (4/6)</title>
-    <desc lang="fr">«Le temple de la mode»Depuis des décennies, les Champs-Elysées sont un théâtre humain où les femmes élégantes de la planète viennent montrer leurs plus belles tenues.</desc>
-    <category lang="fr">Documentaire</category>
-    <icon src="https://images.voomotion.be/Events/2025/07/26/45/1930534_A.jpg" />
+  <programme start="20260928150400 +0200" stop="20260928171800 +0200" channel="CanalPlusCinema.fr">
+    <title lang="fr">La cité interdite</title>
+    <desc lang="fr">A Rome, Marcello, fils d'un restaurateur croulant sous les dettes, croise la route de Mei, une mystérieuse jeune Chinoise experte en arts martiaux à la recherche de sa soeur disparue. Unis par leurs blessures et leur quête de vérité, ils s'enfoncent dans les bas-fonds de la capitale italienne et affrontent ensemble les réseaux criminels les plus violents de la ville....</desc>
+    <credits>
+      <director>Gabriele Mainetti</director>
+      <actor>Claudio Pallitto</actor>
+      <actor>Enrico Borello</actor>
+      <actor>Thomal Islam</actor>
+      <actor>Marco Giallini</actor>
+      <actor>Yaxi Liu</actor>
+      <actor>Luca Zingaretti</actor>
+      <actor>Haijin Ye</actor>
+      <actor>Paolo Buglioni</actor>
+      <actor>Sheena Hao</actor>
+      <actor>Shanshan Chunyu</actor>
+      <actor>Sabrina Ferilli</actor>
+      <actor>Elisa Wong</actor>
+      <adapter>Gabriele Mainetti</adapter>
+      <adapter>Stefano Bises</adapter>
+      <adapter>Davide Serino</adapter>
+      <producer>Lorenzo Gangarossa</producer>
+      <producer>Sonia Rovai</producer>
+      <producer>Saverio Giuseppe Guarascio</producer>
+      <producer>Mandella Quilici</producer>
+      <producer>Gianluca Mizzi</producer>
+      <producer>Mario Gianani</producer>
+      <producer>Claudio Falconi</producer>
+      <composer>Fabio Amurri</composer>
+      <guest> Wildside</guest>
+      <guest>Domenico Dicillo</guest>
+      <guest>Goon Films</guest>
+      <guest> Netflix</guest>
+      <guest>Vision Distribution</guest>
+      <guest>Ivo Petri</guest>
+      <guest>Ministero della Cultura</guest>
+    </credits>
+    <date>2025</date>
+    <category lang="fr">Action</category>
+    <category lang="fr">Policier</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/34674821F285ABEE52925F03E2CB4B42.jpg" />
+    <country lang="fr">Italie</country>
+    <rating system="CSA">
+      <value>-12</value>
+      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Moins12.svg/250px-Moins12.svg.png" />
+    </rating>
   </programme>
   <programme start="20260925060900 +0200" stop="20260925075300 +0200" channel="PlanetePlus.fr">
     <title lang="fr">Maria Anna : l'autre Mozart</title>
@@ -59288,5 +59502,19 @@
     <star-rating system="teleloisirs">
       <value>3/5</value>
     </star-rating>
+  </programme>
+  <programme start="20260928143800 +0200" stop="20260928160600 +0200" channel="PlanetePlus.fr">
+    <title lang="fr">La grande guerre - Saison 1</title>
+    <sub-title lang="fr">A l'assaut</sub-title>
+    <desc lang="fr">L'offensive allemande en direction de Paris pousse les Etats-Unis à prendre des décisions cruciales. Les régiments de la Big Red One et des Harlem Hellfighters jouent un rôle essentiel dans la victoire des Alliés, marquant le début de l'influence militaire et économique des Etats-Unis dans le monde.</desc>
+    <category lang="fr">Decouverte</category>
+    <category lang="fr">Doc Histoire</category>
+    <icon src="https://thumb.canalplus.pro/http/unsafe/640x360/filters:quality(80)/canalplus-cdn.canal-plus.io/p1/plmws/images.media-press.cloud/f6f6/f6f66a75c4794e8caf4c587975ae2a84" />
+    <episode-num system="xmltv_ns">0.1.</episode-num>
+    <subtitles type="teletext" />
+    <rating system="CSA">
+      <value>-10</value>
+      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
+    </rating>
   </programme>
   </tv>
