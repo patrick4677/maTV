@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.8.8 (Support Multi-XMLTV + Correctif programmes de nuit)
+     VERSION : 1.8.9 (Nettoyé & Optimisé)
      OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
      AUTEUR : Patrick
      ============================================================ -->
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.8.8</title>
+<title>TNT + M3U – Version 1.8.9</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -328,7 +328,7 @@ body.dark .help-list li {
   <button onclick="searchOdysee()" class="focusable">🔍</button>
 </div>
 
-<h1>Programme TV v1.8.8</h1>
+<h1>Programme TV v1.8.9</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -344,7 +344,6 @@ body.dark .help-list li {
   <div class="tab active focusable" tabindex="0" onclick="showTab('compact')">Maintenant</div>
   <div class="tab focusable" tabindex="0" onclick="showTab('evening')">Soirée</div>
   <div class="tab focusable" tabindex="0" id="tab-full" onclick="showTab('full')" style="display:none;">Complet</div>
-  <div class="tab focusable" tabindex="0" onclick="showTab('xml')">Chaînes XMLTV</div>
 </div>
 
 <!-- MiniTV + barre de déplacement -->
@@ -378,7 +377,6 @@ body.dark .help-list li {
 
 <div id="evening" class="section"></div>
 <div id="full" class="section"></div>
-<div id="xml" class="section"></div>
 
 <!-- Pop-up -->
 <div id="popup">
@@ -434,7 +432,7 @@ async function loadConfig(){
   try{
     const cfg = await fetch("coulisses/config.json").then(r=>r.json());
     XML_URL = cfg.xml;
-    XML_URL2 = cfg.xml2 || "coulisses/ina70.xml"; // Utilise la clé 'xml2' ou le fichier local par défaut
+    XML_URL2 = cfg.xml2 || "coulisses/ina70.xml";
     M3U_URL = cfg.m3u;
   } catch(e){
     document.getElementById("status").textContent = "Erreur config.json";
@@ -536,9 +534,6 @@ function playStream(url){
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
 
-/* ============================================================
-   RECHERCHE ODYSEE DIRECTE
-   ============================================================ */
 function searchOdysee() {
   const queryInput = document.getElementById('odysee-search-input');
   const query = queryInput ? queryInput.value.trim() : '';
@@ -758,20 +753,6 @@ function buildChannelCellHtml(ch) {
   `;
 }
 
-function renderXMLChannels(channels){
-  const div = document.getElementById("xml");
-  let html = "<h3>Chaînes présentes dans les fichiers XMLTV</h3>";
-
-  Object.keys(channels).forEach(id=>{
-    html += `
-      <div style="padding:6px 0; border-bottom:1px solid #ccc;">
-        <strong>${id}</strong> (${channels[id].length} programmes aujourd'hui)
-      </div>`;
-  });
-
-  div.innerHTML = html;
-}
-
 function renderEvening(channels){
   const container = document.getElementById("evening");
   const today = new Date().toLocaleDateString("fr-FR");
@@ -969,11 +950,9 @@ async function updateTV(){
   try{
     document.getElementById("status").textContent = "Chargement EPG...";
     
-    // 1. Chargement du premier fichier XML (TNT)
     const xmlTxt = await fetch(XML_URL+"?t="+Date.now()).then(r=>r.text());
     xmlDocCache = new DOMParser().parseFromString(xmlTxt,"application/xml");
 
-    // 2. Fusion du second fichier XML (INA 70) si disponible
     if (XML_URL2) {
       try {
         const xmlTxt2 = await fetch(XML_URL2+"?t="+Date.now()).then(r=>r.text());
@@ -994,7 +973,6 @@ async function updateTV(){
     const now = new Date();
     const todayStr = now.toLocaleDateString("fr-FR");
 
-    // Filtrage des programmes : intègre les émissions ayant commencé la veille et finissant aujourd'hui
     for (let i = 0; i < programmesNodes.length; i++) {
       const p = programmesNodes[i];
       const rawStart = p.getAttribute("start");
@@ -1013,7 +991,6 @@ async function updateTV(){
 
     document.getElementById("status").textContent = getEPGDateRange(programmesNodes);
 
-    renderXMLChannels(channelsToday);
     renderEvening(channelsToday);
 
     const tbody = document.querySelector("#tv tbody");
