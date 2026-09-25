@@ -20,24 +20,26 @@ jobs:
         run: |
           curl -s https://xmltvfr.fr/xmltv/xmltv_tnt.xml -o coulisses/xmltv_tnt.xml
 
-      - name: Optimiser et alléger le fichier XML (-12h à +48h)
+      - name: Optimiser le fichier XML (Conservation des chaines + filtrage programmes)
         run: |
           python -c '
           import xml.etree.ElementTree as ET
           from datetime import datetime, timedelta, timezone
 
           file_path = "coulisses/xmltv_tnt.xml"
-          print("Début du filtrage de xmltv_tnt.xml...")
+          print("Début du filtrage sécurisé de xmltv_tnt.xml...")
           
           tree = ET.parse(file_path)
           root = tree.getroot()
 
           now = datetime.now(timezone.utc)
+          # Plage : 12h dans le passé à 72h dans le futur
           min_date = now - timedelta(hours=12)
-          max_date = now + timedelta(days=2)
+          max_date = now + timedelta(days=3)
 
           kept, removed = 0, 0
 
+          # On parcourt uniquement les balises programme (les balises channel restent intactes)
           for prog in root.findall("programme"):
               start_str = prog.get("start")
               if start_str:
@@ -50,7 +52,8 @@ jobs:
                       else:
                           kept += 1
                   except Exception:
-                      pass
+                      # En cas de doute sur la date, on conserve le programme
+                      kept += 1
 
           tree.write(file_path, encoding="utf-8", xml_declaration=True)
           print(f"Optimisation terminée : {kept} programmes conservés, {removed} supprimés.")
