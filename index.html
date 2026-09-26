@@ -1,7 +1,7 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.5.7 (Correction des flux M3U et TNT)
-     OBJET : Interface TV avec XMLTV (2 flux) + M3U (tvrz + pluto_fr via m3u3) + MiniTV + Google Cast + Recherche
+     VERSION : 1.9.5.7 (Robustesse M3U et gestion multi-sources)
+     OBJET : Interface TV avec XMLTV (2 flux) + M3U (tvrz + pluto_fr sécurisé) + MiniTV + Google Cast + Recherche
      AUTEUR : Patrick
      ============================================================ -->
 
@@ -612,7 +612,7 @@ async function parseM3UContent(url){
       }
       else if(line.startsWith("http")){
         cur.stream = line;
-        list.push(cur);
+        if(cur.name) list.push(cur);
         cur = {};
       }
     });
@@ -623,31 +623,50 @@ async function parseM3UContent(url){
     return [];
   }
 }
-
 function applyM3UFilter() {
+  // 1. On remet la TNT à l'état initial propre
   TNT = JSON.parse(JSON.stringify(originalTNT));
+
+  // 2. On intègre d'abord les flux de tvrz.m3u (M3U_URL) dans la TNT existante
+  // (Cela garantit que les chaînes TNT de base gardent leur icône miniTV)
+  // Note : rawM3UList contient les deux listes combinées (tvrz + pluto)
+  
+  // Pour faire propre, on traite d'abord les correspondances avec les chaînes TNT
+  const remainingM3U = [];
 
   rawM3UList.forEach(m => {
     const key = normalizeID(m.name);
 
     if (useWhitelist && WHITELIST.length > 0) {
-      const nameNorm = normalizeID(m.name);
-      const allowed = WHITELIST.some(w => normalizeID(w) === nameNorm);
+      const allowed = WHITELIST.some(w => normalizeID(w) === key);
       if (!allowed) return;
     }
 
-    const exists = TNT.find(ch =>
+    // Cherche si cette entrée correspond à une chaîne TNT existante (par nom, ID ou alias)
+    const tntMatch = TNT.find(ch =>
       normalizeID(ch.name) === key ||
       normalizeID(ch.id) === key ||
       ch.normId === key ||
       (ch.aliases && ch.aliases.some(a => normalizeID(a) === key))
     );
 
-    if (exists) {
-      exists.stream = m.stream;
-      if (m.logo && m.logo.trim() !== "") exists.logo = m.logo;
-      return;
+    if (tntMatch) {
+      // On injecte le flux et éventuellement le logo s'il est dispo
+      tntMatch.stream = m.stream;
+      if (m.logo && m.logo.trim() !== "") tntMatch.logo = m.logo;
+    } else {
+      // Sinon c'est une chaîne additionnelle (type Pluto TV ou autre)
+      remainingM3U.push(m);
     }
+  });
+
+  // 3. On ajoute ensuite les chaînes supplémentaires (Pluto TV, etc.) en évitant les doublons stricts
+  remainingM3U.forEach(m => {
+    const key = normalizeID(m.name);
+
+    // Vérifie si elle existe déjà dans la liste finale
+    const exists = TNT.find(ch => ch.normId === key || normalizeID(ch.name) === key);
+    if (exists) return; // On saute le doublon
 
     TNT.push({
       num: TNT.length + 1,
@@ -660,6 +679,7 @@ function applyM3UFilter() {
     });
   });
 }
+
 
 function toggleWhitelistFilter() {
   useWhitelist = !useWhitelist;
@@ -1191,7 +1211,7 @@ function bindPopupEvents(selector, channelsToday) {
   originalTNT = JSON.parse(JSON.stringify(TNT));
 
   try{
-    // CHARGEMENT COMBINÉ DES 2 FLUX M3U ACTIFS (tvrz.m3u + pluto_fr.m3u via m3u3)
+    // CHARGEMENT COMBINÉ SÉCURISÉ DES 2 FLUX M3U ACTIFS (tvrz.m3u + pluto_fr.m3u via m3u3)
     const list1 = M3U_URL ? await parseM3UContent(M3U_URL) : [];
     const list3 = M3U_URL3 ? await parseM3UContent(M3U_URL3) : [];
     
