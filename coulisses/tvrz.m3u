@@ -3,8 +3,23 @@
 https://httpbin.org/status/404
 #EXTINF:-1 tvg-id="TF1.fr" tvg-name="TF1" tvg-logo="https://companieslogo.com/img/orig/TFI.PA-8c6da426.png" tvg-country="France" group-title="TNT-Top",TF1
 https://tvradiozap.eu/890
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France2.fr" tvg-name="France 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/330px-France_2_2018.svg.png" tvg-country="France" group-title="TNT-Top",France 2
+https://tvradiozap.eu/887
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3.fr" tvg-name="France 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/France_3_2018.svg/langfr-1920px-France_3_2018.svg.png" tvg-country="France" group-title="TNT-Top",France 3
+https://tvradiozap.eu/892
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France4.fr" tvg-name="France 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/France_4_2018.svg/330px-France_4_2018.svg.png" tvg-country="France" group-title="TNT-Top",France 4
+https://tvradiozap.eu/893
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France5.fr" tvg-name="France 5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/France_5_2018.svg/langfr-1920px-France_5_2018.svg.png" tvg-country="France" group-title="TNT-Top",France 5
+https://tvradiozap.eu/891
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="Arte.fr" tvg-name="Arte" tvg-logo="https://images.squarespace-cdn.com/content/v1/553f926ce4b0a46bddb4baf6/1561374992682-AQP12A8997URCIOMDY5I/ARTE-seul-2.png" tvg-country="France" group-title="TNT-Top",Arte
 https://tvradiozap.eu/640
+#EXTINF:-1 tvg-id="LaChaineParlementaire.fr" tvg-name="LCP Public Sénat" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/56/LCP.png" tvg-country="France" group-title="TNT-Top",LCP Public Sénat
+https://tvradiozap.eu/645
 #EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/a/a8/TMC_logo_2016.svg/330px-TMC_logo_2016.svg.png" tvg-country="France" group-title="TNT-Top",TMC
 https://tvradiozap.eu/895
 #EXTINF:-1 tvg-id="NT1.fr" tvg-name="TFX" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TFX_logo.svg/330px-TFX_logo.svg.png" tvg-country="France" group-title="TNT-Top",TFX
@@ -17,12 +32,19 @@ https://tvradiozap.eu/727
 https://tvradiozap.eu/642
 #EXTINF:-1 tvg-id="LCI.fr" tvg-name="LCI" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/b/b4/LCI_logo_%282016%29.png/330px-LCI_logo_%282016%29.png" tvg-country="France" group-title="TNT-Top",LCI
 https://tvradiozap.eu/899
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="FranceInfo.fr" tvg-name="France Info" tvg-logo="https://img.20mn.fr/0Gkk_u0qS22pBMK_ysg7kQ/1200x768_logo-chaine-france-info" tvg-country="France" group-title="TNT-Top",France Info
 https://tvradiozap.eu/834
+#EXTINF:-1 tvg-id="CStar.fr" tvg-name="CStar" tvg-logo="https://app.ladn-data.eu/storage/uploads/companies/a70beb63-7a59-40c0-b097-b6428b18cd36.jpg" tvg-country="France" group-title="TNT-Top",CStar
+https://tvradiozap.eu/635
+#EXTINF:-1 tvg-id="T18.fr" tvg-name="T18" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Logo_de_la_chaine_T18.svg/langfr-330px-Logo_de_la_chaine_T18.svg.png" tvg-country="France" group-title="TNT-Top",T18
+https://tvradiozap.eu/634
 #EXTINF:-1 tvg-id="" tvg-name="Novo19" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_NOVO19_-_2025.svg/330px-Logo_NOVO19_-_2025.svg.png" tvg-country="France" group-title="TNT-Top",Novo19
 https://tvradiozap.eu/737
 #EXTINF:-1 tvg-id="TF1SeriesFilms.fr" tvg-name="TF1 Séries Films" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4b/TF1_S%C3%A9ries_Films_logo_2020.svg/330px-TF1_S%C3%A9ries_Films_logo_2020.svg.png" tvg-country="France" group-title="TNT-Top",TF1 Séries Films
 https://tvradiozap.eu/649
+#EXTINF:-1 tvg-id="LEquipe21.fr" tvg-name="L'Équipe" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/La_cha%C3%AEne_l%27Equipe_-_logo_2016.png/330px-La_cha%C3%AEne_l%27Equipe_-_logo_2016.png" tvg-country="France" group-title="TNT-Top",L'Équipe
+https://tvradiozap.eu/648
 #EXTINF:-1 tvg-id="Numero23.fr" tvg-name="RMC Story" tvg-logo="https://static-cdn.tv.sfr.net/data/img/apps/edito/attachment/animation/tile/logoschaines169rmcstorycouleurs.png" tvg-country="France" group-title="TNT-Top",RMC Story
 https://tvradiozap.eu/644
 #EXTINF:-1 tvg-id="RMCDecouverte.fr" tvg-name="RMC Découverte" tvg-logo="https://static-cdn.tv.sfr.net/data/img/apps/edito/attachment/animation/tile/logoschaines169rmcdecouvertecouleurs.png" tvg-country="France" group-title="TNT-Top",RMC Découverte
@@ -37,6 +59,8 @@ https://tvradiozap.eu/91
 https://tvradiozap.eu/858
 #EXTINF:-1 tvg-id="France24.fr" tvg-name="France 24" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/2/24/Logos_FRANCE24_RVB_2013.svg/330px-Logos_FRANCE24_RVB_2013.svg.png" tvg-country="France" group-title="TNT-Top",France 24
 https://tvradiozap.eu/671
+#EXTINF:-1 tvg-id="francetvsport.fr" tvg-name="France TV Sport" tvg-logo="https://i.ibb.co/R4DDfnCg/frsport.png" tvg-country="France" group-title="TNT-Top",France TV Sport
+https://tvradiozap.eu/1412
 #EXTINF:-1 tvg-id="TVFrancophonie.fr" tvg-name="Francophonie24" tvg-logo="https://tvfrancophonie.org/templates/tvfranco_accueil_j5/images/header.jpg" tvg-country="France" group-title="TNT-Top",Francophonie24
 https://tvradiozap.eu/962
 #EXTINF:-1 tvg-id="" tvg-name="Red Bull" tvg-logo="https://cdn.imgbin.com/21/3/24/imgbin-red-bull-tv-television-film-streaming-media-red-bull-02Jy28szeKm0wszFQpU57gWtY.jpg" tvg-country="France" group-title="TNT-Top",Red Bull
@@ -85,6 +109,7 @@ https://tvradiozap.eu/1101
 https://tvradiozap.eu/1096
 #EXTINF:-1 tvg-id="" tvg-name="LMF5 La Maison France 5" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/8/8b/La_maison_France_5_2010_logo.png" tvg-country="France" group-title="Art de vivre",LMF5 La Maison France 5
 https://tvradiozap.eu/650
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="Mieux.fr" tvg-name="Mieux" tvg-logo="https://www.francetvpub.fr/wp-content/uploads/2025/08/bandeau-site-mieux-768x243.png" tvg-country="France" group-title="Art de vivre",Mieux
 https://tvradiozap.eu/1362
 #EXTINF:-1 tvg-id="" tvg-name="Rustica" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd1pcqPtOUwEsvh_Pd99Kak6RR6eJH66qfwGEAtFvy8zgfo38mEvvw&usqp=CAE&s" tvg-country="France" group-title="Art de vivre",Rustica
@@ -191,6 +216,9 @@ https://tvradiozap.eu/1083
 https://httpbin.org/status/404
 #EXTINF:-1 tvg-id="BFMGrandsReportages.fr" tvg-name="BFM Grands Reportages" tvg-logo="https://static-cdn.tv.sfr.net/data/img/apps/edito/attachment/animation/tile/imgrectangle10920BFMGrandsreportages.jpg" tvg-country="France" group-title="Documentaires",BFM Grands Reportages
 https://tvradiozap.eu/724
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="francetvdocs.fr" tvg-name="France TV docs" tvg-logo="https://i.ibb.co/kJjHW61/frdocs.png" tvg-country="France" group-title="Documentaires",France TV docs
+https://tvradiozap.eu/974
 #EXTINF:-1 tvg-id="Lessecretsdenosregions.fr" tvg-name="Les secrets de nos régions" tvg-logo="https://images-1.rakuten.tv/storage/global-live-channel/translation/artwork/bf4a91c7-9a64-4071-af09-fa4646c4005d-width200-quality90.jpeg" tvg-country="France" group-title="Documentaires",Les secrets de nos régions
 https://tvradiozap.eu/442
 #EXTINF:-1 tvg-id="RMCMecanic.fr" tvg-name="RMC Mecanic" tvg-logo="https://static-cdn.tv.sfr.net/data/img/apps/edito/attachment/animation/tile/imgrectangle1920RMCMecanicmin.jpg" tvg-country="France" group-title="Documentaires",RMC Mecanic
@@ -277,6 +305,7 @@ https://tvradiozap.eu/1076
 https://tvradiozap.eu/1125
 #EXTINF:-1 tvg-id="CanneLerin.fr" tvg-name="Cannes Lerins TV" tvg-logo="https://lerinstvradio.fr/upload/design/66cf40b8510e04.22508416.png" tvg-country="France" group-title="Local",Cannes Lerins TV
 https://tvradiozap.eu/1152
+#EXTVLCOPT:http-referrer=https://player.castr.com/
 #EXTINF:-1 tvg-id="Csur.ca" tvg-name="Csur  (CA)" tvg-logo="https://csur.tv/wp-content/themes/csurtv/dist/images/logo-csur-new.png" tvg-country="Canada" group-title="Local",Csur  (CA)
 https://tvradiozap.eu/1174
 #EXTINF:-1 tvg-id="ctbTV.ca" tvg-name="CTB TV  (CA)" tvg-logo="https://ctbtv.ca/wp-content/uploads/2018/04/ctb-tv-logo-2018-s.png" tvg-country="Canada" group-title="Local",CTB TV  (CA)
@@ -441,6 +470,10 @@ https://tvradiozap.eu/833
 https://httpbin.org/status/404
 #EXTINF:-1 tvg-id="IDF1.fr" tvg-name="20 Minutes TV  (IdF)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/20_Minutes_TV_IDF_logo_%282023%29.png/330px-20_Minutes_TV_IDF_logo_%282023%29.png" tvg-country="France" group-title="Régional",20 Minutes TV  (IdF)
 https://tvradiozap.eu/681
+#EXTINF:-1 tvg-id="8MontBlanc.fr" tvg-name="8 Mont-Blanc" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/6/6a/Logo_8_Mont_Blanc_2015.svg/330px-Logo_8_Mont_Blanc_2015.svg.png" tvg-country="France" group-title="Régional",8 Mont-Blanc
+https://tvradiozap.eu/885
+#EXTINF:-1 tvg-id="AntenneCentre.be" tvg-name="ACTV (Charleroi BE)" tvg-logo="https://www.antennecentre.tv/modules/custom/local_tvs/modules/antenne_centre/assets/ACTV_BLANC.png" tvg-country="Belgique" group-title="Régional",ACTV (Charleroi BE)
+https://tvradiozap.eu/983
 #EXTINF:-1 tvg-id="AntenneReunion.fr" tvg-name="Antenne Réunion" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/Logo_antenne_reunion_hd.jpg" tvg-country="France Réunion" group-title="Régional",Antenne Réunion
 https://tvradiozap.eu/733
 #EXTINF:-1 tvg-id="viaATV.gf" tvg-name="Atv+" tvg-logo="https://www.atvplus.fr/streamit/assets/images/logo.png" tvg-country="France Martinique" group-title="Régional",Atv+
@@ -467,12 +500,82 @@ https://tvradiozap.eu/729
 https://tvradiozap.eu/639
 #EXTINF:-1 tvg-id="BipTV.fr" tvg-name="BIP TV (Berry)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a8/Logo_Bip_TV.png" tvg-country="France" group-title="Régional",BIP TV (Berry)
 https://tvradiozap.eu/672
+#EXTINF:-1 tvg-id="Bouke.be" tvg-name="Boukè (Namur BE)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo_Bouk%C3%A8.svg/330px-Logo_Bouk%C3%A8.svg.png" tvg-country="Belgique" group-title="Régional",Boukè (Namur BE)
+https://tvradiozap.eu/967
 #EXTINF:-1 tvg-id="Canal32.fr" tvg-name="Canal 32 (Troyes)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Logo_C32_couleur.png/250px-Logo_C32_couleur.png" tvg-country="France" group-title="Régional",Canal 32 (Troyes)
 https://tvradiozap.eu/647
 #EXTINF:-1 tvg-id="CanalAlphaJura.ch" tvg-name="Canal Alpha Jura (CH)" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/7/77/Logo_Canal_Alpha_Noire_2.jpg" tvg-country="Suisse" group-title="Régional",Canal Alpha Jura (CH)
 https://tvradiozap.eu/847
 #EXTINF:-1 tvg-id="CanalAlphaNeuchatel.ch" tvg-name="Canal Alpha Neuchatel (CH)" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/7/77/Logo_Canal_Alpha_Noire_2.jpg" tvg-country="Suisse" group-title="Régional",Canal Alpha Neuchatel (CH)
 https://tvradiozap.eu/848
+#EXTINF:-1 tvg-id="CanalZoom.be" tvg-name="Canal Zoom (Gembloux BE)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Canal_Zoom_logo.png/960px-Canal_Zoom_logo.png" tvg-country="Belgique" group-title="Régional",Canal Zoom (Gembloux BE)
+https://tvradiozap.eu/981
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Alpes.fr" tvg-name="France 3 Alpes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/France_3_Alpes_-_Logo_2018.svg/960px-France_3_Alpes_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Alpes
+https://tvradiozap.eu/1343
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Alsace.fr" tvg-name="France 3 Alsace" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/France_3_Alsace_-_Logo_2018.svg/330px-France_3_Alsace_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Alsace
+https://tvradiozap.eu/915
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3NouvelleAquitaine.fr" tvg-name="France 3 Aquitaine" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/France_3_Aquitaine_-_Logo_2018.svg/330px-France_3_Aquitaine_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Aquitaine
+https://tvradiozap.eu/913
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Auvergne.fr" tvg-name="France 3 Auvergne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/France_3_Auvergne_-_Logo_2018.svg/330px-France_3_Auvergne_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Auvergne
+https://tvradiozap.eu/914
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3BasseNormandie.fr" tvg-name="France 3 Basse-Normandie" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/France_3_Normandie_-_Logo_2018.svg/330px-France_3_Normandie_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Basse-Normandie
+https://tvradiozap.eu/1341
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Bourgogne.fr" tvg-name="France 3 Bourgogne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/France_3_Bourgogne_-_Logo_2018.svg/330px-France_3_Bourgogne_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Bourgogne
+https://tvradiozap.eu/917
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Bretagne.fr" tvg-name="France 3 Bretagne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/France_3_Bretagne_-_Logo_2018.svg/330px-France_3_Bretagne_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Bretagne
+https://tvradiozap.eu/918
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Champagne.fr" tvg-name="France 3 Champagne" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/France_3_Champagne-Ardenne_-_Logo_2018.svg/330px-France_3_Champagne-Ardenne_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Champagne
+https://tvradiozap.eu/1347
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3CotedAzur.fr" tvg-name="France 3 Côte d'Azur" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/France_3_Cote_d%27Azur_-_Logo_2018.svg/330px-France_3_Cote_d%27Azur_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Côte d'Azur
+https://tvradiozap.eu/1351
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Franche-Comte.fr" tvg-name="France 3 Franche-Comté" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/France_3_Franche-Comt%C3%A9_-_Logo_2018.svg/330px-France_3_Franche-Comt%C3%A9_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Franche-Comté
+https://tvradiozap.eu/1345
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3HauteNormandie.fr" tvg-name="France 3 Haute-Normandie" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/France_3_Normandie_-_Logo_2018.svg/330px-France_3_Normandie_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Haute-Normandie
+https://tvradiozap.eu/916
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="" tvg-name="France 3 Languedoc-Roussillon" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/France_3_Languedoc-Roussillon_-_Logo_2018.svg/330px-France_3_Languedoc-Roussillon_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Languedoc-Roussillon
+https://tvradiozap.eu/1342
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Limousin.fr" tvg-name="France 3 Limousin" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/France_3_Limousin_-_Logo_2018.svg/330px-France_3_Limousin_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Limousin
+https://tvradiozap.eu/1349
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Lorraine.fr" tvg-name="France 3 Lorraine" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/France_3_Lorraine_-_Logo_2018.svg/330px-France_3_Lorraine_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Lorraine
+https://tvradiozap.eu/1346
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3MidiPyrenees.fr" tvg-name="France 3 Midi-Pyrénées" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/France_3_Midi-Pyr%C3%A9n%C3%A9es_-_Logo_2018.svg/330px-France_3_Midi-Pyr%C3%A9n%C3%A9es_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Midi-Pyrénées
+https://tvradiozap.eu/922
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3NordPasDeCalais.fr" tvg-name="France 3 Nord-Pas-de-Calais" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/France_3_Nord-Pas-de-Calais_-_Logo_2018.svg/330px-France_3_Nord-Pas-de-Calais_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Nord-Pas-de-Calais
+https://tvradiozap.eu/924
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3ParisIdF.fr" tvg-name="France 3 Paris Île-de-France" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/France_3_Paris_Ile-de-France_-_Logo_2018.svg/330px-France_3_Paris_Ile-de-France_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Paris Île-de-France
+https://tvradiozap.eu/925
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3PaysdeLoire.fr" tvg-name="France 3 Pays de Loire" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/France_3_Pays_de_la_Loire_-_Logo_2018.svg/330px-France_3_Pays_de_la_Loire_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Pays de Loire
+https://tvradiozap.eu/926
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Picardie.fr" tvg-name="France 3 Picardie" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/France_3_Picardie_-_Logo_2018.svg/330px-France_3_Picardie_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Picardie
+https://tvradiozap.eu/1348
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3NouvelleAquitaine.fr" tvg-name="France 3 Poitou-Charentes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/France_3_Poitou-Charentes_-_Logo_2018.svg/330px-France_3_Poitou-Charentes_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Poitou-Charentes
+https://tvradiozap.eu/1350
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3ProvenceAlpes.fr" tvg-name="France 3 Provence Alpes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/France_3_Provence-Alpes_-_Logo_2018.svg/330px-France_3_Provence-Alpes_-_Logo_2018.svg.png" tvg-country="France" group-title="Régional",France 3 Provence Alpes
+https://tvradiozap.eu/921
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3Rhone-Alpes.fr" tvg-name="France 3 Rhone-Alpes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/France3_ara.png/330px-France3_ara.png" tvg-country="France" group-title="Régional",France 3 Rhone-Alpes
+https://tvradiozap.eu/1344
 #EXTINF:-1 tvg-id="LaTele.ch" tvg-name="La Télé  (Fribourg CH)" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/5/5c/Logo_La_Tele_Vaud_Fribourg.svg/330px-Logo_La_Tele_Vaud_Fribourg.svg.png" tvg-country="Suisse" group-title="Régional",La Télé  (Fribourg CH)
 https://tvradiozap.eu/699
 #EXTINF:-1 tvg-id="LMTVSarthe.fr" tvg-name="LMtv Sarthe" tvg-logo="https://lmtv.fr/wp-content/uploads/2026/04/Logo_LMTV_Blue_RVB.png" tvg-country="France" group-title="Régional",LMtv Sarthe
@@ -481,32 +584,53 @@ https://tvradiozap.eu/977
 https://tvradiozap.eu/684
 #EXTINF:-1 tvg-id="MaTele.be" tvg-name="Matélé (Dinant BE)" tvg-logo="https://www.matele.be/layouts/defaut/ALL/files/matele-logo-couleur.png" tvg-country="Belgique" group-title="Régional",Matélé (Dinant BE)
 https://tvradiozap.eu/696
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3NOA.fr" tvg-name="NOA (Nvlle Aquitaine)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/NoA_logo_2025_noir.svg/330px-NoA_logo_2025_noir.svg.png" tvg-country="France" group-title="Régional",NOA (Nvlle Aquitaine)
+https://tvradiozap.eu/923
 #EXTINF:-1 tvg-id="NoTele.be" tvg-name="Notélé  (Wallonie picarde BE)" tvg-logo="https://i.imgur.com/fGS55nR.png" tvg-country="Belgique" group-title="Régional",Notélé  (Wallonie picarde BE)
 https://tvradiozap.eu/697
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="" tvg-name="Outre-Mer la 1ère" tvg-logo="https://pictures.live.franceinfo.fr/HKuU2WNBKxcAUIdMD6N8wuYlYuQ/100x100/avatars/martinique-la1ere-1699454391546.png" tvg-country="France" group-title="Régional",Outre-Mer la 1ère
 https://tvradiozap.eu/1310
+#EXTINF:-1 tvg-id="RTC.be" tvg-name="Qu4tre Liège (BE)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Logo_de_QU4TRE_Li%C3%A8ge_M%C3%A9dia.svg/330px-Logo_de_QU4TRE_Li%C3%A8ge_M%C3%A9dia.svg.png" tvg-country="Belgique" group-title="Régional",Qu4tre Liège (BE)
+https://tvradiozap.eu/982
 #EXTINF:-1 tvg-id="Tebeo.fr" tvg-name="Tébéo (Bretagne)" tvg-logo="https://www.tebeo.bzh/wp-content/uploads/2023/05/groupe-logo.png" tvg-country="France" group-title="Régional",Tébéo (Bretagne)
 https://tvradiozap.eu/659
+#EXTINF:-1 tvg-id="TeleMB.be" tvg-name="Télé MB  (Mons BE)" tvg-logo="https://i.imgur.com/XAggjM4.png" tvg-country="Belgique" group-title="Régional",Télé MB  (Mons BE)
+https://tvradiozap.eu/693
 #EXTINF:-1 tvg-id="" tvg-name="Télé PEYI" tvg-logo="https://www.peyiguyane.com/peyi/assets/logo-peyi.jpg" tvg-country="France Guyane" group-title="Régional",Télé PEYI
 https://tvradiozap.eu/1008
 #EXTINF:-1 tvg-id="Telenantes.fr" tvg-name="TéléNantes" tvg-logo="https://telenantes.com/wp-content/uploads/2025/03/logo_telenantes.png" tvg-country="France" group-title="Régional",TéléNantes
 https://tvradiozap.eu/859
 #EXTINF:-1 tvg-id="TelePaese.fr" tvg-name="TelePaese (Corse)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/09/Logo_T%C3%A9l%C3%A9_Paese_%282024%29.png" tvg-country="France" group-title="Régional",TelePaese (Corse)
 https://tvradiozap.eu/889
+#EXTINF:-1 tvg-id="TeleSambre.be" tvg-name="Telesambre  (Charleroi BE)" tvg-logo="https://i.imgur.com/TuIAkA3.png" tvg-country="Belgique" group-title="Régional",Telesambre  (Charleroi BE)
+https://tvradiozap.eu/692
 #EXTINF:-1 tvg-id="TeleGrenobleIsere.fr" tvg-name="TG+ (Télé Grenoble)" tvg-logo="https://tgplus.fr/wp-content/uploads/2025/12/LOGOTYPES-RVB-TG-02-scaled-e1762939545843_6949472a9ff3c.png" tvg-country="France" group-title="Régional",TG+ (Télé Grenoble)
 https://tvradiozap.eu/280
+#EXTVLCOPT:http-referrer=https://www.tvlux.be
+#EXTINF:-1 tvg-id="TVLux.be" tvg-name="TV Lux  (Luxembourg BE)" tvg-logo="https://i.imgur.com/ljbdWkC.png" tvg-country="Belgique" group-title="Régional",TV Lux  (Luxembourg BE)
+https://tvradiozap.eu/698
 #EXTINF:-1 tvg-id="TVVendee.fr" tvg-name="TV Vendée" tvg-logo="https://i.imgur.com/YW7JKcw.png" tvg-country="France" group-title="Régional",TV Vendée
 https://tvradiozap.eu/682
 #EXTINF:-1 tvg-id="TV7Bordeaux.fr" tvg-name="TV7 Bordeaux" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/LOGO_-_TV7_Bordeaux.png/330px-LOGO_-_TV7_Bordeaux.png" tvg-country="France" group-title="Régional",TV7 Bordeaux
 https://tvradiozap.eu/691
 #EXTINF:-1 tvg-id="TV78.fr" tvg-name="TV78  (Yvelines)" tvg-logo="https://i.imgur.com/stzE1Ij.png" tvg-country="France" group-title="Régional",TV78  (Yvelines)
 https://tvradiozap.eu/688
+#EXTINF:-1 tvg-id="TVCom.be" tvg-name="TVCom  (Brabant wallon BE)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/TVCOM_BW_logo_actuel.png/330px-TVCOM_BW_logo_actuel.png" tvg-country="Belgique" group-title="Régional",TVCom  (Brabant wallon BE)
+https://tvradiozap.eu/694
 #EXTINF:-1 tvg-id="TVRennes35Bretagne.fr" tvg-name="TVR  (Rennes)" tvg-logo="https://www.tvr.bzh/facebook-share.png" tvg-country="France" group-title="Régional",TVR  (Rennes)
 https://tvradiozap.eu/683
+#EXTVLCOPT:http-referrer=https://player.castr.com/
 #EXTINF:-1 tvg-id="" tvg-name="TVRS  (CA)" tvg-logo="https://fedetvc.qc.ca/documents/medias/_t900/tvrs005_logo_coul-1692736372.jpg" tvg-country="Canada" group-title="Régional",TVRS  (CA)
 https://tvradiozap.eu/1422
 #EXTINF:-1 tvg-id="TVTours.fr" tvg-name="VDL (Val de Loire)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Val_de_Loire_TV_%28VDL_TV%29.png" tvg-country="France" group-title="Régional",VDL (Val de Loire)
 https://tvradiozap.eu/837
+#EXTINF:-1 tvg-id="Vedia.be" tvg-name="Vedia (Verviers BE)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e9/Vedia_logo.jpg" tvg-country="Belgique" group-title="Régional",Vedia (Verviers BE)
+https://tvradiozap.eu/695
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="France3CorseViaStella.fr" tvg-name="Via Stella" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Logo_ViaStella_2025.png/250px-Logo_ViaStella_2025.png" tvg-country="France" group-title="Régional",Via Stella
+https://tvradiozap.eu/920
 #EXTINF:-1 tvg-id="VosgesTV.fr" tvg-name="Vosges TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/11/Vosges_TV.jpg" tvg-country="France" group-title="Régional",Vosges TV
 https://tvradiozap.eu/685
 #EXTINF:-1,-------------- Reportages
@@ -547,6 +671,8 @@ https://tvradiozap.eu/985
 https://tvradiozap.eu/838
 #EXTINF:-1 tvg-id="" tvg-name="Futura 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Futura-logo.jpg/330px-Futura-logo.jpg" tvg-country="France" group-title="Sciences",Futura 2
 https://tvradiozap.eu/1147
+#EXTINF:-1 tvg-id="" tvg-name="L'Esprit Sorcier" tvg-logo="https://alloforfait.fr/wp-content/uploads/2022/10/esprit-sorcier-tv.jpg.webp" tvg-country="France" group-title="Sciences",L'Esprit Sorcier
+https://tvradiozap.eu/715
 #EXTINF:-1 tvg-id="" tvg-name="Science & Vie 1" tvg-logo="https://www.bordeaux-neurocampus.fr/wp-content/uploads/2019/03/logo-sciences-et-vie.jpg" tvg-country="France" group-title="Sciences",Science & Vie 1
 https://tvradiozap.eu/1241
 #EXTINF:-1 tvg-id="" tvg-name="Science & Vie 2" tvg-logo="https://www.bordeaux-neurocampus.fr/wp-content/uploads/2019/03/logo-sciences-et-vie.jpg" tvg-country="France" group-title="Sciences",Science & Vie 2
@@ -563,6 +689,9 @@ https://tvradiozap.eu/468
 https://tvradiozap.eu/1240
 #EXTINF:-1 tvg-id="" tvg-name="FilmRise Séries" tvg-logo="https://images.plex.tv/photo?size=small-60&scale=2&url=https%3A%2F%2Fprovider-static.plex.tv%2Fepg%2Fcms%2Fproduction%2Fcc0951e8-548c-48ef-afcd-82d7eca657c0%2FPlex_FilmRise_S__ries_Color_Logo.png" tvg-country="France" group-title="Séries-Films",FilmRise Séries
 https://tvradiozap.eu/658
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+#EXTINF:-1 tvg-id="FranceTVSeries.fr" tvg-name="France TV Séries" tvg-logo="https://i.ibb.co/9rmSGqP/frsr.png" tvg-country="France" group-title="Séries-Films",France TV Séries
+https://tvradiozap.eu/956
 #EXTINF:-1 tvg-id="FRBC800001X0" tvg-name="Fréquence Novelas" tvg-logo="https://provider-static.plex.tv/epg/cms/production/f61db6fd-8b5e-41c9-bbcb-0135d9d9635d/FREQUENCE_NOVELAS_-_Logo_1500x1000.png" tvg-country="France" group-title="Séries-Films",Fréquence Novelas
 https://tvradiozap.eu/1149
 #EXTINF:-1 tvg-id="" tvg-name="K-Drama" tvg-logo="https://i.imgur.com/F144MZ6.png" tvg-country="France" group-title="Séries-Films",K-Drama
@@ -623,6 +752,8 @@ https://tvradiozap.eu/990
 https://tvradiozap.eu/1020
 #EXTINF:-1 tvg-id="" tvg-name="Equidia Racing Trot" tvg-logo="https://static.equidia.fr/equidia/logo/201118_EQUIDIA%20RACING_TROT_FB.svg" tvg-country="France" group-title="Sport",Equidia Racing Trot
 https://tvradiozap.eu/1021
+#EXTINF:-1 tvg-id="JournalduGolf.fr" tvg-name="Journal du Golf" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_officiel_Journal_du_Golf.png/250px-Logo_officiel_Journal_du_Golf.png" tvg-country="France" group-title="Sport",Journal du Golf
+https://tvradiozap.eu/973
 #EXTINF:-1 tvg-id="pancraceTV.fr" tvg-name="Pancrace TV" tvg-logo="https://pancrace.tv/uploads/images/logo_site_1485347386.jpg" tvg-country="France" group-title="Sport",Pancrace TV
 https://tvradiozap.eu/1245
 #EXTINF:-1 tvg-id="" tvg-name="Tennis Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4c/Logo_Tennis_Channel.svg/250px-Logo_Tennis_Channel.svg.png" tvg-country="France" group-title="Sport",Tennis Channel
