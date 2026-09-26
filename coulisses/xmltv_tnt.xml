@@ -12302,6 +12302,12 @@
     <category lang="fr">Dessin animé</category>
     <icon src="https://images.voomotion.be/Events/2026/09/02/16/2735902_A.jpg" />
   </programme>
+  <programme start="20260929081400 +0200" stop="20260929082500 +0200" channel="France5.fr">
+    <title lang="fr">Les trois Bricochons (Wilf le golfeur) S1 (28/52)</title>
+    <desc lang="fr">«Wilf le golfeur»Wilf cherche une nouvelle activité, et les Bricochons lui proposent le golf. Mais avec Cornélia, il veut envoyer la balle le plus loin possible et ils cassent tout !</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2026/09/02/16/2735902_A.jpg" />
+  </programme>
   <programme start="20260925204000 +0200" stop="20260925211000 +0200" channel="M6.fr">
     <title lang="fr">Scènes de ménages</title>
     <desc lang="fr">Loin d'être un long fleuve tranquille, la vie de couple est émaillée de conflits, de disputes et de réconciliations, comme en témoigne le quotidien de quatre d'entre eux. Parmi eux, les trentenaires Cédric et Marion, qui se surnomment mutuellement "poussin", les jeunes parents Emma et Fabien, récemment installés à la campagne avec leur petite Chloé, José et Liliane, mariés depuis plus de vingt ans, sans oublier les inénarrables Huguette et Raymond, des retraités à la méchanceté gratuite. Librement adapté de la série espagnole "Escenas de matrimonio", ce programme court évoque avec humour les hauts et les bas de la vie de couple.</desc>
@@ -15721,21 +15727,24 @@
     <previously-shown />
     <subtitles type="teletext" />
   </programme>
-  <programme start="20260925201000 +0200" stop="20260925204500 +0200" channel="W9.fr">
-    <title lang="fr">Tout beau, tout n9uf</title>
-    <sub-title lang="fr">Deuxième partie</sub-title>
-    <desc lang="fr">L'animateur Cyril Hanouna fait son grand retour à la télévision avec le talk-show "Tout beau, tout n9uf" (#TBT9) et l'envie de faire rire, réagir et rassembler avec un concentré d'énergie, de liberté et de bonne humeur dans lequel les news, les chroniques et les happenings les plus surprenants se succèdent pour offrir près de trois heures de divertissement quotidien.</desc>
+  <programme start="20260929081500 +0200" stop="20260929090000 +0200" channel="Arte.fr">
+    <title lang="fr">Invitation au voyage</title>
+    <desc lang="fr">A Madrid, Carlos Giménez affronte les fantômes du franquisme - Les Atikamekw, peuple des forêts québécoises - À La Réunion, le cari de poisson de Nativ - L'Inde, couleur du khaki.
+*A Madrid, Carlos Giménez affronte les fantômes du franquisme*
+1
+*Les Atikamekw, peuple des forêts québécoises*
+2
+*A La Réunion, le cari de poisson de Nativ*
+3
+*L'Inde, couleur du khaki*
+4</desc>
     <credits>
-      <guest>Cyril Hanouna</guest>
+      <guest>Linda Lorin</guest>
     </credits>
-    <date>2026</date>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Divertissement</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/BFFC9C8298DD1FFCF5C3F0D928FE2B41.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~d5cc5aca2ac531c7.jpeg/640x360/quality/80/invitation-au-voyage.jpg" />
+    <previously-shown />
+    <subtitles type="teletext" />
   </programme>
   <programme start="20260925204500 +0200" stop="20260925212500 +0200" channel="W9.fr">
     <title lang="fr">Tout beau, tout n9uf</title>
@@ -16973,16 +16982,6 @@
     <category lang="fr">Autre</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cde66dc540bb683a.jpeg/640x360/quality/80/le-double-expresso-rtl2.jpg" />
     <subtitles type="teletext" />
-  </programme>
-  <programme start="20260925201000 +0200" stop="20260925204500 +0200" channel="TMC.fr">
-    <title lang="fr">Quotidien, deuxième partie</title>
-    <desc lang="fr">Votre rendez-vous info, culture, sport et humour avec Yann Barthès et son équipe.</desc>
-    <category lang="fr">Divertissement</category>
-    <icon src="http://static-cdn.tv.sfr.net/data/img/pl/5/7/3/15718375.jpg" />
-    <episode-num system="xmltv_ns">10.19.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925204500 +0200" stop="20260925212500 +0200" channel="TMC.fr">
     <title lang="fr">Quotidien</title>
@@ -22839,27 +22838,6 @@
     <title lang="fr">Bonjour chez vous !</title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cb5e9beb3a1fe3e2.jpeg/640x360/quality/80/bonjour-chez-vous.jpg" />
-  </programme>
-  <programme start="20260925200800 +0200" stop="20260925201900 +0200" channel="France4.fr">
-    <title lang="fr">Les as de la jungle à la rescousse</title>
-    <sub-title lang="fr">Princesse monochromée</sub-title>
-    <desc lang="fr">Alors que le reste des As est scotché devant les "Pouvoirs Rongeurs", Batricia décide d'aller visiter la nouvelle exposition de Salvador. Lorsqu'elle arrive chez lui, le peintre est introuvable et son atelier sans dessus-dessous. Elle découvre vite qu'il a été kidnappé par la petite Capriciella...</desc>
-    <credits>
-      <director>David Alaux</director>
-      <director>Eric Tosti</director>
-      <producer>Jean-François Tosti</producer>
-      <guest>TAT Productions</guest>
-      <guest> Films</guest>
-    </credits>
-    <date>2019</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Animation</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/9262804DEC570C14933A9A72DFD6756B.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">2.19.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925201900 +0200" stop="20260925202500 +0200" channel="France4.fr">
     <title lang="fr">Les as de la jungle à la rescousse</title>
@@ -31959,20 +31937,6 @@
     <category lang="fr">Infos</category>
     <icon src="https://images.voomotion.be/Events/2026/05/11/43/2704437_A.jpg" />
   </programme>
-  <programme start="20260925200900 +0200" stop="20260925204100 +0200" channel="CStar.fr">
-    <title lang="fr">Top albums</title>
-    <desc lang="fr">Le classement des meilleurs albums du moment, de Nekfeu à Florent Pagny, de PNL à Angèle, illustré par des clips toujours hauts en couleur.</desc>
-    <credits>
-      <guest> T-Miss</guest>
-    </credits>
-    <category lang="fr">Musique</category>
-    <category lang="fr">Clips</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/2B37C2D8095F939138710B8AF0CE1D32.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925204100 +0200" stop="20260925211000 +0200" channel="CStar.fr">
     <title lang="fr">Douanes sous haute surveillance</title>
     <sub-title lang="fr">Lune de miel et nids d'hirondelle</sub-title>
@@ -38315,6 +38279,13 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~197a98d97c4b6e85.jpeg/640x360/quality/80/les-visages-du-crime.jpg" />
     <subtitles type="teletext" />
   </programme>
+  <programme start="20260929080900 +0200" stop="20260929095000 +0200" channel="NOVO19.fr">
+    <title lang="fr">Les visages du crime en région</title>
+    <sub-title lang="fr">Terreur en Franche-Comté</sub-title>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~7494aa253dbf50c1.jpeg/640x360/quality/80/les-visages-du-crime-en-region.jpg" />
+    <subtitles type="teletext" />
+  </programme>
   <programme start="20260925203500 +0200" stop="20260925210500 +0200" channel="TF1SeriesFilms.fr">
     <title lang="fr">Plus belle la vie, encore plus belle</title>
     <desc lang="fr">L'enquête progresse, incitant une Mistralienne à jouer gros pour protéger sa famille. En parallèle, Chloé refuse de baisser les bras. Témoin d'un instant complice, Barbara se retrouve profondément troublée...</desc>
@@ -41482,18 +41453,6 @@
     <category lang="fr">Série Dramatique</category>
     <icon src="https://images.voomotion.be/Events/2025/12/31/57/2652697_A.jpg" />
   </programme>
-  <programme start="20260925200700 +0200" stop="20260925204400 +0200" channel="LEquipe21.fr">
-    <title lang="fr">A toute allure !</title>
-    <desc lang="fr">Ce rendez-vous hebdomadaire met à l'honneur l'univers des courses, avec la diffusion en direct et commentée de l'épreuve du jour, et du sport hippique, au travers de magazines.</desc>
-    <date>2026</date>
-    <category lang="fr">Sport</category>
-    <category lang="fr">Hippisme</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/519949B36913C078542B4807DCF06640.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925204400 +0200" stop="20260925224500 +0200" channel="LEquipe21.fr">
     <title lang="fr">Football : Ligue des Nations UEFA</title>
     <desc lang="fr">En pleine reconstruction, l'équipe d'Italie, qui a rappelé Roberto Mancini à sa tête, doit assurer l'essentiel ce soir face à la Belgique, afin de débuter sa campagne du bon pied et se mettre en confiance pour la suite de la compétition. Dans un groupe A très homogène où l'on retrouvera également l'équipe de France et la Turquie, la Squadra Azzura doit éviter tout faux-pas ce soir au Stade olympique de Rome, face à des Diables Rouges qui arrivent également avec de hautes ambitions.</desc>
@@ -44011,46 +43970,6 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~43f6f883f5a3aa83.jpeg/640x360/quality/80/une-saison-au-zoo.jpg" />
     <previously-shown />
     <subtitles type="teletext" />
-  </programme>
-  <programme start="20260925201000 +0200" stop="20260925204000 +0200" channel="Numero23.fr">
-    <title lang="fr">Big Bang Theory</title>
-    <sub-title lang="fr">La déviation Gothowitz</sub-title>
-    <desc lang="fr">Howard obtient un rendez-vous avec une fille gothique rencontrée sur Internet. Il invite Raj à se joindre à lui. Ils se maquillent et s'habillent en noir pour faire illusion. Au club, les filles leur proposent de les suivre dans un salon de tatouage. Cependant, Howard hésite lorsque l'aiguille du tatoueur s'approche de son bras. Pendant ce temps, Sheldon utilise une technique pour faire faire à Penny ce qu'il veut en la récompensant d'un chocolat à chaque fois qu'elle s'est montrée obéissante...</desc>
-    <credits>
-      <director>Mark Cendrowski</director>
-      <actor>Johnny Galecki</actor>
-      <actor>Kaley Cuoco</actor>
-      <actor>Kunal Nayyar</actor>
-      <actor>Andy Mackenzie</actor>
-      <actor>Molly Morgan</actor>
-      <actor>Jim Parsons</actor>
-      <actor>Simon Helberg</actor>
-      <actor>Sarah Buehler</actor>
-      <adapter>Maria Ferrari</adapter>
-      <adapter>Bill Prady</adapter>
-      <producer>Jim Reynolds</producer>
-      <producer>Bill Prady</producer>
-      <producer>Lee Aronsohn</producer>
-      <producer>Faye Oshima Belyeu</producer>
-      <producer>Brian George</producer>
-      <producer>Peter Chakos</producer>
-      <producer>Chuck Lorre</producer>
-      <editor>Lee Aronsohn</editor>
-      <editor>Bill Prady</editor>
-      <editor>Richard Rosenstock</editor>
-      <editor>Maria Ferrari</editor>
-      <guest>Warner Bros. Television</guest>
-      <guest>Chuck Lorre Productions</guest>
-    </credits>
-    <date>2009</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Comédie</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/EDD8318BBC252F3509B147F9C9DD0057.jpg" />
-    <country lang="fr">Etats-Unis</country>
-    <episode-num system="xmltv_ns">2.2.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925204000 +0200" stop="20260925211000 +0200" channel="Numero23.fr">
     <title lang="fr">Big Bang Theory</title>
