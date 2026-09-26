@@ -24,144 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260926123900 +0200" stop="20260926130600 +0200">
-    
-    
-    <title>Des chiffres et des lettres</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926103900 +0000</episode-num>
-    
-    
-    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926130600 +0200" stop="20260926133300 +0200">
-    
-    
-    <title>Des chiffres et des lettres</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926110600 +0000</episode-num>
-    
-    
-    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926133300 +0200" stop="20260926145200 +0200">
-    
-    
-    <title>Apostrophes</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926113300 +0000</episode-num>
-    
-    
-    <desc>Les espions sont-ils des aventuriers de l'histoire ? Bernard Pivot pose la question à des agents secrets, des agents doubles, des informateurs de la nuit.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c11bbeb65b870013d06380/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c11bbeb65b870013d06380</series-id>
-    
-    
-    <sub-title>Les espions</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926145200 +0200" stop="20260926155200 +0200">
-    
-    
-    <title>Aujourd'hui Madame</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926125200 +0000</episode-num>
-    
-    
-    <desc>Aujourd'hui, la parole est donnée aux femmes paysannes qui parlent de leurs soucis et de leur vision de l'avenir. Une plongée au cœur du quotidien de ces femmes, de leurs conditions de vie souvent très rudes, de leurs espoirs et leurs rêves.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
-    
-    
-    <sub-title>Les femmes paysannes</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260926155200 +0200" stop="20260926172400 +0200">
     
     
@@ -189,10 +51,10 @@
     <sub-title>Maigret en vacances</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -225,10 +87,10 @@
     <sub-title>Nicole Croisille</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -261,10 +123,10 @@
     <sub-title>Ivry Gitlis</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -297,10 +159,10 @@
     <sub-title>Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -333,10 +195,10 @@
     <sub-title>Les jeux de 20 heures à Strasbourg</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -366,10 +228,10 @@
     <series-id system="pluto">65e84d1303625d001315cdbf</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -402,10 +264,10 @@
     <sub-title>Top A Gerard Lenorman</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -438,10 +300,10 @@
     <sub-title>Thierry Le Luron</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -474,10 +336,10 @@
     <sub-title>Doris</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -507,10 +369,10 @@
     <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -543,10 +405,10 @@
     <sub-title>Les dangers dans notre assiette : médicaments et pesticides</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -579,10 +441,10 @@
     <sub-title>Zizi Jeanmaire</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -615,214 +477,181 @@
     <sub-title>Les jeux de 20 heures à Narbonne</sub-title>
     
     
+    <category>Entertainment</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260927051300 +0200" stop="20260927055100 +0200">
+    
+    
+    <title>Des chiffres et des lettres</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260927031300 +0000</episode-num>
+    
+    
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
     <category>Entertainment</category>
     
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926125209 +0200" stop="20260926132409 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Les plages</title>
-    
-    
-    <episode-num system="onscreen">S01E134</episode-num>
-    
-    
-    <episode-num system="pluto">6467555654afb6001a304328</episode-num>
-    
-    
-    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
-    
-    
-    <desc>Fred et Jamy sont sur la plage de Lacanau et nous rappellent qu’il y a des risques et qu’il faut prendre quelques précautions.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19980101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les plages</sub-title>
-    
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-    
-    <category>Science</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926132409 +0200" stop="20260926135809 +0200">
+  <programme channel="ina70.fr" start="20260927055100 +0200" stop="20260927061700 +0200">
     
     
-    <title>C'est Pas Sorcier: Du vent dans les voiles</title>
+    <title>Des chiffres et des lettres</title>
     
     
-    <episode-num system="onscreen">S01E39</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6464e4ef274ca8001af5fa00</episode-num>
+    <episode-num system="original-air-date">20260927035100 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
+    <desc>Deux candidats mesurent leurs aptitudes mathématiques et connaissances en orthographe autour des jeux "Le mot le plus long" et "Le compte est bon". Calcul mental et maîtrise de l'orthographe sont les maîtres-mots de ce célèbre jeu.</desc>
     
     
-    <desc>L'équipe de "C'est pas sorcier " prend la direction de la Normandie pour embarquer à bord du trois-mâts le BELEM. Construit en 1896, le BELEM est le dernier survivant de la grande flotte des voiliers de commerce français.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19950101</date>
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Du vent dans les voiles</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-    
-    <category>Science</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926135809 +0200" stop="20260926143009 +0200">
+  <programme channel="ina70.fr" start="20260927061700 +0200" stop="20260927064300 +0200">
     
     
-    <title>C'est Pas Sorcier</title>
+    <title>Des chiffres et des lettres</title>
     
     
-    <episode-num system="onscreen">S01E539</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">67482b7ae103890013758c19</episode-num>
+    <episode-num system="original-air-date">20260927041700 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
     
     
-    <desc>De quoi dépend notre sens de l'équilibre ? Pourquoi avons-nous peur du vide ? Sommes-nous tous égaux face au vertige ? Sabine et Jamy mènent l'enquête ...</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20120101</date>
+    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les secrets du vertige</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Documentary</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926143009 +0200" stop="20260926150209 +0200">
+  <programme channel="ina70.fr" start="20260927064300 +0200" stop="20260927073400 +0200">
     
     
-    <title>C'est Pas Sorcier</title>
+    <title>À bout portant</title>
     
     
-    <episode-num system="onscreen">S01E513</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6747517ca7fde50013e479d0</episode-num>
+    <episode-num system="original-air-date">20260927044300 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    <desc>Cette interview-portrait, parsemée d'extraits d'un de ses spectacles, nous permet de redécouvrir l'immense auteur-compositeur-interprète qu'était Guy Béart. On le voit notamment dans ce documentaire évoquer sa carrière ainsi que ses nombreux succès.</desc>
     
     
-    <desc>Qui ne s’est jamais empressé d’écraser une araignée avec la semelle de sa chaussure, tellement la vision de cet être à 8 pattes est repoussante ? Souvent synonymes de saleté, négligence et de danger, les araignées n’ont pas vraiment bonne presse !</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20120101</date>
+    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Guy Béart</sub-title>
     
     
-    <sub-title>Peur des araignées ?</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Documentary</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926150209 +0200" stop="20260926153409 +0200">
+  <programme channel="ina70.fr" start="20260927073400 +0200" stop="20260927084400 +0200">
     
     
-    <title>C'est Pas Sorcier: Entre chiens et loups</title>
+    <title>À bout portant</title>
     
     
-    <episode-num system="onscreen">S01E159</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6467555b54afb6001a30446c</episode-num>
+    <episode-num system="original-air-date">20260927053400 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
+    <desc>Rencontre avec un maître de l'illusion qui dit croire à des forces magiques. Dans ce portrait de Michel de La Vega, des extraits de spectacles, un impressionnant numéro d'hypnose avec la speakerine Jacqueline Huet, et des entretiens avec le magicien.</desc>
     
     
-    <desc>Fred et Jamy nous emmènent à la découverte des loups du Gévaudan. Ils nous ouvrent les portes du parc Sainte Lucie qui abrite 30 loups de Mongolie en semi-liberté.Les loups sont des animaux sociaux dont la vie est extrêmement codifiée.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19980101</date>
+    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Michel de la Vega</sub-title>
     
     
-    <sub-title>Entre chiens et loups</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-    
-    <category>Science</category>
     
   
   </programme>
@@ -858,10 +687,10 @@
     <sub-title>Les trésors des salins du midi</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -981,10 +810,10 @@
     <sub-title>Que fait-on des vieux avions ?</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1146,10 +975,10 @@
     <sub-title>La Tour Eiffel des pieds à la tête</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1353,10 +1182,10 @@
     <sub-title>Les entrailles d'un volcan</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Documentary</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1894,6 +1723,213 @@
     
     
     <sub-title>L'anesthésie</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927052601 +0200" stop="20260927060001 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Viva mexico</title>
+    
+    
+    <episode-num system="onscreen">S01E182</episode-num>
+    
+    
+    <episode-num system="pluto">64675ae991275e001ab88962</episode-num>
+    
+    
+    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
+    
+    
+    <desc>Nos trois compères nous offrent une visite de la 3ème ville de la planète : Mexico. Ils reviennent sur les origines aztèques de la ville, nous contant le quotidien de ses habitants avant la conquête espagnole.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19980101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Viva mexico</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927060001 +0200" stop="20260927063201 +0200">
+    
+    
+    <title>C'est Pas Sorcier: La traversée du desert</title>
+    
+    
+    <episode-num system="onscreen">S01E66</episode-num>
+    
+    
+    <episode-num system="pluto">6467322a274ca8001a07218e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy quittent le continent européen pour aller dans le plus grand désert du monde : le Sahara. En 4x4, à dos de dromadaire ou de mulet, ils nous font découvrir le désert et ses habitants.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>La traversée du desert</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927063201 +0200" stop="20260927070401 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les crocodiles</title>
+    
+    
+    <episode-num system="onscreen">S01E123</episode-num>
+    
+    
+    <episode-num system="pluto">646753e7188649001a363fda</episode-num>
+    
+    
+    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
+    
+    
+    <desc>Le camion de Fred et Jamy nous emmène à la ferme aux crocodiles de Pierrelatte dans la Drôme. Cette visite guidée va nous permettre de mieux connaître la famille des crocodiliens : crocodiles, alligators, caïmans et d’apprendre à les distinguer.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19980101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les crocodiles</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927070401 +0200" stop="20260927073601 +0200">
+    
+    
+    <title>C'est Pas Sorcier</title>
+    
+    
+    <episode-num system="onscreen">S01E528</episode-num>
+    
+    
+    <episode-num system="pluto">674828ae3b8ac600135a68b2</episode-num>
+    
+    
+    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    
+    
+    <desc>Voyager grâce à l’énergie solaire est devenu réalité. Le navigateur Raphaël Domjan et son équipage viennent de boucler le premier tour du monde à bord d’un bateau entièrement mu grâce à l’énergie solaire.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20120101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les aventuriers du solaire</sub-title>
+    
+    
+    <category>Documentary</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927073601 +0200" stop="20260927080801 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Homo orbitus</title>
+    
+    
+    <episode-num system="onscreen">S01E20</episode-num>
+    
+    
+    <episode-num system="pluto">6464df73e05e97001a51cdac</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
+    
+    
+    <desc>Fred suit un entraînement à l'Euro Space Center en Belgique. Une piscine et une chaise pour s'imaginer en état d'apesanteur, une chaise multi-axes pour se croire en train de travailler dans l'espace.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Homo orbitus</sub-title>
     
     
     <category>Series</category>
