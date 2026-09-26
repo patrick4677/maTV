@@ -511,8 +511,16 @@ function makeDraggable(element, handle) {
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
-
 function playStream(url){
+  // Si vous êtes sur Android, on force l'ouverture directe dans l'application VLC
+  if (/Android/i.test(navigator.userAgent)) {
+    const cleanUrl = url.replace(/^https?:\/\//, '');
+    const vlcIntentUrl = `intent://${cleanUrl}#Intent;scheme=https;package=org.videolan.vlc;end;`;
+    window.location.href = vlcIntentUrl;
+    return;
+  }
+
+  // Comportement normal pour le PC / Web
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -538,6 +546,7 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
+
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
