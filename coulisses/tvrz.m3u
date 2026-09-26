@@ -3,7 +3,6 @@
 https://httpbin.org/status/404
 #EXTINF:-1 tvg-id="TF1.fr" tvg-name="TF1" tvg-logo="https://companieslogo.com/img/orig/TFI.PA-8c6da426.png" tvg-country="France" group-title="TNT-Top",TF1
 https://tvradiozap.eu/890
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="Arte.fr" tvg-name="Arte" tvg-logo="https://images.squarespace-cdn.com/content/v1/553f926ce4b0a46bddb4baf6/1561374992682-AQP12A8997URCIOMDY5I/ARTE-seul-2.png" tvg-country="France" group-title="TNT-Top",Arte
 https://tvradiozap.eu/640
 #EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/a/a8/TMC_logo_2016.svg/330px-TMC_logo_2016.svg.png" tvg-country="France" group-title="TNT-Top",TMC
@@ -18,7 +17,6 @@ https://tvradiozap.eu/727
 https://tvradiozap.eu/642
 #EXTINF:-1 tvg-id="LCI.fr" tvg-name="LCI" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/b/b4/LCI_logo_%282016%29.png/330px-LCI_logo_%282016%29.png" tvg-country="France" group-title="TNT-Top",LCI
 https://tvradiozap.eu/899
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="FranceInfo.fr" tvg-name="France Info" tvg-logo="https://img.20mn.fr/0Gkk_u0qS22pBMK_ysg7kQ/1200x768_logo-chaine-france-info" tvg-country="France" group-title="TNT-Top",France Info
 https://tvradiozap.eu/834
 #EXTINF:-1 tvg-id="" tvg-name="Novo19" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_NOVO19_-_2025.svg/330px-Logo_NOVO19_-_2025.svg.png" tvg-country="France" group-title="TNT-Top",Novo19
@@ -87,7 +85,6 @@ https://tvradiozap.eu/1101
 https://tvradiozap.eu/1096
 #EXTINF:-1 tvg-id="" tvg-name="LMF5 La Maison France 5" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/8/8b/La_maison_France_5_2010_logo.png" tvg-country="France" group-title="Art de vivre",LMF5 La Maison France 5
 https://tvradiozap.eu/650
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="Mieux.fr" tvg-name="Mieux" tvg-logo="https://www.francetvpub.fr/wp-content/uploads/2025/08/bandeau-site-mieux-768x243.png" tvg-country="France" group-title="Art de vivre",Mieux
 https://tvradiozap.eu/1362
 #EXTINF:-1 tvg-id="" tvg-name="Rustica" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd1pcqPtOUwEsvh_Pd99Kak6RR6eJH66qfwGEAtFvy8zgfo38mEvvw&usqp=CAE&s" tvg-country="France" group-title="Art de vivre",Rustica
@@ -280,7 +277,6 @@ https://tvradiozap.eu/1076
 https://tvradiozap.eu/1125
 #EXTINF:-1 tvg-id="CanneLerin.fr" tvg-name="Cannes Lerins TV" tvg-logo="https://lerinstvradio.fr/upload/design/66cf40b8510e04.22508416.png" tvg-country="France" group-title="Local",Cannes Lerins TV
 https://tvradiozap.eu/1152
-#EXTVLCOPT:http-referrer=https://player.castr.com/
 #EXTINF:-1 tvg-id="Csur.ca" tvg-name="Csur  (CA)" tvg-logo="https://csur.tv/wp-content/themes/csurtv/dist/images/logo-csur-new.png" tvg-country="Canada" group-title="Local",Csur  (CA)
 https://tvradiozap.eu/1174
 #EXTINF:-1 tvg-id="ctbTV.ca" tvg-name="CTB TV  (CA)" tvg-logo="https://ctbtv.ca/wp-content/uploads/2018/04/ctb-tv-logo-2018-s.png" tvg-country="Canada" group-title="Local",CTB TV  (CA)
@@ -487,7 +483,6 @@ https://tvradiozap.eu/684
 https://tvradiozap.eu/696
 #EXTINF:-1 tvg-id="NoTele.be" tvg-name="Notélé  (Wallonie picarde BE)" tvg-logo="https://i.imgur.com/fGS55nR.png" tvg-country="Belgique" group-title="Régional",Notélé  (Wallonie picarde BE)
 https://tvradiozap.eu/697
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF:-1 tvg-id="" tvg-name="Outre-Mer la 1ère" tvg-logo="https://pictures.live.franceinfo.fr/HKuU2WNBKxcAUIdMD6N8wuYlYuQ/100x100/avatars/martinique-la1ere-1699454391546.png" tvg-country="France" group-title="Régional",Outre-Mer la 1ère
 https://tvradiozap.eu/1310
 #EXTINF:-1 tvg-id="Tebeo.fr" tvg-name="Tébéo (Bretagne)" tvg-logo="https://www.tebeo.bzh/wp-content/uploads/2023/05/groupe-logo.png" tvg-country="France" group-title="Régional",Tébéo (Bretagne)
@@ -508,7 +503,6 @@ https://tvradiozap.eu/691
 https://tvradiozap.eu/688
 #EXTINF:-1 tvg-id="TVRennes35Bretagne.fr" tvg-name="TVR  (Rennes)" tvg-logo="https://www.tvr.bzh/facebook-share.png" tvg-country="France" group-title="Régional",TVR  (Rennes)
 https://tvradiozap.eu/683
-#EXTVLCOPT:http-referrer=https://player.castr.com/
 #EXTINF:-1 tvg-id="" tvg-name="TVRS  (CA)" tvg-logo="https://fedetvc.qc.ca/documents/medias/_t900/tvrs005_logo_coul-1692736372.jpg" tvg-country="Canada" group-title="Régional",TVRS  (CA)
 https://tvradiozap.eu/1422
 #EXTINF:-1 tvg-id="TVTours.fr" tvg-name="VDL (Val de Loire)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Val_de_Loire_TV_%28VDL_TV%29.png" tvg-country="France" group-title="Régional",VDL (Val de Loire)

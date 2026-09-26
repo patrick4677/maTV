@@ -1187,22 +1187,6 @@
     <category lang="fr">Magazine d'information</category>
     <icon src="https://images.voomotion.be/Events/2026/06/12/54/2674357_A.jpg" />
   </programme>
-  <programme start="20260925204500 +0200" stop="20260925225500 +0200" channel="France2.fr">
-    <title lang="fr">La grande veillée des jeunes avec le pape</title>
-    <desc lang="fr">En cette fin de première journée du voyage du pape Léon XIV à Paris, le souverain pontife rencontre les jeunes et préside un temps de prière au Stade de France, à Saint-Denis. Plus de 80 000 fidèles, âgés de 17 à 35 ans, sont attendus pour cette grande veillée mêlant fête, enseignement et prière.</desc>
-    <credits>
-      <guest>Stéphane Bern</guest>
-      <guest>Léa Salamé</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Religions</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/0547437FF9B4BDE5C2D20500177DA32C.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925225500 +0200" stop="20260926002500 +0200" channel="France2.fr">
     <title lang="fr">Mon jour de chance</title>
     <desc lang="fr">Sébastien passe un week-end à la campagne avec son épouse Valérie et ses amis d'enfance Gauthier et Franck, ainsi que Marie-Noëlle, l'épouse de ce dernier. Ils se souviennent qu'à l'époque ils laissaient le sort décider pour eux et prenaient toutes leurs décisions en jouant au dé. Sébastien se rappelle précisément d'un soir où il avait fait un quatre. Si seulement il avait fait un six, sa vie aurait été bien plus belle, il en est convaincu. Et si le destin lui donnait l'occasion de rejouer ? Au risque de bouleverser radicalement son existence et celle de ses amis ?...</desc>
@@ -2923,40 +2907,6 @@
     <desc lang="fr">De l'info et de la bonne humeur, sept jours sur sept : résolument dans l'air du temps, la première matinale de France, forte de sa richesse éditoriale et de sa dynamique d'équipe, aborde de nombreuses thématiques et traite l'actualité avec sérieux et sans dramatisation.</desc>
     <category lang="fr">Magazine</category>
     <icon src="https://images.voomotion.be/Events/2026/08/24/05/2733877_A.jpg" />
-  </programme>
-  <programme start="20260925204500 +0200" stop="20260925211000 +0200" channel="France3.fr">
-    <title lang="fr">Un si grand soleil</title>
-    <desc lang="fr">Alors que Marc va devoir faire preuve d'imagination, Laurine, de son côté, ne compte pas se laisser faire, quitte à franchir clairement la ligne rouge.</desc>
-    <credits>
-      <director>Chris Nahon</director>
-      <director>Emmanuelle Dubergey</director>
-      <director>Olivier Szulzynger</director>
-      <actor>Nadia Fossier</actor>
-      <actor>Fabrice Deville</actor>
-      <actor>Tonya Kinzinger</actor>
-      <actor>Emma Colberti</actor>
-      <actor>Benjamin Bourgois</actor>
-      <actor>Aurore Delplace</actor>
-      <actor>Marie-Gaëlle Cals</actor>
-      <actor>Moïse Santamaria</actor>
-      <actor>Yvon Back</actor>
-      <actor>Chrystelle Labaude</actor>
-      <actor>Frédéric Van den Driessche</actor>
-      <actor>Mélanie Maudran</actor>
-      <producer>Toma De Matteis</producer>
-      <composer> Talisco</composer>
-      <guest>France TV Studio</guest>
-      <guest>Epeios Productions</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Policier</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/28724C060B14015E14BB4D87C48BA11F.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">7.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925211000 +0200" stop="20260925224500 +0200" channel="France3.fr">
     <title lang="fr">Les secrets du Finistère</title>
@@ -12247,33 +12197,11 @@
     <category lang="fr">Dessin animé</category>
     <icon src="https://images.voomotion.be/Events/2026/07/07/28/2719784_A.jpg" />
   </programme>
-  <programme start="20260925204000 +0200" stop="20260925211000 +0200" channel="M6.fr">
-    <title lang="fr">Scènes de ménages</title>
-    <desc lang="fr">Loin d'être un long fleuve tranquille, la vie de couple est émaillée de conflits, de disputes et de réconciliations, comme en témoigne le quotidien de quatre d'entre eux. Parmi eux, les trentenaires Cédric et Marion, qui se surnomment mutuellement "poussin", les jeunes parents Emma et Fabien, récemment installés à la campagne avec leur petite Chloé, José et Liliane, mariés depuis plus de vingt ans, sans oublier les inénarrables Huguette et Raymond, des retraités à la méchanceté gratuite. Librement adapté de la série espagnole "Escenas de matrimonio", ce programme court évoque avec humour les hauts et les bas de la vie de couple.</desc>
-    <credits>
-      <actor>Valérie Karsenti</actor>
-      <actor>Claire Chust</actor>
-      <actor>Grégoire Bonnet</actor>
-      <actor>Vinnie Dargaud</actor>
-      <actor>Frédéric Bouraly</actor>
-      <actor>Anne-Elisabeth Blateau</actor>
-      <actor>Majid Berhila</actor>
-      <actor>David Mora</actor>
-      <actor>Amélie Etasse</actor>
-      <actor>Gérard Hernandez</actor>
-      <actor>Elodie Poux</actor>
-      <guest>M6 Métropole Télévision</guest>
-      <guest> KaBo</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Comédie</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/CBDF98F39DA47B607C196EBFD52984DB.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">17.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
+  <programme start="20260929084500 +0200" stop="20260929084900 +0200" channel="France5.fr">
+    <title lang="fr">Peppa Pig (Le club secret) S3 (40/52)</title>
+    <desc lang="fr">«Le club secret»Suzy et Peppa fondent un club secret. Elles envisagent de partir en missions secrètes et de faire des activités confidentielles. Bientôt tout les autres veulent les rejoindre...</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2026/04/07/33/2690881_A.jpg" />
   </programme>
   <programme start="20260925211000 +0200" stop="20260925221000 +0200" channel="M6.fr">
     <title lang="fr">Arnaques !</title>
@@ -15685,21 +15613,6 @@
     <previously-shown />
     <subtitles type="teletext" />
   </programme>
-  <programme start="20260925204500 +0200" stop="20260925212500 +0200" channel="W9.fr">
-    <title lang="fr">Tout beau, tout n9uf</title>
-    <desc lang="fr">L'animateur Cyril Hanouna fait son grand retour à la télévision avec le talk-show "Tout beau, tout n9uf" (#TBT9) et l'envie de faire rire, réagir et rassembler avec un concentré d'énergie, de liberté et de bonne humeur dans lequel les news, les chroniques et les happenings les plus surprenants se succèdent pour offrir près de trois heures de divertissement quotidien.</desc>
-    <credits>
-      <guest>Cyril Hanouna</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Divertissement</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/BFFC9C8298DD1FFCF5C3F0D928FE2B41.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925212500 +0200" stop="20260925223000 +0200" channel="W9.fr">
     <title lang="fr">Enquête d'action</title>
     <sub-title lang="fr">Feux géants et sauvetages impossibles : les pompiers face au pire (1/2)</sub-title>
@@ -16921,15 +16834,6 @@
     <category lang="fr">Autre</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cde66dc540bb683a.jpeg/640x360/quality/80/le-double-expresso-rtl2.jpg" />
     <subtitles type="teletext" />
-  </programme>
-  <programme start="20260925204500 +0200" stop="20260925212500 +0200" channel="TMC.fr">
-    <title lang="fr">Quotidien</title>
-    <category lang="fr">Divertissement</category>
-    <icon src="http://static-cdn.tv.sfr.net/data/img/pl/5/7/3/15718375.jpg" />
-    <episode-num system="xmltv_ns">10.19.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925212500 +0200" stop="20260925232000 +0200" channel="TMC.fr">
     <title lang="fr">L'élève Ducobu</title>
@@ -21130,6 +21034,14 @@
     <title lang="fr">TFou</title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~92c070ce245ad6da.jpeg/640x360/quality/80/tfou.jpg" />
+    <subtitles type="teletext" />
+  </programme>
+  <programme start="20260929084000 +0200" stop="20260929100500 +0200" channel="NT1.fr">
+    <title lang="fr">Baby boom</title>
+    <sub-title lang="fr">Une affaire d'homme</sub-title>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~dbc9e732d761c5f9.jpeg/640x360/quality/80/baby-boom.jpg" />
+    <previously-shown />
     <subtitles type="teletext" />
   </programme>
   <programme start="20260925205800 +0200" stop="20260925220000 +0200" channel="LaChaineParlementaire.fr">
@@ -28791,6 +28703,12 @@
     <category lang="fr">Dessin animé</category>
     <icon src="https://images.voomotion.be/Events/2026/07/01/15/2718409_A.jpg" />
   </programme>
+  <programme start="20260929084500 +0200" stop="20260929085900 +0200" channel="France4.fr">
+    <title lang="fr">Mystery Lane (Le ronge-muraille) S1 (21/26)</title>
+    <desc lang="fr">«Le ronge-muraille»McFlare vient trouver Clever pour l'aider à débusquer un fameux criminel évadé de la prison de Greenside : le dangereux Ronge-Muraille, un rat à la dentition dure comme le fer.</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2026/07/01/12/2718416_A.jpg" />
+  </programme>
   <programme start="20260925210000 +0200" stop="20260926000000 +0200" channel="BFMTV.fr">
     <title lang="fr">BFM Grand Soir</title>
     <desc lang="fr">Du lundi au vendredi, Julie Hammett et Emilie Broussouloux reviennent sur des sujets qui font la une de l'actualité de 22h à 00h dans BFM Grand Soir.</desc>
@@ -31833,26 +31751,6 @@
     <desc lang="fr">Tous les matins, Romain Desarbres, ses chroniqueurs et ses invités vous informent dans #LaMatinale de 6h à 9h du lundi au vendredi.</desc>
     <category lang="fr">Infos</category>
     <icon src="https://images.voomotion.be/Events/2026/05/11/43/2704437_A.jpg" />
-  </programme>
-  <programme start="20260925204100 +0200" stop="20260925211000 +0200" channel="CStar.fr">
-    <title lang="fr">Douanes sous haute surveillance</title>
-    <sub-title lang="fr">Lune de miel et nids d'hirondelle</sub-title>
-    <desc lang="fr">Les douaniers repèrent un trafiquant de drogue qui transporte des paquets dans le bas de son dos. Leurs collègues appréhendent un imposteur qui voyage avec de faux papiers.</desc>
-    <credits>
-      <producer>Lyndal Marks</producer>
-      <guest>Grant Bowler</guest>
-      <guest>Seven Studios</guest>
-    </credits>
-    <date>2015</date>
-    <category lang="fr">Documentaire</category>
-    <category lang="fr">Société</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/F9636786496EA45B8A15E6B98819534C.jpg" />
-    <country lang="fr">Australie</country>
-    <episode-num system="xmltv_ns">14.0.</episode-num>
-    <rating system="CSA">
-      <value>-10</value>
-      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
-    </rating>
   </programme>
   <programme start="20260925211000 +0200" stop="20260925225800 +0200" channel="CStar.fr">
     <title lang="fr">Un été au camping</title>
@@ -36809,22 +36707,6 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~0d752df4e6e8ce99.jpeg/640x360/quality/80/sur-la-scene-du-crime.jpg" />
     <previously-shown />
   </programme>
-  <programme start="20260925204200 +0200" stop="20260925210900 +0200" channel="NOVO19.fr">
-    <title lang="fr">On a de l'info</title>
-    <desc lang="fr">Du lundi au vendredi, 15 minutes d'information axée sur les territoires : actualités, innovation, environnement, économie, santé, vie locale, international.</desc>
-    <credits>
-      <guest>Martin Cangelosi</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Information</category>
-    <category lang="fr">Journal</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/B145A945475C5B8222A271394303C0FB.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">1.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925210900 +0200" stop="20260925220700 +0200" channel="NOVO19.fr">
     <title lang="fr">Lourdes : capitale des miracles</title>
     <desc lang="fr">Autrefois modeste bourgade des Pyrénées, Lourdes a connu une métamorphose spectaculaire depuis les apparitions de la Vierge Marie à Bernadette Soubirous en 1858. Devenue un lieu majeur du pèlerinage catholique, la ville accueille chaque année quatre millions de visiteurs en quête de spiritualité ou d'une guérison miraculeuse. Un retour documenté sur l'histoire de la vraie capitale des miracles.</desc>
@@ -41328,18 +41210,6 @@
     <category lang="fr">Série Dramatique</category>
     <icon src="https://images.voomotion.be/Events/2025/12/31/57/2652697_A.jpg" />
   </programme>
-  <programme start="20260925204400 +0200" stop="20260925224500 +0200" channel="LEquipe21.fr">
-    <title lang="fr">Football : Ligue des Nations UEFA</title>
-    <desc lang="fr">En pleine reconstruction, l'équipe d'Italie, qui a rappelé Roberto Mancini à sa tête, doit assurer l'essentiel ce soir face à la Belgique, afin de débuter sa campagne du bon pied et se mettre en confiance pour la suite de la compétition. Dans un groupe A très homogène où l'on retrouvera également l'équipe de France et la Turquie, la Squadra Azzura doit éviter tout faux-pas ce soir au Stade olympique de Rome, face à des Diables Rouges qui arrivent également avec de hautes ambitions.</desc>
-    <date>2026</date>
-    <category lang="fr">Sport</category>
-    <category lang="fr">Football</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/A326428348FB98F9948E557937EA4AD0.jpg" />
-    <country lang="fr">Italie</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925224500 +0200" stop="20260925230000 +0200" channel="LEquipe21.fr">
     <title lang="fr">L'Equipe du soir</title>
     <sub-title lang="fr">100% buts</sub-title>
@@ -43858,43 +43728,6 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~43f6f883f5a3aa83.jpeg/640x360/quality/80/une-saison-au-zoo.jpg" />
     <previously-shown />
     <subtitles type="teletext" />
-  </programme>
-  <programme start="20260925204000 +0200" stop="20260925211000 +0200" channel="Numero23.fr">
-    <title lang="fr">Big Bang Theory</title>
-    <sub-title lang="fr">La solution pirate</sub-title>
-    <desc lang="fr">Raj annonce à ses amis qu'il va être renvoyé chez lui, en Inde. Ses recherches n'ayant donné aucun résultat satisfaisant, l'université ne veut plus le financer. Howard veut que son ami reste aux Etats-Unis et lui trouve un emploi. Raj doit passer un entretien qui se passe bien jusqu'à l'arrivée d'une magnifique jeune femme. Raj, incapable de parler en présence de femmes, commence à boire pour surmonter sa timidité. Cependant, il boit trop et perd ses chances pour le poste. Sheldon propose par conséquent à Raj de travailler pour lui...</desc>
-    <credits>
-      <director>Mark Cendrowski</director>
-      <actor>Johnny Galecki</actor>
-      <actor>Kaley Cuoco</actor>
-      <actor>Kunal Nayyar</actor>
-      <actor>Elizabeth Bogush</actor>
-      <actor>Oliver Muirhead</actor>
-      <actor>Jim Parsons</actor>
-      <actor>Simon Helberg</actor>
-      <actor>Eli Marienthal</actor>
-      <adapter>Steve Holland</adapter>
-      <producer>Jim Reynolds</producer>
-      <producer>Bill Prady</producer>
-      <producer>Lee Aronsohn</producer>
-      <producer>Faye Oshima Belyeu</producer>
-      <producer>Brian George</producer>
-      <producer>Peter Chakos</producer>
-      <producer>Chuck Lorre</producer>
-      <editor>Maria Ferrari</editor>
-      <editor>Bill Prady</editor>
-      <guest>Warner Bros. Television</guest>
-      <guest>Chuck Lorre Productions</guest>
-    </credits>
-    <date>2009</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Comédie</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/EDD8318BBC252F3509B147F9C9DD0057.jpg" />
-    <country lang="fr">Etats-Unis</country>
-    <episode-num system="xmltv_ns">2.3.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925211000 +0200" stop="20260925223000 +0200" channel="Numero23.fr">
     <title lang="fr">Enlèvement demandé : le quotidien des fourrières</title>
@@ -47469,6 +47302,14 @@
     <sub-title lang="fr">Le retour de la pelleteuse</sub-title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~ecdd9220d2368bea.jpeg/640x360/quality/80/le-mystere-d-oak-island.jpg" />
+    <previously-shown />
+    <subtitles type="teletext" />
+  </programme>
+  <programme start="20260929084000 +0200" stop="20260929093000 +0200" channel="RMCDecouverte.fr">
+    <title lang="fr">Le mystère d'Oak Island</title>
+    <sub-title lang="fr">L'heure du thé</sub-title>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~7d4ad397f6ca12d0.jpeg/640x360/quality/80/le-mystere-d-oak-island.jpg" />
     <previously-shown />
     <subtitles type="teletext" />
   </programme>
@@ -54586,6 +54427,30 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~b2dccdb123b2e670.jpeg/640x360/quality/80/de-courts.jpg" />
     <previously-shown />
   </programme>
+  <programme start="20260929084500 +0200" stop="20260929103500 +0200" channel="CanalPlusCinema.fr">
+    <title lang="fr">La Voie du serpent</title>
+    <desc lang="fr">Albert Bacheret est un père dévasté par la disparition inexplicable de sa fille de 8 ans. Alors que la police semble incapable de résoudre l'affaire, il décide de prendre les choses en main et mène ses propres recherches. Dans cette quête, il reçoit l'aide inattendue de Sayoko, une énigmatique psychiatre japonaise. Ensemble, ils kidnappent des responsables du Cercle, une société secrète. Mais chaque nouvel indice mène à un nouveau suspect qui présente toujours une version différente des faits. Obsédé par la vérité, Albert va devoir naviguer entre sa soif aveugle de vengeance et une infinie spirale de mensonges...</desc>
+    <credits>
+      <director>Kiyoshi Kurosawa</director>
+      <actor>Damien Bonnard</actor>
+      <actor>Ko Shibasaki</actor>
+      <actor>Mathieu Amalric</actor>
+      <actor>Grégoire Colin</actor>
+      <actor>Hidetoshi Nishijima</actor>
+    </credits>
+    <date>2024</date>
+    <category lang="fr">Cinéma</category>
+    <keyword>audio-description</keyword>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~backoffice~program~2252b8236472571690aa1cab53322031.jpg/640x360/focus-point/1201,657/quality/80/la-voie-du-serpent.jpg" />
+    <country lang="fr">France - Japon - Belgique</country>
+    <previously-shown />
+    <subtitles type="teletext" />
+    <star-rating>
+      <value>3/5</value>
+    </star-rating>
+    <review type="text">Kiyoshi Kurosawa réalise le remake d’un de ses propres films, relocalisé en France. Un homme, aidé d’une médecin japonaise, enlève un notable parisien. Mais pourquoi ? Malgré quelques détours qui diluent le récit, ce thriller se révèle souvent retors et prenant, notamment grâce à sa mise en scène acérée.</review>
+    <audio-described />
+  </programme>
   <programme start="20260925205500 +0200" stop="20260925214800 +0200" channel="PlanetePlus.fr">
     <title lang="fr">La guerre des trônes, la véritable histoire de l'Europe (L'Europe s'embrase (1561-1569)) S2 (3/6)</title>
     <desc lang="fr">«L'Europe s'embrase (1561-1569)»Durant des siècles, seules quelques grandes familles se sont disputé l'hégémonie sur le continent européen, à travers une lutte de pouvoir acharnée.</desc>
@@ -55689,5 +55554,16 @@
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~dc06551bb95ab82d.jpeg/640x360/quality/80/les-coulisses-de-l-histoire.jpg" />
     <previously-shown />
+  </programme>
+  <programme start="20260929083900 +0200" stop="20260929093900 +0200" channel="PlanetePlus.fr">
+    <title lang="fr">Staline-Trotski, le tsar et le prophète</title>
+    <desc lang="fr">Staline face à Trotski, c'est un duel absolu : un duel idéologique entre deux visions du communisme, un duel politique pour la prise du pouvoir, mais surtout et avant tout un duel entre deux hommes que tout oppose, du physique à l'intellect, des origines aux motivations, du parcours à l'ascension. Le fils de savetier géorgien face au juif cosmopolite, le rustre taciturne contre l'intellectuel bavard, le calculateur méthodique face à l'homme enthousiaste, l'organisateur patient contre le flamboyant, le nationaliste rationnel face au théoricien mondialiste. Le duel entre Staline et Trotski dure trente ans et se déroule sur plusieurs continents. Il est question de mensonges, de machinations, de chasse à l'homme, mais aussi de meurtre.</desc>
+    <credits>
+      <guest>Marie-Laurence Rincé</guest>
+      <guest>Alain Frerejean</guest>
+    </credits>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cb01afa7b9ab475e.jpeg/640x360/quality/80/staline-trotski-le-tsar-et-le-prophete.jpg" />
+    <subtitles type="teletext" />
   </programme>
   </tv>
