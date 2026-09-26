@@ -24,114 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260926064200 +0200" stop="20260926073500 +0200">
-    
-    
-    <title>À bout portant</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926044200 +0000</episode-num>
-    
-    
-    <desc>Le chanteur de "Elle était si jolie", alors au sommet de sa carrière, continue de remplir les salles. Reportage sur la tournée d'Alain Barrière avec des images de l'artiste sur scène, des extraits d'interviews et de moments filmés en coulisse.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
-    
-    
-    <sub-title>Alain Barrière</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926073500 +0200" stop="20260926084800 +0200">
-    
-    
-    <title>À bout portant</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926053500 +0000</episode-num>
-    
-    
-    <desc>Il est à la fois clown surdoué, mime et jongleur de mots. Avec toute sa finesse d'esprit, Raymond Devos, monstre sacré de l'humour, accepte de se confier sur les passions qui l'animent et sur sa vision éminemment philosophique du métier.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
-    
-    
-    <sub-title>Raymond Devos</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926084800 +0200" stop="20260926093400 +0200">
-    
-    
-    <title>L'école des fans</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926064800 +0000</episode-num>
-    
-    
-    <desc>Aujourd'hui, six enfants montent sur scène pour reprendre les plus grandes chansons de Nicolas Peyrac. Ils interprètent, entre autres, "Recommençons", "Le vin me saoule" ou encore "Il y aurait du soleil".</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014459050/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014459050</series-id>
-    
-    
-    <sub-title>Nicolas Peyrac</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260926093400 +0200" stop="20260926104100 +0200">
     
     
@@ -159,10 +51,10 @@
     <sub-title>L'augmentation des prix</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -195,10 +87,10 @@
     <sub-title>L'insémination artificielle</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -231,10 +123,10 @@
     <sub-title>Les compagnons de la chanson</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -264,10 +156,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -297,10 +189,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -333,10 +225,10 @@
     <sub-title>Les espions</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -369,10 +261,10 @@
     <sub-title>Les femmes paysannes</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -405,10 +297,10 @@
     <sub-title>Maigret en vacances</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -441,10 +333,10 @@
     <sub-title>Nicole Croisille</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -477,10 +369,10 @@
     <sub-title>Ivry Gitlis</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -513,10 +405,10 @@
     <sub-title>Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -549,10 +441,10 @@
     <sub-title>Les jeux de 20 heures à Strasbourg</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -582,10 +474,10 @@
     <series-id system="pluto">65e84d1303625d001315cdbf</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -618,10 +510,10 @@
     <sub-title>Top A Gerard Lenorman</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -654,131 +546,44 @@
     <sub-title>Thierry Le Luron</sub-title>
     
     
+    <category>Entertainment</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260926232300 +0200" stop="20260927015700 +0200">
+    
+    
+    <title>Au théâtre ce soir</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260926212300 +0000</episode-num>
+    
+    
+    <desc>Doris, une inquiétante et charmante jeune fille, ne peut s'empêcher de mentir, au point de douter de sa sincérité. Amoureuse, elle va tout faire pour parvenir à ses fins. Cependant, tous ces mensonges vont la mener à la catastrophe.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c122d9a40ff70013da357e/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c122d9a40ff70013da357e</series-id>
+    
+    
+    <sub-title>Doris</sub-title>
     
     
     <category>Entertainment</category>
     
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926065509 +0200" stop="20260926073009 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Noël a Saint Veran</title>
-    
-    
-    <episode-num system="onscreen">S01E87</episode-num>
-    
-    
-    <episode-num system="pluto">646737d15348f4001a6582e7</episode-num>
-    
-    
-    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
-    
-    
-    <desc>La veille de Noël, Fred et Jamy abandonnent leur camion-atelier pour un voyage pittoresque au cœur du Queyras, dans le village de Saint-Véran.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19960101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Noël a Saint Veran</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926073009 +0200" stop="20260926080209 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Le recul des glaciers</title>
-    
-    
-    <episode-num system="onscreen">S01E371</episode-num>
-    
-    
-    <episode-num system="pluto">647081cbf2a541001bbc9d37</episode-num>
-    
-    
-    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
-    
-    
-    <desc>Fred et Jamy sont partis explorer les glaciers les plus grandioses du massif alpin pour tenter de comprendre avec nous pourquoi la plupart des glaciers de la planète se mettent à reculer.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20060101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Le recul des glaciers</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926080209 +0200" stop="20260926083409 +0200">
-    
-    
-    <title>C'est Pas Sorcier</title>
-    
-    
-    <episode-num system="onscreen">S01E551</episode-num>
-    
-    
-    <episode-num system="pluto">67482e41e835570013ee2d47</episode-num>
-    
-    
-    <episode-num system="original-air-date">20130101000000 +0000</episode-num>
-    
-    
-    <desc>Il y a plus de 125 millions de jumeaux sur la planète, presque 2% de la population, et leur nombre ne cesse d’augmenter ! Sabine et Jamy partent à la découverte de ce mystère de la reproduction humaine.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20130101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les mystères des jumeaux</sub-title>
-    
-    
-    <category>Documentary</category>
-    
     
     <category>Series</category>
     
@@ -786,85 +591,34 @@
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926083409 +0200" stop="20260926090809 +0200">
+  <programme channel="ina70.fr" start="20260927015700 +0200" stop="20260927022900 +0200">
     
     
-    <title>C'est Pas Sorcier: Les volcans</title>
+    <title>La femme en blanc</title>
     
     
-    <episode-num system="onscreen">S01E224</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">646b6cfd17da09001a312e2b</episode-num>
+    <episode-num system="original-air-date">20260926235700 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20010101000000 +0000</episode-num>
+    <desc>Malgré le contrat de mariage contestable, le mariage entre Laura et Percival Glyde a lieu. Marian part s'installer dans la résidence de Black Water Park.</desc>
     
     
-    <desc>Fred, Jamy et Sabine sont dans les îles éoliennes, entre la Sicile et la péninsule italienne. Ce chapelet d'îles volcaniques, né de la rencontre chaotique des plaques africaine et européenne, abrite trois volcans encore en activité.</desc>
+    <icon src="https://images.pluto.tv/series/66f6c93ba2922a0013265239/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20010101</date>
+    <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les volcans</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926090809 +0200" stop="20260926094009 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Vol au dessus d'un nid d avions</title>
-    
-    
-    <episode-num system="onscreen">S01E28</episode-num>
-    
-    
-    <episode-num system="pluto">6464e21de05e97001a51f1ce</episode-num>
-    
-    
-    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
-    
-    
-    <desc>Aéroport Roissy-Charles De Gaulle. Depuis l'entretien des avions de ligne au sol jusqu'au pilotage d'un Boeing 747, en passant par l'organisation d'un aéroport et ses tours de contrôle,</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19950101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Vol au dessus d'un nid d avions</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -1236,10 +990,10 @@
     <sub-title>Les secrets du vertige</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1275,10 +1029,10 @@
     <sub-title>Peur des araignées ?</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1356,10 +1110,10 @@
     <sub-title>Les trésors des salins du midi</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1479,10 +1233,10 @@
     <sub-title>Que fait-on des vieux avions ?</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1644,10 +1398,10 @@
     <sub-title>La Tour Eiffel des pieds à la tête</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1851,10 +1605,10 @@
     <sub-title>Les entrailles d'un volcan</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1888,6 +1642,258 @@
     
     
     <sub-title>Bol d'aire dans le grand bleu la plongée sous marine</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926230201 +0200" stop="20260926233501 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Quand la terre tremble</title>
+    
+    
+    <episode-num system="onscreen">S01E265</episode-num>
+    
+    
+    <episode-num system="pluto">6474774b91275e001afddb67</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Pourquoi la terre tremble-t-elle si souvent en certains points de la planète ? Comment les ondes se propagent-elles sur la croûte terrestre ? Quelles sont les techniques de constructions para-sismiques ?</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Quand la terre tremble</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926233501 +0200" stop="20260927000701 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Le viaduc de Millau</title>
+    
+    
+    <episode-num system="onscreen">S01E303</episode-num>
+    
+    
+    <episode-num system="pluto">6474774b91275e001afddbc3</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Fred, Jammy et Sabine prennent de l’altitude pour nous présenter l’un des chantiers les plus impressionnants de ce début de 21ème siècle : le viaduc de Millau.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Le viaduc de Millau</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927000701 +0200" stop="20260927003901 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Béton : les sorciers au pied du mur</title>
+    
+    
+    <episode-num system="onscreen">S01E358</episode-num>
+    
+    
+    <episode-num system="pluto">6470752813c2c2001a52194e</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Le béton est le produit le plus consommé au monde après l'eau ! Résistant, économique, isolant, ce matériau de construction prend toutes les formes et défie les lois de la pesanteur. Seul hic il n'arrange pas le problème du réchauffement de la planète !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Béton : les sorciers au pied du mur</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927003901 +0200" stop="20260927011101 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Le plus grands manèges du monde</title>
+    
+    
+    <episode-num system="onscreen">S01E14</episode-num>
+    
+    
+    <episode-num system="pluto">6464df53e05e97001a51c735</episode-num>
+    
+    
+    <episode-num system="original-air-date">19940101000000 +0000</episode-num>
+    
+    
+    <desc>La foire de Rouen est une gigantesque fête foraine. Vieille de 900 ans, elle a connu toutes les attractions !Derrière cette industrie du divertissement se dissimulent de multiples recherches scientifiques et technologiques.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19940101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Le plus grands manèges du monde</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927011101 +0200" stop="20260927014301 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les fortifications Vauban</title>
+    
+    
+    <episode-num system="onscreen">S01E375</episode-num>
+    
+    
+    <episode-num system="pluto">64708325649e97001b711748</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Sébastien le Pestre de Vauban était commissaire aux fortifications au temps de Louis XIV. Partout autour des frontières françaises, il fit protéger les villes en y construisant des remparts aux formes curieuses.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les fortifications Vauban</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927014301 +0200" stop="20260927021401 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Faire un disque ça vous chante</title>
+    
+    
+    <episode-num system="onscreen">S01E41</episode-num>
+    
+    
+    <episode-num system="pluto">6464e7b95348f4001a5ac251</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
+    
+    
+    <desc>Le camion de C’est pas sorcier prend la route des studios et suit une jeune chanteuse qui enregistre son premier album.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Faire un disque ça vous chante</sub-title>
     
     
     <category>Series</category>
