@@ -1,7 +1,7 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.0 (Correctif Anti-Cache, HTTPS & Compatibility)
-     OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche Odysee
+     VERSION : 1.9.5 (Modifiée - Soirée : effacement si non commencé + temps restant 2nde partie)
+     OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche + Filtre Whitelist
      AUTEUR : Patrick
      ============================================================ -->
 
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.0</title>
+<title>TNT + M3U – Version 1.9.5</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -104,10 +104,6 @@ th { background:#eee; }
   border-radius: 4px;
 }
 
-/* Barre de progression */
-.bar { width:100%; height:6px; background:#ddd; border-radius:3px; overflow:hidden; }
-.fill { height:100%; background:#4caf50; }
-
 /* Boutons Google Cast */
 google-cast-launcher {
   display: inline-block !important;
@@ -163,7 +159,7 @@ google-cast-launcher {
   background:#000;
 }
 
-/* Module de Recherche Odysee (Haut à droite) */
+/* Module de Recherche Odysee & YouTube (Haut à droite) */
 .search-container {
   position: absolute;
   top: 10px;
@@ -183,17 +179,12 @@ google-cast-launcher {
 
 .search-container button {
   padding: 6px 12px;
-  background-color: #ef1c43;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
   font-size: 13px;
-}
-
-.search-container button:hover {
-  background-color: #d01538;
 }
 
 /* Boîte Popup */
@@ -293,8 +284,6 @@ body.dark { background:#222; color:#eee; }
 body.dark table { background:#333; color:#eee; }
 body.dark th { background:#444; color:#fff; }
 body.dark td { border-color:#555; }
-body.dark .bar { background:#555; }
-body.dark .fill { background:#4caf50; }
 body.dark .channel-name-link { color:#fff; }
 body.dark img.logo { filter:brightness(0.85); }
 body.dark a { color:#9cf; }
@@ -322,18 +311,20 @@ body.dark .help-list li {
 
 <body>
 
-<!-- Recherche Odysee en haut à droite -->
+<!-- Recherche Externe (Odysee & YouTube) en haut à droite -->
 <div class="search-container">
-  <input type="text" id="odysee-search-input" placeholder="Recherche Odysee..." class="focusable" onkeydown="if(event.key==='Enter') searchOdysee()">
-  <button onclick="searchOdysee()" class="focusable">🔍</button>
+  <input type="text" id="ext-search-input" placeholder="Recherche..." class="focusable">
+  <button onclick="searchExternal('odysee')" class="focusable" style="background-color:#ef1c43;" title="Rechercher sur Odysee">Odysee</button>
+  <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.0</h1>
+<h1>Programme TV v1.9.5</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
 <button class="focusable" onclick="updateTV()">🔄 Recharger</button>
 <button class="focusable" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
+<button class="focusable" id="filterBtn" onclick="toggleWhitelistFilter()">⭐ Sélection TV</button>
 <google-cast-launcher class="focusable" title="Caster vers TV"></google-cast-launcher>
 <button class="focusable" id="openHelpBtn">❓ Mode d'emploi</button>
 
@@ -367,7 +358,6 @@ body.dark .help-list li {
           <th>Durée</th>
           <th>Début suiv.</th>
           <th>Suivant</th>
-          <th>Progression</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -399,6 +389,7 @@ body.dark .help-list li {
       <li><strong>Image du programme :</strong> Détail de ce programme</li>
       <li><strong>« Maintenant » :</strong> Programme en cours et le suivant</li>
       <li><strong>« Soirée » :</strong> Programme de la soirée</li>
+      <li><strong>« Sélection TV » / « Toutes les TV » :</strong> Filtrer les chaînes favorites ou tout afficher</li>
     </ul>
   </div>
 </div>
@@ -418,11 +409,13 @@ let XML_URL2 = "";
 let M3U_URL = "";
 let hlsPlayer = null;
 let WHITELIST = [];
+let useWhitelist = true; // Actif par défaut
+let rawM3UList = [];
+let originalTNT = [];
 let xmlDocCache = null;
 
 async function loadWhitelist(){
   try{
-    // Anti-cache pour forcer GitHub Pages à charger le fichier à jour
     WHITELIST = await fetch("coulisses/whitelist.json?t=" + Date.now()).then(r=>r.json());
   } catch(e){
     console.warn("Whitelist non disponible ou vide :", e);
@@ -514,7 +507,6 @@ makeDraggable(document.getElementById("playerBox"), document.getElementById("dra
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
 
 function playStream(url){
-  // Protection Mixed Content pour GitHub Pages (HTTPS -> HTTPS)
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -541,13 +533,17 @@ function playStream(url){
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
 
-function searchOdysee() {
-  const queryInput = document.getElementById('odysee-search-input');
+function searchExternal(platform) {
+  const queryInput = document.getElementById('ext-search-input');
   const query = queryInput ? queryInput.value.trim() : '';
 
   if (!query) return;
 
-  window.open(`https://odysee.com/$/search?q=${encodeURIComponent(query)}`, '_blank');
+  if (platform === 'odysee') {
+    window.open(`https://odysee.com/$/search?q=${encodeURIComponent(query)}`, '_blank');
+  } else if (platform === 'youtube') {
+    window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, '_blank');
+  }
 }
 
 function normalizeID(id){
@@ -610,7 +606,6 @@ TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
 async function loadM3U(url){
   try{
-    // Anti-cache sur le fichier M3U
     const txt = await fetch(url + "?t=" + Date.now()).then(r=>r.text());
     const lines = txt.split("\n");
     const list = [];
@@ -636,15 +631,17 @@ async function loadM3U(url){
     return [];
   }
 }
-function extendTNTwithM3U(m3uList){
-  m3uList.forEach(m=>{
+
+function applyM3UFilter() {
+  TNT = JSON.parse(JSON.stringify(originalTNT));
+
+  rawM3UList.forEach(m => {
     const key = normalizeID(m.name);
 
-    // Filtrage Whitelist plus tolérant
-    if(WHITELIST.length > 0){
+    if (useWhitelist && WHITELIST.length > 0) {
       const nameNorm = normalizeID(m.name);
       const allowed = WHITELIST.some(w => normalizeID(w) === nameNorm);
-      if(!allowed) return;
+      if (!allowed) return;
     }
 
     const exists = TNT.find(ch =>
@@ -654,9 +651,9 @@ function extendTNTwithM3U(m3uList){
       (ch.aliases && ch.aliases.some(a => normalizeID(a) === key))
     );
 
-    if(exists){
+    if (exists) {
       exists.stream = m.stream;
-      if(m.logo && m.logo.trim() !== "") exists.logo = m.logo;
+      if (m.logo && m.logo.trim() !== "") exists.logo = m.logo;
       return;
     }
 
@@ -670,6 +667,22 @@ function extendTNTwithM3U(m3uList){
       stream: m.stream
     });
   });
+}
+
+function toggleWhitelistFilter() {
+  useWhitelist = !useWhitelist;
+  const btn = document.getElementById("filterBtn");
+  
+  if (useWhitelist) {
+    btn.textContent = "⭐ Sélection TV";
+    btn.style.backgroundColor = "";
+  } else {
+    btn.textContent = "🌐 Toutes les TV";
+    btn.style.backgroundColor = "#ff9800";
+  }
+
+  applyM3UFilter();
+  updateTV();
 }
 
 function parseDate(str){
@@ -770,8 +783,12 @@ function renderEvening(channels){
   <div class="table-wrapper"><table>
   <thead><tr>
     <th>Chaîne</th>
-    <th>Début</th><th>Programme de la soirée</th><th>Thème</th><th>Durée</th>
-    <th>Début suiv.</th><th>Suivant</th><th>Progression</th>
+    <th>Début</th>
+    <th>Programme de la soirée</th>
+    <th>Thème</th>
+    <th>Durée</th>
+    <th>Début suiv.</th>
+    <th>Suivant</th>
   </tr></thead><tbody>`;
 
   TNT.forEach(ch=>{
@@ -782,7 +799,7 @@ function renderEvening(channels){
       html += `
       <tr>
         <td>${chanCellHtml}</td>
-        <td colspan="7" style="text-align:center;color:#888;">Pas de données XMLTV</td>
+        <td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>
       </tr>`;
       return;
     }
@@ -817,14 +834,32 @@ function renderEvening(channels){
       html += `
       <tr>
         <td>${chanCellHtml}</td>
-        <td colspan="7" style="text-align:center;color:#888;">Aucun programme soirée</td>
+        <td colspan="6" style="text-align:center;color:#888;">Aucun programme soirée</td>
       </tr>`;
       return;
     }
 
     const duration = Math.round((evening.stop-evening.start)/60000);
-    const progress = Math.min(100, Math.max(0,
-      ((now-evening.start)/(evening.stop-evening.start))*100));
+    
+    // Gestion du temps restant pour la soirée principale
+    let remainingText = "";
+    if (now >= evening.start && now <= evening.stop) {
+      const remaining = Math.max(0, Math.round((evening.stop - now) / 60000));
+      remainingText = `Reste ${remaining} mn`;
+    } else if (now > evening.stop) {
+      remainingText = "Terminé";
+    }
+
+    // Gestion du temps restant pour la 2ème partie de soirée (next)
+    let nextRemainingText = "";
+    if (next) {
+      if (now >= next.start && now <= next.stop) {
+        const nextRem = Math.max(0, Math.round((next.stop - now) / 60000));
+        nextRemainingText = `Reste ${nextRem} mn`;
+      } else if (now > next.stop) {
+        nextRemainingText = "Terminé";
+      }
+    }
 
     let eveningIcon = evening.icon;
     let nextIcon = next ? next.icon : "";
@@ -847,9 +882,12 @@ function renderEvening(channels){
           data-chan="${ch.normId}"
           data-idx="${list.indexOf(evening)}"
           style="cursor:pointer;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          ${eveningImgHtml}
-          <span>${evening.title}</span>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            ${eveningImgHtml}
+            <span>${evening.title}</span>
+          </div>
+          <span style="color:#007acc; font-weight:bold; white-space:nowrap; margin-left:10px;">${remainingText}</span>
         </div>
       </td>
 
@@ -862,13 +900,14 @@ function renderEvening(channels){
           data-chan="${ch.normId}"
           data-idx="${next ? list.indexOf(next) : -1}"
           style="cursor:pointer;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          ${nextImgHtml}
-          <span>${next ? next.title : "—"}</span>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            ${nextImgHtml}
+            <span>${next ? next.title : "—"}</span>
+          </div>
+          <span style="color:#007acc; font-weight:bold; white-space:nowrap; margin-left:10px;">${nextRemainingText}</span>
         </div>
       </td>
-
-      <td><div class="bar"><div class="fill" style="width:${progress}%"></div></div></td>
     </tr>`;
   });
 
@@ -1012,7 +1051,7 @@ async function updateTV(){
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${chanCellHtml}</td>
-          <td colspan="7" style="text-align:center;color:#888;">Pas de données XMLTV</td>
+          <td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>
         `;
         tbody.appendChild(tr);
         return;
@@ -1034,15 +1073,14 @@ async function updateTV(){
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${chanCellHtml}</td>
-          <td colspan="7" style="text-align:center;color:#888;">Aucun programme en cours</td>
+          <td colspan="6" style="text-align:center;color:#888;">Aucun programme en cours</td>
         `;
         tbody.appendChild(tr);
         return;
       }
 
       const duration = Math.round((current.stop - current.start) / 60000);
-      const progress = Math.min(100, Math.max(0,
-        ((now - current.start) / (current.stop - current.start)) * 100));
+      const remaining = Math.max(0, Math.round((current.stop - now) / 60000));
 
       const tr = document.createElement("tr");
       tr.innerHTML = `
@@ -1055,9 +1093,12 @@ async function updateTV(){
             data-chan="${ch.normId}"
             data-idx="${list.indexOf(current)}"
             style="cursor:pointer;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            ${current && current.icon ? `<img src="${current.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
-            <span>${current ? current.title : ""}</span>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              ${current && current.icon ? `<img src="${current.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
+              <span>${current ? current.title : ""}</span>
+            </div>
+            <span style="color:#007acc; font-weight:bold; white-space:nowrap; margin-left:10px;">Reste ${remaining} mn</span>
           </div>
         </td>
 
@@ -1074,12 +1115,6 @@ async function updateTV(){
           <div style="display:flex; align-items:center; gap:8px;">
             ${next && next.icon ? `<img src="${next.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
             <span>${next ? next.title : ""}</span>
-          </div>
-        </td>
-
-        <td>
-          <div class="bar">
-            <div class="fill" style="width:${progress}%"></div>
           </div>
         </td>
       `;
@@ -1121,9 +1156,11 @@ function bindPopupEvents(selector, channelsToday) {
   await loadConfig();
   await loadWhitelist();
 
+  originalTNT = JSON.parse(JSON.stringify(TNT));
+
   try{
-    const m3u = await loadM3U(M3U_URL);
-    extendTNTwithM3U(m3u);
+    rawM3UList = await loadM3U(M3U_URL);
+    applyM3UFilter();
   } catch(e){}
 
   updateTV();
