@@ -24,78 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260925204800 +0200" stop="20260925222300 +0200">
-    
-    
-    <title>Les enquêtes du commissaire Maigret</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925184800 +0000</episode-num>
-    
-    
-    <desc>Le commissaire Maigret et son épouse prennent des vacances bien méritées. Dès le lendemain de leur arrivée, Louise Maigret ressent de violentes douleurs au ventre et doit être hospitalisée pour être opérée de l'appendicite.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea50e764c00014459b8a/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea50e764c00014459b8a</series-id>
-    
-    
-    <sub-title>Maigret en vacances</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260925222300 +0200" stop="20260925234300 +0200">
-    
-    
-    <title>Apostrophes</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260925202300 +0000</episode-num>
-    
-    
-    <desc>Bien qu'ils aient tous une brillante carrière à la télévision ou au cinéma, c'est en prenant la plume qu'ils ont décidé, cette fois-ci, de s'exprimer. Un nouveau défi pour certains, une évidence pour d'autres.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c11bbeb65b870013d06380/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c11bbeb65b870013d06380</series-id>
-    
-    
-    <sub-title>Le spectacle est dans les livres</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260925234300 +0200" stop="20260926012900 +0200">
     
     
@@ -123,10 +51,10 @@
     <sub-title>Le racisme</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -156,10 +84,10 @@
     <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -192,10 +120,10 @@
     <sub-title>Le cerveau</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -228,10 +156,10 @@
     <sub-title>Maigret à l'école</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -264,10 +192,10 @@
     <sub-title>Les jeux de 20 heures à Cannes</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -297,10 +225,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -330,10 +258,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -363,10 +291,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -399,10 +327,10 @@
     <sub-title>Alain Barrière</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -435,10 +363,10 @@
     <sub-title>Raymond Devos</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -471,10 +399,10 @@
     <sub-title>Nicolas Peyrac</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -507,10 +435,10 @@
     <sub-title>L'augmentation des prix</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -543,10 +471,10 @@
     <sub-title>L'insémination artificielle</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -579,10 +507,10 @@
     <sub-title>Les compagnons de la chanson</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -612,10 +540,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -645,10 +573,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -681,47 +609,44 @@
     <sub-title>Les espions</sub-title>
     
     
+    <category>Entertainment</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260926145200 +0200" stop="20260926155200 +0200">
+    
+    
+    <title>Aujourd'hui Madame</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260926125200 +0000</episode-num>
+    
+    
+    <desc>Aujourd'hui, la parole est donnée aux femmes paysannes qui parlent de leurs soucis et de leur vision de l'avenir. Une plongée au cœur du quotidien de ces femmes, de leurs conditions de vie souvent très rudes, de leurs espoirs et leurs rêves.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    
+    
+    <sub-title>Les femmes paysannes</sub-title>
     
     
     <category>Entertainment</category>
     
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925214509 +0200" stop="20260925221709 +0200">
-    
-    
-    <title>C'est Pas Sorcier</title>
-    
-    
-    <episode-num system="onscreen">S01E546</episode-num>
-    
-    
-    <episode-num system="pluto">67482cece103890013759bdb</episode-num>
-    
-    
-    <episode-num system="original-air-date">20130101000000 +0000</episode-num>
-    
-    
-    <desc>Les communes du littoral français sont de plus en plus menacées par l’érosion marine. Sur la côte Aquitaine près de 400 bâtiments risquent d’être engloutis par la mer d’ici 2040.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20130101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Littoral, la mer attaque la terre</sub-title>
-    
-    
-    <category>Documentary</category>
-    
     
     <category>Series</category>
     
@@ -729,205 +654,37 @@
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260925221709 +0200" stop="20260925224909 +0200">
+  <programme channel="ina70.fr" start="20260926155200 +0200" stop="20260926172400 +0200">
     
     
-    <title>C'est Pas Sorcier</title>
+    <title>Les enquêtes du commissaire Maigret</title>
     
     
-    <episode-num system="onscreen">S01E556</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">67482fa98d00c6001433eb77</episode-num>
+    <episode-num system="original-air-date">20260926135200 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20130101000000 +0000</episode-num>
+    <desc>Le commissaire Maigret et son épouse prennent des vacances bien méritées. Dès le lendemain de leur arrivée, Louise Maigret ressent de violentes douleurs au ventre et doit être hospitalisée pour être opérée de l'appendicite.</desc>
     
     
-    <desc>Tout juste cent ans après le 1er looping effectué par Louis Blériot avec un avion à hélice, Fred et Jamy nous emmènent à la rencontre de l’équipe de voltige de l’armée de l’air.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea50e764c00014459b8a/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20130101</date>
+    <series-id system="pluto">65c0ea50e764c00014459b8a</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    <sub-title>Maigret en vacances</sub-title>
     
     
-    <sub-title>Les acrobates du ciel : les voltigeurs de la patrouille de France</sub-title>
-    
-    
-    <category>Documentary</category>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925224909 +0200" stop="20260925232109 +0200">
-    
-    
-    <title>C'est Pas Sorcier</title>
-    
-    
-    <episode-num system="onscreen">S01E530</episode-num>
-    
-    
-    <episode-num system="pluto">674828b03b8ac600135a690f</episode-num>
-    
-    
-    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
-    
-    
-    <desc>Dans un laboratoire de neurosciences de l'Université Paris -Descartes, Fred participe à des tests en réalité virtuelle pour évaluer ses mémoires à court terme et la consolidation de ses souvenirs.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20120101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Peut-on améliorer sa mémoire</sub-title>
-    
-    
-    <category>Documentary</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925232109 +0200" stop="20260925235309 +0200">
-    
-    
-    <title>C'est Pas Sorcier: L'année des sorciers best of</title>
-    
-    
-    <episode-num system="onscreen">S01E53</episode-num>
-    
-    
-    <episode-num system="pluto">64671fe391275e001ab758ea</episode-num>
-    
-    
-    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
-    
-    
-    <desc>Pour clôturer l'année 1995 Fred et Jamy nous font découvrir les espaces de la Cité de La Villette. Nous les suivrons dans ce parcours d'exploration des sciences, des techniques et de l'Industrie.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19960101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>L'année des sorciers best of</sub-title>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260925235309 +0200" stop="20260926002509 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Serpents</title>
-    
-    
-    <episode-num system="onscreen">S01E259</episode-num>
-    
-    
-    <episode-num system="pluto">6474774c91275e001afddc46</episode-num>
-    
-    
-    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
-    
-    
-    <desc>Sans pattes, comment les serpents font-ils pour avancer ? A quoi leur sert la langue fourchue qu'ils agitent tout le temps Fred, Jamy et Sabine nous font découvrir l'univers de ces reptiles beaucoup plus sympathiques qu'on ne l'imagine.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20020101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Serpents</sub-title>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926002509 +0200" stop="20260926005709 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Le Bambou</title>
-    
-    
-    <episode-num system="onscreen">S01E314</episode-num>
-    
-    
-    <episode-num system="pluto">64706cad649e97001b70f1ad</episode-num>
-    
-    
-    <episode-num system="original-air-date">20040101000000 +0000</episode-num>
-    
-    
-    <desc>Les bambous sont durs comme du bois et peuvent atteindre jusqu'à 25 mètres de hauteur. Pourtant, ils n'ont pas grand chose à voir avec les arbres : ce sont en fait des herbes !</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20040101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Le Bambou</sub-title>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -966,10 +723,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1008,10 +765,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1050,10 +807,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1092,10 +849,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1134,10 +891,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1176,10 +933,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1218,10 +975,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1257,10 +1014,10 @@
     <sub-title>Dans le secret des commandos</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1299,10 +1056,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1341,10 +1098,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1383,10 +1140,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1425,10 +1182,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1467,10 +1224,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1506,10 +1263,10 @@
     <sub-title>Les mystères des jumeaux</sub-title>
     
     
-    <category>Documentary</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Documentary</category>
     
   
   </programme>
@@ -1548,10 +1305,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1590,10 +1347,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1632,10 +1389,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1674,10 +1431,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1716,10 +1473,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1758,10 +1515,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1800,10 +1557,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1842,10 +1599,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1884,10 +1641,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1926,10 +1683,10 @@
     <category>Science</category>
     
     
-    <category>Series</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1965,7 +1722,211 @@
     <sub-title>Les secrets du vertige</sub-title>
     
     
+    <category>Series</category>
+    
+    
     <category>Documentary</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926143009 +0200" stop="20260926150209 +0200">
+    
+    
+    <title>C'est Pas Sorcier</title>
+    
+    
+    <episode-num system="onscreen">S01E513</episode-num>
+    
+    
+    <episode-num system="pluto">6747517ca7fde50013e479d0</episode-num>
+    
+    
+    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
+    
+    
+    <desc>Qui ne s’est jamais empressé d’écraser une araignée avec la semelle de sa chaussure, tellement la vision de cet être à 8 pattes est repoussante ? Souvent synonymes de saleté, négligence et de danger, les araignées n’ont pas vraiment bonne presse !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20120101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Peur des araignées ?</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Documentary</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926150209 +0200" stop="20260926153409 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Entre chiens et loups</title>
+    
+    
+    <episode-num system="onscreen">S01E159</episode-num>
+    
+    
+    <episode-num system="pluto">6467555b54afb6001a30446c</episode-num>
+    
+    
+    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy nous emmènent à la découverte des loups du Gévaudan. Ils nous ouvrent les portes du parc Sainte Lucie qui abrite 30 loups de Mongolie en semi-liberté.Les loups sont des animaux sociaux dont la vie est extrêmement codifiée.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19980101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Entre chiens et loups</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926153409 +0200" stop="20260926160609 +0200">
+    
+    
+    <title>C'est Pas Sorcier</title>
+    
+    
+    <episode-num system="onscreen">S01E548</episode-num>
+    
+    
+    <episode-num system="pluto">67482cf1e103890013759d41</episode-num>
+    
+    
+    <episode-num system="original-air-date">20130101000000 +0000</episode-num>
+    
+    
+    <desc>Sabine et Jamy mettent le cap sur Aigues-Mortes, au Sud-Ouest de la Camargue. Depuis l’antiquité l’homme y aménage d’immenses lagunes pour cultiver le sel de mer.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20130101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les trésors des salins du midi</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Documentary</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926160609 +0200" stop="20260926163809 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Voyage au coeur de la matière</title>
+    
+    
+    <episode-num system="onscreen">S01E385</episode-num>
+    
+    
+    <episode-num system="pluto">64708333649e97001b711de5</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Des protons lancés à près de 300 000 km par seconde dans de longs tuyaux enfouis sous la terre ? La drôle de machine qui réalise cet exploit atteint 27 kilomètres de circonférence et traverse la frontière franco-suisse de part en part.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Voyage au coeur de la matière</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260926163809 +0200" stop="20260926171009 +0200">
+    
+    
+    <title>C'est Pas Sorcier: L'adolescence vive la crise</title>
+    
+    
+    <episode-num system="onscreen">S01E337</episode-num>
+    
+    
+    <episode-num system="pluto">64706e1ba7ef77001aa7a9b0</episode-num>
+    
+    
+    <episode-num system="original-air-date">20050101000000 +0000</episode-num>
+    
+    
+    <desc>L'adolescence est l'âge de tous les bouleversements. Le corps se métamorphose à une allure folle. La silhouette devient celle d'un adulte. On se découvre une sexualité.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20050101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>L'adolescence vive la crise</sub-title>
+    
+    
+    <category>Science</category>
+    
+    
+    <category>Educational</category>
     
     
     <category>Series</category>
