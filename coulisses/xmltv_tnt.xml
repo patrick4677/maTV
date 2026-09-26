@@ -12203,6 +12203,18 @@
     <category lang="fr">Dessin animé</category>
     <icon src="https://images.voomotion.be/Events/2026/04/07/33/2690881_A.jpg" />
   </programme>
+  <programme start="20260929084900 +0200" stop="20260929085100 +0200" channel="France5.fr">
+    <title lang="fr">Peppa Pig (Mystères) S2 (5/52)</title>
+    <desc lang="fr">«Mystères»Après avoir regardé leur émission de télévision préférée, Peppa et George veulent, eux-aussi, devenir des détectives fameux. Papa Pig leur donne un mystère à élucider...</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2023/07/03/17/2232946_A.jpg" />
+  </programme>
+  <programme start="20260929085100 +0200" stop="20260929085900 +0200" channel="France5.fr">
+    <title lang="fr">Peppa Pig (La boîte à secrets) S1 (13/52)</title>
+    <desc lang="fr">«La boîte à secrets»Maman Cochon fabrique une boîte dans laquelle Peppa pourra ranger et cacher des papiers ou des objets confidentiels. George a également une boîte à secrets.</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2025/06/12/22/2183152_A.jpg" />
+  </programme>
   <programme start="20260925211000 +0200" stop="20260925221000 +0200" channel="M6.fr">
     <title lang="fr">Arnaques !</title>
     <sub-title lang="fr">Arnaqués par leurs proches : la pire des trahisons</sub-title>
@@ -31752,6 +31764,12 @@
     <category lang="fr">Infos</category>
     <icon src="https://images.voomotion.be/Events/2026/05/11/43/2704437_A.jpg" />
   </programme>
+  <programme start="20260929084900 +0200" stop="20260929085800 +0200" channel="CNews.fr">
+    <title lang="fr">Météo 9h</title>
+    <desc lang="fr">Un retour sur les prévisions de la journée.</desc>
+    <category lang="fr">Météo</category>
+    <icon src="https://images.voomotion.be/Events/2026/05/11/43/2704436_A.jpg" />
+  </programme>
   <programme start="20260925211000 +0200" stop="20260925225800 +0200" channel="CStar.fr">
     <title lang="fr">Un été au camping</title>
     <desc lang="fr">En famille, entre amis, en couple ou même en solo, les Français adorent passer leurs vacances au camping. Avec plus de 7500 établissements dans le pays, il y en a pour tous les goûts et toutes les bourses. Du plus grand camping de France dans les Landes avec ses 6000 vacanciers hebdomadaires et ses équipes mobilisées jour et nuit, au camping familial en passant par l'unique camping naturiste de Haute-Garonne, plongée dans les coulisses de trois d'entre eux.</desc>
@@ -41759,20 +41777,6 @@
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~f7581b739b719621.jpeg/640x360/quality/80/aux-frontieres-de-l-alaska.jpg" />
   </programme>
-  <programme start="20260925205000 +0200" stop="20260925211000 +0200" channel="6ter.fr">
-    <title lang="fr">Un trésor dans votre maison</title>
-    <sub-title lang="fr">Violon</sub-title>
-    <desc lang="fr">Cette émission consiste à estimer vos objets et ensuite à les vendre lors d'une vente aux enchères afin d'obtenir une belle petite somme d'argent.</desc>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Services</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/5D9990BA45164970218C75011145AE0E.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925211000 +0200" stop="20260925215000 +0200" channel="6ter.fr">
     <title lang="fr">Hawaii 5-0</title>
     <sub-title lang="fr">Ke Ku 'Ana</sub-title>
@@ -51721,19 +51725,6 @@
     <country lang="fr">France</country>
     <subtitles type="teletext" />
     <review type="text">Quelque part en France, l’entreprise Geugène électro stim. Dans son espace détente trône une machine à café. C’est dans ce périmètre circonscrit que se déroule la série "Caméra café" : les téléspectateurs suivent ces héros au travers de la machine à café comme ils le feraient à travers l’œil d’une caméra cachée. Au fil de très brefs épisodes (pas plus de quelques minutes chacun), ils "picorent" des tranches de vie d’une dizaine d’employés de la compagnie : potins, prises de bec, persiflages, confessions, petits et grands débats… En même temps que l’ambiance qui règne dans une grande entreprise, c’est un peu la société tertiaire française dans son ensemble qui est dépeinte. D’où le caractère caricatural des personnages. A l’heure sacro-sainte de l’expresso ou de la noisette, on retrouve souvent les mêmes commères : Jean-Claude, cadre commercial interprété par Yvan Le Bolloc’h ("Le Séminaire"), père de famille volage, macho et fan de voitures. Hervé, campé par Bruno Solo ("La Vérité si je mens !"), responsable des achats et collectionneur de galets peints, est aussi délégué syndical, ce qui explique parfois ses envolées lyriques. Sylvain, joué par Alexandre Pesle ("Espace détente"), est un peu le souffre-douleur de ses collègues : fayot, le comptable habite toujours chez sa mère. La seule qui ne le raille pas est Maéva, incarnée par Armelle Lesniak ("La Belle Verte"). Renfermée, plus à l’aise avec son chat qu’avec ses semblables, l’archiviste écrit des poèmes.</review>
-  </programme>
-  <programme start="20260925205100 +0200" stop="20260925210000 +0200" channel="CanalPlusSport.fr">
-    <title lang="fr">Soir de rugby avant-match</title>
-    <sub-title lang="fr">Grenoble - Valence Romans</sub-title>
-    <desc lang="fr">"Soir de rugby avant-match" présente les dernières informations de la rencontre de rugby à venir, avec les compositions des équipes et l'ambiance autour du terrain.</desc>
-    <date>2026</date>
-    <category lang="fr">Sport</category>
-    <category lang="fr">Rugby</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/DE14432A6AA491E66D9F47379B1F75EF.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925210000 +0200" stop="20260925225100 +0200" channel="CanalPlusSport.fr">
     <title lang="fr">Rugby : Pro D2</title>
