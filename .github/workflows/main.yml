@@ -1,4 +1,4 @@
-name: Mise a jour du XML EPG et m3u
+jename: Mise a jour du XML EPG et m3u
 
 on:
   schedule:
@@ -61,8 +61,7 @@ jobs:
 
       - name: Télécharger le fichier M3U
         run: |
-          curl -sL "https://tvradiozap.eu/live/d/tvzeu.m3u" -o coulisses/tvrz.m3u
-
+          curl -sL "https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u" -o coulisses/tvrz.m3u
       - name: Sauvegarder les modifications
         run: |
           git config --local user.email "action@github.com"
