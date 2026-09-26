@@ -8,10 +8,14 @@ from datetime import datetime, timedelta, timezone
 OUTPUT_FILE = "coulisses/ina70.xml"
 PLUTO_XML_URL = "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/PlutoTV/fr.xml"
 
-# Mapping des ID Pluto TV réels vers les ID cibles de ton application
+# Mapping des ID Pluto TV réels vers les ID cibles de votre application
 TARGET_CHANNELS = {
-    "639b54404cfdf7000729b3c1": "ina70.fr",         # INA 70
-    "63b579961bdba100071214cb": "cestpassorcier.fr" # C'est pas sorcier (ID M3U à jour)
+    "639b54404cfdf7000729b3c1": "ina70.fr",              # INA 70[span_1](start_span)[span_1](end_span)
+    "63b579961bdba100071214cb": "cestpassorcier.fr",      # C'est pas sorcier[span_2](start_span)[span_2](end_span)
+    "6245ccd0c6cdb800074632e4": "macgyver.fr",            # MacGyver
+    "6671b21ffc3a46000857fe75": "missionimpossible.fr",  # Mission Impossible
+    "691b332aa4385c191ee44b57": "rex.fr",                 # Rex, chien flic
+    "60afa749ac7f3200078adb40": "walkertexasranger.fr"    # Walker Texas Ranger
 }
 
 def get_paris_tz():
@@ -53,7 +57,7 @@ def main():
         print(f"Erreur de téléchargement : {e}")
         sys.exit(1)
 
-    print("Extraction d'INA 70 et C'est pas sorcier...")
+    print("Extraction des programmes (INA 70, C'est pas sorcier, MacGyver, Mission Impossible, Rex, Walker)...")
     root = ET.fromstring(xml_data)
 
     tv = ET.Element('tv', {
@@ -61,18 +65,16 @@ def main():
         'source-info-name': 'Pluto TV FR'
     })
 
-    # Traitement des canaux
     for channel in root.findall('channel'):
         ch_id = channel.get('id')
         if ch_id in TARGET_CHANNELS:
             channel.set('id', TARGET_CHANNELS[ch_id])
             tv.append(channel)
 
-    # Traitement des programmes (conservation uniquement des programmes récents/à venir)
     count = 0
     now = datetime.now(timezone.utc)
-    min_date = now - timedelta(hours=12) # Conservation de 12h dans le passé
-    max_date = now + timedelta(days=2)   # Conservation de 48h dans le futur
+    min_date = now - timedelta(hours=12)
+    max_date = now + timedelta(days=2)
 
     for prog in root.findall('programme'):
         ch_id = prog.get('channel')
@@ -80,7 +82,6 @@ def main():
             start_str = prog.get('start')
             stop_str = prog.get('stop')
             
-            # Vérification de la plage horaire avant traitement
             if start_str:
                 try:
                     clean = start_str.split()[0]
