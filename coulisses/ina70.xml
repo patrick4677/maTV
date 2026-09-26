@@ -24,114 +24,6 @@
   </channel>
   
   
-  <programme channel="ina70.fr" start="20260926093400 +0200" stop="20260926104100 +0200">
-    
-    
-    <title>Aujourd'hui Madame</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926073400 +0000</episode-num>
-    
-    
-    <desc>La hausse des prix impacte la vie quotidienne des Français. Des téléspectateurs et deux journalistes débattent autour des façons dont elle affecte la population et ses habitudes de consommation.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
-    
-    
-    <sub-title>L'augmentation des prix</sub-title>
-    
-    
-    <category>Entertainment</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926104100 +0200" stop="20260926114200 +0200">
-    
-    
-    <title>Aujourd'hui Madame</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926084100 +0000</episode-num>
-    
-    
-    <desc>Retour sur l'insémination artificielle avec donneur anonyme telle qu'elle était abordé en 1972, un sujet alors tabou. Jacques Garat et Valérie Manuel parlent avec leurs invités des aspects cliniques, psychologiques, légaux ou religieux de ce choix.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
-    
-    
-    <sub-title>L'insémination artificielle</sub-title>
-    
-    
-    <category>Entertainment</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260926114200 +0200" stop="20260926123900 +0200">
-    
-    
-    <title>À bout portant</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260926094200 +0000</episode-num>
-    
-    
-    <desc>Neuf hommes, neuf chanteurs et musiciens, neuf personnalités différentes qui depuis l'après-guerre sillonnent les routes de France pour se produire sur scène. Pour quelques jours, les caméras de A bout portant deviennent le 10e membre de la troupe.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
-    
-    
-    <sub-title>Les compagnons de la chanson</sub-title>
-    
-    
-    <category>Entertainment</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="ina70.fr" start="20260926123900 +0200" stop="20260926130600 +0200">
     
     
@@ -156,10 +48,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -189,10 +81,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -225,10 +117,10 @@
     <sub-title>Les espions</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -261,10 +153,10 @@
     <sub-title>Les femmes paysannes</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -297,10 +189,10 @@
     <sub-title>Maigret en vacances</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -333,10 +225,10 @@
     <sub-title>Nicole Croisille</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -369,10 +261,10 @@
     <sub-title>Ivry Gitlis</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -405,10 +297,10 @@
     <sub-title>Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -441,10 +333,10 @@
     <sub-title>Les jeux de 20 heures à Strasbourg</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -474,10 +366,10 @@
     <series-id system="pluto">65e84d1303625d001315cdbf</series-id>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -510,10 +402,10 @@
     <sub-title>Top A Gerard Lenorman</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -546,10 +438,10 @@
     <sub-title>Thierry Le Luron</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -582,10 +474,10 @@
     <sub-title>Doris</sub-title>
     
     
-    <category>Entertainment</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
@@ -615,262 +507,118 @@
     <series-id system="pluto">66f6c93ba2922a0013265239</series-id>
     
     
+    <category>Series</category>
+    
+    
     <category>Entertainment</category>
     
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260927022900 +0200" stop="20260927032400 +0200">
+    
+    
+    <title>Aujourd'hui Madame</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260927002900 +0000</episode-num>
+    
+    
+    <desc>L'alimentation moderne pourrait être un danger pour la santé. Nicole André et Gilbert Khan interrogent leurs invités sur les moyens de lutter contre les résidus de médicaments et de pesticides présents dans les produits alimentaires.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    
+    
+    <sub-title>Les dangers dans notre assiette : médicaments et pesticides</sub-title>
+    
     
     <category>Series</category>
+    
+    
+    <category>Entertainment</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926094009 +0200" stop="20260926101309 +0200">
+  <programme channel="ina70.fr" start="20260927032400 +0200" stop="20260927043600 +0200">
     
     
-    <title>C'est Pas Sorcier: Eau en danger pollution</title>
+    <title>Top à...</title>
     
     
-    <episode-num system="onscreen">S01E250</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">646b6e5be05e97001a68d261</episode-num>
+    <episode-num system="original-air-date">20260927012400 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    <desc>Hommage au music-hall dans ce show endiablé mené par la pétulante Zizi Jeanmaire entourée de ses invités Alvin Stardust, Yves Lecoq, Jean Piat et tant d'autres.</desc>
     
     
-    <desc>Quel circuit l’eau potable emprunte-t-elle avant d’arriver à notre robinet ? Comment la débarrasse-t-on des nitrates, pesticides et bactéries en tous genres ?</desc>
+    <icon src="https://images.pluto.tv/series/65e84d1503625d001315d0b2/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>20020101</date>
+    <series-id system="pluto">65e84d1503625d001315d0b2</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Eau en danger pollution</sub-title>
+    <sub-title>Zizi Jeanmaire</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
+    <category>Entertainment</category>
     
   
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260926101309 +0200" stop="20260926104409 +0200">
+  <programme channel="ina70.fr" start="20260927043600 +0200" stop="20260927051300 +0200">
     
     
-    <title>C'est Pas Sorcier: Faire la pluie et le beau temps</title>
+    <title>Les jeux de 20 heures</title>
     
     
-    <episode-num system="onscreen">S01E32</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">6464e229e05e97001a51f556</episode-num>
+    <episode-num system="original-air-date">20260927023600 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
+    <desc>Émission présentée par Maurice Favières et Jean-Pierre Descombes. Trois personnalités et des candidats sélectionnés à Narbonne s'affrontent en duplex sur des jeux de la langue française. C'est l'intraitable maître Capello qui arbitre le jeu !</desc>
     
     
-    <desc>Direction les stations météorologiques ! On va enfin savoir décrypter un bulletin météo. Après une promenade en ballon à la découverte des différents phénomènes atmosphériques, les sorciers atterrissent à Nantes, pour visiter la soufflerie Jules Verne.</desc>
+    <icon src="https://images.pluto.tv/series/65c0ea4ce764c000144592b9/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19950101</date>
+    <series-id system="pluto">65c0ea4ce764c000144592b9</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Faire la pluie et le beau temps</sub-title>
+    <sub-title>Les jeux de 20 heures à Narbonne</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926104409 +0200" stop="20260926111609 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Le cerveau :les sorciers se prennent la tête</title>
-    
-    
-    <episode-num system="onscreen">S01E188</episode-num>
-    
-    
-    <episode-num system="pluto">64675aee91275e001ab88aa6</episode-num>
-    
-    
-    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
-    
-    
-    <desc>L’équipe de C’est pas sorcier consacre deux émissions à cette mystérieuse mécanique qu’est le cerveau. Le cerveau est le siège des émotions, de la pensée, du langage...</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19980101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Le cerveau :les sorciers se prennent la tête</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926111609 +0200" stop="20260926114809 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Le père noël</title>
-    
-    
-    <episode-num system="onscreen">S01E302</episode-num>
-    
-    
-    <episode-num system="pluto">64745e51eead4c001b6fef0b</episode-num>
-    
-    
-    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
-    
-    
-    <desc>Considérant que Noël se fête en Europe en Russie, en Australie, en Afrique du Sud, sur le continent américain et au Japon. Que 500 millions d’enfants attendent leur cadeau le jour de Noël, et que l’on peut estimer le poids moyen d’un cadeau à 1 kg.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20030101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Le père noël</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926114809 +0200" stop="20260926122009 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Faire du sport c'est physique et chimique</title>
-    
-    
-    <episode-num system="onscreen">S01E33</episode-num>
-    
-    
-    <episode-num system="pluto">6464e4e9274ca8001af5f79a</episode-num>
-    
-    
-    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
-    
-    
-    <desc>Le camion de C'est pas sorcier franchit les portes de l'INSEP, l’Institut National du Sport et de l’Education Physique, où s'entraînent plus de mille champions dans une vingtaine de disciplines. Fred teste ses capacités auprès de sportifs de haut niveau.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19950101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Faire du sport c'est physique et chimique</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260926122009 +0200" stop="20260926125209 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Quand un pays à faim</title>
-    
-    
-    <episode-num system="onscreen">S01E97</episode-num>
-    
-    
-    <episode-num system="pluto">64673aa013c2c2001a19f37f</episode-num>
-    
-    
-    <episode-num system="original-air-date">19970101000000 +0000</episode-num>
-    
-    
-    <desc>Fred et Jamy nous emmènent en Afrique de l'ouest en Sierra Léone où la guerre civile a éclaté en 1991 entraînant la famine.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19970101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Quand un pays à faim</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
+    <category>Entertainment</category>
     
   
   </programme>
@@ -909,10 +657,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -951,10 +699,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1071,10 +819,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1152,10 +900,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1194,10 +942,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1275,10 +1023,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1317,10 +1065,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1359,10 +1107,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1440,10 +1188,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1482,10 +1230,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1524,10 +1272,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1566,10 +1314,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1647,10 +1395,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1689,10 +1437,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1731,10 +1479,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1773,10 +1521,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1815,10 +1563,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1857,10 +1605,10 @@
     <category>Series</category>
     
     
-    <category>Science</category>
-    
-    
     <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -1899,10 +1647,262 @@
     <category>Series</category>
     
     
+    <category>Educational</category>
+    
+    
     <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927021401 +0200" stop="20260927024601 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Moteurs d'avions ça va decoller</title>
+    
+    
+    <episode-num system="onscreen">S01E339</episode-num>
+    
+    
+    <episode-num system="pluto">64706e0ea7ef77001aa7a529</episode-num>
+    
+    
+    <episode-num system="original-air-date">20050101000000 +0000</episode-num>
+    
+    
+    <desc>Des hélices qui révolutionnèrent l'aéronautique aux turboréacteurs les plus modernes, Fred et Jamy nous entraînent au coeur des moteurs d'avion.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20050101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Moteurs d'avions ça va decoller</sub-title>
+    
+    
+    <category>Series</category>
     
     
     <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927024601 +0200" stop="20260927031801 +0200">
+    
+    
+    <title>C'est Pas Sorcier: L'école est finie best of</title>
+    
+    
+    <episode-num system="onscreen">S01E38</episode-num>
+    
+    
+    <episode-num system="pluto">6464e4fc274ca8001af5ff16</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950101000000 +0000</episode-num>
+    
+    
+    <desc>Fred et Jamy reprennent reprennent leurs meilleurs maquettes de l’année écoulée.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>L'école est finie best of</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927031801 +0200" stop="20260927035001 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Le bio habitat</title>
+    
+    
+    <episode-num system="onscreen">S01E377</episode-num>
+    
+    
+    <episode-num system="pluto">6470832b649e97001b711a25</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Maison de paille, maison de bois, maison de brique…? Cette semaine, C'est pas sorcier nous rejoue la fable des trois petits cochons dans sa version écologique.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Le bio habitat</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927035001 +0200" stop="20260927042201 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Le squelette</title>
+    
+    
+    <episode-num system="onscreen">S01E336</episode-num>
+    
+    
+    <episode-num system="pluto">64706e0aa7ef77001aa7a3b6</episode-num>
+    
+    
+    <episode-num system="original-air-date">20050101000000 +0000</episode-num>
+    
+    
+    <desc>A quoi les os servent-ils ? Comment nos articulations encaissent-elles les chocs ? Que se passe-t-il quand on a une entorse ou une luxation ? Comment le squelette se forme-t-il au cours de la vie foetale ?</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20050101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Le squelette</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927042201 +0200" stop="20260927045401 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Les grands aquariums</title>
+    
+    
+    <episode-num system="onscreen">S01E306</episode-num>
+    
+    
+    <episode-num system="pluto">64745ce9e05e97001a93074d</episode-num>
+    
+    
+    <episode-num system="original-air-date">20040101000000 +0000</episode-num>
+    
+    
+    <desc>Les océans recouvrent 71% de notre planète. Cette immense étendue bleue abrite une biodiversité extraordinaire : plus de 170 000 espèces y ont été répertoriées. Et nous ne cessons d'en découvrir de nouvelles.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20040101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les grands aquariums</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260927045401 +0200" stop="20260927052601 +0200">
+    
+    
+    <title>C'est Pas Sorcier: L'anesthésie</title>
+    
+    
+    <episode-num system="onscreen">S01E307</episode-num>
+    
+    
+    <episode-num system="pluto">6474774b91275e001afddb4a</episode-num>
+    
+    
+    <episode-num system="original-air-date">20040101000000 +0000</episode-num>
+    
+    
+    <desc>Une anesthésie ne consiste pas seulement à endormir les gens. Elle doit certes assurer la perte de la conscience, mais également empêcher la douleur de se déclencher, tout en assurant une parfaite immobilité du corps.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20040101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>L'anesthésie</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
