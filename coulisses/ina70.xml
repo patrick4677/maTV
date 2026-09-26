@@ -1,5 +1,53 @@
 <?xml version="1.0" ?>
 <tv generator-info-name="FAST-EPG-Generator" source-info-name="Pluto TV FR">
+  <channel id="walkertexasranger.fr">
+    
+    
+    <display-name>Walker Texas Ranger</display-name>
+    
+    
+    <icon src="https://images.pluto.tv/channels/60afa749ac7f3200078adb40/colorLogoPNG.png"/>
+    
+  
+  </channel>
+  
+  
+  <channel id="rex.fr">
+    
+    
+    <display-name>Rex, chien flic</display-name>
+    
+    
+    <icon src="https://images.pluto.tv/channels/691b332aa4385c191ee44b57/colorLogoPNG_1771923791904.png"/>
+    
+  
+  </channel>
+  
+  
+  <channel id="missionimpossible.fr">
+    
+    
+    <display-name>Mission Impossible</display-name>
+    
+    
+    <icon src="https://images.pluto.tv/channels/6671b21ffc3a46000857fe75/colorLogoPNG.png"/>
+    
+  
+  </channel>
+  
+  
+  <channel id="macgyver.fr">
+    
+    
+    <display-name>MacGyver</display-name>
+    
+    
+    <icon src="https://images.pluto.tv/channels/6245ccd0c6cdb800074632e4/colorLogoPNG.png"/>
+    
+  
+  </channel>
+  
+  
   <channel id="cestpassorcier.fr">
     
     
@@ -22,6 +70,1548 @@
     
   
   </channel>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926152300 +0200" stop="20260926161600 +0200">
+    
+    
+    <title>Walker Texas Ranger: La terre sacrée</title>
+    
+    
+    <episode-num system="onscreen">S02E20</episode-num>
+    
+    
+    <episode-num system="pluto">61162090bd1d980013b03184</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950311000000 +0000</episode-num>
+    
+    
+    <desc>Pensant ne pas être protégés par la loi de l'homme blanc, de jeunes Cherokees entreprennent de cambrioler des musées en y dérobant des artefacts indiens qui, selon eux, ont été volés dans d'anciens cimetières autochtones.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950311</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>La terre sacrée</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926161600 +0200" stop="20260926170800 +0200">
+    
+    
+    <title>Walker Texas Ranger: Mais où sont les envahisseurs ?</title>
+    
+    
+    <episode-num system="onscreen">S02E21</episode-num>
+    
+    
+    <episode-num system="pluto">6116208fbd1d980013b03147</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950429000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu’Alex et Walker retrouve une petite fille traumatisée qui leur explique que son père a été enlevé par des « gens venus du ciel », Walker décide de mener l’enquête sur des signalement d'extraterrestres dans une petite ville du Texas.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950429</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Mais où sont les envahisseurs ?</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926170800 +0200" stop="20260926180100 +0200">
+    
+    
+    <title>Walker Texas Ranger: La légende de l'or perdu (Partie 1)</title>
+    
+    
+    <episode-num system="onscreen">S02E22</episode-num>
+    
+    
+    <episode-num system="pluto">61162091bd1d980013b0323f</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950506000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu'un chasseur de trésors est tué après avoir déterré un butin enfoui depuis les années 1860, Walker est guidé dans le désert par l'esprit du légendaire Texas Ranger Hays Cooper pour y découvrir la vérité sur la disparition de l'or caché.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950506</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>La légende de l'or perdu (Partie 1)</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926180100 +0200" stop="20260926185100 +0200">
+    
+    
+    <title>Walker Texas Ranger: La légende de l'or perdu (Partie 2)</title>
+    
+    
+    <episode-num system="onscreen">S02E23</episode-num>
+    
+    
+    <episode-num system="pluto">6116208dbd1d980013b03091</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950506000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu'un chasseur de trésors est tué après avoir déterré un butin enfoui depuis les années 1860, Walker est guidé dans le désert par l'esprit du légendaire Texas Ranger Hays Cooper pour y découvrir la vérité sur la disparition de l'or caché.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950506</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>La légende de l'or perdu (Partie 2)</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926185100 +0200" stop="20260926194100 +0200">
+    
+    
+    <title>Walker Texas Ranger: Tueurs à gages (Partie 1)</title>
+    
+    
+    <episode-num system="onscreen">S02E24</episode-num>
+    
+    
+    <episode-num system="pluto">6116208fbd1d980013b0311d</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950513000000 +0000</episode-num>
+    
+    
+    <desc>Un célèbre assassin international est engagé par un baron de la drogue emprisonné pour tuer un candidat à la présidentielle mexicaine, alors que Walker et Trivette sont chargés de sa protection lors d'une visite de campagne au Texas.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950513</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Tueurs à gages (Partie 1)</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926194100 +0200" stop="20260926203200 +0200">
+    
+    
+    <title>Walker Texas Ranger: Tueurs à gages (Partie 2)</title>
+    
+    
+    <episode-num system="onscreen">S02E25</episode-num>
+    
+    
+    <episode-num system="pluto">61162092bd1d980013b03269</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950513000000 +0000</episode-num>
+    
+    
+    <desc>Un célèbre assassin international est engagé par un baron de la drogue emprisonné pour tuer un candidat à la présidentielle mexicaine, alors que Walker et Trivette sont chargés de sa protection lors d'une visite de campagne au Texas.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950513</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Tueurs à gages (Partie 2)</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926203200 +0200" stop="20260926212600 +0200">
+    
+    
+    <title>Walker Texas Ranger: Sur la piste du vengeur</title>
+    
+    
+    <episode-num system="onscreen">S03E01</episode-num>
+    
+    
+    <episode-num system="pluto">61162344483fb10013a93ec8</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950923000000 +0000</episode-num>
+    
+    
+    <desc>Un évadé tente d’éliminer un par un tous ceux qui l'ont envoyé en prison et garde Walker pour la fin.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950923</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Sur la piste du vengeur</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926212600 +0200" stop="20260926221600 +0200">
+    
+    
+    <title>Walker Texas Ranger: Un flic à Miami</title>
+    
+    
+    <episode-num system="onscreen">S03E02</episode-num>
+    
+    
+    <episode-num system="pluto">61162341483fb10013a93cf5</episode-num>
+    
+    
+    <episode-num system="original-air-date">19950930000000 +0000</episode-num>
+    
+    
+    <desc>Catogan, chemise en soie et voiture de sport pour Walker qui s’associe à une belle flic infiltrée de Miami pour arrêter un baron de la drogue.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19950930</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Un flic à Miami</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926221600 +0200" stop="20260926230800 +0200">
+    
+    
+    <title>Walker Texas Ranger: Sauvons la terre !</title>
+    
+    
+    <episode-num system="onscreen">S03E03</episode-num>
+    
+    
+    <episode-num system="pluto">61162341483fb10013a93d4e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951007000000 +0000</episode-num>
+    
+    
+    <desc>Lorsque deux ouvriers meurent sur une plate-forme pétrolière au Texas à la suite d’accidents « improbables », Walker s’infiltre pour découvrir qui sabote les opérations de la plate-forme et pourquoi.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951007</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Sauvons la terre !</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260926230800 +0200" stop="20260927000100 +0200">
+    
+    
+    <title>Walker Texas Ranger: Le retour de Bonnie &amp; Clyde</title>
+    
+    
+    <episode-num system="onscreen">S03E04</episode-num>
+    
+    
+    <episode-num system="pluto">61162343483fb10013a93e5d</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951014000000 +0000</episode-num>
+    
+    
+    <desc>Walker et C.D. ne perdent pas une seconde pour sauver la nièce de C.D. après son kidnapping par un ex-petit ami en plein délire qui l'oblige à le suivre dans ses braquages de banque tels des Bonnie et Clyde des temps modernes.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951014</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Le retour de Bonnie &amp; Clyde</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927000100 +0200" stop="20260927005400 +0200">
+    
+    
+    <title>Walker Texas Ranger: Mauvaise passe</title>
+    
+    
+    <episode-num system="onscreen">S03E05</episode-num>
+    
+    
+    <episode-num system="pluto">61162342483fb10013a93e2a</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951021000000 +0000</episode-num>
+    
+    
+    <desc>Après une piètre performance de coach, l'entraîneur d’une petite équipe de football du lycée est assassiné. Selon Walker et Trivette, il n’a pas été tué par des fans en colère.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951021</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Mauvaise passe</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927005400 +0200" stop="20260927014800 +0200">
+    
+    
+    <title>Walker Texas Ranger: Magie rouge</title>
+    
+    
+    <episode-num system="onscreen">S03E06</episode-num>
+    
+    
+    <episode-num system="pluto">61162344483fb10013a93edd</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951104000000 +0000</episode-num>
+    
+    
+    <desc>En colère contre l'homme blanc pour avoir profané un cimetière indien, un guérisseur indien démoniaque revient d'entre les morts pour terroriser les responsables des fouilles.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951104</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Magie rouge</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927014800 +0200" stop="20260927024200 +0200">
+    
+    
+    <title>Walker Texas Ranger: La justice de Walter</title>
+    
+    
+    <episode-num system="onscreen">S03E07</episode-num>
+    
+    
+    <episode-num system="pluto">61162341483fb10013a93d35</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951111000000 +0000</episode-num>
+    
+    
+    <desc>Lorsque Walker élimine un trafiquant d'armes lors d'un coup de filet, le frère du défunt décide de se venger en utilisant C.D. comme appât pour attirer Walker dans un piège.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951111</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>La justice de Walter</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927024200 +0200" stop="20260927033500 +0200">
+    
+    
+    <title>Walker Texas Ranger: Un jugement expéditif</title>
+    
+    
+    <episode-num system="onscreen">S03E08</episode-num>
+    
+    
+    <episode-num system="pluto">6116233e483fb10013a93c69</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951118000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu’une meute de gens d’une petite ville accuse un garçon du meurtre d'une femme très appréciée localement, Walker est appelé pour les empêcher de lyncher le jeune homme et tente de prouver son innocence.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951118</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Un jugement expéditif</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927033500 +0200" stop="20260927042400 +0200">
+    
+    
+    <title>Walker Texas Ranger: La rivière infernale (1ère partie)</title>
+    
+    
+    <episode-num system="onscreen">S03E09</episode-num>
+    
+    
+    <episode-num system="pluto">61162342483fb10013a93da8</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951125000000 +0000</episode-num>
+    
+    
+    <desc>Sur les ordres de son médecin, Walker doit se détendre. Alex l'emmène faire du rafting en eau vive, mais lorsqu'un membre du groupe est assassiné, les vacances prennent rapidement une autre tournure.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951125</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>La rivière infernale (1ère partie)</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927042400 +0200" stop="20260927051400 +0200">
+    
+    
+    <title>Walker Texas Ranger: La rivière infernale (2ème partie)</title>
+    
+    
+    <episode-num system="onscreen">S03E10</episode-num>
+    
+    
+    <episode-num system="pluto">61162342483fb10013a93dc5</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951202000000 +0000</episode-num>
+    
+    
+    <desc>Sur les ordres de son médecin, Walker doit se détendre. Alex l'emmène faire du rafting en eau vive, mais lorsqu'un membre du groupe est assassiné, les vacances prennent rapidement une autre tournure.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951202</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>La rivière infernale (2ème partie)</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927051400 +0200" stop="20260927060700 +0200">
+    
+    
+    <title>Walker Texas Ranger: Colère dans les rues</title>
+    
+    
+    <episode-num system="onscreen">S03E11</episode-num>
+    
+    
+    <episode-num system="pluto">61162341483fb10013a93d1f</episode-num>
+    
+    
+    <episode-num system="original-air-date">19951209000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu’un élève de la classe de karaté de Walker rejoint un gang latino pour venger son frère blessé lors d’une fusillade en voiture, Walker tente de mettre un terme à une guerre insensée et de ramener la paix dans un quartier divisé à la période de Noël.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19951209</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Colère dans les rues</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927060700 +0200" stop="20260927070100 +0200">
+    
+    
+    <title>Walker Texas Ranger: Le coeur a ses raisons</title>
+    
+    
+    <episode-num system="onscreen">S03E12</episode-num>
+    
+    
+    <episode-num system="pluto">61162341483fb10013a93d0a</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960106000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu'un célèbre chef de la mafia demande sa libération conditionnelle, deux des trois témoins qui ont contribué à sa condamnation sont retrouvés morts. Walker doit protéger le troisième qui se trouve être un ancien compagnon d’Alex.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960106</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Le coeur a ses raisons</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927070100 +0200" stop="20260927075400 +0200">
+    
+    
+    <title>Walker Texas Ranger: Mission de paix</title>
+    
+    
+    <episode-num system="onscreen">S03E13</episode-num>
+    
+    
+    <episode-num system="pluto">61162342483fb10013a93deb</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960113000000 +0000</episode-num>
+    
+    
+    <desc>Lorsque des rebelles de l’IRA tentent d'assassiner un dignitaire chargé de négocier un traité de paix entre l’IRA et la Grande-Bretagne, Walker et Trivette doivent retrouver les coupables sous peine de déclencher un incident diplomatique international.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960113</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Mission de paix</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="walkertexasranger.fr" start="20260927075400 +0200" stop="20260927084500 +0200">
+    
+    
+    <title>Walker Texas Ranger: Haute sécurité</title>
+    
+    
+    <episode-num system="onscreen">S03E14</episode-num>
+    
+    
+    <episode-num system="pluto">61162344483fb10013a93eb3</episode-num>
+    
+    
+    <episode-num system="original-air-date">19960120000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu'un témoin sous la protection de Walker et Trivette est tué et que le truand responsable s’apprête à être libéré, Walker s’infiltre dans la prison à sécurité maximale en tant que condamné pour faire passer le gangster aux aveux.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19960120</date>
+    
+    
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
+    
+    
+    <sub-title>Haute sécurité</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+    
+    <category>Western</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926155800 +0200" stop="20260926165400 +0200">
+    
+    
+    <title>MacGyver: Retraite anticipée</title>
+    
+    
+    <episode-num system="onscreen">S03E12</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdd118de520013780bc8</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880118000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880118</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Retraite anticipée</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926165400 +0200" stop="20260926175000 +0200">
+    
+    
+    <title>MacGyver: Étrange trio</title>
+    
+    
+    <episode-num system="onscreen">S03E13</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdd118de520013780b8e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880229000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880229</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Étrange trio</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926175000 +0200" stop="20260926184600 +0200">
+    
+    
+    <title>MacGyver: Terrain glissant</title>
+    
+    
+    <episode-num system="onscreen">S03E14</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdd118de520013780b3e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880201000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880201</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Terrain glissant</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926184600 +0200" stop="20260926194100 +0200">
+    
+    
+    <title>MacGyver: La négociatrice</title>
+    
+    
+    <episode-num system="onscreen">S03E15</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdcf18de520013780aeb</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880307000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880307</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>La négociatrice</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926194100 +0200" stop="20260926203700 +0200">
+    
+    
+    <title>MacGyver: Les Pollueurs</title>
+    
+    
+    <episode-num system="onscreen">S03E16</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdcf18de520013780abf</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880314000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880314</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Les Pollueurs</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926203700 +0200" stop="20260926213300 +0200">
+    
+    
+    <title>MacGyver: Le Masque du loup</title>
+    
+    
+    <episode-num system="onscreen">S03E17</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdcd18de520013780a7c</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880328000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880328</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Le Masque du loup</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926213300 +0200" stop="20260926222900 +0200">
+    
+    
+    <title>MacGyver: Deux hommes et un couffin</title>
+    
+    
+    <episode-num system="onscreen">S03E18</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdd018de520013780b2a</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880418000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880418</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Deux hommes et un couffin</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926222900 +0200" stop="20260926232500 +0200">
+    
+    
+    <title>MacGyver: Vacances dangereuse</title>
+    
+    
+    <episode-num system="onscreen">S03E19</episode-num>
+    
+    
+    <episode-num system="pluto">62c7cdd118de520013780ba1</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880502000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880502</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Vacances dangereuse</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260926232500 +0200" stop="20260927002000 +0200">
+    
+    
+    <title>MacGyver: Le Dragon de jade</title>
+    
+    
+    <episode-num system="onscreen">S03E20</episode-num>
+    
+    
+    <episode-num system="pluto">64d1df85e675cb0013ccfbf4</episode-num>
+    
+    
+    <episode-num system="original-air-date">19880101000000 +0000</episode-num>
+    
+    
+    <desc>Des menaces de mort pèsent sur le directeur d'une entreprise internationale de transport maritime. MacGyver et Pete se chargent de retrouver son unique héritier, un garçon de 14 ans qui n'a jamais vu son grand-père.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19880101</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Le Dragon de jade</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927002000 +0200" stop="20260927011800 +0200">
+    
+    
+    <title>MacGyver: Le secret de la maison Parker</title>
+    
+    
+    <episode-num system="onscreen">S04E01</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc69800132958c6</episode-num>
+    
+    
+    <episode-num system="original-air-date">19881031000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19881031</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Le secret de la maison Parker</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927011800 +0200" stop="20260927021500 +0200">
+    
+    
+    <title>MacGyver: Frères de Sang</title>
+    
+    
+    <episode-num system="onscreen">S04E02</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaaabcc698001329576e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19881121000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19881121</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Frères de Sang</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927021500 +0200" stop="20260927031100 +0200">
+    
+    
+    <title>MacGyver: Les étrangers</title>
+    
+    
+    <episode-num system="onscreen">S04E03</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc69800132958a0</episode-num>
+    
+    
+    <episode-num system="original-air-date">19881128000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19881128</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Les étrangers</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927031100 +0200" stop="20260927040800 +0200">
+    
+    
+    <title>MacGyver: Deux ailes et une prière</title>
+    
+    
+    <episode-num system="onscreen">S04E04</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc6980013295805</episode-num>
+    
+    
+    <episode-num system="original-air-date">19881205000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19881205</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Deux ailes et une prière</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927040800 +0200" stop="20260927050400 +0200">
+    
+    
+    <title>MacGyver: Le Grand Prix à Westwood</title>
+    
+    
+    <episode-num system="onscreen">S04E05</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc6980013295867</episode-num>
+    
+    
+    <episode-num system="original-air-date">19881212000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19881212</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Le Grand Prix à Westwood</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927050400 +0200" stop="20260927060100 +0200">
+    
+    
+    <title>MacGyver: Une sacrée Famille</title>
+    
+    
+    <episode-num system="onscreen">S04E06</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc698001329583e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19890123000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19890123</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Une sacrée Famille</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927060100 +0200" stop="20260927065800 +0200">
+    
+    
+    <title>MacGyver: Opération survie</title>
+    
+    
+    <episode-num system="onscreen">S04E07</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaabbcc69800132957f0</episode-num>
+    
+    
+    <episode-num system="original-air-date">19890109000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19890109</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Opération survie</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927065800 +0200" stop="20260927075600 +0200">
+    
+    
+    <title>MacGyver: Morts programmées</title>
+    
+    
+    <episode-num system="onscreen">S04E08</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc6980013295854</episode-num>
+    
+    
+    <episode-num system="original-air-date">19890116000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19890116</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Morts programmées</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260927075600 +0200" stop="20260927085300 +0200">
+    
+    
+    <title>MacGyver: Cléo Rocks</title>
+    
+    
+    <episode-num system="onscreen">S04E09</episode-num>
+    
+    
+    <episode-num system="pluto">62cbbaadbcc698001329588d</episode-num>
+    
+    
+    <episode-num system="original-air-date">19890206000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19890206</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>Cléo Rocks</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
   
   
   <programme channel="ina70.fr" start="20260926155200 +0200" stop="20260926172400 +0200">
@@ -1939,6 +3529,1449 @@
     
     
     <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926153801 +0200" stop="20260926163521 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E312</episode-num>
+    
+    
+    <episode-num system="pluto">682469bb09261e2706aa4532</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>L'Impossible Missions Force est confrontée à la logique ingénieuse d'un agent ennemi car l'IMF tente de conduire l'agent à travers un labyrinthe d'indices compliqués afin de parvenir à une fausse conclusion.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Operation intelligence</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926163521 +0200" stop="20260926173241 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E313</episode-num>
+    
+    
+    <episode-num system="pluto">682469b509261e2706a9814c</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Avant l'expiration d'un délai de prescription pour un vol de 10 millions de dollars, l'Impossible Missions Force doit faire sortir le suspect de prison et le duper pour qu'il conduise la police à la cachette de l'argent.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>L'hibernation</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926173241 +0200" stop="20260926183000 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E314</episode-num>
+    
+    
+    <episode-num system="pluto">68246b16a8cdcdbb7d66ae36</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680204000000 +0000</episode-num>
+    
+    
+    <desc>Rollin sert de cobaye à un scientifique qui veut perfectionner un virus mortel. Si le plan de Jim échoue, Rollin pourrait mourir d'une mort atroce.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680204</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Extermination</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926183000 +0200" stop="20260926192719 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E315</episode-num>
+    
+    
+    <episode-num system="pluto">68246b2da8cdcdbb7d69be26</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>L'Impossible Missions Force dirigée par Jim Phelps entreprend de persuader l'homme de confiance d'un chef d'un syndicat du crime de témoigner contre son patron.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Le système</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926192719 +0200" stop="20260926202439 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E316</episode-num>
+    
+    
+    <episode-num system="pluto">68246b23a8cdcdbb7d6877f4</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Une prison sous surveillance électronique affronte l'Impossible Missions Force lorsqu'elle tente de libérer un prisonnier politique d'une cellule de verre à l'épreuve des évasions.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>La cage de verre</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926202439 +0200" stop="20260926212159 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E317</episode-num>
+    
+    
+    <episode-num system="pluto">68246b10a8cdcdbb7d65da7e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>L'Impossible Missions Force envahit le monde complexe des espions pour protéger un agent double américain et se heurte à une bombe à retardement humaine.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>L'appât vivant</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926212159 +0200" stop="20260926221918 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E318</episode-num>
+    
+    
+    <episode-num system="pluto">68246b19a8cdcdbb7d672055</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Lorsqu'un fabricant peu scrupuleux risque la troisième guerre mondiale en proposant à la vente une bombe à hydrogène, l'Impossible Missions Force entre dans l'appel d'offres avec un plan dangereux pour garder l'arme hors des mains de l'ennemi.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Au plus offrant</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926221918 +0200" stop="20260926231637 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E319</episode-num>
+    
+    
+    <episode-num system="pluto">682469b809261e2706a9e33f</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Le FMI fait la course contre un tueur à gages qui traque un scientifique nucléaire forcé par l'ennemi à travailler sur un appareil qui pourrait bouleverser l'équilibre des puissances mondiales dans le premier d'un épisode en deux parties.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Le bunker partie 1</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260926231637 +0200" stop="20260927001354 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E320</episode-num>
+    
+    
+    <episode-num system="pluto">682469c409261e2706ab7ad8</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Alors qu'il tente de libérer un scientifique nucléaire et sa femme des mains de l'ennemi, le FMI est pris au piège lorsqu'un assassin potentiel reprend l'un des déguisements de Rollin dans la partie 2.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Le bunker partie 2</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927001354 +0200" stop="20260927011113 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E321</episode-num>
+    
+    
+    <episode-num system="pluto">68246de0a9356a30623efcba</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Le FMI ne se retrouve qu'à une seconde de l'éternité lorsqu'il intercepte un expert en nitroglycérine qui envisage de faire sauter la maison du gouvernement d'un petit pays provoquant ainsi la guerre avec sa nation voisine.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Nitro</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927011113 +0200" stop="20260927020832 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E322</episode-num>
+    
+    
+    <episode-num system="pluto">68246de6a9356a30623fd068</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>La star invitée Nehemiah Persoff en tant que responsable latino-américain corrompu complote pour piller son propre pays de 40 000 000 $ avec la connivence du FMI.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Les 40 millions du Président</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927020832 +0200" stop="20260927030551 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E323</episode-num>
+    
+    
+    <episode-num system="pluto">68246c78f5ddf73debb83eb2</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>La star invitée Joan Collins en tant qu'agent double séduisant met en danger un projet vital du FMI lorsque Jim Phelps tombe amoureux d'elle.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Nicole</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927030551 +0200" stop="20260927040309 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E324</episode-num>
+    
+    
+    <episode-num system="pluto">68246c82f5ddf73debb99647</episode-num>
+    
+    
+    <episode-num system="original-air-date">19681015000000 +0000</episode-num>
+    
+    
+    <desc>Cinnamon et Rollin deviennent des artistes de cabaret dans un complot visant à faire tomber un homme dérangé amoureux de Cinnamon puis à la tuer.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19681015</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Illusion</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927040309 +0200" stop="20260927050029 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S03E325</episode-num>
+    
+    
+    <episode-num system="pluto">682469a509261e2706a78764</episode-num>
+    
+    
+    <episode-num system="original-air-date">19680101000000 +0000</episode-num>
+    
+    
+    <desc>Dans une expérience audacieuse avec l'esprit d'un homme, le FMI efface la mémoire d'un agent ennemi puis entreprend de lui faire croire qu'il est quelqu'un d'autre.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19680101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>L'interrogateur</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927050029 +0200" stop="20260927055748 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S04E401</episode-num>
+    
+    
+    <episode-num system="pluto">682473889f0436e1ab458132</episode-num>
+    
+    
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    
+    
+    <desc>Leonard Nimoy, ancien de la série Star Trek, et la star invitée Dina Merrill rejoignent l'Impossible Missions Force pour combattre une drogue destructrice d'esprit qui pourrait asservir le monde libre.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19690101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>B-230 partie 1</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927055748 +0200" stop="20260927065505 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S04E402</episode-num>
+    
+    
+    <episode-num system="pluto">682473919f0436e1ab46a70e</episode-num>
+    
+    
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    
+    
+    <desc>Jim Phelps se laisse accuser de meurtre dans le cadre d'un stratagème visant à discréditer un scientifique qui a développé une drogue destructrice d'esprit dans le deuxième d'un épisode en deux parties.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19690101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>B-230 partie 2</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927065505 +0200" stop="20260927075224 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S04E403</episode-num>
+    
+    
+    <episode-num system="pluto">682474f51426f2773e312231</episode-num>
+    
+    
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    
+    
+    <desc>Leonard Nimoy devient membre de l'Impossible Missions Force et, en tant que Paris du FMI, aide à déchiffrer un code vital en détournant un avion afin que l'ennemi puisse capturer l'un des passagers dans le premier épisode de la quatrième saison.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19690101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Le code</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260927075224 +0200" stop="20260927084943 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S04E404</episode-num>
+    
+    
+    <episode-num system="pluto">682474e81426f2773e2f79e1</episode-num>
+    
+    
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    
+    
+    <desc>Dans une bataille contre le crime organisé, le FMI met en place une expérience de transfert d'esprit bizarre pour convaincre un chef de syndicat qu'il est doublé.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19690101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Le Successeur</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Action</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926153249 +0200" stop="20260926162800 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E94</episode-num>
+    
+    
+    <episode-num system="pluto">6a1554699ee0ad741be67612</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Après l'élimination du commissaire Brandtner et de Böck, c'est le vide dans le bureau. Rex se sent abandonné. Pendant ce temps la sportive Niki Herzog apprend à quelques pickpockets à avoir peur...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>On n'embrasse pas les policiers</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926162800 +0200" stop="20260926172355 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E95</episode-num>
+    
+    
+    <episode-num system="pluto">6a15546c9ee0ad741be6d820</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Un cambriolage tourne mal : Bernard Bauman est tué par un voleur qu'il a surpris chez lui. La soeur de Bauman, Sonia Fuchs, est sa seule héritière. Marc et Nicky la suspectent d'un coup monté...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Les chandeliers</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926172355 +0200" stop="20260926181900 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E96</episode-num>
+    
+    
+    <episode-num system="pluto">6a1554789ee0ad741be74c05</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020131000000 +0000</episode-num>
+    
+    
+    <desc>Suite à un pari, les grimpeurs professionnels Hans et Pete grimpent de nuit sur la tour de l'Hôtel de Ville. Malheureusement, Hans présume de ses forces et tombe, devant les yeux de ses amis.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020131</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Avalanche</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926181900 +0200" stop="20260926191400 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E97</episode-num>
+    
+    
+    <episode-num system="pluto">6a1555d1812ca1001673b626</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Une jeune femme est étranglée chez elle. Rex mène l'enquête et recueille le petit chien qu'elle venait d'adopter. Les soupçons se portent sur un homme possédant un alibi.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Le petit chien</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926191400 +0200" stop="20260926200851 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E98</episode-num>
+    
+    
+    <episode-num system="pluto">6a1555d4812ca10016741834</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>La jeune Sylvia Bäumert est retrouvée morte dans une petite forêt, apparemment suicidée. Leo Graf découvre rapidement qu'elle a été empoisonnée au cyanure.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Le dernier chemin</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926200851 +0200" stop="20260926210317 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E99</episode-num>
+    
+    
+    <episode-num system="pluto">6a1555d7812ca10016747a42</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Sur le conseil d'un voisin anxieux, deux policiers recherchent dans la maison d'un homme violent différentes armes qu'ils vont confisquer. Bien que Kostial ne fasse aucune opposition, il va peu après se rendre chez son voisin et le tuer.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Jusqu'à la dernière balle</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926210317 +0200" stop="20260926215410 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E100</episode-num>
+    
+    
+    <episode-num system="pluto">6a1555da812ca1001674ee27</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Un marionnettiste est assassiné dans le théâtre où il donne une représentation. Il n'y a pas le moindre indice qui pourrait aider Marc, Nikki et Rex à mener à bien leur enquête...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Oeil pour oeil</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926215410 +0200" stop="20260926224911 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E101</episode-num>
+    
+    
+    <episode-num system="pluto">6a155739114ca7fcbe248977</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Contre une forte somme d'argent, des spectateurs assistent à un spectacle illégal : un combat dont seul le vainqueur sort vivant et où les paris atteignent des sommes astronomiques. Une jeune femme décide d'en informer la police, mais elle est assassinée.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Jeux interdits</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926224911 +0200" stop="20260926234401 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E102</episode-num>
+    
+    
+    <episode-num system="pluto">6a15573c114ca7fcbe24eb85</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Un individu déguisé en facteur étrangle Eva Fentz, une jeune femme blonde, jolie et riche. C'est le véritable facteur qui découvre le corps de la victime. Il explique à la police qu'il a tenté de la réanimer, en vain</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Blondes, belles, mortes</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260926234401 +0200" stop="20260927003918 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E103</episode-num>
+    
+    
+    <episode-num system="pluto">6a1558a1f667431af655179c</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Iris Konrad, employée rusée, convainc deux frères à cambrioler une bijouterie. Pendant qu'un des frères attend dans la voiture, les deux autres dévalisent le coffre</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Drôle de cadeau</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927003918 +0200" stop="20260927013513 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E104</episode-num>
+    
+    
+    <episode-num system="pluto">6a1558a5f667431af6558b81</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Simplement sur indices, Erwin Schuster est condamné à une longue peine de prison, pour cambriolage et meurtre. Il ne va pas en rester là. Par petite annonce, il a rencontré la discrète Elli Lischka.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Manipulation</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927013513 +0200" stop="20260927022956 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E105</episode-num>
+    
+    
+    <episode-num system="pluto">6a1558a8f667431af655ed8f</episode-num>
+    
+    
+    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
+    
+    
+    <desc>Mélanie Berger et Anita Scholtz, actrices, se rendent à une réception. La rivalité entre les deux stars est évidente. Au cours de la soirée, lors d'une altercation, Mélanie est frappée avec une bouteille par une jeune fan éconduite et s'effondre morte.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20020101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>En route pour la gloire</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927022956 +0200" stop="20260927032045 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E106</episode-num>
+    
+    
+    <episode-num system="pluto">6a1558aaf667431af6564f9d</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Deux marchands d'art se voient proposer dix millions de dollars par un collectionneur pour voler une momie égyptienne. Etant donné que le sarcophage représente à lui seul une vente intéressante, les deux hommes décident d'en faire une copie</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Sous l'oeil d'Anubis</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927032045 +0200" stop="20260927041115 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E107</episode-num>
+    
+    
+    <episode-num system="pluto">6a155a0987a403a7cfb3c71e</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Un colombophile à la retraite, Edouard Ettrichs trouve la mort en ouvrant un message piégé rapporté par Ellie, l'un de ses nombreux pigeons voyageurs. La petite saccoche contenait une mini-bombe.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Meurtre dans un pigeonnier</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927041115 +0200" stop="20260927050609 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S07E108</episode-num>
+    
+    
+    <episode-num system="pluto">6a155a0c87a403a7cfb42928</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Une matone retrouve le corps sans vie d'une détenue, Elvira Strasser. La jeune femme a été égorgée avec un tesson de verre. Elle avait été arrêtée par Nicky pour complicité de vol. Selon le rapport officiel de la prison, la victime se serait suicidée.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Prison de femmes</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927050609 +0200" stop="20260927055601 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S08E109</episode-num>
+    
+    
+    <episode-num system="pluto">6a155cd90eeacb372358db37</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Présentatrice radio, Nina Klaus mène une campagne contre l'alcool au volant. Certains désapprouvent cette action et Nina reçoit des menaces par téléphone.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Ondes troubles</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927055601 +0200" stop="20260927065002 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S08E110</episode-num>
+    
+    
+    <episode-num system="pluto">6a155cdc0eeacb3723594f19</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Deux adolescents s'amusent avec un pistolet appartenant au père de la jeune fille. Mais un coup de feu provoque un drame lourd de conséquences : un clochard, qui se trouvait sur les lieux, est touché !</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Le chantier abandonné</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927065002 +0200" stop="20260927074044 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S08E111</episode-num>
+    
+    
+    <episode-num system="pluto">6a155cdf0eeacb372359c2ff</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>L'hôpital est en effervescence : une jeune patiente a disparu ; elle a été retrouvée un peu plus tard sans connaissance dans l'ascenseur. La directrice de l'hôpital ordonne une enquête mais, le lendemain, elle est retrouvée morte dans son bureau.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Suicides suspects</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260927074044 +0200" stop="20260927083132 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S08E112</episode-num>
+    
+    
+    <episode-num system="pluto">6a155ce10eeacb37235a250a</episode-num>
+    
+    
+    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    
+    
+    <desc>Selon plusieurs personnes, un crocodile aurait élu domicile dans les eaux du Danube. Margarethe et sa soeur Doris sont tranquillement en train de se prélasser sur un pédalo. Doris plonge et s'éloigne de quelques mètres.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20030101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Le crocodile du Danube</sub-title>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Thriller</category>
     
   
   </programme>
