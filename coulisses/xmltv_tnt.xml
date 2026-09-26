@@ -120,32 +120,6 @@
     <display-name>Planete+</display-name>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~channel~475677d45988adc5.png/480x480/quality/100/planete.png" />
   </channel>
-  <programme start="20260925202500 +0200" stop="20260925203000 +0200" channel="TF1.fr">
-    <title lang="fr">My Million</title>
-    <desc lang="fr">Découvrez les 5 numéros gagnants et les 2 bonnes étoiles d'EuroMillions ainsi que les codes gagnants My Million des derniers tirages !</desc>
-    <category lang="fr">Jeu</category>
-    <icon src="http://static-cdn.tv.sfr.net/data/img/pl/0/2/9/15189920.jpg" />
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925203000 +0200" stop="20260925203500 +0200" channel="TF1.fr">
-    <title lang="fr">Météo</title>
-    <category lang="fr">Météo</category>
-    <icon src="http://static-cdn.tv.sfr.net/data/img/pl/2/4/8/15629842.jpg" />
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925203500 +0200" stop="20260925224500 +0200" channel="TF1.fr">
-    <title lang="fr">Football : Ligue des Nations UEFA | Turquie / France</title>
-    <desc lang="fr">C'est l'heure de la rentrée pour l'équipe de France après sa quatrième place lors de la dernière coupe du monde, et surtout le baptême du feu pour son nouveau sélectionneur Zinédine Zidane. Les Bleus, emmenés par leur capitaine Kylian Mbappé, débutent leur campagne dans Ligue des Nations avec cette première rencontre à Izmit face à la Turquie. Des joueurs turcs qui auront à cœur de se rattraper devant leur public après un mondial raté, et une élimination dès la phase de poule. Pour les tricolores, il s'agira de ne pas perdre de points en route, dans un groupe 1 qui s'annonce relevé avec également l'Italie et la Belgique, qui s'affrontent dans le même temps à Rome ce soir.</desc>
-    <category lang="fr">Football</category>
-    <icon src="http://static-cdn.tv.sfr.net/data/img/pl/0/7/6/15868670.jpg" />
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925224500 +0200" stop="20260925234500 +0200" channel="TF1.fr">
     <title lang="fr">Après match</title>
     <sub-title lang="fr">match</sub-title>
@@ -2944,50 +2918,11 @@
     <category lang="fr">Infos</category>
     <icon src="https://images.voomotion.be/Events/2026/08/31/08/2735375_A.jpg" />
   </programme>
-  <programme start="20260925202000 +0200" stop="20260925202500 +0200" channel="France3.fr">
-    <title lang="fr">Le journal des talents</title>
-    <desc lang="fr">Un magazine d'information consacré aux personnes talentueuses et aux héros du quotidien en région.</desc>
-    <category lang="fr">Information</category>
-    <category lang="fr">Journal</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/44E27EA9590A87187ABAE1F4BCA29575.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925202500 +0200" stop="20260925204500 +0200" channel="France3.fr">
-    <title lang="fr">Un si grand soleil</title>
-    <desc lang="fr">En pleine tempête, Clémence doit se mettre en retrait à l'hôpital. De son côté, l'infiltration de Marc prend une tournure totalement inattendue.</desc>
-    <credits>
-      <director>Chris Nahon</director>
-      <director>Emmanuelle Dubergey</director>
-      <director>Olivier Szulzynger</director>
-      <actor>Nadia Fossier</actor>
-      <actor>Fabrice Deville</actor>
-      <actor>Tonya Kinzinger</actor>
-      <actor>Emma Colberti</actor>
-      <actor>Benjamin Bourgois</actor>
-      <actor>Aurore Delplace</actor>
-      <actor>Marie-Gaëlle Cals</actor>
-      <actor>Moïse Santamaria</actor>
-      <actor>Yvon Back</actor>
-      <actor>Chrystelle Labaude</actor>
-      <actor>Frédéric Van den Driessche</actor>
-      <actor>Mélanie Maudran</actor>
-      <producer>Toma De Matteis</producer>
-      <composer> Talisco</composer>
-      <guest>France TV Studio</guest>
-      <guest>Epeios Productions</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Policier</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/DE3125E2BB990521EE7D5E0BB0A70B25.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">7.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
+  <programme start="20260929081700 +0200" stop="20260929092000 +0200" channel="France2.fr">
+    <title lang="fr">Télématin</title>
+    <desc lang="fr">De l'info et de la bonne humeur, sept jours sur sept : résolument dans l'air du temps, la première matinale de France, forte de sa richesse éditoriale et de sa dynamique d'équipe, aborde de nombreuses thématiques et traite l'actualité avec sérieux et sans dramatisation.</desc>
+    <category lang="fr">Magazine</category>
+    <icon src="https://images.voomotion.be/Events/2026/08/24/05/2733877_A.jpg" />
   </programme>
   <programme start="20260925204500 +0200" stop="20260925211000 +0200" channel="France3.fr">
     <title lang="fr">Un si grand soleil</title>
@@ -6213,23 +6148,6 @@
     <category lang="fr">Autre</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~714728b65c0fc3a4.jpeg/640x360/quality/80/ici-matin.jpg" />
   </programme>
-  <programme start="20260925203100 +0200" stop="20260925211000 +0200" channel="CanalPlus.fr">
-    <title lang="fr">En aparté</title>
-    <desc lang="fr">C'est une icône depuis qu'elle a quinze ans, et c'est aussi tout le contraire : pas du genre à se laisser enfermer dans une image ! Repérée par Jean Paul Gautier, muse de Saint Laurent, elle a aussi tourné sous l'œil de Raoul Ruiz et de tant d'autres. Avec à chaque fois, la force d'aller, là où elle le souhaite plus que là où on l'attend ! Laetitia Casta est en aparté.</desc>
-    <credits>
-      <guest>Laetitia Casta</guest>
-      <guest>Nathalie Levy</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Programme</category>
-    <category lang="fr">Divertissement</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/982408F5239A990A6FBCEABC7AB8358A.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.115.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925211000 +0200" stop="20260925225200 +0200" channel="CanalPlus.fr">
     <title lang="fr">Le crime du 3e étage</title>
     <desc lang="fr">Colette, professeure de cinéma spécialisée dans l'oeuvre d'Alfred Hitchcock, soupçonne son nouveau voisin d'en face, comédien de théâtre, d'avoir tué son épouse. Réalité ou déformation professionnelle ? Son mari François, écrivain de romans historico-policiers au charme désuet, est d'abord sceptique face à l'obsession de Colette pour ce prétendu crime. Il se laisse cependant embarquer dans cette enquête rocambolesque et, à mesure que les indices s'accumulent et que le mystère s'épaissit, ce couple ordinaire se transforme en duo de détectives hors pair...</desc>
@@ -8302,6 +8220,15 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cb78daf1e20cefbc.jpeg/640x360/quality/80/en-aparte.jpg" />
     <previously-shown />
     <subtitles type="teletext" />
+  </programme>
+  <programme start="20260929081800 +0200" stop="20260929101700 +0200" channel="CanalPlus.fr">
+    <title lang="fr">Smashing Machine</title>
+    <category lang="fr">Cinéma</category>
+    <keyword>audio-description</keyword>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~backoffice~program~d5c578a5bd307bafcc62dd1b217630e5.jpg/640x360/focus-point/1023,439/quality/80/smashing-machine.jpg" />
+    <previously-shown />
+    <subtitles type="teletext" />
+    <audio-described />
   </programme>
   <programme start="20260925210500 +0200" stop="20260925224500 +0200" channel="France5.fr">
     <title lang="fr">Lucky Luke</title>
@@ -12307,6 +12234,18 @@
     <desc lang="fr">«Wilf le golfeur»Wilf cherche une nouvelle activité, et les Bricochons lui proposent le golf. Mais avec Cornélia, il veut envoyer la balle le plus loin possible et ils cassent tout !</desc>
     <category lang="fr">Dessin animé</category>
     <icon src="https://images.voomotion.be/Events/2026/09/02/16/2735902_A.jpg" />
+  </programme>
+  <programme start="20260929082500 +0200" stop="20260929083500 +0200" channel="France5.fr">
+    <title lang="fr">Mojo TipTop (Le cadeau de Dot) S1 (10/52)</title>
+    <desc lang="fr">«Le cadeau de Dot»C'est l'anniversaire de Dot, et elle est impatiente d'ouvrir son cadeau, à tel point que Nan demande à Mojo et Bo de tout faire pour le cacher. Cette dernière est à leurs trousses.</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2026/07/07/28/2719784_A.jpg" />
+  </programme>
+  <programme start="20260929083500 +0200" stop="20260929084500 +0200" channel="France5.fr">
+    <title lang="fr">Mojo TipTop (La parade des pirates) S1 (9/52)</title>
+    <desc lang="fr">«La parade des pirates»C'est la Parade des Pirates à TipTop Ville. Bo et Mojo sont appelés à l'aide pour l'occasion, mais il y a un léger problème : Bo n'aime vraiment pas les pirates.</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2026/07/07/28/2719784_A.jpg" />
   </programme>
   <programme start="20260925204000 +0200" stop="20260925211000 +0200" channel="M6.fr">
     <title lang="fr">Scènes de ménages</title>
@@ -21193,24 +21132,6 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~92c070ce245ad6da.jpeg/640x360/quality/80/tfou.jpg" />
     <subtitles type="teletext" />
   </programme>
-  <programme start="20260925203000 +0200" stop="20260925205800 +0200" channel="LaChaineParlementaire.fr">
-    <title lang="fr">Quai n°8</title>
-    <sub-title lang="fr">Stomy Bugsy</sub-title>
-    <desc lang="fr">Figure de proue d'un rap politisé avec le Ministère A.M.E.R., Stomy Bugsy n'a jamais hésité à mettre en lumière les fractures sociales et les luttes des quartiers populaire, comme lorsqu'il signe le morceau "Sacrifice de poulets" pour le film "La Haine", de Mathieu Kassovitz. Au fil des années, il a su faire évoluer son art sans renier ses racines, passant du rap de combat à une carrière d'acteur.</desc>
-    <credits>
-      <guest>Stomy Bugsy</guest>
-      <guest>Didier Varrod</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Interview</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/4E324066F68E7497D628372CE96AB7A2.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.9.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925205800 +0200" stop="20260925220000 +0200" channel="LaChaineParlementaire.fr">
     <title lang="fr">Main basse sur les savants d'Hitler, le plan secret français</title>
     <desc lang="fr">C'est l'un des chapitres les plus méconnus de l'après-guerre. Les savants d'Hitler ont été convoités par tous les vainqueurs de la Seconde Guerre mondiale. Comme les Etats-Unis ou l'URSS, la France a elle aussi participé à ce pillage des ressources humaines et matérielles de l'Allemagne défaite. Son projet a été élaboré dès 1944 et approuvé secrètement par le général de Gaulle en personne. Tirées de l'oubli, les voix de trois acteurs majeurs de ce transfert de matière grise racontent comment toute cette opération s'est déroulée, pour le plus grand bénéfice de la France.</desc>
@@ -22838,42 +22759,6 @@
     <title lang="fr">Bonjour chez vous !</title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cb5e9beb3a1fe3e2.jpeg/640x360/quality/80/bonjour-chez-vous.jpg" />
-  </programme>
-  <programme start="20260925201900 +0200" stop="20260925202500 +0200" channel="France4.fr">
-    <title lang="fr">Les as de la jungle à la rescousse</title>
-    <sub-title lang="fr">Le surfeur d'Argan</sub-title>
-    <desc lang="fr">Goliath n'a pas vraiment le moral. Tout autour de lui semble lui dire la même chose : il est devenu vieux. Les As ne comptent pas laisser le rhinocéros dans cet état et lui proposent alors de passer un peu de temps avec Junior, histoire de comprendre que la jeunesse, c'est dans la tête. Au cours de sa journée avec le petit tigre, Goliath va se confronter à François, surnommé le "Surfeur d'Argan". Ce prétentieux ouistiti à la mèche blonde luisante influence les autres enfants et les fait voler des noix d'argan, le secret de son charisme, dans le dangereux jardin de Marla...</desc>
-    <credits>
-      <director>Benoît Somville</director>
-      <director>Laurent Bru</director>
-      <guest>TAT Productions</guest>
-      <guest> Films</guest>
-    </credits>
-    <date>2019</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Animation</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/9262804DEC570C14933A9A72DFD6756B.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">2.20.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925202500 +0200" stop="20260925205500 +0200" channel="France4.fr">
-    <title lang="fr">C'est toujours pas sorcier</title>
-    <desc lang="fr">Cécile, Max et Mathieu se penchent sur le recyclage des déchets. Un thème important puisqu'il concerne les 7 milliards d'êtres humains qui vivent sur la planète.</desc>
-    <credits>
-      <guest>Max Bird</guest>
-    </credits>
-    <date>2021</date>
-    <category lang="fr">Société</category>
-    <category lang="fr">Education</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/E683A3806C4A5372A3D04C02482DDD9C.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">2.7.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925205500 +0200" stop="20260925210000 +0200" channel="France4.fr">
     <title lang="fr">Okoo-koo</title>
@@ -28900,6 +28785,12 @@
     <category lang="fr">Dessin animé</category>
     <icon src="https://images.voomotion.be/Events/2026/06/10/16/2712027_A.jpg" />
   </programme>
+  <programme start="20260929082300 +0200" stop="20260929084500 +0200" channel="France4.fr">
+    <title lang="fr">Mystery Lane (Le faiseur d'énigmes) S1 (20/26)</title>
+    <desc lang="fr">«Le faiseur d'énigmes»Un mystérieux justicier, qui maîtrise à distance les équipements électriques connectés grâce à ses talents de hacker, s'en prend à tous les nantis parmi les animaux de Londres.</desc>
+    <category lang="fr">Dessin animé</category>
+    <icon src="https://images.voomotion.be/Events/2026/07/01/15/2718409_A.jpg" />
+  </programme>
   <programme start="20260925210000 +0200" stop="20260926000000 +0200" channel="BFMTV.fr">
     <title lang="fr">BFM Grand Soir</title>
     <desc lang="fr">Du lundi au vendredi, Julie Hammett et Emilie Broussouloux reviennent sur des sujets qui font la une de l'actualité de 22h à 00h dans BFM Grand Soir.</desc>
@@ -29411,6 +29302,12 @@
     <desc lang="fr">Du lundi au vendredi dès 6h, l'équipe de la Première édition donne rendez-vous pour plusieurs heures d'info avec dynamisme et convivialité.</desc>
     <category lang="fr">Infos</category>
     <icon src="https://images.voomotion.be/Events/2026/04/28/09/2693281_A.jpg" />
+  </programme>
+  <programme start="20260929083000 +0200" stop="20260929090000 +0200" channel="BFMTV.fr">
+    <title lang="fr">Face à face</title>
+    <desc lang="fr">Une personnalité donne son point de vue et son analyse de l'actualité politique et sociale. Chaque matin un face-à-face en direct et en simultané sur RMC et BFMTV.</desc>
+    <category lang="fr">Magazine</category>
+    <icon src="https://images.voomotion.be/Events/2026/05/13/53/2705253_A.jpg" />
   </programme>
   <programme start="20260925210000 +0200" stop="20260925225700 +0200" channel="CNews.fr">
     <title lang="fr">Edition spéciale : visite du pape en France</title>
@@ -38286,34 +38183,6 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~7494aa253dbf50c1.jpeg/640x360/quality/80/les-visages-du-crime-en-region.jpg" />
     <subtitles type="teletext" />
   </programme>
-  <programme start="20260925203500 +0200" stop="20260925210500 +0200" channel="TF1SeriesFilms.fr">
-    <title lang="fr">Plus belle la vie, encore plus belle</title>
-    <desc lang="fr">L'enquête progresse, incitant une Mistralienne à jouer gros pour protéger sa famille. En parallèle, Chloé refuse de baisser les bras. Témoin d'un instant complice, Barbara se retrouve profondément troublée...</desc>
-    <credits>
-      <director>Nicolas Viegeolat</director>
-      <director>Olivier Chapelle</director>
-      <director>Lionel Smila</director>
-      <director>Marion Lallier</director>
-      <director>Pascal Heylbroeck</director>
-      <actor>Laurent Kérusoré</actor>
-      <actor>Cécilia Hornus</actor>
-      <actor>Sylvie Flepp</actor>
-      <actor>Anne Décis</actor>
-      <actor>Léa François</actor>
-      <actor>Stéphane Henon</actor>
-      <guest>Plus Belle Prod</guest>
-      <guest>Newen Studios</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Drame</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/79503D2147F8F72577D88E0BEA7004E4.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">2.0.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925210500 +0200" stop="20260925211000 +0200" channel="TF1SeriesFilms.fr">
     <title lang="fr">Petits plats en équilibre</title>
     <desc lang="fr">Laurent Mariotte donne toutes les astuces pour préparer de bons petits plats, comme un vrai chef, avec des ingrédients frais et de saison.</desc>
@@ -41453,6 +41322,12 @@
     <category lang="fr">Série Dramatique</category>
     <icon src="https://images.voomotion.be/Events/2025/12/31/57/2652697_A.jpg" />
   </programme>
+  <programme start="20260929083000 +0200" stop="20260929090000 +0200" channel="TF1SeriesFilms.fr">
+    <title lang="fr">Petits secrets entre voisins (Des vacances d'enfer) S4 (n°27)</title>
+    <desc lang="fr">«Des vacances d'enfer»Pour leurs vacances, Tara et Matisse, un jeune couple, ont loué une villa avec piscine. Anais et Auban, également en vacances, ignorent que leur séjour pourrait bien se transformer en cauchemar.</desc>
+    <category lang="fr">Série Dramatique</category>
+    <icon src="https://images.voomotion.be/Events/2025/12/31/57/2652697_A.jpg" />
+  </programme>
   <programme start="20260925204400 +0200" stop="20260925224500 +0200" channel="LEquipe21.fr">
     <title lang="fr">Football : Ligue des Nations UEFA</title>
     <desc lang="fr">En pleine reconstruction, l'équipe d'Italie, qui a rappelé Roberto Mancini à sa tête, doit assurer l'essentiel ce soir face à la Belgique, afin de débuter sa campagne du bon pied et se mettre en confiance pour la suite de la compétition. Dans un groupe A très homogène où l'on retrouvera également l'équipe de France et la Turquie, la Squadra Azzura doit éviter tout faux-pas ce soir au Stade olympique de Rome, face à des Diables Rouges qui arrivent également avec de hautes ambitions.</desc>
@@ -43971,6 +43846,19 @@
     <previously-shown />
     <subtitles type="teletext" />
   </programme>
+  <programme start="20260929083000 +0200" stop="20260929090000 +0200" channel="6ter.fr">
+    <title lang="fr">Une saison au zoo</title>
+    <sub-title lang="fr">Episode 51</sub-title>
+    <desc lang="fr">Après ses vacances, c'est avec une grande joie non dissimulée que Bérénice retrouve ses otaries. Et elles le lui rendent bien. Au programme : bisous, câlins et compliments ! Marine entame la dernière semaine de son stage. Elle doit nettoyer l'incontournable bassin des manchots. Une vraie galère : la tête de l'aspirateur n'arrête pas de se déboîter.</desc>
+    <credits>
+      <guest>Chrystel Rebours</guest>
+      <guest>Juliette Ronteix</guest>
+    </credits>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~43f6f883f5a3aa83.jpeg/640x360/quality/80/une-saison-au-zoo.jpg" />
+    <previously-shown />
+    <subtitles type="teletext" />
+  </programme>
   <programme start="20260925204000 +0200" stop="20260925211000 +0200" channel="Numero23.fr">
     <title lang="fr">Big Bang Theory</title>
     <sub-title lang="fr">La solution pirate</sub-title>
@@ -46356,6 +46244,12 @@
     </credits>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~c8489cf01d21af31.jpeg/640x360/quality/80/apolline-matin.jpg" />
+  </programme>
+  <programme start="20260929083000 +0200" stop="20260929090000 +0200" channel="Numero23.fr">
+    <title lang="fr">Le morning - le supplément</title>
+    <desc lang="fr">Avec "Le Supplément", retour sur une actualité marquante ou un fait particulier de la matinale de RMC.</desc>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~9bf1f40861c8ca01.jpeg/640x360/quality/80/le-morning-le-supplement.jpg" />
   </programme>
   <programme start="20260925211000 +0200" stop="20260925220000 +0200" channel="RMCDecouverte.fr">
     <title lang="fr">La Seconde Guerre Mondiale avec Tom Hanks</title>
@@ -49486,19 +49380,10 @@
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~47f994833d9f2390.jpeg/640x360/quality/80/la-matinale-lci.jpg" />
   </programme>
-  <programme start="20260925202800 +0200" stop="20260925210500 +0200" channel="FranceInfo.fr">
-    <title lang="fr">A Suivre avec Claire-Elisabeth Beaufort</title>
-    <desc lang="fr">Toute l'actualité revue et commentée par Claire-Elisabeth Beaufort.</desc>
-    <credits>
-      <guest>Claire-Elisabeth Beaufort</guest>
-    </credits>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Information</category>
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
+  <programme start="20260929082500 +0200" stop="20260929090000 +0200" channel="LCI.fr">
+    <title lang="fr">L'interview d'Amélie Carrouër</title>
+    <category lang="fr">Autre</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~5eac2b4082f5d526.jpeg/640x360/quality/80/l-interview-d-amelie-carrouer.jpg" />
   </programme>
   <programme start="20260925210500 +0200" stop="20260925213000 +0200" channel="FranceInfo.fr">
     <title lang="fr">Grand format</title>
@@ -50275,6 +50160,11 @@
     <title lang="fr">La matinale</title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~80852b6246ecab12.jpeg/640x360/quality/80/la-matinale.jpg" />
+  </programme>
+  <programme start="20260929083300 +0200" stop="20260929085800 +0200" channel="FranceInfo.fr">
+    <title lang="fr">8h30 franceinfo</title>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~7450d89c275ed38e.jpeg/640x360/quality/80/8h30-franceinfo.jpg" />
   </programme>
   <programme start="20260925210000 +0200" stop="20260925224500 +0200" channel="ParisPremiere.fr">
     <title lang="fr">Chief of Station</title>
