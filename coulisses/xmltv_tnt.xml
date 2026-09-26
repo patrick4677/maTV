@@ -13574,65 +13574,6 @@
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~6a8555d45a710b22.jpeg/640x360/quality/80/my-boutique-teleshop.jpg" />
     <subtitles type="teletext" />
   </programme>
-  <programme start="20260925205200 +0200" stop="20260925205500 +0200" channel="Arte.fr">
-    <title lang="fr">50 nuances de Grecs</title>
-    <sub-title lang="fr">Laisse-moi zoom-zoom Zeus</sub-title>
-    <desc lang="fr">L'épidémie de taramavirus vaut à l'Olympe un confinement, des youtubeurs et influenceuses se lancent à l'assaut, tandis que les locations Homère-bnb donnent lieu à des abus.</desc>
-    <credits>
-      <director>Mathieu Signolet</director>
-      <guest>Haut Et Court Tv</guest>
-    </credits>
-    <date>2022</date>
-    <category lang="fr">Série</category>
-    <category lang="fr">Animation</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/B9F43527124C19206D0F30841D91E9F7.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">2.3.</episode-num>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
-  <programme start="20260925205500 +0200" stop="20260925223500 +0200" channel="Arte.fr">
-    <title lang="fr">L'homme au cheval blanc</title>
-    <desc lang="fr">Tandis qu'en raison du dérèglement climatique les tempêtes s'enchaînent sur les côtes d'Allemagne du Nord, on retrouve un matin, sur la plage, le corps sans vie de l'intendant chargé des digues auprès de la protection du littoral. Avant son infarctus, l'homme avait cru voir un cheval blanc émerger des eaux. Son remplaçant, Hauke, constate l'ampleur des dégâts : la digue a été abîmée et l'eau s'infiltre sur les polders, ces terrains gagnés sur la mer au fil des siècles. Si rien n'est fait, son village sera bientôt englouti par les eaux. Une idée folle le saisit : plutôt que d'être forcé au départ, pourquoi ne pas s'allier à la mer, et créer une ville flottante sur le lac de retenue situé derrière les polders ?</desc>
-    <credits>
-      <director>Francis Meletzky</director>
-      <actor>Joshua Jagersberger</actor>
-      <actor>Till Firit</actor>
-      <actor>Nico Holonics</actor>
-      <actor>Annette Frier</actor>
-      <actor>Christoph Glaubacker</actor>
-      <actor>Ramona Kunze-Libnow</actor>
-      <actor>Olga von Luckwald</actor>
-      <actor>Max Hubacher</actor>
-      <actor>Lisa Carline Hofer</actor>
-      <actor>Kriemhild Hamann</actor>
-      <actor>Harald Windisch</actor>
-      <actor>Emanuel Fellmer</actor>
-      <adapter>Léonie-Claire Breinersdorfer</adapter>
-      <producer>Rupert Henning</producer>
-      <producer>Robert Schaefer</producer>
-      <producer>Bettina Wente</producer>
-      <producer>Wolfgang Cimera</producer>
-      <producer>Annegret Weitkämper-Krug</producer>
-      <producer>Isabelle Welter</producer>
-      <producer>Jan Schuster</producer>
-      <composer>Kyrre Kvam</composer>
-      <guest> Gretchenfilm</guest>
-      <guest> ZDF/Arte</guest>
-      <guest>WHee Film</guest>
-      <guest>Network Movie Film- und Fernsehproduktion GmbH</guest>
-      <guest>BASTEI Media</guest>
-    </credits>
-    <date>2025</date>
-    <category lang="fr">Film</category>
-    <category lang="fr">Drame</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/D4BEDC98B36C181F337364F863EB956B.jpg" />
-    <country lang="fr">Allemagne</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260925223500 +0200" stop="20260925233000 +0200" channel="Arte.fr">
     <title lang="fr">Paul McCartney : une légende des Beatles</title>
     <desc lang="fr">Le chanteur et bassiste des Beatles Paul McCartney n'a pas seulement marqué l'histoire de la musique, il a également influencé toute une génération. Les chansons composées par le groupe mythique ont inspiré des millions d'adolescents à travers le monde, donnant naissance à un mouvement musical d'une ampleur inédite ainsi qu'à une révolution économique : on a ainsi pu voir une foule de "jeunes", désormais définis comme une catégorie à part entière, utiliser leurs premiers émoluments pour s'offrir les vinyles des quatre garçons de Liverpool. La séparation des Beatles se conclut par une dernière chanson enregistrée par le groupe au complet, la prophétique "The End", en 1969, qui n'a pas empêché Paul McCartney de continuer la musique, avec la sortie de 26 albums durant les cinquante années suivantes.</desc>
@@ -22683,19 +22624,6 @@
     <title lang="fr">Bonjour chez vous !</title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~cb5e9beb3a1fe3e2.jpeg/640x360/quality/80/bonjour-chez-vous.jpg" />
-  </programme>
-  <programme start="20260925205500 +0200" stop="20260925210000 +0200" channel="France4.fr">
-    <title lang="fr">Okoo-koo</title>
-    <sub-title lang="fr">Tuto jeux : deux jeux avec gobelets et balles de ping-pong</sub-title>
-    <desc lang="fr">Panne d'inspiration pour un anniversaire ? Voilà deux jeux faciles, rapides et avec un max de challenge !</desc>
-    <date>2026</date>
-    <category lang="fr">Magazine</category>
-    <category lang="fr">Jeunesse</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/0BA23BE149E2B3AF46532E88D128C676.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
   </programme>
   <programme start="20260925210000 +0200" stop="20260925233500 +0200" channel="France4.fr">
     <title lang="fr">La Belle au bois dormant</title>
@@ -33147,6 +33075,12 @@
     <category lang="fr">Clips</category>
     <icon src="https://images.voomotion.be/Events/2023/11/16/25/1646347_A.jpg" />
   </programme>
+  <programme start="20260929085300 +0200" stop="20260929095700 +0200" channel="CStar.fr">
+    <title lang="fr">Top CStar</title>
+    <desc lang="fr">Un classement des quinze meilleurs clips actuels pour être en phase avec LA musique du moment.</desc>
+    <category lang="fr">Clips</category>
+    <icon src="https://images.voomotion.be/Events/2026/04/23/07/1657792_A.jpg" />
+  </programme>
   <programme start="20260925210500 +0200" stop="20260925225500 +0200" channel="Gulli.fr">
     <title lang="fr">Les Mitchell contre les machines</title>
     <desc lang="fr">Katie Mitchell est un brin accro à son téléphone portable. Son père, Rick, voit sa petite fille devenue grande s'éloigner de plus en plus. Pour renouer le lien, il décide d'emmener toute la famille vers l'université dans laquelle Katie va étudier. Linda, la maman, Aaron, le petit frère fantasque, Monchi le chien, Katie et Rick embarquent tous dans la voiture chargée à ras bord. Pendant ce temps, des robots ont décidé de prendre les contrôle des machines et ainsi des humains. La famille Mitchell compte bien les mettre hors d'état de nuire...</desc>
@@ -35341,28 +35275,6 @@
     <category lang="fr">Magazine</category>
     <icon src="https://images.voomotion.be/Events/2025/06/12/37/2458124_A.jpg" />
   </programme>
-  <programme start="20260925205500 +0200" stop="20260925224000 +0200" channel="T18.fr">
-    <title lang="fr">Tuez Hitler !</title>
-    <desc lang="fr">Hitler s'est donné la mort mais nombreux sont ceux qui ont essayé, à sa place et avant lui, de mettre fin à ses jours pour sauver l'Europe. Pas moins d'une trentaine d'attentats, parfois très élaborés, ont été commis contre le führer entre 1921 et 1944, par des ouvriers ou des aristocrates, des politiques ou des militaires de haut rang. Mais tous ont échoué dans leur entreprise, et la plupart des instigateurs de tels actes y ont laissé la vie. Hitler, lui, a eu la chance de son côté plusieurs fois, échappant de peu à une mort certaine. Quel destin l'Europe aurait-elle connu si Hitler avait péri au cours d'une de ces tentatives, couronnée de succès ?</desc>
-    <credits>
-      <director>Frédéric Tonolli</director>
-      <guest>Johannes Oliver Hamm</guest>
-      <guest>Frédéric Tonolli</guest>
-      <guest>Pierre-Marie Rochefort-Schneider</guest>
-      <guest>Sunset Presse</guest>
-      <guest>Jochen Hägele</guest>
-    </credits>
-    <date>2015</date>
-    <category lang="fr">Documentaire</category>
-    <category lang="fr">Histoire</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/2F058AF6C45A350B46BA092EAAA9ED32.jpg" />
-    <country lang="fr">France</country>
-    <episode-num system="xmltv_ns">0.0.</episode-num>
-    <rating system="CSA">
-      <value>-10</value>
-      <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
-    </rating>
-  </programme>
   <programme start="20260925224000 +0200" stop="20260925231000 +0200" channel="T18.fr">
     <title lang="fr">Pour tout dire</title>
     <desc lang="fr">De l'expertise, de l'humeur et des convictions : c'est le cocktail de "Pour tout dire", un rendez-vous qui permet à Matthieu Croissandeau et ses invités de débattre des petits et grands sujets qui font l'actualité, avec une grande liberté de ton. Du lundi au vendredi, en deuxième partie de soirée, le journaliste politique anime ce regard pointu sur les réalités de l'époque actuelle. Un moment d'échange instructif et distrayant.</desc>
@@ -36723,6 +36635,13 @@
     <sub-title lang="fr">Pour le meilleur et pour le pire - L'affaire Hamour</sub-title>
     <category lang="fr">Culture Infos</category>
     <icon src="https://www.programme-tv.net/imgre/fit/~2~program~0d752df4e6e8ce99.jpeg/640x360/quality/80/sur-la-scene-du-crime.jpg" />
+    <previously-shown />
+  </programme>
+  <programme start="20260929085500 +0200" stop="20260929100000 +0200" channel="T18.fr">
+    <title lang="fr">Les carnets de Julie</title>
+    <sub-title lang="fr">Le Périgord pourpre, en Dordogne</sub-title>
+    <category lang="fr">Culture Infos</category>
+    <icon src="https://www.programme-tv.net/imgre/fit/~2~program~9eca12e66442650f.jpeg/640x360/quality/80/les-carnets-de-julie.jpg" />
     <previously-shown />
   </programme>
   <programme start="20260925210900 +0200" stop="20260925220700 +0200" channel="NOVO19.fr">
@@ -52336,6 +52255,16 @@
       <value>-0</value>
     </rating>
   </programme>
+  <programme start="20260929085300 +0200" stop="20260929103700 +0200" channel="CanalPlusSport.fr">
+    <title lang="fr">Rugby : Top 14 - Pau / La Rochelle</title>
+    <desc lang="fr">Au stade du Hameau, ce derby de la façade atlantique entre la Section Paloise et le Stade Rochelais met aux prises deux formations ambitieuses en ce début de saison.</desc>
+    <category lang="fr">Emission sportive</category>
+    <category lang="fr">Rugby</category>
+    <icon src="https://img1.oqee.net/pictures/446284/wide_generic/h1080" />
+    <rating system="CSA">
+      <value>-0</value>
+    </rating>
+  </programme>
   <programme start="20260925210000 +0200" stop="20260925225000 +0200" channel="CanalPlusCinema.fr">
     <title lang="fr">Restore Point</title>
     <desc lang="fr">Prague, en 2041. Dans une société où le risque de mort violente a crû de façon exponentielle, la constitution accorde à tous les citoyens le droit de vivre une vie entière. En cas de mort non naturelle, la personne est ramenée à la vie grâce à Restore Point, une technologie qui fonctionne grâce à des sauvegardes régulières du contenu du cerveau. La jeune policière Em Trochinowska se voit confier l'enquête sur le meurtre d'un couple. Le mari, un scientifique, n'a pas pu être sauvé par l'équipe de restauration, faute de sauvegarde valide. Em est persuadée qu'un groupuscule terroriste a effacé les données du serveur...</desc>
@@ -54441,12 +54370,6 @@
     </star-rating>
     <review type="text">Kiyoshi Kurosawa réalise le remake d’un de ses propres films, relocalisé en France. Un homme, aidé d’une médecin japonaise, enlève un notable parisien. Mais pourquoi ? Malgré quelques détours qui diluent le récit, ce thriller se révèle souvent retors et prenant, notamment grâce à sa mise en scène acérée.</review>
     <audio-described />
-  </programme>
-  <programme start="20260925205500 +0200" stop="20260925214800 +0200" channel="PlanetePlus.fr">
-    <title lang="fr">La guerre des trônes, la véritable histoire de l'Europe (L'Europe s'embrase (1561-1569)) S2 (3/6)</title>
-    <desc lang="fr">«L'Europe s'embrase (1561-1569)»Durant des siècles, seules quelques grandes familles se sont disputé l'hégémonie sur le continent européen, à travers une lutte de pouvoir acharnée.</desc>
-    <category lang="fr">Documentaire</category>
-    <icon src="https://images.voomotion.be/Events/2026/09/10/35/2142677_A.jpg" />
   </programme>
   <programme start="20260925214800 +0200" stop="20260925224700 +0200" channel="PlanetePlus.fr">
     <title lang="fr">La guerre des trônes, la véritable histoire de l'Europe (Noces de sang (1567-1574)) S2 (4/6)</title>
