@@ -1,7 +1,7 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.5 (Modifiée - Soirée : effacement si non commencé + temps restant 2nde partie)
-     OBJET : Interface TV avec XMLTV + M3U + MiniTV + Google Cast + Recherche + Filtre Whitelist
+     VERSION : 1.9.5.7 (Correction des flux M3U et TNT)
+     OBJET : Interface TV avec XMLTV (2 flux) + M3U (tvrz + pluto_fr via m3u3) + MiniTV + Google Cast + Recherche
      AUTEUR : Patrick
      ============================================================ -->
 
@@ -9,7 +9,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.5</title>
+<title>TNT + M3U – Version 1.9.5.7</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -318,7 +318,7 @@ body.dark .help-list li {
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.5</h1>
+<h1>Programme TV v1.9.5.7</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -407,6 +407,7 @@ window.__onGCastApiAvailable = function(isAvailable) {
 let XML_URL = "";
 let XML_URL2 = ""; 
 let M3U_URL = "";
+let M3U_URL3 = ""; 
 let hlsPlayer = null;
 let WHITELIST = [];
 let useWhitelist = true; // Actif par défaut
@@ -426,11 +427,17 @@ async function loadWhitelist(){
 async function loadConfig(){
   try{
     const cfg = await fetch("coulisses/config.json?t=" + Date.now()).then(r=>r.json());
-    XML_URL = cfg.xml;
+    XML_URL = cfg.xml || "coulisses/xmltv_tnt.xml";
     XML_URL2 = cfg.xml2 || "coulisses/ina70.xml";
-    M3U_URL = cfg.m3u;
+    M3U_URL = cfg.m3u || "coulisses/tvrz.m3u";
+    // cfg.m3u2 est réservé au générateur de whitelist, ignoré ici
+    M3U_URL3 = cfg.m3u3 || "coulisses/pluto_fr.m3u"; 
   } catch(e){
-    document.getElementById("status").textContent = "Erreur config.json";
+    XML_URL = "coulisses/xmltv_tnt.xml";
+    XML_URL2 = "coulisses/ina70.xml";
+    M3U_URL = "coulisses/tvrz.m3u";
+    M3U_URL3 = "coulisses/pluto_fr.m3u";
+    document.getElementById("status").textContent = "Mode secours (config.json absent)";
   }
 }
 
@@ -557,6 +564,7 @@ function normalizeID(id){
     .replace(/[^a-z0-9]/g,"");
 }
 
+/* Les 25 chaînes de base de la TNT */
 let TNT = [
   {num:1, id:"TF1.fr", name:"TF1", logo:"coulisses/logos/tf1.png", link:"https://www.tf1.fr", aliases:["tf1", "tf1hd"]},
   {num:2, id:"France2.fr", name:"France 2", logo:"coulisses/logos/france2.png", link:"https://www.france.tv", aliases:["france2", "france2hd", "frfrance2"]},
@@ -582,66 +590,12 @@ let TNT = [
   {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.6play.fr", aliases:["6ter"]},
   {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr", aliases:["rmcstory", "numero23"]},
   {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com", aliases:["rmcdecouverte"]},
-  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#", aliases:["rmclife", "cherie25"]},
-  {
-    num: 26,
-    id: "cestpassorcier.fr",
-    name: "C'est pas sorcier",
-    logo: "https://images.pluto.tv/channels/63b579961bdba100071214cb/colorLogoPNG.png",
-    link: "#",
-    stream: "https://rb-france.rakuten.tv/v1/live/channels/fr/5ef1b7eeb78efb22a07c0827/master.m3u8",
-    aliases: ["cestpassorcier", "c'est pas sorcier"]
-  },
-  {
-    num: 27,
-    id: "ina70.fr",
-    name: "INA 70",
-    logo: "https://images.pluto.tv/channels/639b54404cfdf7000729b3c1/colorLogoPNG.png",
-    link: "#",
-    stream: "https://rb-france.rakuten.tv/v1/live/channels/fr/5fa92da9a63973000109968a/master.m3u8",
-    aliases: ["ina 70", "ina70"]
-  },
-  {
-    num: 28,
-    id: "macgyver.fr",
-    name: "Séries & Action",
-    logo: "https://images.pluto.tv/channels/6245ccd0c6cdb800074632e4/colorLogoPNG.png",
-    link: "#",
-    stream: "https://rb-france.rakuten.tv/v1/live/channels/fr/5d9c2e0b52366b579b3602d3/master.m3u8",
-    aliases: ["macgyver", "series"]
-  },
-  {
-    num: 29,
-    id: "missionimpossible.fr",
-    name: "Action Cinéma",
-    logo: "https://images.pluto.tv/channels/6671b21ffc3a46000857fe75/colorLogoPNG.png",
-    link: "#",
-    stream: "https://rb-france.rakuten.tv/v1/live/channels/fr/5f110c73a6397300017fefd3/master.m3u8",
-    aliases: ["missionimpossible", "action"]
-  },
-  {
-    num: 30,
-    id: "rex.fr",
-    name: "Films Familiaux",
-    logo: "https://images.pluto.tv/channels/691b332aa4385c191ee44b57/colorLogoPNG.png",
-    link: "#",
-    stream: "https://rb-france.rakuten.tv/v1/live/channels/fr/5f67ad836f6311000115e580/master.m3u8",
-    aliases: ["rex", "famille"]
-  },
-  {
-    num: 31,
-    id: "walkertexasranger.fr",
-    name: "Séries Policières",
-    logo: "https://images.pluto.tv/channels/60afa749ac7f3200078adb40/colorLogoPNG.png",
-    link: "#",
-    stream: "https://rb-france.rakuten.tv/v1/live/channels/fr/5d9c2e2252366b579b3602ee/master.m3u8",
-    aliases: ["walkertexasranger", "policier"]
-  }
+  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#", aliases:["rmclife", "cherie25"]}
 ];
 
 TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
-async function loadM3U(url){
+async function parseM3UContent(url){
   try{
     const txt = await fetch(url + "?t=" + Date.now()).then(r=>r.text());
     const lines = txt.split("\n");
@@ -665,6 +619,7 @@ async function loadM3U(url){
 
     return list;
   } catch(e){
+    console.warn("Erreur chargement M3U depuis : " + url, e);
     return [];
   }
 }
@@ -878,7 +833,6 @@ function renderEvening(channels){
 
     const duration = Math.round((evening.stop-evening.start)/60000);
     
-    // Gestion du temps restant pour la soirée principale
     let remainingText = "";
     if (now >= evening.start && now <= evening.stop) {
       const remaining = Math.max(0, Math.round((evening.stop - now) / 60000));
@@ -887,7 +841,6 @@ function renderEvening(channels){
       remainingText = "Terminé";
     }
 
-    // Gestion du temps restant pour la 2ème partie de soirée (next)
     let nextRemainingText = "";
     if (next) {
       if (now >= next.start && now <= next.stop) {
@@ -1032,19 +985,25 @@ document.getElementById("search").addEventListener("input", filterChannels);
 
 async function updateTV(){
   try{
-    document.getElementById("status").textContent = "Chargement EPG...";
+    document.getElementById("status").textContent = "Chargement EPG (1/2)...";
     
-    const xmlTxt = await fetch(XML_URL+"?t="+Date.now()).then(r=>r.text());
-    xmlDocCache = new DOMParser().parseFromString(xmlTxt,"application/xml");
+    const xmlTxt = await fetch(XML_URL + "?t=" + Date.now()).then(r=>r.text());
+    xmlDocCache = new DOMParser().parseFromString(xmlTxt, "application/xml");
 
     if (XML_URL2) {
       try {
-        const xmlTxt2 = await fetch(XML_URL2+"?t="+Date.now()).then(r=>r.text());
-        const xmlDoc2 = new DOMParser().parseFromString(xmlTxt2,"application/xml");
+        document.getElementById("status").textContent = "Chargement EPG (2/2)...";
+        const xmlTxt2 = await fetch(XML_URL2 + "?t=" + Date.now()).then(r=>r.text());
+        const xmlDoc2 = new DOMParser().parseFromString(xmlTxt2, "application/xml");
         
         const extraProgrammes = xmlDoc2.querySelectorAll("programme");
         extraProgrammes.forEach(p => {
           xmlDocCache.documentElement.appendChild(p.cloneNode(true));
+        });
+
+        const extraChannels = xmlDoc2.querySelectorAll("channel");
+        extraChannels.forEach(c => {
+          xmlDocCache.documentElement.appendChild(c.cloneNode(true));
         });
       } catch(err) {
         console.warn("Second fichier XML non chargé :", err);
@@ -1073,6 +1032,30 @@ async function updateTV(){
       }
     }
 
+    const xmlChannels = xmlDocCache.querySelectorAll("channel");
+    xmlChannels.forEach(xmlChan => {
+      const xmlId = xmlChan.getAttribute("id");
+      const normXmlId = normalizeID(xmlId);
+      const displayName = normalizeID(xmlChan.querySelector("display-name")?.textContent || "");
+      let icon = xmlChan.querySelector("icon")?.getAttribute("src") || "";
+      if (icon.startsWith("http://")) icon = icon.replace("http://", "https://");
+
+      let match = TNT.find(ch => 
+        ch.normId === normXmlId || 
+        normalizeID(ch.name) === displayName ||
+        normXmlId.includes(normalizeID(ch.name)) ||
+        (ch.aliases && ch.aliases.some(a => normalizeID(a) === normXmlId || normalizeID(a) === displayName))
+      );
+
+      if (match) {
+        match.xmlId = xmlId;
+        match.normId = normXmlId; 
+        if (icon && (!match.logo || match.logo.includes("default") || match.logo.includes("tv-blue"))) {
+          match.logo = icon;
+        }
+      }
+    });
+
     document.getElementById("status").textContent = getEPGDateRange(programmesNodes);
 
     renderEvening(channelsToday);
@@ -1081,7 +1064,19 @@ async function updateTV(){
     tbody.innerHTML = "";
 
     TNT.forEach(ch=>{
-      const list = channelsToday[ch.normId];
+      let list = channelsToday[ch.normId];
+      if (!list && ch.xmlId && channelsToday[normalizeID(ch.xmlId)]) {
+        list = channelsToday[normalizeID(ch.xmlId)];
+      }
+      if (!list && ch.aliases) {
+        for (let alias of ch.aliases) {
+          if (channelsToday[normalizeID(alias)]) {
+            list = channelsToday[normalizeID(alias)];
+            break;
+          }
+        }
+      }
+
       const chanCellHtml = buildChannelCellHtml(ch);
 
       if(!list){
@@ -1163,7 +1158,7 @@ async function updateTV(){
 
   } catch(e){
     console.error(e);
-    document.getElementById("status").textContent = "Erreur de chargement";
+    document.getElementById("status").textContent = "Erreur de chargement des flux XML";
   }
 }
 
@@ -1196,9 +1191,16 @@ function bindPopupEvents(selector, channelsToday) {
   originalTNT = JSON.parse(JSON.stringify(TNT));
 
   try{
-    rawM3UList = await loadM3U(M3U_URL);
+    // CHARGEMENT COMBINÉ DES 2 FLUX M3U ACTIFS (tvrz.m3u + pluto_fr.m3u via m3u3)
+    const list1 = M3U_URL ? await parseM3UContent(M3U_URL) : [];
+    const list3 = M3U_URL3 ? await parseM3UContent(M3U_URL3) : [];
+    
+    rawM3UList = [...list1, ...list3];
+    
     applyM3UFilter();
-  } catch(e){}
+  } catch(e){
+    console.warn("Erreur globale de chargement M3U", e);
+  }
 
   updateTV();
   setInterval(updateTV, 60000);
