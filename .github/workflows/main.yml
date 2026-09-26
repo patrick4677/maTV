@@ -1,4 +1,4 @@
-name: Mise a jour du XML EPG et m3u
+name: Mise a jour du XML EPG
 
 on:
   schedule:
@@ -62,22 +62,10 @@ jobs:
           print(f"Optimisation terminée : {kept} programmes conservés, {removed} supprimés.")
           '
 
-      - name: Télécharger le fichier M3U (Simulation Navigateur)
-        run: |
-          curl -sL -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
-               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
-               -H "Accept-Language: fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7" \
-               "https://tvradiozap.eu/live/d/tvzeu.m3u" -o coulisses/tvrz.m3u
-
-      - name: Vérifier la taille du M3U
-        run: |
-          lines=$(wc -l < coulisses/tvrz.m3u)
-          echo "Nombre de lignes dans le M3U : $lines"
-
-      - name: Sauvegarder les modifications
+      - name: Sauvegarder les modifications EPG
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add coulisses/xmltv_tnt.xml coulisses/tvrz.m3u
-          git commit -m "Mise à jour et optimisation automatique du XML et M3U" || exit 0
+          git add coulisses/xmltv_tnt.xml
+          git commit -m "Mise à jour et optimisation automatique du XML EPG" || exit 0
           git push
