@@ -2,6 +2,6 @@
     "xml": "coulisses/xmltv_tnt.xml",
     "xml2": "coulisses/ina70.xml",
     "m3u": "coulisses/tvrz.m3u",
-    "m3u2": "coulisses/tvrz.m3u",
+    "m3u2": "tvrz.m3u",
     "m3u3": "coulisses/pluto_fr.m3u"
 }
