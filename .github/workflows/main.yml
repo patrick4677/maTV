@@ -61,7 +61,7 @@ jobs:
 
       - name: Télécharger le fichier M3U
         run: |
-          curl -sL "https://tvradiozap.eu/live/d/tvzeu.m3u" -o coulisses/tvrz.m3u
+          curl -sL "https://tvradiozap.eu/live/d/tvrz.m3u" -o coulisses/tvrz.m3u
 
       - name: Sauvegarder les modifications
         run: |
