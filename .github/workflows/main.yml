@@ -1,4 +1,4 @@
-jename: Mise a jour du XML EPG et m3u
+name: Mise a jour du XML EPG et m3u
 
 on:
   schedule:
