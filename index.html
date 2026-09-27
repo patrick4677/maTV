@@ -552,7 +552,7 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement dans l'application VLC externe (Android et Windows corrigé) */
+/* Mode 2 : Lancement dans l'application VLC externe (Android et Windows robuste) */
 function playExternalVLC(url){
   if (/Android/i.test(navigator.userAgent)) {
     // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement
@@ -565,24 +565,22 @@ function playExternalVLC(url){
     a.click();
     document.body.removeChild(a);
   } else {
-    // SUR WINDOWS / PC : Pour forcer le passage vers le logiciel VLC de bureau (notamment pour Pluto TV)
-    // On nettoie l'URL et on utilise le protocole enregistré 'vlc://' ou un lien iframe invisible 
-    // qui pousse Windows à lancer l'application VLC externe.
+    // SUR WINDOWS / PC : 
     const userAgentString = "/:http-user-agent=Mozilla/5.0";
     const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
     
-    // Format requis pour que VLC bureau accepte le flux avec ses options sous Windows
-    const vlcProtocol = "vlc://" + finalUrl;
-
-    // Création d'un élément lien invisible pour déclencher le protocole VLC sur le PC
-    const a = document.createElement('a');
-    a.href = vlcProtocol;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    // Sur Windows, si le protocole direct est bloqué par le navigateur, 
+    // on ouvre une page intermédiaire ou on utilise window.open avec une gestion propre,
+    // ou bien on force l'URI du lecteur de bureau.
+    try {
+      // Tentative d'ouverture via le protocole bureau
+      window.location.href = "vlc://" + finalUrl;
+    } catch(e) {
+      // Secours si le navigateur bloque l'URI directe
+      window.open(finalUrl, '_blank');
+    }
   }
 }
-
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
