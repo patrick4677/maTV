@@ -1,6 +1,6 @@
 {
   "name": "maTV",
-  "short_name": "App",
+  "short_name": "maTV",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
