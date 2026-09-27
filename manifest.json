@@ -1,5 +1,5 @@
 {
-  "name": "maTV",
+  "name": "Programme TV",
   "short_name": "maTV",
   "start_url": "./index.html",
   "display": "standalone",
@@ -7,7 +7,7 @@
   "theme_color": "#ff9800",
   "icons": [
     {
-      "src": "coulisses/icone.png",
+      "src": "coulisses/icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
