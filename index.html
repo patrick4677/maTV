@@ -552,10 +552,10 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement dans l'application VLC externe (Android et Windows avec secours cliquable) */
+/* Mode 2 : Lancement (Android natif & Windows via la fenêtre intégrée stable) */
 function playExternalVLC(url){
   if (/Android/i.test(navigator.userAgent)) {
-    // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement[span_1](start_span)[span_1](end_span)
+    // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
 
@@ -565,30 +565,13 @@ function playExternalVLC(url){
     a.click();
     document.body.removeChild(a);
   } else {
-    // SUR WINDOWS / PC : Les scripts automatiques sont bloqués par les navigateurs.
-    // On prépare le lien enrichi et on force l'ouverture d'une petite fenêtre de secours 
-    // avec un lien cliquable que l'utilisateur peut presser directement.
-    const userAgentString = "/:http-user-agent=Mozilla/5.0";
-    const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
-    const vlcProtocolUrl = "vlc://" + finalUrl;
-
-    // Création d'une modale ou d'une popup propre pour forcer le clic utilisateur sous Windows
-    let popupWindow = window.open("", "VLC_Windows", "width=400,height=200");
-    if (popupWindow) {
-      popupWindow.document.write(`
-        <html>
-          <head><title>Lancer VLC - PC</title></head>
-          <body style="font-family: Arial; text-align: center; padding: 20px; background: #222; color: #fff;">
-            <h3>Lancement de VLC</h3>
-            <p>Cliquez sur le bouton ci-dessous pour ouvrir le flux dans VLC :</p>
-            <a href="${vlcProtocolUrl}" style="display: inline-block; padding: 10px 20px; background: #ff9800; color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px;">Ouvrir dans VLC</a>
-            <p style="font-size: 11px; color: #aaa; margin-top: 15px;">(Si VLC est installé sur votre PC)</p>
-          </body>
-        </html>
-      `);
+    // SUR WINDOWS / PC : Retour à la méthode intégrée stable (MiniTV / Lecteur de la page)
+    // On s'assure que l'URL est bien transmise au lecteur de la page pour éviter les blocages du PC.
+    if (typeof playStream === 'function') {
+      playStream(url);
     } else {
-      // Si le bloqueur de popups bloque la fenêtre, on tente le lien direct standard
-      window.location.href = vlcProtocolUrl;
+      // Secours standard si la fonction de lecture globale est nommée différemment
+      window.open(url, '_blank');
     }
   }
 }
