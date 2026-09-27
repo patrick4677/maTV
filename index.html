@@ -552,7 +552,7 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement (Android rapide & Windows via MiniTV ou lien direct) */
+/* Mode 2 : Lancement dans l'application VLC externe (Android et Windows corrigé) */
 function playExternalVLC(url){
   if (/Android/i.test(navigator.userAgent)) {
     // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement
@@ -565,17 +565,24 @@ function playExternalVLC(url){
     a.click();
     document.body.removeChild(a);
   } else {
-    // SUR WINDOWS / PC : Au lieu d'ouvrir une popup de navigateur qui plante sur les flux bruts,
-    // on bascule directement la lecture dans votre MiniTV intégrée qui supporte le plein écran,
-    // ou on déclenche la lecture propre.
-    playStream(url);
+    // SUR WINDOWS / PC : Pour forcer le passage vers le logiciel VLC de bureau (notamment pour Pluto TV)
+    // On nettoie l'URL et on utilise le protocole enregistré 'vlc://' ou un lien iframe invisible 
+    // qui pousse Windows à lancer l'application VLC externe.
+    const userAgentString = "/:http-user-agent=Mozilla/5.0";
+    const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
     
-    // Si vous souhaitez en plus essayer d'ouvrir le VLC de bureau en mode plein écran :
-    // (Note: Les navigateurs bloquent souvent les commandes directes, mais on peut passer par le protocole)
-    const cleanUrl = url.split('/:')[0];
-    window.location.href = "vlc://" + cleanUrl;
+    // Format requis pour que VLC bureau accepte le flux avec ses options sous Windows
+    const vlcProtocol = "vlc://" + finalUrl;
+
+    // Création d'un élément lien invisible pour déclencher le protocole VLC sur le PC
+    const a = document.createElement('a');
+    a.href = vlcProtocol;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }
 }
+
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
