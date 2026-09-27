@@ -552,10 +552,10 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement (Android natif & Windows via la fenêtre intégrée stable) */
+/* Mode 2 : Android (Intent rapide) & Windows (Popup 800x600 d'origine) */
 function playExternalVLC(url){
   if (/Android/i.test(navigator.userAgent)) {
-    // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement
+    // SUR ANDROID : Votre configuration actuelle validée et rapide
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
 
@@ -565,14 +565,17 @@ function playExternalVLC(url){
     a.click();
     document.body.removeChild(a);
   } else {
-    // SUR WINDOWS / PC : Retour à la méthode intégrée stable (MiniTV / Lecteur de la page)
-    // On s'assure que l'URL est bien transmise au lecteur de la page pour éviter les blocages du PC.
-    if (typeof playStream === 'function') {
-      playStream(url);
-    } else {
-      // Secours standard si la fonction de lecture globale est nommée différemment
-      window.open(url, '_blank');
-    }
+    // SUR WINDOWS / PC : Retour à la popup 800x600 avec le lien d'origine (idéal pour Pluto TV)
+    const width = 800;
+    const height = 600;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    
+    window.open(
+      url, 
+      'PopupVLC', 
+      `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
+    );
   }
 }
 
