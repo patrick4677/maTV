@@ -552,26 +552,28 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement dans l'application VLC externe (Android robuste et PC) */
+/* Mode 2 : Lancement dans l'application VLC externe (Version robuste Android & Windows) */
 function playExternalVLC(url){
-  const userAgentString = "/:http-user-agent=Mozilla/5.0";
-  const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
-
   if (/Android/i.test(navigator.userAgent)) {
-    // Nettoyage de l'URL pour l'intent Android
-    const cleanUrl = finalUrl.replace(/^https?:\/\//, '').replace(/^http:\/\//, '');
+    // SUR ANDROID : On nettoie l'URL de toute option technique (comme le user-agent) 
+    // pour que VLC mobile accepte le lien direct immédiatement sans bloquer.
+    const cleanStreamUrl = url.split('/:')[0]; 
+    const encodedUrl = encodeURIComponent(cleanStreamUrl);
     
-    // Syntaxe Intent Android officielle pour cibler explicitement le package VLC org.videolan.vlc
-    const intentUrl = `intent://${cleanUrl}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
+    // Utilisation d'un intent propre ciblant directement VLC Android
+    const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
 
-    // Utilisation d'un lien temporaire pour simuler un clic utilisateur natif
     const a = document.createElement('a');
     a.href = intentUrl;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   } else {
-    // Sur PC / Navigateur : Ouverture en popup centrée avec le lien enrichi
+    // SUR WINDOWS / PC : On conserve l'option user-agent si nécessaire, 
+    // ou on l'applique proprement pour le lecteur de bureau.
+    const userAgentString = "/:http-user-agent=Mozilla/5.0";
+    const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
+
     const width = 800;
     const height = 600;
     const left = (window.innerWidth - width) / 2;
@@ -584,6 +586,7 @@ function playExternalVLC(url){
     );
   }
 }
+
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
