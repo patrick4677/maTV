@@ -552,33 +552,38 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement dans une fenêtre popup ou externe */
+/* Mode 2 : Lancement dans l'application VLC externe (Android robuste et PC) */
 function playExternalVLC(url){
+  const userAgentString = "/:http-user-agent=Mozilla/5.0";
+  const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
+
   if (/Android/i.test(navigator.userAgent)) {
-    // Sur Android, on utilise la simulation de lien pour éviter de s'y reprendre à 3 fois
-    const cleanUrl = url.replace(/^https?:\/\//, '').replace(/^http:\/\//, '');
-    const vlcIntentUrl = `intent://${cleanUrl}#Intent;scheme=https;package=org.videolan.vlc;end;`;
+    // Nettoyage de l'URL pour l'intent Android
+    const cleanUrl = finalUrl.replace(/^https?:\/\//, '').replace(/^http:\/\//, '');
     
+    // Syntaxe Intent Android officielle pour cibler explicitement le package VLC org.videolan.vlc
+    const intentUrl = `intent://${cleanUrl}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
+
+    // Utilisation d'un lien temporaire pour simuler un clic utilisateur natif
     const a = document.createElement('a');
-    a.href = vlcIntentUrl;
+    a.href = intentUrl;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   } else {
-    // Sur PC / Navigateur : Force l'ouverture dans une vraie petite fenêtre popup
+    // Sur PC / Navigateur : Ouverture en popup centrée avec le lien enrichi
     const width = 800;
     const height = 600;
     const left = (window.innerWidth - width) / 2;
     const top = (window.innerHeight - height) / 2;
     
     window.open(
-      url, 
+      finalUrl, 
       'PopupVLC', 
       `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
     );
   }
 }
-
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
