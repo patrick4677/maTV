@@ -72,132 +72,6 @@
   </channel>
   
   
-  <programme channel="walkertexasranger.fr" start="20260927093800 +0200" stop="20260927103100 +0200">
-    
-    
-    <title>Walker Texas Ranger: Abus de pouvoir</title>
-    
-    
-    <episode-num system="onscreen">S03E16</episode-num>
-    
-    
-    <episode-num system="pluto">6116233e483fb10013a93c93</episode-num>
-    
-    
-    <episode-num system="original-air-date">19960210000000 +0000</episode-num>
-    
-    
-    <desc>Lorsqu’Alex essaie de convaincre une femme de quitter son mari qui est en prison pour violences conjugales, il perd son sang-froid et jure de reconquérir sa femme ou de faire payer Alex.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19960210</date>
-    
-    
-    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
-    
-    
-    <sub-title>Abus de pouvoir</sub-title>
-    
-    
-    <category>Action</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Western</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="walkertexasranger.fr" start="20260927103100 +0200" stop="20260927112300 +0200">
-    
-    
-    <title>Walker Texas Ranger: Au delà de la frontière (1ère partie)</title>
-    
-    
-    <episode-num system="onscreen">S03E17</episode-num>
-    
-    
-    <episode-num system="pluto">61162342483fb10013a93e00</episode-num>
-    
-    
-    <episode-num system="original-air-date">19960217000000 +0000</episode-num>
-    
-    
-    <desc>Lorsque Walker découvre qu'un groupe d'Américains fait entrer illégalement des ressortissants mexicains aux États-Unis pour les vendre comme esclaves, il décide seul de s’infiltrer en tant que paysan mexicain pour faire échouer l'opération.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19960217</date>
-    
-    
-    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
-    
-    
-    <sub-title>Au delà de la frontière (1ère partie)</sub-title>
-    
-    
-    <category>Action</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Western</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="walkertexasranger.fr" start="20260927112300 +0200" stop="20260927121100 +0200">
-    
-    
-    <title>Walker Texas Ranger: Au delà de la frontière (2ème partie)</title>
-    
-    
-    <episode-num system="onscreen">S03E18</episode-num>
-    
-    
-    <episode-num system="pluto">61162342483fb10013a93dda</episode-num>
-    
-    
-    <episode-num system="original-air-date">19960224000000 +0000</episode-num>
-    
-    
-    <desc>Lorsque Walker découvre qu'un groupe d'Américains fait entrer illégalement des ressortissants mexicains aux États-Unis pour les vendre comme esclaves, il décide seul de s’infiltrer en tant que paysan mexicain pour faire échouer l'opération.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19960224</date>
-    
-    
-    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
-    
-    
-    <sub-title>Au delà de la frontière (2ème partie)</sub-title>
-    
-    
-    <category>Action</category>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Western</category>
-    
-  
-  </programme>
-  
-  
   <programme channel="walkertexasranger.fr" start="20260927121100 +0200" stop="20260927130300 +0200">
     
     
@@ -228,10 +102,10 @@
     <sub-title>Duel sans merci</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -270,10 +144,10 @@
     <sub-title>Gros plan sur les rangers</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -312,10 +186,10 @@
     <sub-title>Amnésie</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -354,10 +228,10 @@
     <sub-title>Un ranger peut toujours servir</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -396,10 +270,10 @@
     <sub-title>Piégés dans les bois</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -438,10 +312,10 @@
     <sub-title>Le flic qui venait du froid</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -480,10 +354,10 @@
     <sub-title>Sauvetage à Middle Creek</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -522,10 +396,10 @@
     <sub-title>Le défi du tueur</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -564,10 +438,10 @@
     <sub-title>Sur la piste du vengeur</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -606,10 +480,10 @@
     <sub-title>Un flic à Miami</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -648,10 +522,10 @@
     <sub-title>Sauvons la Terre</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -690,10 +564,10 @@
     <sub-title>Les Exécuteurs</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -732,10 +606,10 @@
     <sub-title>Virus</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -774,10 +648,10 @@
     <sub-title>À la santé du diable</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -816,10 +690,10 @@
     <sub-title>Une émeute, un ranger - Parties 1 et 2</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -858,10 +732,10 @@
     <sub-title>Frontière</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
     
     <category>Western</category>
@@ -870,118 +744,127 @@
   </programme>
   
   
-  <programme channel="macgyver.fr" start="20260927095000 +0200" stop="20260927104700 +0200">
+  <programme channel="walkertexasranger.fr" start="20260928022900 +0200" stop="20260928032100 +0200">
     
     
-    <title>MacGyver: La Bataille de Tommy Giordano</title>
+    <title>Walker Texas Ranger: Une ombre dans la nuit</title>
     
     
-    <episode-num system="onscreen">S04E11</episode-num>
+    <episode-num system="onscreen">S01E03</episode-num>
     
     
-    <episode-num system="pluto">62cbbaa9bcc698001329572b</episode-num>
+    <episode-num system="pluto">611b57b120706900140097f6</episode-num>
     
     
-    <episode-num system="original-air-date">19890220000000 +0000</episode-num>
+    <episode-num system="original-air-date">19930501000000 +0000</episode-num>
     
     
-    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    <desc>Walker a rencontré Yoshi Sakaii il y a bien des années, alors qu'il était au Japon : le père de ce dernier lui apprenait les arts martiaux. Or, voici qu'un député américain est impliqué dans le meurtre d'un Yakuza...</desc>
     
     
-    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>19890220</date>
+    <date>19930501</date>
     
     
-    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
     
     
-    <sub-title>La Bataille de Tommy Giordano</sub-title>
+    <sub-title>Une ombre dans la nuit</sub-title>
+    
+    
+    <category>Series</category>
     
     
     <category>Action</category>
     
     
-    <category>Series</category>
+    <category>Western</category>
     
   
   </programme>
   
   
-  <programme channel="macgyver.fr" start="20260927104700 +0200" stop="20260927114500 +0200">
+  <programme channel="walkertexasranger.fr" start="20260928032100 +0200" stop="20260928041400 +0200">
     
     
-    <title>MacGyver: Défi en noir et blanc</title>
+    <title>Walker Texas Ranger: Chasseur de primes</title>
     
     
-    <episode-num system="onscreen">S04E12</episode-num>
+    <episode-num system="onscreen">S01E04</episode-num>
     
     
-    <episode-num system="pluto">62cbbaadbcc69800132958b3</episode-num>
+    <episode-num system="pluto">611b57b120706900140096ef</episode-num>
     
     
-    <episode-num system="original-air-date">19890227000000 +0000</episode-num>
+    <episode-num system="original-air-date">19930925000000 +0000</episode-num>
     
     
-    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    <desc>Walker est sur la piste de deux jeunes criminels, qu'il tâche de retrouver avant qu'un chasseur de primes ne les supprime...</desc>
     
     
-    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>19890227</date>
+    <date>19930925</date>
     
     
-    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
     
     
-    <sub-title>Défi en noir et blanc</sub-title>
+    <sub-title>Chasseur de primes</sub-title>
+    
+    
+    <category>Series</category>
     
     
     <category>Action</category>
     
     
-    <category>Series</category>
+    <category>Western</category>
     
   
   </programme>
   
   
-  <programme channel="macgyver.fr" start="20260927114500 +0200" stop="20260927124200 +0200">
+  <programme channel="walkertexasranger.fr" start="20260928041400 +0200" stop="20260928050600 +0200">
     
     
-    <title>MacGyver: La Fugitive</title>
+    <title>Walker Texas Ranger: Nouvelle-Orléans me voici</title>
     
     
-    <episode-num system="onscreen">S04E13</episode-num>
+    <episode-num system="onscreen">S01E05</episode-num>
     
     
-    <episode-num system="pluto">64f57531f6f05d0013331d94</episode-num>
+    <episode-num system="pluto">611b57b1207069001400969a</episode-num>
     
     
-    <episode-num system="original-air-date">19880101000000 +0000</episode-num>
+    <episode-num system="original-air-date">19931002000000 +0000</episode-num>
     
     
-    <desc>MacGyver tente de sauver une jeune femme de la drogue et de la prostitution</desc>
+    <desc>Le camion cellulaire de Trivette est emporté par un ouragan et tous les détenus s'évadent...</desc>
     
     
-    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/61162089bd1d980013b02ffd/tile_1747381007928.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>19880101</date>
+    <date>19931002</date>
     
     
-    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    <series-id system="pluto">61162089bd1d980013b02ffd</series-id>
     
     
-    <sub-title>La Fugitive</sub-title>
+    <sub-title>Nouvelle-Orléans me voici</sub-title>
+    
+    
+    <category>Series</category>
     
     
     <category>Action</category>
     
     
-    <category>Series</category>
+    <category>Western</category>
     
   
   </programme>
@@ -1017,10 +900,10 @@
     <sub-title>Chasse au trésor</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1056,10 +939,10 @@
     <sub-title>Le tueur invisible</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1095,10 +978,10 @@
     <sub-title>Morts programmées</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1134,10 +1017,10 @@
     <sub-title>Ondes de choc</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1173,10 +1056,10 @@
     <sub-title>Le renégat</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1212,10 +1095,10 @@
     <sub-title>Jeu de piste mortel</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1251,10 +1134,10 @@
     <sub-title>Cessez le feu</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1290,10 +1173,10 @@
     <sub-title>Les Perles de Cléopatre</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1329,10 +1212,10 @@
     <sub-title>La légende de la rose sacrée - 1ère partie</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1368,10 +1251,10 @@
     <sub-title>La légende de la rose sacrée - 2ème partie</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1407,10 +1290,10 @@
     <sub-title>Le fils qu'on attend pas</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1446,10 +1329,10 @@
     <sub-title>Le couloir de la mort</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1485,10 +1368,10 @@
     <sub-title>Entrée en fac</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1524,10 +1407,10 @@
     <sub-title>La piste des rhinocéros</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -1563,151 +1446,127 @@
     <sub-title>Un Paysage d'Anvers</sub-title>
     
     
+    <category>Series</category>
+    
+    
     <category>Action</category>
     
+  
+  </programme>
+  
+  
+  <programme channel="macgyver.fr" start="20260928025500 +0200" stop="20260928035200 +0200">
+    
+    
+    <title>MacGyver: La vierge disparue</title>
+    
+    
+    <episode-num system="onscreen">S05E10</episode-num>
+    
+    
+    <episode-num system="pluto">62e7745ad7fb2b0013883105</episode-num>
+    
+    
+    <episode-num system="original-air-date">19891218000000 +0000</episode-num>
+    
+    
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19891218</date>
+    
+    
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>La vierge disparue</sub-title>
+    
     
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
   
   
-  <programme channel="ina70.fr" start="20260927092400 +0200" stop="20260927104400 +0200">
+  <programme channel="macgyver.fr" start="20260928035200 +0200" stop="20260928044900 +0200">
     
     
-    <title>Aujourd'hui Madame</title>
+    <title>MacGyver: L'un chante l'autre peint</title>
     
     
-    <live/>
+    <episode-num system="onscreen">S05E11</episode-num>
     
     
-    <episode-num system="original-air-date">20260927072400 +0000</episode-num>
+    <episode-num system="pluto">62e77452d7fb2b0013882f9b</episode-num>
     
     
-    <desc>Aujourd'hui, un débat sur l'euthanasie. Une question toujours d'actualité, discutée dans ses aspects politiques, juridiques ou religieux, avec l'espoir d'une fin de vie digne et apaisée.</desc>
+    <episode-num system="original-air-date">19891211000000 +0000</episode-num>
     
     
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
     
     
-    <date>19700101</date>
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    <date>19891211</date>
     
     
-    <sub-title>L'euthanasie</sub-title>
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
+    
+    
+    <sub-title>L'un chante l'autre peint</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Entertainment</category>
+    <category>Action</category>
     
   
   </programme>
   
   
-  <programme channel="ina70.fr" start="20260927104400 +0200" stop="20260927114600 +0200">
+  <programme channel="macgyver.fr" start="20260928044900 +0200" stop="20260928054600 +0200">
     
     
-    <title>Aujourd'hui Madame</title>
+    <title>MacGyver: Sérénité</title>
     
     
-    <live/>
+    <episode-num system="onscreen">S05E12</episode-num>
     
     
-    <episode-num system="original-air-date">20260927084400 +0000</episode-num>
+    <episode-num system="pluto">62e7745ad7fb2b0013883249</episode-num>
     
     
-    <desc>Certaines femmes choisissent de ne pas devenir mères. Dans une société tournée majoritairement vers un modèle familial prédominant, elles doivent expliquer et surtout assumer ce non-désir d'enfant.</desc>
+    <episode-num system="original-air-date">19890108000000 +0000</episode-num>
     
     
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <desc>Travaillant pour la Fondation Phoenix, MacGyver est appelé à l'aide dès qu'une situation périlleuse l'exige.</desc>
     
     
-    <date>19700101</date>
+    <icon src="https://images.pluto.tv/series/62c7cda8be1ffb0014f7e9c7/tile_1788166082010.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    <date>19890108</date>
     
     
-    <sub-title>Celles qui ne veulent pas avoir d'enfants</sub-title>
+    <series-id system="pluto">62c7cda8be1ffb0014f7e9c7</series-id>
     
     
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260927114600 +0200" stop="20260927123200 +0200">
-    
-    
-    <title>À bout portant</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260927094600 +0000</episode-num>
-    
-    
-    <desc>Portrait de Gilbert Bécaud, celui que l'on surnommait Monsieur 100 000 volts. Et dont les chansons et l'incroyable sens du rythme ont électrisé les années 50 et 60.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4be764c00014459101/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4be764c00014459101</series-id>
-    
-    
-    <sub-title>Gilbert Becaud</sub-title>
+    <sub-title>Sérénité</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Entertainment</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="ina70.fr" start="20260927123200 +0200" stop="20260927125800 +0200">
-    
-    
-    <title>Des chiffres et des lettres</title>
-    
-    
-    <live/>
-    
-    
-    <episode-num system="original-air-date">20260927103200 +0000</episode-num>
-    
-    
-    <desc>Présenté par Patrice Laffont. Deux candidats s'affrontent pour le mot le plus long et le compte est bon, leurs compétences en calcul mental et en orthographe sont mises à rude épreuve !</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458fe3/tile_1769587504353.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19700101</date>
-    
-    
-    <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Entertainment</category>
+    <category>Action</category>
     
   
   </programme>
@@ -1737,10 +1596,10 @@
     <series-id system="pluto">65c0ea4ae764c00014458fe3</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1773,10 +1632,10 @@
     <sub-title>Michèle Torr</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1809,10 +1668,10 @@
     <sub-title>Patrick Juvet</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1845,10 +1704,10 @@
     <sub-title>La Bande à Bonnot</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1881,10 +1740,10 @@
     <sub-title>La Bande à Bonnot</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1917,10 +1776,10 @@
     <sub-title>Doris</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1953,10 +1812,10 @@
     <sub-title>Jeu télévisé animé par Pierre Guillermo et Danièle Vlaminck.</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -1989,10 +1848,10 @@
     <sub-title>Les jeux de 20 heures à Trébeurden</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -2022,10 +1881,10 @@
     <series-id system="pluto">65e84d1303625d001315cdbf</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -2055,10 +1914,10 @@
     <series-id system="pluto">65c20aa7e764c000144f7052</series-id>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -2091,10 +1950,10 @@
     <sub-title>L'affaire Philby</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -2127,10 +1986,10 @@
     <sub-title>Pizarre, conquérant du Pérou</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -2163,10 +2022,10 @@
     <sub-title>L'affaire Stavisky</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Entertainment</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -2199,47 +2058,44 @@
     <sub-title>6ème épisode</sub-title>
     
     
+    <category>Entertainment</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="ina70.fr" start="20260928022300 +0200" stop="20260928033000 +0200">
+    
+    
+    <title>Aujourd'hui Madame</title>
+    
+    
+    <live/>
+    
+    
+    <episode-num system="original-air-date">20260928002300 +0000</episode-num>
+    
+    
+    <desc>Les antibiotiques, ce n'est pas automatique. Retour sur le principe d'action des molécules, le cadre de leur prescription chez les adultes et les enfants, l'antibiorésistance et la réglementation en cours en France.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/65c0ea4ae764c00014458f8d/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19700101</date>
+    
+    
+    <series-id system="pluto">65c0ea4ae764c00014458f8d</series-id>
+    
+    
+    <sub-title>Les antibiotiques</sub-title>
     
     
     <category>Entertainment</category>
     
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260927094401 +0200" stop="20260927101601 +0200">
-    
-    
-    <title>C'est Pas Sorcier</title>
-    
-    
-    <episode-num system="onscreen">S01E521</episode-num>
-    
-    
-    <episode-num system="pluto">6747518fa7fde50013e47df3</episode-num>
-    
-    
-    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
-    
-    
-    <desc>Nous passons presque un tiers de notre vie à dormir. Couche-tôt, oiseaux de nuit ou insomniaques, nous avons tous nos propres cycles de sommeil. Pour comprendre comment nous dormons, Sabine est allée passer la nuit dans un centre du sommeil à Lyon</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20120101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Le mystère du sommeil</sub-title>
-    
-    
-    <category>Documentary</category>
-    
     
     <category>Series</category>
     
@@ -2247,211 +2103,34 @@
   </programme>
   
   
-  <programme channel="cestpassorcier.fr" start="20260927101601 +0200" stop="20260927104901 +0200">
+  <programme channel="ina70.fr" start="20260928033000 +0200" stop="20260928050100 +0200">
     
     
-    <title>C'est Pas Sorcier: L' hospital de la tête aux pieds</title>
+    <title>La petite valise</title>
     
     
-    <episode-num system="onscreen">S01E08</episode-num>
+    <live/>
     
     
-    <episode-num system="pluto">64705d2c442733001acc6f5e</episode-num>
+    <episode-num system="original-air-date">20260928013000 +0000</episode-num>
     
     
-    <episode-num system="original-air-date">19940101000000 +0000</episode-num>
+    <desc>Un jeune clerc de notaire de province connaît quelques soucis d'argent. Un jour, il découvre dans le journal que son billet de loterie a remporté le gros lot. Valise à la main, il part récupérer son gain sans se douter qu'une erreur a été commise.</desc>
     
     
-    <desc>A l'intérieur d'un grand hôpital pour enfants, nous suivons le parcours d'un jeune admis pour une opération chirurgicale et découvrons l'ensemble des services et des examens qui permettent sa prise en charge. Comment peut-on voir à l'intérieur du corps ?</desc>
+    <icon src="https://images.pluto.tv/series/66f546c0ee0bee00130ef447/tile_1776776716633.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <date>19700101</date>
     
     
-    <date>19940101</date>
+    <series-id system="pluto">66f546c0ee0bee00130ef447</series-id>
     
     
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>L' hospital de la tête aux pieds</sub-title>
+    <category>Entertainment</category>
     
     
     <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260927104901 +0200" stop="20260927112101 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Histoires de coeur</title>
-    
-    
-    <episode-num system="onscreen">S01E60</episode-num>
-    
-    
-    <episode-num system="pluto">64672144e05e97001a59abe3</episode-num>
-    
-    
-    <episode-num system="original-air-date">19960101000000 +0000</episode-num>
-    
-    
-    <desc>Fred et Jamy nous révèlent tout sur le coeur. Fred se rend à l'INSEP voir comment fonctionne le coeur quand il est soumis à des exercices physiques. Il nous parlera des battements, du rythme cardiaque pendant l'effort, et se prêtera à un échocardiogramme.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19960101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Histoires de coeur</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260927112101 +0200" stop="20260927115301 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Trésor des tourbières</title>
-    
-    
-    <episode-num system="onscreen">S01E257</episode-num>
-    
-    
-    <episode-num system="pluto">646c7c5c91275e001acee5c0</episode-num>
-    
-    
-    <episode-num system="original-air-date">20020101000000 +0000</episode-num>
-    
-    
-    <desc>A première vue, ce ne sont que de banals marécages. Et pourtant, les tourbières regorgent de trésors insoupçonnés. Ces zones humides abritent une faune et une flore rares et passionnantes. Et surtout, la matière organique s'y dégrade peu.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20020101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Trésor des tourbières</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260927115301 +0200" stop="20260927122601 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Le cerveau : j'ai la mémoire qui flanche</title>
-    
-    
-    <episode-num system="onscreen">S01E189</episode-num>
-    
-    
-    <episode-num system="pluto">64675b0691275e001ab88dc1</episode-num>
-    
-    
-    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
-    
-    
-    <desc>Dans ce deuxième volet, nos sorciers nous expliquent comment on acquiert un langage, comment fonctionne notre mémoire, ce qu’est l’intelligence et si on peut la mesurer.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19980101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Le cerveau : j'ai la mémoire qui flanche</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="cestpassorcier.fr" start="20260927122601 +0200" stop="20260927125801 +0200">
-    
-    
-    <title>C'est Pas Sorcier: Les pneus</title>
-    
-    
-    <episode-num system="onscreen">S01E287</episode-num>
-    
-    
-    <episode-num system="pluto">6474774c91275e001afddc56</episode-num>
-    
-    
-    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
-    
-    
-    <desc>C’est crevant la vie d’un pneu ! Sur une longue vie de 40 000 km, il faut savoir économiser sa gomme sans jamais relâcher la pression, garder une tenue irréprochable pour enchaîner les bornes et les virages, tout en résistant aux freinages intempestifs.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20030101</date>
-    
-    
-    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
-    
-    
-    <sub-title>Les pneus</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2487,13 +2166,13 @@
     <sub-title>Des hommes de toutes les couleurs</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2529,13 +2208,13 @@
     <sub-title>Les cathédrales</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2571,13 +2250,13 @@
     <sub-title>Le sida</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2730,13 +2409,13 @@
     <sub-title>Sang pour sang</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2811,13 +2490,13 @@
     <sub-title>La police scientifique (2)</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2853,13 +2532,13 @@
     <sub-title>La lune</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2934,13 +2613,13 @@
     <sub-title>Tous en piste; le cirque</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -2976,13 +2655,13 @@
     <sub-title>Les chasseurs d'épaves</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3018,13 +2697,13 @@
     <sub-title>Les cactus</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3060,13 +2739,13 @@
     <sub-title>Les oiseaux</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3102,13 +2781,13 @@
     <sub-title>Pleins feux sur le système solaire</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3144,13 +2823,13 @@
     <sub-title>Ordinateur tout un programme</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3186,13 +2865,13 @@
     <sub-title>Les sorciers font du ski</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3228,13 +2907,13 @@
     <sub-title>Le sucre</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3270,13 +2949,13 @@
     <sub-title>Ici l'onde; la radio</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3312,13 +2991,13 @@
     <sub-title>Faire du sport c'est physique et chimique</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3354,13 +3033,13 @@
     <sub-title>Quand un pays à faim</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3396,13 +3075,13 @@
     <sub-title>Les plages</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3438,13 +3117,13 @@
     <sub-title>Du vent dans les voiles</sub-title>
     
     
+    <category>Educational</category>
+    
+    
     <category>Series</category>
     
     
     <category>Science</category>
-    
-    
-    <category>Educational</category>
     
   
   </programme>
@@ -3489,76 +3168,37 @@
   </programme>
   
   
-  <programme channel="missionimpossible.fr" start="20260927094702 +0200" stop="20260927104419 +0200">
+  <programme channel="cestpassorcier.fr" start="20260928022201 +0200" stop="20260928025401 +0200">
     
     
-    <title>Mission: Impossible</title>
+    <title>C'est Pas Sorcier</title>
     
     
-    <episode-num system="onscreen">S04E406</episode-num>
+    <episode-num system="onscreen">S01E513</episode-num>
     
     
-    <episode-num system="pluto">6824722a03a2ab14da950fbf</episode-num>
+    <episode-num system="pluto">6747517ca7fde50013e479d0</episode-num>
     
     
-    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    <episode-num system="original-air-date">20120101000000 +0000</episode-num>
     
     
-    <desc>Pour libérer un prêtre emprisonné dont la vie est en jeu, Jim Phelps se fait passer pour un missionnaire, Paris devient un général chinois et Barney construit un hélicoptère.</desc>
+    <desc>Qui ne s’est jamais empressé d’écraser une araignée avec la semelle de sa chaussure, tellement la vision de cet être à 8 pattes est repoussante ? Souvent synonymes de saleté, négligence et de danger, les araignées n’ont pas vraiment bonne presse !</desc>
     
     
-    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>19690101</date>
+    <date>20120101</date>
     
     
-    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
     
     
-    <sub-title>Le Commandant</sub-title>
+    <sub-title>Peur des araignées ?</sub-title>
     
     
-    <category>Action</category>
-    
-    
-    <category>Series</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="missionimpossible.fr" start="20260927104419 +0200" stop="20260927114136 +0200">
-    
-    
-    <title>Mission: Impossible</title>
-    
-    
-    <episode-num system="onscreen">S04E407</episode-num>
-    
-    
-    <episode-num system="pluto">682474e51426f2773e2efedc</episode-num>
-    
-    
-    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
-    
-    
-    <desc>Lee Meriwether et Malachi Throne sont des stars invitées dans un complot du FMI impliquant des doubles et des doubles jeux avec Paris jouant cinq rôles différents et Jim Phelps devenant magicien.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>19690101</date>
-    
-    
-    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
-    
-    
-    <sub-title>Le Robot</sub-title>
-    
-    
-    <category>Action</category>
+    <category>Documentary</category>
     
     
     <category>Series</category>
@@ -3567,40 +3207,166 @@
   </programme>
   
   
-  <programme channel="missionimpossible.fr" start="20260927114136 +0200" stop="20260927123854 +0200">
+  <programme channel="cestpassorcier.fr" start="20260928025401 +0200" stop="20260928032601 +0200">
     
     
-    <title>Mission: Impossible</title>
+    <title>C'est Pas Sorcier: Entre chiens et loups</title>
     
     
-    <episode-num system="onscreen">S04E408</episode-num>
+    <episode-num system="onscreen">S01E159</episode-num>
     
     
-    <episode-num system="pluto">682473869f0436e1ab451f3e</episode-num>
+    <episode-num system="pluto">6467555b54afb6001a30446c</episode-num>
     
     
-    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    <episode-num system="original-air-date">19980101000000 +0000</episode-num>
     
     
-    <desc>La star de la comédie musicale Sally Ann Howes joue un rôle dramatique en tant que membre invité du FMI lorsqu'il entreprend de déjouer un complot visant à ruiner un pays ami avec de la fausse monnaie.</desc>
+    <desc>Fred et Jamy nous emmènent à la découverte des loups du Gévaudan. Ils nous ouvrent les portes du parc Sainte Lucie qui abrite 30 loups de Mongolie en semi-liberté.Les loups sont des animaux sociaux dont la vie est extrêmement codifiée.</desc>
     
     
-    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>19690101</date>
+    <date>19980101</date>
     
     
-    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
     
     
-    <sub-title>De l'or... pour des prunes</sub-title>
+    <sub-title>Entre chiens et loups</sub-title>
     
     
-    <category>Action</category>
+    <category>Educational</category>
     
     
     <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260928032601 +0200" stop="20260928035801 +0200">
+    
+    
+    <title>C'est Pas Sorcier</title>
+    
+    
+    <episode-num system="onscreen">S01E548</episode-num>
+    
+    
+    <episode-num system="pluto">67482cf1e103890013759d41</episode-num>
+    
+    
+    <episode-num system="original-air-date">20130101000000 +0000</episode-num>
+    
+    
+    <desc>Sabine et Jamy mettent le cap sur Aigues-Mortes, au Sud-Ouest de la Camargue. Depuis l’antiquité l’homme y aménage d’immenses lagunes pour cultiver le sel de mer.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20130101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Les trésors des salins du midi</sub-title>
+    
+    
+    <category>Documentary</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260928035801 +0200" stop="20260928043001 +0200">
+    
+    
+    <title>C'est Pas Sorcier: Voyage au coeur de la matière</title>
+    
+    
+    <episode-num system="onscreen">S01E385</episode-num>
+    
+    
+    <episode-num system="pluto">64708333649e97001b711de5</episode-num>
+    
+    
+    <episode-num system="original-air-date">20060101000000 +0000</episode-num>
+    
+    
+    <desc>Des protons lancés à près de 300 000 km par seconde dans de longs tuyaux enfouis sous la terre ? La drôle de machine qui réalise cet exploit atteint 27 kilomètres de circonférence et traverse la frontière franco-suisse de part en part.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20060101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>Voyage au coeur de la matière</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="cestpassorcier.fr" start="20260928043001 +0200" stop="20260928050201 +0200">
+    
+    
+    <title>C'est Pas Sorcier: L'adolescence vive la crise</title>
+    
+    
+    <episode-num system="onscreen">S01E337</episode-num>
+    
+    
+    <episode-num system="pluto">64706e1ba7ef77001aa7a9b0</episode-num>
+    
+    
+    <episode-num system="original-air-date">20050101000000 +0000</episode-num>
+    
+    
+    <desc>L'adolescence est l'âge de tous les bouleversements. Le corps se métamorphose à une allure folle. La silhouette devient celle d'un adulte. On se découvre une sexualité.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6464dc8617da09001a0f44ed/tile_1768261440257.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20050101</date>
+    
+    
+    <series-id system="pluto">6464dc8617da09001a0f44ed</series-id>
+    
+    
+    <sub-title>L'adolescence vive la crise</sub-title>
+    
+    
+    <category>Educational</category>
+    
+    
+    <category>Series</category>
+    
+    
+    <category>Science</category>
     
   
   </programme>
@@ -3636,10 +3402,10 @@
     <sub-title>Le Bouddha de Pékin</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3675,10 +3441,10 @@
     <sub-title>Le Sous-marin</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3714,10 +3480,10 @@
     <sub-title>Les Frères</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3753,10 +3519,10 @@
     <sub-title>Le faucon partie 1</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3792,10 +3558,10 @@
     <sub-title>Le faucon partie 2</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3831,10 +3597,10 @@
     <sub-title>Le faucon partie 3</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3870,10 +3636,10 @@
     <sub-title>Attentat nucléaire</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3909,10 +3675,10 @@
     <sub-title>Amnésie</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3948,10 +3714,10 @@
     <sub-title>Chico</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -3987,10 +3753,10 @@
     <sub-title>La terreur</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -4026,10 +3792,10 @@
     <sub-title>Gitano</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -4065,10 +3831,10 @@
     <sub-title>Fantômes</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -4104,10 +3870,10 @@
     <sub-title>La Liaison</sub-title>
     
     
-    <category>Action</category>
-    
-    
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
@@ -4143,166 +3909,166 @@
     <sub-title>Orphée</sub-title>
     
     
+    <category>Series</category>
+    
+    
     <category>Action</category>
     
+  
+  </programme>
+  
+  
+  <programme channel="missionimpossible.fr" start="20260928020136 +0200" stop="20260928025855 +0200">
+    
+    
+    <title>Mission: Impossible</title>
+    
+    
+    <episode-num system="onscreen">S04E423</episode-num>
+    
+    
+    <episode-num system="pluto">682474fb1426f2773e31f5e8</episode-num>
+    
+    
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
+    
+    
+    <desc>Après avoir sauvé un prisonnier de l'exécution par un dictateur, le FMI doit trouver une cachette si visible qu'elle sera ignorée par la police à la recherche du fugitif.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>19690101</date>
+    
+    
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
+    
+    
+    <sub-title>Le Sosie</sub-title>
+    
     
     <category>Series</category>
+    
+    
+    <category>Action</category>
     
   
   </programme>
   
   
-  <programme channel="rex.fr" start="20260927092157 +0200" stop="20260927101228 +0200">
+  <programme channel="missionimpossible.fr" start="20260928025855 +0200" stop="20260928035614 +0200">
     
     
-    <title>Rex, chien flic</title>
+    <title>Mission: Impossible</title>
     
     
-    <episode-num system="onscreen">S08E114</episode-num>
+    <episode-num system="onscreen">S04E424</episode-num>
     
     
-    <episode-num system="pluto">6a155e44dee9a631d0fe42af</episode-num>
+    <episode-num system="pluto">6824738b9f0436e1ab45e326</episode-num>
     
     
-    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
     
     
-    <desc>Manuel est tué après une fête. Marc Hoffmann soupçonne les invités, dont Thomas et Lisa, un couple cachant une grossesse. Grâce au flair de Rex, l'enquête progresse et révèle que le secret des amoureux est au cœur de ce drame. Un mystère poignant.</desc>
+    <desc>Jim Phelps conduit le FMI à aider l'un de ses propres membres lorsque Barney est arrêté et marqué pour exécution par un chef de police sadique.</desc>
     
     
-    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>20030101</date>
+    <date>19690101</date>
     
     
-    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
     
     
-    <sub-title>Lisa et Thomas</sub-title>
+    <sub-title>La Cachette</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Thriller</category>
+    <category>Action</category>
     
   
   </programme>
   
   
-  <programme channel="rex.fr" start="20260927101228 +0200" stop="20260927110302 +0200">
+  <programme channel="missionimpossible.fr" start="20260928035614 +0200" stop="20260928045332 +0200">
     
     
-    <title>Rex, chien flic</title>
+    <title>Mission: Impossible</title>
     
     
-    <episode-num system="onscreen">S08E115</episode-num>
+    <episode-num system="onscreen">S04E425</episode-num>
     
     
-    <episode-num system="pluto">6a155fa987a403a7cfb4dd68</episode-num>
+    <episode-num system="pluto">6824738e9f0436e1ab46451a</episode-num>
     
     
-    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
     
     
-    <desc>Grabner et Lang sont deux peintres en bâtiment chargés de repeindre la maison des Baumeister. Le voisin, Elmar Baumann, demande à Grabner s'il pourrait également lui repeindre la sienne. Le soir même, Baumann est poignardé.</desc>
+    <desc>Paris est sur le point d'être exécuté lorsqu'il se fait passer pour un mystique fou de pouvoir essayant de prendre le contrôle d'un pays ami en hypnotisant sa dirigeante.</desc>
     
     
-    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>20030101</date>
+    <date>19690101</date>
     
     
-    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
     
     
-    <sub-title>Suivez le guide</sub-title>
+    <sub-title>La Brigade de la mort</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Thriller</category>
+    <category>Action</category>
     
   
   </programme>
   
   
-  <programme channel="rex.fr" start="20260927110302 +0200" stop="20260927115705 +0200">
+  <programme channel="missionimpossible.fr" start="20260928045332 +0200" stop="20260928055049 +0200">
     
     
-    <title>Rex, chien flic</title>
+    <title>Mission: Impossible</title>
     
     
-    <episode-num system="onscreen">S08E116</episode-num>
+    <episode-num system="onscreen">S04E426</episode-num>
     
     
-    <episode-num system="pluto">6a155fab87a403a7cfb53f73</episode-num>
+    <episode-num system="pluto">682473799f0436e1ab437580</episode-num>
     
     
-    <episode-num system="original-air-date">20030101000000 +0000</episode-num>
+    <episode-num system="original-air-date">19690101000000 +0000</episode-num>
     
     
-    <desc>Placé dans un home, le vieux Monsieur Walter est un vrai tyran avec le personnel soignant et les personnes âgées. Lorsqu'il est retrouvé mort, assassiné, l'enquêteur, Marc Hoffmann, soupçonne deux personnes.</desc>
+    <desc>Pour empêcher qu'un congrès étudiant ne soit utilisé comme un tampon par un premier ministre répressif, le FMI prépare Phelps à être capturé afin qu'il puisse trahir Paris en tant que leader étudiant renégat.</desc>
     
     
-    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    <icon src="https://images.pluto.tv/series/681e008ea21058b98fb2d6e7/tile_1768266010996.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
     
     
-    <date>20030101</date>
+    <date>19690101</date>
     
     
-    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    <series-id system="pluto">681e008ea21058b98fb2d6e7</series-id>
     
     
-    <sub-title>La coupe est pleine</sub-title>
-    
-    
-    <category>Series</category>
-    
-    
-    <category>Thriller</category>
-    
-  
-  </programme>
-  
-  
-  <programme channel="rex.fr" start="20260927115705 +0200" stop="20260927125115 +0200">
-    
-    
-    <title>Rex, chien flic</title>
-    
-    
-    <episode-num system="onscreen">S08E117</episode-num>
-    
-    
-    <episode-num system="pluto">6a155fb487a403a7cfb6894c</episode-num>
-    
-    
-    <episode-num system="original-air-date">20040101000000 +0000</episode-num>
-    
-    
-    <desc>Drôle d'enquête! Après avoir reçu l'appel d'un inconnu qui vient d'assister au meurtre d'une femme, l'inspecteur Marc Hoffmann se rend immédiatement sur place, mais les policiers ne trouvent aucune trace de l'homicide.</desc>
-    
-    
-    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
-    
-    
-    <date>20040101</date>
-    
-    
-    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
-    
-    
-    <sub-title>Le défi</sub-title>
+    <sub-title>Le Fils prodigue</sub-title>
     
     
     <category>Series</category>
     
     
-    <category>Thriller</category>
+    <category>Action</category>
     
   
   </programme>
@@ -4338,10 +4104,10 @@
     <sub-title>Amnésie</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4377,10 +4143,10 @@
     <sub-title>Dopage</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4416,10 +4182,10 @@
     <sub-title>Destination Rome</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4455,10 +4221,10 @@
     <sub-title>Calibre 7, 65</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4494,10 +4260,10 @@
     <sub-title>Ombres chinoises</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4533,10 +4299,10 @@
     <sub-title>La plume et le coeur</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4572,10 +4338,10 @@
     <sub-title>Journal intime</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4611,10 +4377,10 @@
     <sub-title>Une poupée de chiffon</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4650,10 +4416,10 @@
     <sub-title>In vino veritas</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4689,10 +4455,10 @@
     <sub-title>Le quatrième complice</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4728,10 +4494,10 @@
     <sub-title>Entre la vie et la mort</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4767,10 +4533,10 @@
     <sub-title>Mort au delphinarium</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4806,10 +4572,10 @@
     <sub-title>La loi du Talion</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4845,10 +4611,10 @@
     <sub-title>Hara-kiri</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4884,10 +4650,10 @@
     <sub-title>Une mère envahissante</sub-title>
     
     
-    <category>Series</category>
-    
-    
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
@@ -4923,10 +4689,127 @@
     <sub-title>Mascarade</sub-title>
     
     
+    <category>Thriller</category>
+    
+    
     <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260928024718 +0200" stop="20260928033712 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S10E134</episode-num>
+    
+    
+    <episode-num system="pluto">6a1687108eee0f23e7e5de34</episode-num>
+    
+    
+    <episode-num system="original-air-date">20090101000000 +0000</episode-num>
+    
+    
+    <desc>Le jockey Giacomo Marussi, qui, contre toute attente, vient de gagner une course, est retrouvé mort dans les écuries. En enquêtant, Lorenzo et Morini découvrent que des tableaux ont disparu dans la villa d'un célèbre architecte.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20090101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>La dernière course</sub-title>
     
     
     <category>Thriller</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260928033712 +0200" stop="20260928042712 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S10E135</episode-num>
+    
+    
+    <episode-num system="pluto">6a1689c9812ca10016c6f24a</episode-num>
+    
+    
+    <episode-num system="original-air-date">20090101000000 +0000</episode-num>
+    
+    
+    <desc>Tout le commissariat est sous le choc. Donatella, la compagne de Gori, est morte étranglée chez elle, dans l'entrée, alors que Gori dormait dans la chambre. Aucune trace d'effraction. Gori est le seul suspect.</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20090101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>Un homme seul</sub-title>
+    
+    
+    <category>Thriller</category>
+    
+    
+    <category>Series</category>
+    
+  
+  </programme>
+  
+  
+  <programme channel="rex.fr" start="20260928042712 +0200" stop="20260928051714 +0200">
+    
+    
+    <title>Rex, chien flic</title>
+    
+    
+    <episode-num system="onscreen">S10E136</episode-num>
+    
+    
+    <episode-num system="pluto">6a1689cd812ca10016c75453</episode-num>
+    
+    
+    <episode-num system="original-air-date">20090101000000 +0000</episode-num>
+    
+    
+    <desc>Le directeur d'un centre de psychologie de l'enfance étrangle Marta, l'une des psychologues. Il a quitté les lieux, ignorant que le fils de la victime, un enfant autiste, a tout vu...</desc>
+    
+    
+    <icon src="https://images.pluto.tv/series/6a0d6733aac2f7c6ecc1763e/tile_1779263284589.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=900"/>
+    
+    
+    <date>20090101</date>
+    
+    
+    <series-id system="pluto">6a0d6733aac2f7c6ecc1763e</series-id>
+    
+    
+    <sub-title>La couleur du silence</sub-title>
+    
+    
+    <category>Thriller</category>
+    
+    
+    <category>Series</category>
     
   
   </programme>
