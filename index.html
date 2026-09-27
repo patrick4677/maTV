@@ -1,15 +1,13 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.5.7 (Robustesse M3U et gestion multi-sources)
-     OBJET : Interface TV avec XMLTV (2 flux) + M3U (tvrz + pluto_fr sécurisé) + MiniTV + Google Cast + Recherche
-     AUTEUR : Patrick
+     VERSION : 1.9.6.0 (Icônes agrandies et espacées)
      ============================================================ -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.5.7</title>
+<title>TNT + M3U – Version 1.9.6.0</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -39,13 +37,13 @@ table { width:100%; border-collapse:collapse; background:#fff; font-size:13px; }
 th, td { border:1px solid #ccc; padding:4px; vertical-align:middle; }
 th { background:#eee; }
 
-/* En-tête de chaîne sur 2 Lignes (Ultra Compact) */
+/* En-tête de chaîne sur 2 Lignes (Ultra Compact avec double action verticale) */
 .channel-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 130px;
-  max-width: 160px;
+  min-width: 150px;
+  max-width: 180px;
   gap: 2px;
 }
 
@@ -72,11 +70,26 @@ th { background:#eee; }
   font-size: 0.9rem;
 }
 
+/* Conteneur des boutons empilés verticalement à droite du nom */
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* Espace augmenté entre les icônes */
+  flex-shrink: 0;
+}
+
 .channel-play-icon {
-  height: 22px;
+  height: 22px; /* Icône un peu plus grande */
   width: 22px;
   cursor: pointer;
-  flex-shrink: 0;
+}
+
+.channel-vlc-icon {
+  height: 22px; /* Icône un peu plus grande */
+  width: 22px;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 .channel-row-bottom {
@@ -318,7 +331,7 @@ body.dark .help-list li {
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.5.7</h1>
+<h1>Programme TV v1.9.6.0</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -385,7 +398,8 @@ body.dark .help-list li {
     <ul class="help-list">
       <li><strong>Icône de la chaîne :</strong> Programme complet</li>
       <li><strong>Nom de la chaîne :</strong> Lien vers le site de la chaîne</li>
-      <li><strong>Télévision :</strong> Ouverture de la chaîne</li>
+      <li><strong>Icône Bleue (haut) :</strong> Lecture dans la MiniTV intégrée</li>
+      <li><strong>Icône Cône VLC (bas) :</strong> Ouvrir dans l'application VLC externe</li>
       <li><strong>Image du programme :</strong> Détail de ce programme</li>
       <li><strong>« Maintenant » :</strong> Programme en cours et le suivant</li>
       <li><strong>« Soirée » :</strong> Programme de la soirée</li>
@@ -410,7 +424,7 @@ let M3U_URL = "";
 let M3U_URL3 = ""; 
 let hlsPlayer = null;
 let WHITELIST = [];
-let useWhitelist = true; // Actif par défaut
+let useWhitelist = true;
 let rawM3UList = [];
 let originalTNT = [];
 let xmlDocCache = null;
@@ -419,7 +433,6 @@ async function loadWhitelist(){
   try{
     WHITELIST = await fetch("coulisses/whitelist.json?t=" + Date.now()).then(r=>r.json());
   } catch(e){
-    console.warn("Whitelist non disponible ou vide :", e);
     WHITELIST = [];
   }
 }
@@ -511,16 +524,9 @@ function makeDraggable(element, handle) {
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
-function playStream(url){
-  // Si vous êtes sur Android, on force l'ouverture directe dans l'application VLC
-  if (/Android/i.test(navigator.userAgent)) {
-    const cleanUrl = url.replace(/^https?:\/\//, '');
-    const vlcIntentUrl = `intent://${cleanUrl}#Intent;scheme=https;package=org.videolan.vlc;end;`;
-    window.location.href = vlcIntentUrl;
-    return;
-  }
 
-  // Comportement normal pour le PC / Web
+/* Mode 1 : Lecture dans la MiniTV intégrée */
+function playStream(url){
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -545,6 +551,32 @@ function playStream(url){
   }
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
+}
+/* Mode 2 : Lancement dans une fenêtre popup ou externe */
+function playExternalVLC(url){
+  if (/Android/i.test(navigator.userAgent)) {
+    // Sur Android, on utilise la simulation de lien pour éviter de s'y reprendre à 3 fois
+    const cleanUrl = url.replace(/^https?:\/\//, '').replace(/^http:\/\//, '');
+    const vlcIntentUrl = `intent://${cleanUrl}#Intent;scheme=https;package=org.videolan.vlc;end;`;
+    
+    const a = document.createElement('a');
+    a.href = vlcIntentUrl;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } else {
+    // Sur PC / Navigateur : Force l'ouverture dans une vraie petite fenêtre popup
+    const width = 800;
+    const height = 600;
+    const left = (window.innerWidth - width) / 2;
+    const top = (window.innerHeight - height) / 2;
+    
+    window.open(
+      url, 
+      'PopupVLC', 
+      `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
+    );
+  }
 }
 
 
@@ -572,12 +604,11 @@ function normalizeID(id){
     .replace(/[^a-z0-9]/g,"");
 }
 
-/* Les 25 chaînes de base de la TNT */
 let TNT = [
   {num:1, id:"TF1.fr", name:"TF1", logo:"coulisses/logos/tf1.png", link:"https://www.tf1.fr", aliases:["tf1", "tf1hd"]},
   {num:2, id:"France2.fr", name:"France 2", logo:"coulisses/logos/france2.png", link:"https://www.france.tv", aliases:["france2", "france2hd", "frfrance2"]},
   {num:3, id:"France3.fr", name:"France 3", logo:"coulisses/logos/france3.png", link:"https://www.france.tv", aliases:["france3", "france3hd", "frfrance3"]},
-  {num:4, id:"France4.fr", name:"France 4", logo:"coulisses/logos/france4.png", link:"https://www.france.tv", aliases:["france4", "france4hd", "frfrance4"]},
+  {num:4, id:"France4.fr", name:"France 4", logo:"coulisses/logos/france4.png", link:["https://www.france.tv"], aliases:["france4", "france4hd", "frfrance4"]},
   {num:5, id:"France5.fr", name:"France 5", logo:"coulisses/logos/france5.png", link:"https://www.france.tv", aliases:["france5", "france5hd", "frfrance5"]},
   {num:6, id:"M6.fr", name:"M6", logo:"coulisses/logos/m6.png", link:"https://www.6play.fr", aliases:["m6", "m6hd"]},
   {num:7, id:"Arte.fr", name:"Arte", logo:"coulisses/logos/arte.png", link:"https://www.arte.tv", aliases:["arte", "artefr"]},
@@ -633,9 +664,7 @@ async function parseM3UContent(url){
 }
 
 function applyM3UFilter() {
-  // 1. On remet la TNT à l'état initial propre
   TNT = JSON.parse(JSON.stringify(originalTNT));
-
   const remainingM3U = [];
 
   rawM3UList.forEach(m => {
@@ -646,7 +675,6 @@ function applyM3UFilter() {
       if (!allowed) return;
     }
 
-    // Cherche si cette entrée correspond à une chaîne TNT existante (par nom, ID ou alias)
     const tntMatch = TNT.find(ch =>
       normalizeID(ch.name) === key ||
       normalizeID(ch.id) === key ||
@@ -655,22 +683,17 @@ function applyM3UFilter() {
     );
 
     if (tntMatch) {
-      // On injecte le flux et éventuellement le logo s'il est dispo
       tntMatch.stream = m.stream;
       if (m.logo && m.logo.trim() !== "") tntMatch.logo = m.logo;
     } else {
-      // Sinon c'est une chaîne additionnelle (type Pluto TV ou autre)
       remainingM3U.push(m);
     }
   });
 
-  // 2. On ajoute ensuite les chaînes supplémentaires (Pluto TV, etc.) en évitant les doublons stricts
   remainingM3U.forEach(m => {
     const key = normalizeID(m.name);
-
-    // Vérifie si elle existe déjà dans la liste finale
     const exists = TNT.find(ch => ch.normId === key || normalizeID(ch.name) === key);
-    if (exists) return; // On saute le doublon
+    if (exists) return;
 
     TNT.push({
       num: TNT.length + 1,
@@ -734,7 +757,6 @@ function parseSingleProgrammeNode(p) {
 
   let rawEp = p.querySelector("episode-num")?.textContent || "";
   let episode = parseEpisodeNum(rawEp);
-
   let rating = p.querySelector("rating value")?.textContent || p.querySelector("rating")?.textContent || "";
 
   const creditsNode = p.querySelector("credits");
@@ -767,20 +789,28 @@ function getEPGDateRange(programmes){
 
   if(dates.length===0) return "Programme chargé";
   dates.sort((a,b)=>a-b);
-
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
+/* Génération de la cellule avec les boutons agrandis et espacés verticalement */
 function buildChannelCellHtml(ch) {
-  const playImg = ch.stream 
-    ? `<img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer le direct">` 
-    : '';
+  let actionsHtml = '';
+  if (ch.stream) {
+    actionsHtml = `
+      <div class="actions-container">
+        <!-- Bouton haut : MiniTV intégrée -->
+        <img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer dans la MiniTV">
+        <!-- Bouton bas : Cône VLC Externe -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6.svg" onerror="this.src='coulisses/vlc.png'" class="channel-vlc-icon focusable" tabindex="0" onclick="playExternalVLC('${ch.stream}')" title="Ouvrir dans l'application VLC externe">
+      </div>
+    `;
+  }
 
   return `
     <div class="channel-box">
       <div class="channel-row-top">
         <span class="channel-num">#${ch.num}</span>
-        <a href="${ch.link}" target="_blank" class="channel-name-link focusable" tabindex="0">${ch.name}</a>${playImg}
+        <a href="${ch.link}" target="_blank" class="channel-name-link focusable" tabindex="0">${ch.name}</a>${actionsHtml}
       </div>
       <div class="channel-row-bottom">
         <img class="channel-logo-img focusable" tabindex="0" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')" alt="${ch.name}" title="Voir 7 jours">
@@ -811,31 +841,23 @@ function renderEvening(channels){
     const chanCellHtml = buildChannelCellHtml(ch);
 
     if(!list){
-      html += `
-      <tr>
-        <td>${chanCellHtml}</td>
-        <td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>
-      </tr>`;
+      html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td></tr>`;
       return;
     }
 
     let evening = list.find(p=>{
       const date = p.start.toLocaleDateString("fr-FR");
       if(date!==today) return false;
-
       const h = p.start.getHours(), m = p.start.getMinutes();
       const minutes = h*60+m;
       const duration = (p.stop-p.start)/60000;
-
       return minutes>=1245 && minutes<=1290 && duration>=45;
     }) || list.find(p=>{
       const date = p.start.toLocaleDateString("fr-FR");
       if(date!==today) return false;
-
       const h = p.start.getHours(), m = p.start.getMinutes();
       const minutes = h*60+m;
       const duration = (p.stop-p.start)/60000;
-
       return minutes>=1230 && duration>=20;
     });
 
@@ -846,16 +868,11 @@ function renderEvening(channels){
     }
 
     if(!evening){
-      html += `
-      <tr>
-        <td>${chanCellHtml}</td>
-        <td colspan="6" style="text-align:center;color:#888;">Aucun programme soirée</td>
-      </tr>`;
+      html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Aucun programme soirée</td></tr>`;
       return;
     }
 
     const duration = Math.round((evening.stop-evening.start)/60000);
-    
     let remainingText = "";
     if (now >= evening.start && now <= evening.stop) {
       const remaining = Math.max(0, Math.round((evening.stop - now) / 60000));
@@ -874,50 +891,25 @@ function renderEvening(channels){
       }
     }
 
-    let eveningIcon = evening.icon;
-    let nextIcon = next ? next.icon : "";
-
-    const eveningImgHtml = eveningIcon 
-      ? `<img src="${eveningIcon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` 
-      : ``;
-
-    const nextImgHtml = nextIcon 
-      ? `<img src="${nextIcon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` 
-      : ``;
+    const eveningImgHtml = evening.icon ? `<img src="${evening.icon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` : ``;
+    const nextImgHtml = next && next.icon ? `<img src="${next.icon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` : ``;
 
     html += `
     <tr>
       <td>${chanCellHtml}</td>
       <td>${formatTime(evening.start)}</td>
-
-      <td class="popup-evening focusable"
-          tabindex="0"
-          data-chan="${ch.normId}"
-          data-idx="${list.indexOf(evening)}"
-          style="cursor:pointer;">
+      <td class="popup-evening focusable" tabindex="0" data-chan="${ch.normId}" data-idx="${list.indexOf(evening)}" style="cursor:pointer;">
         <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            ${eveningImgHtml}
-            <span>${evening.title}</span>
-          </div>
+          <div style="display:flex; align-items:center; gap:8px;">${eveningImgHtml}<span>${evening.title}</span></div>
           <span style="color:#007acc; font-weight:bold; white-space:nowrap; margin-left:10px;">${remainingText}</span>
         </div>
       </td>
-
       <td>${evening.theme}</td>
       <td>${duration} min</td>
       <td>${next?formatTime(next.start):"—"}</td>
-
-      <td class="popup-evening focusable"
-          tabindex="0"
-          data-chan="${ch.normId}"
-          data-idx="${next ? list.indexOf(next) : -1}"
-          style="cursor:pointer;">
+      <td class="popup-evening focusable" tabindex="0" data-chan="${ch.normId}" data-idx="${next ? list.indexOf(next) : -1}" style="cursor:pointer;">
         <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            ${nextImgHtml}
-            <span>${next ? next.title : "—"}</span>
-          </div>
+          <div style="display:flex; align-items:center; gap:8px;">${nextImgHtml}<span>${next ? next.title : "—"}</span></div>
           <span style="color:#007acc; font-weight:bold; white-space:nowrap; margin-left:10px;">${nextRemainingText}</span>
         </div>
       </td>
@@ -953,7 +945,6 @@ function openFullProgramForChannel(normId) {
     html += `<p style="color:#888;">Aucune donnée XMLTV disponible pour cette chaîne.</p>`;
   } else {
     fullList.sort((a, b) => a.start - b.start);
-
     fullList.forEach(p => {
       html += `
       <div class="prog-item" style="margin-bottom:12px; display:flex; align-items:center; gap:12px;">
@@ -970,13 +961,11 @@ function openFullProgramForChannel(normId) {
   }
 
   html += "</div>";
-
   document.getElementById("full").innerHTML = html;
 
   const tab = document.getElementById("tab-full");
   tab.style.display = "inline-block";
   tab.textContent = "Complet – " + ch.name;
-
   showTab("full");
 }
 
@@ -990,14 +979,7 @@ function filterFullPrograms(){
 
 function filterChannels(){
   const q = document.getElementById("search").value.toLowerCase().trim();
-
-  document.querySelectorAll("#tv tbody tr").forEach(row=>{
-    const nameCell = row.querySelector(".channel-name-link");
-    if(!nameCell) return;
-    row.style.display = nameCell.textContent.toLowerCase().includes(q) ? "" : "none";
-  });
-
-  document.querySelectorAll("#evening tbody tr").forEach(row=>{
+  document.querySelectorAll("#tv tbody tr, #evening tbody tr").forEach(row=>{
     const nameCell = row.querySelector(".channel-name-link");
     if(!nameCell) return;
     row.style.display = nameCell.textContent.toLowerCase().includes(q) ? "" : "none";
@@ -1019,15 +1001,8 @@ async function updateTV(){
         const xmlTxt2 = await fetch(XML_URL2 + "?t=" + Date.now()).then(r=>r.text());
         const xmlDoc2 = new DOMParser().parseFromString(xmlTxt2, "application/xml");
         
-        const extraProgrammes = xmlDoc2.querySelectorAll("programme");
-        extraProgrammes.forEach(p => {
-          xmlDocCache.documentElement.appendChild(p.cloneNode(true));
-        });
-
-        const extraChannels = xmlDoc2.querySelectorAll("channel");
-        extraChannels.forEach(c => {
-          xmlDocCache.documentElement.appendChild(c.cloneNode(true));
-        });
+        xmlDoc2.querySelectorAll("programme").forEach(p => xmlDocCache.documentElement.appendChild(p.cloneNode(true)));
+        xmlDoc2.querySelectorAll("channel").forEach(c => xmlDocCache.documentElement.appendChild(c.cloneNode(true)));
       } catch(err) {
         console.warn("Second fichier XML non chargé :", err);
       }
@@ -1035,7 +1010,6 @@ async function updateTV(){
 
     const programmesNodes = xmlDocCache.querySelectorAll("programme");
     const channelsToday = {};
-
     const now = new Date();
     const todayStr = now.toLocaleDateString("fr-FR");
 
@@ -1055,8 +1029,7 @@ async function updateTV(){
       }
     }
 
-    const xmlChannels = xmlDocCache.querySelectorAll("channel");
-    xmlChannels.forEach(xmlChan => {
+    xmlDocCache.querySelectorAll("channel").forEach(xmlChan => {
       const xmlId = xmlChan.getAttribute("id");
       const normXmlId = normalizeID(xmlId);
       const displayName = normalizeID(xmlChan.querySelector("display-name")?.textContent || "");
@@ -1080,7 +1053,6 @@ async function updateTV(){
     });
 
     document.getElementById("status").textContent = getEPGDateRange(programmesNodes);
-
     renderEvening(channelsToday);
 
     const tbody = document.querySelector("#tv tbody");
@@ -1088,15 +1060,10 @@ async function updateTV(){
 
     TNT.forEach(ch=>{
       let list = channelsToday[ch.normId];
-      if (!list && ch.xmlId && channelsToday[normalizeID(ch.xmlId)]) {
-        list = channelsToday[normalizeID(ch.xmlId)];
-      }
+      if (!list && ch.xmlId && channelsToday[normalizeID(ch.xmlId)]) list = channelsToday[normalizeID(ch.xmlId)];
       if (!list && ch.aliases) {
         for (let alias of ch.aliases) {
-          if (channelsToday[normalizeID(alias)]) {
-            list = channelsToday[normalizeID(alias)];
-            break;
-          }
+          if (channelsToday[normalizeID(alias)]) { list = channelsToday[normalizeID(alias)]; break; }
         }
       }
 
@@ -1104,16 +1071,12 @@ async function updateTV(){
 
       if(!list){
         const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${chanCellHtml}</td>
-          <td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>
-        `;
+        tr.innerHTML = `<td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>`;
         tbody.appendChild(tr);
         return;
       }
 
       list.sort((a,b)=>a.start-b.start);
-
       let current = null, next = null;
 
       for(let i=0;i<list.length;i++){
@@ -1126,10 +1089,7 @@ async function updateTV(){
 
       if(!current){
         const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${chanCellHtml}</td>
-          <td colspan="6" style="text-align:center;color:#888;">Aucun programme en cours</td>
-        `;
+        tr.innerHTML = `<td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Aucun programme en cours</td>`;
         tbody.appendChild(tr);
         return;
       }
@@ -1140,33 +1100,20 @@ async function updateTV(){
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td>${chanCellHtml}</td>
-
         <td>${formatTime(current.start)}</td>
-
-        <td class="popup-now focusable"
-            tabindex="0"
-            data-chan="${ch.normId}"
-            data-idx="${list.indexOf(current)}"
-            style="cursor:pointer;">
+        <td class="popup-now focusable" tabindex="0" data-chan="${ch.normId}" data-idx="${list.indexOf(current)}" style="cursor:pointer;">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
             <div style="display:flex; align-items:center; gap:8px;">
-              ${current && current.icon ? `<img src="${current.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
+              ${current && current.icon ? `<img src="${current.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'"` : ""}
               <span>${current ? current.title : ""}</span>
             </div>
             <span style="color:#007acc; font-weight:bold; white-space:nowrap; margin-left:10px;">Reste ${remaining} mn</span>
           </div>
         </td>
-
         <td>${current.theme}</td>
         <td>${duration} min</td>
-
         <td>${next ? formatTime(next.start) : ""}</td>
-
-        <td class="popup-now focusable"
-            tabindex="0"
-            data-chan="${ch.normId}"
-            data-idx="${next ? list.indexOf(next) : -1}"
-            style="cursor:pointer;">
+        <td class="popup-now focusable" tabindex="0" data-chan="${ch.normId}" data-idx="${next ? list.indexOf(next) : -1}" style="cursor:pointer;">
           <div style="display:flex; align-items:center; gap:8px;">
             ${next && next.icon ? `<img src="${next.icon}" referrerpolicy="no-referrer" style="height:50px; border-radius:4px;" onerror="this.style.display='none'">` : ""}
             <span>${next ? next.title : ""}</span>
@@ -1189,7 +1136,6 @@ function bindPopupEvents(selector, channelsToday) {
   document.querySelectorAll(selector).forEach(cell => {
     const chan = cell.dataset.chan;
     const idx = parseInt(cell.dataset.idx, 10);
-
     if (!channelsToday[chan] || !channelsToday[chan][idx]) return;
     const prog = channelsToday[chan][idx];
 
@@ -1200,9 +1146,7 @@ function bindPopupEvents(selector, channelsToday) {
 
     cell.addEventListener("click", openAction);
     cell.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.keyCode === 13) {
-        openAction(e);
-      }
+      if (e.key === "Enter" || e.keyCode === 13) openAction(e);
     });
   });
 }
@@ -1210,16 +1154,12 @@ function bindPopupEvents(selector, channelsToday) {
 (async ()=>{
   await loadConfig();
   await loadWhitelist();
-
   originalTNT = JSON.parse(JSON.stringify(TNT));
 
   try{
-    // CHARGEMENT COMBINÉ SÉCURISÉ DES 2 FLUX M3U ACTIFS (tvrz.m3u + pluto_fr.m3u via m3u3)
     const list1 = M3U_URL ? await parseM3UContent(M3U_URL) : [];
     const list3 = M3U_URL3 ? await parseM3UContent(M3U_URL3) : [];
-    
     rawM3UList = [...list1, ...list3];
-    
     applyM3UFilter();
   } catch(e){
     console.warn("Erreur globale de chargement M3U", e);
@@ -1231,11 +1171,7 @@ function bindPopupEvents(selector, channelsToday) {
 
 function showProgramPopup(prog){
   let detailsHtml = "";
-
-  if (prog.subTitle) {
-    detailsHtml += `<p style="font-style:italic; font-size:15px; margin-top:-5px; color:#ddd;">${prog.subTitle}</p>`;
-  }
-
+  if (prog.subTitle) detailsHtml += `<p style="font-style:italic; font-size:15px; margin-top:-5px; color:#ddd;">${prog.subTitle}</p>`;
   detailsHtml += `<p><b>Horaire :</b> ${formatTime(prog.start)} – ${formatTime(prog.stop)} (${Math.round((prog.stop-prog.start)/60000)} min)</p>`;
   
   if (prog.episode) detailsHtml += `<p><b>Épisode :</b> ${prog.episode}</p>`;
@@ -1262,12 +1198,8 @@ function showProgramPopup(prog){
   `;
 
   document.getElementById("popupContent").innerHTML = html;
-  const popup = document.getElementById("popup");
-  popup.style.display = "block";
-
-  setTimeout(() => {
-    document.getElementById("popupCloseBtn").focus();
-  }, 100);
+  document.getElementById("popup").style.display = "block";
+  setTimeout(() => document.getElementById("popupCloseBtn").focus(), 100);
 }
 
 function closePopup(){
@@ -1288,9 +1220,7 @@ helpCloseBtn.addEventListener("click", () => {
 });
 
 window.addEventListener("click", (event) => {
-  if (event.target === helpModal) {
-    helpModal.style.display = "none";
-  }
+  if (event.target === helpModal) helpModal.style.display = "none";
 });
 </script>
 
