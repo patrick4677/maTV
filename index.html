@@ -552,10 +552,10 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Lancement dans l'application VLC externe (Android et Windows robuste) */
+/* Mode 2 : Lancement dans l'application VLC externe (Android et Windows avec secours cliquable) */
 function playExternalVLC(url){
   if (/Android/i.test(navigator.userAgent)) {
-    // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement
+    // SUR ANDROID : Votre configuration actuelle qui fonctionne parfaitement[span_1](start_span)[span_1](end_span)
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
 
@@ -565,22 +565,35 @@ function playExternalVLC(url){
     a.click();
     document.body.removeChild(a);
   } else {
-    // SUR WINDOWS / PC : 
+    // SUR WINDOWS / PC : Les scripts automatiques sont bloqués par les navigateurs.
+    // On prépare le lien enrichi et on force l'ouverture d'une petite fenêtre de secours 
+    // avec un lien cliquable que l'utilisateur peut presser directement.
     const userAgentString = "/:http-user-agent=Mozilla/5.0";
     const finalUrl = url.includes('/:http-user-agent=') ? url : url + userAgentString;
-    
-    // Sur Windows, si le protocole direct est bloqué par le navigateur, 
-    // on ouvre une page intermédiaire ou on utilise window.open avec une gestion propre,
-    // ou bien on force l'URI du lecteur de bureau.
-    try {
-      // Tentative d'ouverture via le protocole bureau
-      window.location.href = "vlc://" + finalUrl;
-    } catch(e) {
-      // Secours si le navigateur bloque l'URI directe
-      window.open(finalUrl, '_blank');
+    const vlcProtocolUrl = "vlc://" + finalUrl;
+
+    // Création d'une modale ou d'une popup propre pour forcer le clic utilisateur sous Windows
+    let popupWindow = window.open("", "VLC_Windows", "width=400,height=200");
+    if (popupWindow) {
+      popupWindow.document.write(`
+        <html>
+          <head><title>Lancer VLC - PC</title></head>
+          <body style="font-family: Arial; text-align: center; padding: 20px; background: #222; color: #fff;">
+            <h3>Lancement de VLC</h3>
+            <p>Cliquez sur le bouton ci-dessous pour ouvrir le flux dans VLC :</p>
+            <a href="${vlcProtocolUrl}" style="display: inline-block; padding: 10px 20px; background: #ff9800; color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px;">Ouvrir dans VLC</a>
+            <p style="font-size: 11px; color: #aaa; margin-top: 15px;">(Si VLC est installé sur votre PC)</p>
+          </body>
+        </html>
+      `);
+    } else {
+      // Si le bloqueur de popups bloque la fenêtre, on tente le lien direct standard
+      window.location.href = vlcProtocolUrl;
     }
   }
 }
+
+
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
