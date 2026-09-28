@@ -1,22 +1,29 @@
 import os
 import sys
+import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+# Fichiers dans le même répertoire que le script
 OUTPUT_FILE = "coulisses/ina70.xml"
-PLUTO_XML_URL = "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/PlutoTV/fr.xml"
+CHANNELS_CONFIG_FILE = "coulisses/channels.json"
 
-# Mapping des ID Pluto TV réels vers les ID cibles de votre application
-TARGET_CHANNELS = {
-    "639b54404cfdf7000729b3c1": "ina70.fr",              # INA 70[span_1](start_span)[span_1](end_span)
-    "63b579961bdba100071214cb": "cestpassorcier.fr",      # C'est pas sorcier[span_2](start_span)[span_2](end_span)
-    "6245ccd0c6cdb800074632e4": "macgyver.fr",            # MacGyver
-    "6671b21ffc3a46000857fe75": "missionimpossible.fr",  # Mission Impossible
-    "691b332aa4385c191ee44b57": "rex.fr",                 # Rex, chien flic
-    "60afa749ac7f3200078adb40": "walkertexasranger.fr"    # Walker Texas Ranger
-}
+def load_config():
+    """Charge l'URL et le dictionnaire des chaînes depuis le JSON local."""
+    if os.path.exists(CHANNELS_CONFIG_FILE):
+        try:
+            with open(CHANNELS_CONFIG_FILE, "r", encoding="utf-8") as f:
+                config = json.load(f)
+                url = config.get("pluto_xml_url")
+                channels = config.get("target_channels", {})
+                return url, channels
+        except Exception as e:
+            print(f"Erreur de lecture du JSON : {e}")
+    
+    print(f"Erreur : Impossible de trouver le fichier {CHANNELS_CONFIG_FILE} dans le répertoire courant.")
+    sys.exit(1)
 
 def get_paris_tz():
     now = datetime.now(timezone.utc)
@@ -46,18 +53,25 @@ def convert_date(date_str):
         return date_str
 
 def main():
+    pluto_xml_url, target_channels = load_config()
+    
+    if not pluto_xml_url or not target_channels:
+        print("Erreur : Configuration incomplète dans le JSON.")
+        sys.exit(1)
+
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    print("Téléchargement du flux Pluto TV...")
+    print(f"Téléchargement du flux depuis : {pluto_xml_url}")
 
     try:
-        req = urllib.request.Request(PLUTO_XML_URL, headers={'User-Agent': 'Mozilla/5.0'})
+        req = urllib.request.Request(pluto_xml_url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=30) as resp:
             xml_data = resp.read()
     except Exception as e:
         print(f"Erreur de téléchargement : {e}")
         sys.exit(1)
 
-    print("Extraction des programmes (INA 70, C'est pas sorcier, MacGyver, Mission Impossible, Rex, Walker)...")
+    channel_names = ", ".join(target_channels.values())
+    print(f"Extraction des programmes pour : {channel_names}...")
     root = ET.fromstring(xml_data)
 
     tv = ET.Element('tv', {
@@ -67,8 +81,8 @@ def main():
 
     for channel in root.findall('channel'):
         ch_id = channel.get('id')
-        if ch_id in TARGET_CHANNELS:
-            channel.set('id', TARGET_CHANNELS[ch_id])
+        if ch_id in target_channels:
+            channel.set('id', target_channels[ch_id])
             tv.append(channel)
 
     count = 0
@@ -78,7 +92,7 @@ def main():
 
     for prog in root.findall('programme'):
         ch_id = prog.get('channel')
-        if ch_id in TARGET_CHANNELS:
+        if ch_id in target_channels:
             start_str = prog.get('start')
             stop_str = prog.get('stop')
             
@@ -91,7 +105,7 @@ def main():
                 except Exception:
                     pass
 
-            prog.set('channel', TARGET_CHANNELS[ch_id])
+            prog.set('channel', target_channels[ch_id])
             if start_str: prog.set('start', convert_date(start_str))
             if stop_str: prog.set('stop', convert_date(stop_str))
 
