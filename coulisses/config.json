@@ -1,8 +1,7 @@
 {
-    "xml1": "https://xmltvfr.fr/xmltv/xmltv_tnt.xml",
     "xml": "coulisses/xmltv_tnt.xml",
     "xml2": "coulisses/ina70.xml",
     "m3u": "https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u",
-    "m3u2": "tvrz.m3u",
+    "m3u2": "https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u",
     "m3u3": "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_fr.m3u"
 }
