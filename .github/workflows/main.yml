@@ -22,7 +22,7 @@ jobs:
       - name: Télécharger le fichier XML et les listes M3U
         run: |
           curl -s https://xmltvfr.fr/xmltv/xmltv_tnt.xml -o coulisses/xmltv_tnt.xml
-          curl -sL https://tvradiozap.eu/live/d/tvrztv.m3u -o coulisses/tvrz.m3u
+          curl -sL https://tvradiozap.eu/live/d/tvrztv.m3u -o coulisses/tvrztv.m3u
           curl -sL https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_fr.m3u  -o coulisses/pluto_fr.m3u
 
       - name: Optimiser le fichier XML (Conservation des chaines + filtrage programmes)
