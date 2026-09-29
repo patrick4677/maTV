@@ -1,13 +1,13 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.6.0 (Icônes agrandies et espacées)
+     VERSION : 1.9.6.1 (Corrigé - MiniTV, VLC & M3U)
      ============================================================ -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.6.0</title>
+<title>TNT + M3U – Version 1.9.6.1</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -82,18 +82,18 @@ th { background:#eee; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px; /* Espace augmenté entre les icônes */
+  gap: 6px;
   flex-shrink: 0;
 }
 
 .channel-play-icon {
-  height: 22px; /* Icône un peu plus grande */
+  height: 22px;
   width: 22px;
   cursor: pointer;
 }
 
 .channel-vlc-icon {
-  height: 22px; /* Icône un peu plus grande */
+  height: 22px;
   width: 22px;
   cursor: pointer;
   object-fit: contain;
@@ -338,7 +338,7 @@ body.dark .help-list li {
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.6.0</h1>
+<h1>Programme TV v1.9.6.1</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -559,10 +559,12 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
-/* Mode 2 : Android (Intent rapide) & Windows (Popup 800x600 d'origine) */
+
+/* Mode 2 : Android (Intent rapide) & Windows (Popup 800x600 d'origine) - CORRIGÉ AVEC FERMETURE MINITV */
 function playExternalVLC(url){
+  closeMiniTV(); // Coupe la MiniTV pour qu'elle ne tourne plus en arrière-plan[span_2](start_span)[span_2](end_span)
+
   if (/Android/i.test(navigator.userAgent)) {
-    // SUR ANDROID : Votre configuration actuelle validée et rapide
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
 
@@ -572,7 +574,6 @@ function playExternalVLC(url){
     a.click();
     document.body.removeChild(a);
   } else {
-    // SUR WINDOWS / PC : Retour à la popup 800x600 avec le lien d'origine (idéal pour Pluto TV)
     const width = 800;
     const height = 600;
     const left = (window.innerWidth - width) / 2;
@@ -640,8 +641,12 @@ let TNT = [
 
 TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
+/* CORRIGÉ : Support du protocole sécurisé pour les URL M3U distantes */
 async function parseM3UContent(url){
   try{
+    if (window.location.protocol === 'https:' && url.startsWith('http://')) {
+      url = url.replace('http://', 'https://');
+    }
     const txt = await fetch(url + "?t=" + Date.now()).then(r=>r.text());
     const lines = txt.split("\n");
     const list = [];
@@ -798,7 +803,6 @@ function getEPGDateRange(programmes){
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
-/* Génération de la cellule avec les boutons agrandis et espacés verticalement */
 function buildChannelCellHtml(ch) {
   let actionsHtml = '';
   if (ch.stream) {
