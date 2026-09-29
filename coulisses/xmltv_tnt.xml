@@ -2084,36 +2084,6 @@
       <icon src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Moins10.svg/250px-Moins10.svg.png" />
     </rating>
   </programme>
-  <programme start="20260929031500 +0200" stop="20260929044000 +0200" channel="France2.fr">
-    <title lang="fr">Le combat d'Alice</title>
-    <desc lang="fr">Veuf depuis deux ans, Joscelin s'étourdit dans le travail. Il faut qu'Alice, sa fille de 16 ans, se fasse renvoyer du lycée pour qu'il admette enfin qu'elle aussi va mal. Leurs rapports sont à la fois distants et tendus et l'adolescente est envoyée contre son gré à la campagne. Elle y mène la vie dure à ses grands-parents jusqu'à ce qu'elle fasse la connaissance de Doucette, une jolie vache dont la tendresse qu'elle porte à son veau la touche et l'apaise. Mais un jour, la bête est chargée dans une camionnette, direction l'abattoir. Quand Alice, bouleversée, comprend que le petit de Doucette est le prochain sur la liste, elle cesse du jour au lendemain de manger de la viande. Prête à tout pour sauver l'animal, elle se rapproche de militants antispécistes et s'engage avec toute la force et l'excès de son âge...</desc>
-    <credits>
-      <director>Thierry Binisti</director>
-      <actor>Jérémy Barrière</actor>
-      <actor>Jacques Chambon</actor>
-      <actor>Juliette Donner</actor>
-      <actor>Lucas Noël</actor>
-      <actor>Mathieu Dublocard</actor>
-      <actor>Lucy Loste Berset</actor>
-      <actor>Pasquale d'Inca</actor>
-      <actor>Carole Bianic</actor>
-      <actor>Luce Mouchel</actor>
-      <actor>Véronique Frumy</actor>
-      <actor>Nicolas Gob</actor>
-      <actor>Léonie Dahan-Lamort</actor>
-      <adapter>Mikaël Ollivier</adapter>
-      <producer>Pierre Sportolaro</producer>
-      <guest>A Prime Group</guest>
-    </credits>
-    <date>2024</date>
-    <category lang="fr">Téléfilm</category>
-    <category lang="fr">Drame</category>
-    <icon src="https://img.bouygtel.fr/CMS/images/0041A9A5A3B3C9EA54BD06DF51C5A275.jpg" />
-    <country lang="fr">France</country>
-    <rating system="CSA">
-      <value>Tout public</value>
-    </rating>
-  </programme>
   <programme start="20260929044000 +0200" stop="20260929044500 +0200" channel="France2.fr">
     <title lang="fr">Journal Météo climat outre-mer</title>
     <desc lang="fr">Un point météo complet sur la météo dans les Outre-mer, avec les prévisions de températures et la force des vents.</desc>
@@ -23663,6 +23633,52 @@
       <value>Tout public</value>
     </rating>
   </programme>
+  <programme start="20261002151500 +0200" stop="20261002161000 +0200" channel="NT1.fr">
+    <title lang="fr">Les frères Scott</title>
+    <sub-title lang="fr">La vérité rien que la vérité</sub-title>
+    <desc lang="fr">Haley examine les photos compromettantes de Nathan tenant Renee dans ses bras. Malgré ses protestations d'innocence, Nathan aura du mal à dissiper les doutes. Millicent se rend à l'hôtel où Alex séjourne pour l'emmener à sa première séance de photos chez Clothes Over Bro's. Cependant, elle est surprise de trouver Alex de retour d'une nuit de fête. Dan est inquiet de son émission de télévision. Alex tente de séduire Julian et se moque de l'âge de Brooke...</desc>
+    <credits>
+      <director>Liz Friedlander</director>
+      <actor>Robert Buckley</actor>
+      <actor>Austin Nichols</actor>
+      <actor>Paul Johansson</actor>
+      <actor>Bethany Joy Lenz</actor>
+      <actor>Jackson Brundage</actor>
+      <actor>Kate French</actor>
+      <actor>Sophia Bush</actor>
+      <actor>Shantel VanSanten</actor>
+      <actor>James Lafferty</actor>
+      <actor>Antwon Tanner</actor>
+      <actor>Lee Norris</actor>
+      <actor>Jana Kramer</actor>
+      <adapter>Mark Schwahn</adapter>
+      <producer>Mike Herro</producer>
+      <producer>Brian Robbins</producer>
+      <producer>Lynn Raynor</producer>
+      <producer>Steven Goldfried</producer>
+      <producer>David Strauss</producer>
+      <producer>John A. Norris</producer>
+      <producer>David Blake Hartley</producer>
+      <producer>Gregory Prange</producer>
+      <producer>Mark Schwahn</producer>
+      <producer>Michael Tollin</producer>
+      <producer>Joe Davola</producer>
+      <composer>John Nordstrom</composer>
+      <editor>Mark Schwahn</editor>
+      <guest>Mastermind Laboratories</guest>
+      <guest>Tollin/Robbins Productions</guest>
+      <guest>Warner Bros. Television</guest>
+    </credits>
+    <date>2009</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Drame</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/28D7918459F38474A80DEFE9B08AA712.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">6.2.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
   <programme start="20260929032400 +0200" stop="20260929032700 +0200" channel="LaChaineParlementaire.fr">
     <title lang="fr">Emmenez-moi</title>
     <sub-title lang="fr">Auxerre : une station d'envergure pour nous faire rouler à l'hydrogène vert</sub-title>
@@ -31949,6 +31965,40 @@
     <icon src="https://img.bouygtel.fr/CMS/images/9FFE1A37E49F52A16C666260D41E88F5.jpg" />
     <country lang="fr">Etats-Unis</country>
     <episode-num system="xmltv_ns">1.10.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20261002151200 +0200" stop="20261002153300 +0200" channel="France4.fr">
+    <title lang="fr">Molusco</title>
+    <sub-title lang="fr">La fièvre des billes</sub-title>
+    <desc lang="fr">Molusco fabrique des perles à Bruce, le petit frère de Rafik. Mais ce dernier ne tarde pas à se faire enlever par un gang : Bruce a une grosse dette de billes, que Molusco propose de rembourser lors d'un tournoi qui l'oppose à une terrible adversaire.</desc>
+    <credits>
+      <director>Fabien Limousin</director>
+      <director>Damien Barrau</director>
+      <adapter>Nicolas Verpilleux</adapter>
+      <producer>Camille Serceau</producer>
+      <producer>Franck Ekinci</producer>
+      <composer>Alexis Pecharman</composer>
+      <composer>Denis Vautrin</composer>
+      <guest>Jeff Schjerlund</guest>
+      <guest>The Walt Disney Company</guest>
+      <guest>Marc Bretonnière</guest>
+      <guest>Donald Reignoux</guest>
+      <guest>Akie Kotabe</guest>
+      <guest>Yoann Sover</guest>
+      <guest>Emmanuel Garijo</guest>
+      <guest>Caroline Mozzone</guest>
+      <guest>Je Suis Bien Content</guest>
+      <guest>Matthew Forbes</guest>
+      <guest>Rasmus Hardiker</guest>
+    </credits>
+    <date>2014</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Animation</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/8B0B46F5B24D5293F3BCD4478C0C01D8.jpg" />
+    <country lang="fr">Etats-Unis - France</country>
+    <episode-num system="xmltv_ns">0.12.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
@@ -45762,6 +45812,47 @@
     <icon src="https://img.bouygtel.fr/CMS/images/B2FC14F55E72264A1A4246B783B42168.jpg" />
     <country lang="fr">Etats-Unis</country>
     <episode-num system="xmltv_ns">3.20.</episode-num>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20261002151500 +0200" stop="20261002161500 +0200" channel="TF1SeriesFilms.fr">
+    <title lang="fr">Beverly Hills</title>
+    <sub-title lang="fr">Un week-end plein de surprises</sub-title>
+    <desc lang="fr">Brandon part en week-end avec le conseil de l'université. Il demande à Kelly de bien vouloir l'accompagner, car il a besoin d'une partenaire...</desc>
+    <credits>
+      <director>Bethany Rooney</director>
+      <actor>Jason Priestley</actor>
+      <actor>Tori Spelling</actor>
+      <actor>Gabrielle Carteris</actor>
+      <actor>Dina Meyer</actor>
+      <actor>Carol Potter</actor>
+      <actor>James Eckhouse</actor>
+      <actor>Joe E. Tata</actor>
+      <actor>Jennie Garth</actor>
+      <actor>Brian Austin Green</actor>
+      <actor>Luke Perry</actor>
+      <actor>Shannen Doherty</actor>
+      <actor>Ian Ziering</actor>
+      <adapter>Chip Johannessen</adapter>
+      <producer>Paul Waigner</producer>
+      <producer>Charles Rosin</producer>
+      <producer>Darren Star</producer>
+      <producer>Aaron Spelling</producer>
+      <producer>Larry Mollin</producer>
+      <producer>David Semel</producer>
+      <composer>Martin Davich</composer>
+      <editor>Darren Star</editor>
+      <editor>Chip Johannessen</editor>
+      <guest>Torand Productions</guest>
+      <guest>Spelling Television</guest>
+    </credits>
+    <date>1994</date>
+    <category lang="fr">Série</category>
+    <category lang="fr">Drame</category>
+    <icon src="https://img.bouygtel.fr/CMS/images/35F66F754F9A22EF529D25B91BA15564.jpg" />
+    <country lang="fr">Etats-Unis</country>
+    <episode-num system="xmltv_ns">3.21.</episode-num>
     <rating system="CSA">
       <value>Tout public</value>
     </rating>
