@@ -3,7 +3,8 @@
     "xml0": "https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz",
     "xml2": "coulisses/ina70.xml",
     "xml1": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/PlutoTV/fr.xml",
-    "m3u": "https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u",
+    "m3u": "coulisses/tvrz.m3u",
+    "m3u0": "https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u",
     "m3u2": "https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u",
     "m3u3": "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_fr.m3u"
 }
