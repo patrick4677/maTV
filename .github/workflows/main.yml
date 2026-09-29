@@ -1,4 +1,4 @@
-name: Mise a jour du XML EPG
+name: Mise a jour du XML EPG et des M3U
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # Permet de le lancer manuellement
 
 jobs:
-  update-xml:
+  update-data:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,9 +19,11 @@ jobs:
       - name: Créer le dossier coulisses si inexistant
         run: mkdir -p coulisses
 
-      - name: Télécharger le fichier XML
+      - name: Télécharger le fichier XML et les listes M3U
         run: |
           curl -s https://xmltvfr.fr/xmltv/xmltv_tnt.xml -o coulisses/xmltv_tnt.xml
+          curl -sL https://tvradiozap.eu/live/x/vlc/d/tvzeu.m3u -o coulisses/tvrz.m3u
+          curl -sL https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_fr.m3u  -o coulisses/pluto_fr.m3u
 
       - name: Optimiser le fichier XML (Conservation des chaines + filtrage programmes)
         run: |
@@ -62,10 +64,10 @@ jobs:
           print(f"Optimisation terminée : {kept} programmes conservés, {removed} supprimés.")
           '
 
-      - name: Sauvegarder les modifications EPG
+      - name: Sauvegarder les modifications (XML et M3U)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add coulisses/xmltv_tnt.xml
-          git commit -m "Mise à jour et optimisation automatique du XML EPG" || exit 0
+          git add coulisses/xmltv_tnt.xml coulisses/tvrz.m3u coulisses/pluto_fr.m3u
+          git commit -m "Mise à jour automatique du XML EPG et des listes M3U" || exit 0
           git push
