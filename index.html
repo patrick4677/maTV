@@ -1,13 +1,13 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.7 (TNT + M3U + Manuel)
+     VERSION : 1.9.11 (TNT + M3U + Whitelist globale & Export JSON)
      ============================================================ -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.7</title>
+<title>TNT + M3U – Version 1.9.11</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -338,13 +338,14 @@ body.dark .help-list li {
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.7</h1>
+<h1>Programme TV v1.9.11</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
 <button class="focusable" onclick="updateTV()">🔄 Recharger</button>
 <button class="focusable" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
 <button class="focusable" id="filterBtn" onclick="toggleWhitelistFilter()">⭐ Sélection TV</button>
+<button class="focusable" onclick="exportWhitelist()" title="Télécharger la whitelist mise à jour">💾 Exporter Whitelist</button>
 <google-cast-launcher class="focusable" title="Caster vers TV"></google-cast-launcher>
 <button class="focusable" id="openHelpBtn">❓ Mode d'emploi</button>
 
@@ -403,14 +404,16 @@ body.dark .help-list li {
     <button class="popup-close-btn focusable" id="helpCloseBtn" style="position:absolute; top:12px; right:15px;">✕</button>
     <h2>💡 Mode d'emploi</h2>
     <ul class="help-list">
+      <li><strong>Étoile (⭐/☆) :</strong> Ajouter ou retirer des favoris</li>
       <li><strong>Icône de la chaîne :</strong> Programme complet</li>
       <li><strong>Nom de la chaîne :</strong> Lien vers le site de la chaîne</li>
-      <li><strong>Icône Bleue (haut) :</strong> Lecture dans la MiniTV intégrée</li>
-      <li><strong>Icône Cône VLC (bas) :</strong> Ouvrir dans l'application VLC externe</li>
+      <li><strong>Icône Bleue (haut) :</strong> Lecture dans la MiniTV intégrée (ou ouverture directe si page web)</li>
+      <li><strong>Icône Cône VLC (bas) :</strong> Ouvrir dans l'application VLC externe (ou ouverture directe si page web)</li>
       <li><strong>Image du programme :</strong> Détail de ce programme</li>
       <li><strong>« Maintenant » :</strong> Programme en cours et le suivant</li>
       <li><strong>« Soirée » :</strong> Programme de la soirée</li>
       <li><strong>« Sélection TV » / « Toutes les TV » :</strong> Filtrer les chaînes favorites ou tout afficher</li>
+      <li><strong>« Exporter Whitelist » :</strong> Télécharger le fichier JSON des favoris actifs</li>
     </ul>
   </div>
 </div>
@@ -437,9 +440,75 @@ let rawM3UList = [];
 let originalTNT = [];
 let xmlDocCache = null;
 
+function normalizeID(id){
+  if(!id) return "";
+  return id
+    .toLowerCase()
+    .replace(/é|è|ê/g,"e")
+    .replace(/à/g,"a")
+    .replace(/ç/g,"c")
+    .replace(/î|ï/g,"i")
+    .replace(/[^a-z0-9]/g,"");
+}
+
+// Gestion des favoris via localStorage avec normalisation stricte
+function getFavorites() {
+  const saved = localStorage.getItem('tv_favorites');
+  if (saved !== null) {
+    try { 
+      const parsed = JSON.parse(saved);
+      return parsed.map(id => normalizeID(id));
+    } catch(e) {}
+  }
+  return WHITELIST ? WHITELIST.map(id => normalizeID(id)) : [];
+}
+
+function isFavorite(normId) {
+  const favs = getFavorites();
+  return favs.includes(normalizeID(normId));
+}
+
+function toggleFavorite(normId) {
+  let favs = getFavorites();
+  const cleanId = normalizeID(normId);
+  const index = favs.indexOf(cleanId);
+
+  if (index >= 0) {
+    favs.splice(index, 1);
+  } else {
+    favs.push(cleanId);
+  }
+
+  localStorage.setItem('tv_favorites', JSON.stringify(favs));
+  
+  WHITELIST = favs;
+  applyM3UFilter();
+  updateTV();
+}
+
+// Fonction pour exporter la whitelist actuelle sous forme de fichier JSON téléchargeable
+function exportWhitelist() {
+  const favs = getFavorites();
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(favs, null, 2));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", "whitelist.json");
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+}
+
 async function loadWhitelist(){
   try{
-    WHITELIST = await fetch("coulisses/whitelist.json?t=" + Date.now()).then(r=>r.json());
+    const saved = localStorage.getItem('tv_favorites');
+    if (saved !== null) {
+      const parsed = JSON.parse(saved);
+      WHITELIST = parsed.map(id => normalizeID(id));
+    } else {
+      const data = await fetch("coulisses/whitelist.json?t=" + Date.now()).then(r=>r.json());
+      WHITELIST = data.map(id => normalizeID(id));
+      localStorage.setItem('tv_favorites', JSON.stringify(WHITELIST));
+    }
   } catch(e){
     WHITELIST = [];
   }
@@ -534,9 +603,9 @@ function makeDraggable(element, handle) {
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
+
 /* Mode 1 : Lecture dans la MiniTV intégrée (uniquement si c'est un flux compatible) ou ouverture directe */
 function playStream(url){
-  // Si ce n'est pas un flux direct (m3u8, mp4, etc.), on ouvre l'URL directement (lecteur dédié)
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
@@ -568,9 +637,8 @@ function playStream(url){
 
 /* Mode 2 : Lecteur externe ou ouverture directe du lien du lecteur dédié */
 function playExternalVLC(url){
-  closeMiniTV(); // Coupe la MiniTV
+  closeMiniTV(); 
 
-  // Si c'est un lien de lecteur dédié (pas un flux direct), on l'ouvre dans une nouvelle fenêtre/onglet
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
@@ -599,7 +667,6 @@ function playExternalVLC(url){
   }
 }
 
-
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
   const query = queryInput ? queryInput.value.trim() : '';
@@ -611,17 +678,6 @@ function searchExternal(platform) {
   } else if (platform === 'youtube') {
     window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, '_blank');
   }
-}
-
-function normalizeID(id){
-  if(!id) return "";
-  return id
-    .toLowerCase()
-    .replace(/é|è|ê/g,"e")
-    .replace(/à/g,"a")
-    .replace(/ç/g,"c")
-    .replace(/î|ï/g,"i")
-    .replace(/[^a-z0-9]/g,"");
 }
 
 let TNT = [
@@ -654,7 +710,6 @@ let TNT = [
 
 TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
-/* CORRIGÉ : Support du protocole sécurisé pour les URL M3U distantes */
 async function parseM3UContent(url){
   try{
     if (window.location.protocol === 'https:' && url.startsWith('http://')) {
@@ -688,7 +743,17 @@ async function parseM3UContent(url){
 }
 
 function applyM3UFilter() {
-  TNT = JSON.parse(JSON.stringify(originalTNT));
+  let workingTNT = JSON.parse(JSON.stringify(originalTNT));
+
+  if (useWhitelist && WHITELIST.length > 0) {
+    workingTNT = workingTNT.filter(ch => {
+      const keyNorm = normalizeID(ch.name);
+      const idNorm = normalizeID(ch.id);
+      return WHITELIST.some(w => normalizeID(w) === keyNorm || normalizeID(w) === idNorm || (ch.aliases && ch.aliases.some(a => normalizeID(a) === normalizeID(w))));
+    });
+  }
+
+  TNT = workingTNT;
   const remainingM3U = [];
 
   rawM3UList.forEach(m => {
@@ -730,10 +795,15 @@ function applyM3UFilter() {
     });
   });
 
-  // Injection des flux manuels (M6, W9, 6ter, etc.) définis dans config.json
   if (MANUAL_CHANNELS && MANUAL_CHANNELS.length > 0) {
     MANUAL_CHANNELS.forEach(manual => {
       const key = normalizeID(manual.name);
+      
+      if (useWhitelist && WHITELIST.length > 0) {
+        const allowed = WHITELIST.some(w => normalizeID(w) === key);
+        if (!allowed) return;
+      }
+
       const tntMatch = TNT.find(ch =>
         normalizeID(ch.name) === key ||
         normalizeID(ch.id) === key ||
@@ -742,11 +812,9 @@ function applyM3UFilter() {
       );
 
       if (tntMatch) {
-        // Si la chaîne existe déjà dans la TNT, on lui injecte directement le flux manuel
         tntMatch.stream = manual.url;
         if (manual.logo) tntMatch.logo = manual.logo;
       } else {
-        // Sinon on l'ajoute à la liste
         const exists = TNT.find(ch => ch.normId === key);
         if (!exists) {
           TNT.push({
@@ -854,18 +922,25 @@ function buildChannelCellHtml(ch) {
   if (ch.stream) {
     actionsHtml = `
       <div class="actions-container">
-        <!-- Bouton haut : MiniTV intégrée -->
-        <img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer dans la MiniTV">
-        <!-- Bouton bas : Cône VLC Externe -->
+        <!-- Bouton haut : MiniTV intégrée ou ouverture directe -->
+        <img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer le flux">
+        <!-- Bouton bas : Cône VLC Externe ou ouverture directe -->
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6.svg" onerror="this.src='coulisses/vlc.png'" class="channel-vlc-icon focusable" tabindex="0" onclick="playExternalVLC('${ch.stream}')" title="Ouvrir dans l'application VLC externe">
       </div>
     `;
   }
 
+  const isFav = isFavorite(ch.normId);
+  const starClass = isFav ? "star-btn active" : "star-btn";
+  const starChar = isFav ? "★" : "☆";
+
   return `
     <div class="channel-box">
       <div class="channel-row-top">
-        <span class="channel-num">#${ch.num}</span>
+        <span style="display:flex; align-items:center; gap:4px;">
+          <span class="${starClass} focusable" tabindex="0" onclick="toggleFavorite('${ch.normId}')" title="Ajouter/Retirer des favoris" style="cursor:pointer; font-size:1.1rem; color:${isFav ? '#ff9800' : '#888'};">${starChar}</span>
+          <span class="channel-num">#${ch.num}</span>
+        </span>
         <a href="${ch.link}" target="_blank" class="channel-name-link focusable" tabindex="0">${ch.name}</a>${actionsHtml}
       </div>
       <div class="channel-row-bottom">
@@ -1057,8 +1132,9 @@ async function updateTV(){
         const xmlTxt2 = await fetch(XML_URL2 + "?t=" + Date.now()).then(r=>r.text());
         const xmlDoc2 = new DOMParser().parseFromString(xmlTxt2, "application/xml");
         
-        xmlDoc2.querySelectorAll("programme").forEach(p => xmlDocCache.documentElement.appendChild(p.cloneNode(true)));
-        xmlDoc2.querySelectorAll("channel").forEach(c => xmlDocCache.documentElement.appendChild(c.cloneNode(true)));
+        const root = xmlDocCache.documentElement;
+        xmlDoc2.querySelectorAll("programme").forEach(p => root.appendChild(xmlDocCache.importNode(p, true)));
+        xmlDoc2.querySelectorAll("channel").forEach(c => root.appendChild(xmlDocCache.importNode(c, true)));
       } catch(err) {
         console.warn("Second fichier XML non chargé :", err);
       }
@@ -1094,6 +1170,7 @@ async function updateTV(){
 
       let match = TNT.find(ch => 
         ch.normId === normXmlId || 
+        ch.normId === displayName ||
         normalizeID(ch.name) === displayName ||
         normXmlId.includes(normalizeID(ch.name)) ||
         (ch.aliases && ch.aliases.some(a => normalizeID(a) === normXmlId || normalizeID(a) === displayName))
@@ -1101,7 +1178,9 @@ async function updateTV(){
 
       if (match) {
         match.xmlId = xmlId;
-        match.normId = normXmlId; 
+        if (channelsToday[normXmlId] && !channelsToday[match.normId]) {
+          channelsToday[match.normId] = channelsToday[normXmlId];
+        }
         if (icon && (!match.logo || match.logo.includes("default") || match.logo.includes("tv-blue"))) {
           match.logo = icon;
         }
