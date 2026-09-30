@@ -3,5 +3,22 @@
     "xml2": "coulisses/ina70.xml",
     "m3u": "coulisses/tvrz.m3u",
     "m3u2": "tvrz.m3u",
-    "m3u3": "coulisses/pluto_fr.m3u"
+    "m3u3": "coulisses/pluto_fr.m3u",
+  "manual_channels": [
+        {
+            "name": "M6",
+            "url": "https://shls-m6-int-prod-dub.shahid.net/out/v1/a315ab77ee7343a7a17dbe7e32eee3ba/index_2.m3u8",
+            "logo": "coulisses/logos/m6.png"
+        },
+        {
+            "name": "W9",
+            "url": "https://www.callofliberty.fr/tv/9-W9/9-W9.php",
+            "logo": "coulisses/logos/w9.png"
+        },
+        {
+            "name": "6ter",
+            "url": "https://www.callofliberty.fr/tv/22-6ter/22-6ter.php",
+            "logo": "coulisses/logos/6ter.png"
+        }
+    ]
 }
