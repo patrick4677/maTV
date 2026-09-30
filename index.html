@@ -1,13 +1,13 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.11 (TNT + M3U + Whitelist globale & Export JSON)
+     VERSION : 1.9.16 (Correction priorisation stricte du Flux Stream)
      ============================================================ -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.11</title>
+<title>Programme TV v1.9.16</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -22,9 +22,7 @@
 
 <!-- Icône classique pour les favoris et certains navigateurs mobiles -->
 <link rel="icon" type="image/png" href="coulisses/icon.png">
-<!-- ============================================================
-     STYLES GLOBAUX & COMPACTAGE TV
-     ============================================================ -->
+
 <style>
 body { font-family: Arial; background:#f5f5f5; padding:10px; margin:0; }
 h1 { text-align:center; margin-bottom:10px; font-size: 1.5rem; }
@@ -44,7 +42,7 @@ table { width:100%; border-collapse:collapse; background:#fff; font-size:13px; }
 th, td { border:1px solid #ccc; padding:4px; vertical-align:middle; }
 th { background:#eee; }
 
-/* En-tête de chaîne sur 2 Lignes (Ultra Compact avec double action verticale) */
+/* En-tête de chaîne sur 2 Lignes */
 .channel-box {
   display: flex;
   flex-direction: column;
@@ -77,7 +75,6 @@ th { background:#eee; }
   font-size: 0.9rem;
 }
 
-/* Conteneur des boutons empilés verticalement à droite du nom */
 .actions-container {
   display: flex;
   flex-direction: column;
@@ -113,18 +110,13 @@ th { background:#eee; }
   cursor: pointer;
 }
 
-/* Gestion de la sélection Fire TV / Télécommande */
-.focusable {
-  outline: none;
-}
-
+.focusable { outline: none; }
 .focusable:focus, .focusable:focus-within {
   outline: 3px solid #ff9800 !important;
   background-color: rgba(255, 152, 0, 0.15) !important;
   border-radius: 4px;
 }
 
-/* Boutons Google Cast */
 google-cast-launcher {
   display: inline-block !important;
   vertical-align: middle;
@@ -147,7 +139,6 @@ google-cast-launcher {
   --disconnected-color: #fff;
 }
 
-/* Mini TV flottante */
 #playerBox {
   position: fixed;
   top: 20px;
@@ -179,7 +170,6 @@ google-cast-launcher {
   background:#000;
 }
 
-/* Module de Recherche Odysee & YouTube (Haut à droite) */
 .search-container {
   position: absolute;
   top: 10px;
@@ -207,7 +197,6 @@ google-cast-launcher {
   font-size: 13px;
 }
 
-/* Boîte Popup */
 #popup {
   display: none;
   position: fixed;
@@ -252,7 +241,6 @@ google-cast-launcher {
   cursor: pointer;
 }
 
-/* Modale de Mode d'emploi */
 #helpModal {
   display: none;
   position: fixed;
@@ -295,57 +283,36 @@ google-cast-launcher {
   font-size: 0.95rem;
 }
 
-.help-list li:last-child {
-  border-bottom: none;
-}
-
-/* Mode sombre */
 body.dark { background:#222; color:#eee; }
 body.dark table { background:#333; color:#eee; }
 body.dark th { background:#444; color:#fff; }
 body.dark td { border-color:#555; }
 body.dark .channel-name-link { color:#fff; }
-body.dark img.logo { filter:brightness(0.85); }
 body.dark a { color:#9cf; }
 body.dark button { background:#444; color:#fff; border:1px solid #666; }
 body.dark google-cast-launcher { background-color: #444; --disconnected-color: #fff; }
-
-body.dark #evening table { background:white !important; color:black !important; }
-body.dark #evening th { background:#f0f0f0 !important; color:black !important; }
-body.dark #evening td { border-color:#ccc !important; color:black !important; }
-body.dark #evening .channel-name-link { color:#000 !important; }
-
-body.dark .help-modal-content {
-  background-color: #2a2a2a;
-  color: #eee;
-  border: 1px solid #444;
-}
-body.dark .help-modal-content h2 {
-  color: #4caf50;
-}
-body.dark .help-list li {
-  border-bottom-color: #444;
-}
+body.dark .help-modal-content { background-color: #2a2a2a; color: #eee; border: 1px solid #444; }
+body.dark .help-modal-content h2 { color: #4caf50; }
+body.dark .help-list li { border-bottom-color: #444; }
 </style>
 </head>
 
 <body>
 
-<!-- Recherche Externe (Odysee & YouTube) en haut à droite -->
 <div class="search-container">
   <input type="text" id="ext-search-input" placeholder="Recherche..." class="focusable">
-  <button onclick="searchExternal('odysee')" class="focusable" style="background-color:#ef1c43;" title="Rechercher sur Odysee">Odysee</button>
-  <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
+  <button onclick="searchExternal('odysee')" class="focusable" style="background-color:#ef1c43;">Odysee</button>
+  <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.11</h1>
+<h1>Programme TV v1.9.16</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
 <button class="focusable" onclick="updateTV()">🔄 Recharger</button>
 <button class="focusable" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
 <button class="focusable" id="filterBtn" onclick="toggleWhitelistFilter()">⭐ Sélection TV</button>
-<button class="focusable" onclick="exportWhitelist()" title="Télécharger la whitelist mise à jour">💾 Exporter Whitelist</button>
+<button class="focusable" onclick="exportWhitelist()">💾 Exporter Whitelist</button>
 <google-cast-launcher class="focusable" title="Caster vers TV"></google-cast-launcher>
 <button class="focusable" id="openHelpBtn">❓ Mode d'emploi</button>
 
@@ -358,7 +325,6 @@ body.dark .help-list li {
   <div class="tab focusable" tabindex="0" id="tab-full" onclick="showTab('full')" style="display:none;">Complet</div>
 </div>
 
-<!-- MiniTV + barre de déplacement -->
 <div id="playerBox">
   <div id="dragBar">
     MiniTV
@@ -389,7 +355,6 @@ body.dark .help-list li {
 <div id="evening" class="section"></div>
 <div id="full" class="section"></div>
 
-<!-- Pop-up -->
 <div id="popup">
   <div id="popupHeader">
     <span style="font-weight:bold;">Détails du programme</span>
@@ -398,7 +363,6 @@ body.dark .help-list li {
   <div id="popupContent"></div>
 </div>
 
-<!-- Modale Mode d'emploi -->
 <div id="helpModal" class="modal">
   <div class="help-modal-content">
     <button class="popup-close-btn focusable" id="helpCloseBtn" style="position:absolute; top:12px; right:15px;">✕</button>
@@ -407,13 +371,7 @@ body.dark .help-list li {
       <li><strong>Étoile (⭐/☆) :</strong> Ajouter ou retirer des favoris</li>
       <li><strong>Icône de la chaîne :</strong> Programme complet</li>
       <li><strong>Nom de la chaîne :</strong> Lien vers le site de la chaîne</li>
-      <li><strong>Icône Bleue (haut) :</strong> Lecture dans la MiniTV intégrée (ou ouverture directe si page web)</li>
-      <li><strong>Icône Cône VLC (bas) :</strong> Ouvrir dans l'application VLC externe (ou ouverture directe si page web)</li>
-      <li><strong>Image du programme :</strong> Détail de ce programme</li>
-      <li><strong>« Maintenant » :</strong> Programme en cours et le suivant</li>
-      <li><strong>« Soirée » :</strong> Programme de la soirée</li>
-      <li><strong>« Sélection TV » / « Toutes les TV » :</strong> Filtrer les chaînes favorites ou tout afficher</li>
-      <li><strong>« Exporter Whitelist » :</strong> Télécharger le fichier JSON des favoris actifs</li>
+      <li><strong>Icône Bleue / VLC :</strong> Lancement prioritaire du flux vidéo direct (stream)</li>
     </ul>
   </div>
 </div>
@@ -432,12 +390,13 @@ let XML_URL = "";
 let XML_URL2 = ""; 
 let M3U_URL = "";
 let M3U_URL3 = ""; 
-let MANUAL_CHANNELS = []; // Stockage des flux manuels issus du config.json
+let MANUAL_CHANNELS = []; 
+let TNT = [];
+let originalTNT = [];
 let hlsPlayer = null;
 let WHITELIST = [];
 let useWhitelist = true;
 let rawM3UList = [];
-let originalTNT = [];
 let xmlDocCache = null;
 
 function normalizeID(id){
@@ -451,7 +410,6 @@ function normalizeID(id){
     .replace(/[^a-z0-9]/g,"");
 }
 
-// Gestion des favoris via localStorage avec normalisation stricte
 function getFavorites() {
   const saved = localStorage.getItem('tv_favorites');
   if (saved !== null) {
@@ -480,13 +438,11 @@ function toggleFavorite(normId) {
   }
 
   localStorage.setItem('tv_favorites', JSON.stringify(favs));
-  
   WHITELIST = favs;
   applyM3UFilter();
   updateTV();
 }
 
-// Fonction pour exporter la whitelist actuelle sous forme de fichier JSON téléchargeable
 function exportWhitelist() {
   const favs = getFavorites();
   const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(favs, null, 2));
@@ -522,19 +478,20 @@ async function loadConfig(){
     M3U_URL = cfg.m3u || "coulisses/tvrz.m3u";
     M3U_URL3 = cfg.m3u3 || "coulisses/pluto_fr.m3u"; 
     MANUAL_CHANNELS = cfg.manual_channels || [];
+    TNT = cfg.tnt_channels || [];
+    TNT.forEach(ch => ch.normId = normalizeID(ch.id));
   } catch(e){
     XML_URL = "coulisses/xmltv_tnt.xml";
     XML_URL2 = "coulisses/ina70.xml";
     M3U_URL = "coulisses/tvrz.m3u";
     M3U_URL3 = "coulisses/pluto_fr.m3u";
     MANUAL_CHANNELS = [];
+    TNT = [];
     document.getElementById("status").textContent = "Mode secours (config.json absent)";
   }
 }
 
-function toggleDark(){
-  document.body.classList.toggle("dark");
-}
+function toggleDark(){ document.body.classList.toggle("dark"); }
 
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -545,27 +502,17 @@ function showTab(id){
 
 function toggleMiniTV(){
   const box = document.getElementById("playerBox");
-  if (box.style.display === "none" || box.style.display === "") {
-    box.style.display = "block";
-  } else {
-    closeMiniTV();
-  }
+  box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
 }
 
 function closeMiniTV(){
   const box = document.getElementById("playerBox");
   const video = document.getElementById("player");
   video.muted = true;
-
   if (window.hlsPlayer) {
-    try {
-      window.hlsPlayer.stopLoad();
-      window.hlsPlayer.detachMedia();
-      window.hlsPlayer.destroy();
-    } catch(e){}
+    try { window.hlsPlayer.stopLoad(); window.hlsPlayer.detachMedia(); window.hlsPlayer.destroy(); } catch(e){}
     window.hlsPlayer = null;
   }
-
   video.pause();
   video.removeAttribute("src");
   video.load();
@@ -576,7 +523,6 @@ function makeDraggable(element, handle) {
   let ox = 0, oy = 0;
   handle.addEventListener("mousedown", start);
   handle.addEventListener("touchstart", start);
-
   function start(e) {
     e = e.touches ? e.touches[0] : e;
     ox = e.clientX - element.offsetLeft;
@@ -586,13 +532,11 @@ function makeDraggable(element, handle) {
     document.addEventListener("mouseup", stop);
     document.addEventListener("touchend", stop);
   }
-
   function move(e) {
     e = e.touches ? e.touches[0] : e;
     element.style.left = (e.clientX - ox) + "px";
     element.style.top = (e.clientY - oy) + "px";
   }
-
   function stop() {
     document.removeEventListener("mousemove", move);
     document.removeEventListener("touchmove", move);
@@ -604,13 +548,12 @@ function makeDraggable(element, handle) {
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
 
-/* Mode 1 : Lecture dans la MiniTV intégrée (uniquement si c'est un flux compatible) ou ouverture directe */
 function playStream(url){
+  if (!url || url === "#") return;
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
   }
-
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -619,10 +562,7 @@ function playStream(url){
   box.style.display = "block";
   const video = document.getElementById("player");
 
-  if(hlsPlayer){
-    hlsPlayer.destroy();
-    hlsPlayer = null;
-  }
+  if(hlsPlayer){ hlsPlayer.destroy(); hlsPlayer = null; }
 
   if(Hls.isSupported()){
     hlsPlayer = new Hls();
@@ -635,8 +575,8 @@ function playStream(url){
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
 
-/* Mode 2 : Lecteur externe ou ouverture directe du lien du lecteur dédié */
 function playExternalVLC(url){
+  if (!url || url === "#") return;
   closeMiniTV(); 
 
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
@@ -647,68 +587,23 @@ function playExternalVLC(url){
   if (/Android/i.test(navigator.userAgent)) {
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
-
     const a = document.createElement('a');
     a.href = intentUrl;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   } else {
-    const width = 800;
-    const height = 600;
-    const left = (window.innerWidth - width) / 2;
-    const top = (window.innerHeight - height) / 2;
-    
-    window.open(
-      url, 
-      'PopupVLC', 
-      `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
-    );
+    window.open(url, 'PopupVLC', 'width=800,height=600,resizable=yes,scrollbars=yes');
   }
 }
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
   const query = queryInput ? queryInput.value.trim() : '';
-
   if (!query) return;
-
-  if (platform === 'odysee') {
-    window.open(`https://odysee.com/$/search?q=${encodeURIComponent(query)}`, '_blank');
-  } else if (platform === 'youtube') {
-    window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, '_blank');
-  }
+  if (platform === 'odysee') window.open(`https://odysee.com/$/search?q=${encodeURIComponent(query)}`, '_blank');
+  else if (platform === 'youtube') window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, '_blank');
 }
-
-let TNT = [
-  {num:1, id:"TF1.fr", name:"TF1", logo:"coulisses/logos/tf1.png", link:"https://www.tf1.fr", aliases:["tf1", "tf1hd"]},
-  {num:2, id:"France2.fr", name:"France 2", logo:"coulisses/logos/france2.png", link:"https://www.france.tv", aliases:["france2", "france2hd", "frfrance2"]},
-  {num:3, id:"France3.fr", name:"France 3", logo:"coulisses/logos/france3.png", link:"https://www.france.tv", aliases:["france3", "france3hd", "frfrance3"]},
-  {num:4, id:"France4.fr", name:"France 4", logo:"coulisses/logos/france4.png", link:["https://www.france.tv"], aliases:["france4", "france4hd", "frfrance4"]},
-  {num:5, id:"France5.fr", name:"France 5", logo:"coulisses/logos/france5.png", link:"https://www.france.tv", aliases:["france5", "france5hd", "frfrance5"]},
-  {num:6, id:"M6.fr", name:"M6", logo:"coulisses/logos/m6.png", link:"https://www.m6.fr/m6/direct", aliases:["m6", "m6hd"]},
-  {num:7, id:"Arte.fr", name:"Arte", logo:"coulisses/logos/arte.png", link:"https://www.arte.tv", aliases:["arte", "artefr"]},
-  {num:8, id:"LaChaîneParlementaire.fr", name:"LCP", logo:"coulisses/logos/lcp.png", link:"https://www.lcp.fr", aliases:["lcppublicsenat", "lcp", "lcpsenat"]},
-  {num:9, id:"W9.fr", name:"W9", logo:"coulisses/logos/w9.png", link:"https://www.m6.fr/w9/direct", aliases:["w9"]},
-  {num:10, id:"TMC.fr", name:"TMC", logo:"coulisses/logos/tmc.png", link:"https://www.tf1.fr", aliases:["tmc"]},
-  {num:11, id:"NT1.fr", name:"TFX", logo:"coulisses/logos/tfx.png", link:"https://www.tf1.fr", aliases:["tfx", "nt1"]},
-  {num:12, id:"Gulli.fr", name:"Gulli", logo:"coulisses/logos/gulli.png", link:"https://www.gulli.fr", aliases:["gulli"]},
-  {num:13, id:"BFMTV.fr", name:"BFM TV", logo:"coulisses/logos/bfmtv.png", link:"https://www.bfmtv.com", aliases:["bfmtv", "bfm"]},
-  {num:14, id:"CNews.fr", name:"CNEWS", logo:"coulisses/logos/cnews.png", link:"https://www.cnews.fr", aliases:["cnews", "itanim24"]},
-  {num:15, id:"LCI.fr", name:"LCI", logo:"coulisses/logos/lci.png", link:"https://www.tf1.fr", aliases:["lci"]},
-  {num:16, id:"FranceInfo.fr", name:"Franceinfo", logo:"coulisses/logos/franceinfo.png", link:"https://www.francetvinfo.fr", aliases:["franceinfo", "frfranceinfo"]},
-  {num:17, id:"CStar.fr", name:"CSTAR", logo:"coulisses/logos/cstar.png", link:"https://www.cstar.fr", aliases:["cstar", "d17"]},
-  {num:18, id:"T18.fr", name:"T18", logo:"coulisses/logos/t18.png", link:"#", aliases:["t18"]},
-  {num:19, id:"NOVO19.fr", name:"NOVO 19", logo:"coulisses/logos/novo19.png", link:"#", aliases:["novo19"]},
-  {num:20, id:"TF1SeriesFilms.fr", name:"TF1 Séries Films", logo:"coulisses/logos/tf1seriesfilms.png", link:"https://www.tf1.fr", aliases:["tf1seriesfilms", "hd1"]},
-  {num:21, id:"LEquipe21.fr", name:"L'Équipe", logo:"coulisses/logos/lequipe.png", link:"https://www.lequipe.fr", aliases:["lequipe21", "lequipe"]},
-  {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.m6.fr/6ter/direct", aliases:["6ter"]},
-  {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr", aliases:["rmcstory", "numero23"]},
-  {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com", aliases:["rmcdecouverte"]},
-  {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#", aliases:["rmclife", "cherie25"]}
-];
-
-TNT.forEach(ch=>ch.normId = normalizeID(ch.id));
 
 async function parseM3UContent(url){
   try{
@@ -734,10 +629,8 @@ async function parseM3UContent(url){
         cur = {};
       }
     });
-
     return list;
   } catch(e){
-    console.warn("Erreur chargement M3U depuis : " + url, e);
     return [];
   }
 }
@@ -758,10 +651,8 @@ function applyM3UFilter() {
 
   rawM3UList.forEach(m => {
     const key = normalizeID(m.name);
-
     if (useWhitelist && WHITELIST.length > 0) {
-      const allowed = WHITELIST.some(w => normalizeID(w) === key);
-      if (!allowed) return;
+      if (!WHITELIST.some(w => normalizeID(w) === key)) return;
     }
 
     const tntMatch = TNT.find(ch =>
@@ -781,11 +672,9 @@ function applyM3UFilter() {
 
   remainingM3U.forEach(m => {
     const key = normalizeID(m.name);
-    const exists = TNT.find(ch => ch.normId === key || normalizeID(ch.name) === key);
-    if (exists) return;
-
+    if (TNT.find(ch => ch.normId === key || normalizeID(ch.name) === key)) return;
     TNT.push({
-      num: TNT.length + 1,
+      num: 0,
       id: "M3U_" + key,
       normId: key,
       name: m.name,
@@ -798,10 +687,8 @@ function applyM3UFilter() {
   if (MANUAL_CHANNELS && MANUAL_CHANNELS.length > 0) {
     MANUAL_CHANNELS.forEach(manual => {
       const key = normalizeID(manual.name);
-      
       if (useWhitelist && WHITELIST.length > 0) {
-        const allowed = WHITELIST.some(w => normalizeID(w) === key);
-        if (!allowed) return;
+        if (!WHITELIST.some(w => normalizeID(w) === key)) return;
       }
 
       const tntMatch = TNT.find(ch =>
@@ -815,10 +702,9 @@ function applyM3UFilter() {
         tntMatch.stream = manual.url;
         if (manual.logo) tntMatch.logo = manual.logo;
       } else {
-        const exists = TNT.find(ch => ch.normId === key);
-        if (!exists) {
+        if (!TNT.find(ch => ch.normId === key)) {
           TNT.push({
-            num: TNT.length + 1,
+            num: 0,
             id: "MANUAL_" + key,
             normId: key,
             name: manual.name,
@@ -830,12 +716,22 @@ function applyM3UFilter() {
       }
     });
   }
+
+  let nextExtraNum = 26;
+  TNT.forEach(ch => {
+    const orig = originalTNT.find(o => o.normId === ch.normId);
+    if (orig && (!useWhitelist || WHITELIST.length === 0 || WHITELIST.includes(orig.normId))) {
+      ch.num = orig.num;
+    } else if (ch.num === 0 || !ch.num) {
+      ch.num = nextExtraNum++;
+    }
+  });
+  TNT.sort((a, b) => a.num - b.num);
 }
 
 function toggleWhitelistFilter() {
   useWhitelist = !useWhitelist;
   const btn = document.getElementById("filterBtn");
-  
   if (useWhitelist) {
     btn.textContent = "⭐ Sélection TV";
     btn.style.backgroundColor = "";
@@ -843,7 +739,6 @@ function toggleWhitelistFilter() {
     btn.textContent = "🌐 Toutes les TV";
     btn.style.backgroundColor = "#ff9800";
   }
-
   applyM3UFilter();
   updateTV();
 }
@@ -853,9 +748,7 @@ function parseDate(str){
   return new Date(m[1], m[2]-1, m[3], m[4], m[5], m[6]);
 }
 
-function formatTime(d){
-  return d.toTimeString().slice(0,5);
-}
+function formatTime(d){ return d.toTimeString().slice(0,5); }
 
 function parseEpisodeNum(str) {
   if (!str) return "";
@@ -876,27 +769,20 @@ function parseSingleProgrammeNode(p) {
   const subTitle = p.querySelector("sub-title")?.textContent || "";
   const theme = [...p.querySelectorAll("category")].map(c=>c.textContent).join(" / ") || "";
   const desc = p.querySelector("desc")?.textContent || "";
-  
   let icon = p.querySelector("icon")?.getAttribute("src") || "";
   if (icon.startsWith("http://")) icon = icon.replace("http://", "https://");
-
   let rawEp = p.querySelector("episode-num")?.textContent || "";
   let episode = parseEpisodeNum(rawEp);
   let rating = p.querySelector("rating value")?.textContent || p.querySelector("rating")?.textContent || "";
-
   const creditsNode = p.querySelector("credits");
   let credits = { directors: [], actors: [], producers: [], writers: [], adapters: [], composers: [], guests: [] };
-  
   if (creditsNode) {
     credits.directors = [...creditsNode.querySelectorAll("director")].map(c=>c.textContent);
     credits.actors = [...creditsNode.querySelectorAll("actor")].map(c=>c.textContent);
     credits.producers = [...creditsNode.querySelectorAll("producer")].map(c=>c.textContent);
     credits.writers = [...creditsNode.querySelectorAll("writer")].map(c=>c.textContent);
-    credits.adapters = [...creditsNode.querySelectorAll("adapter")].map(c=>c.textContent);
-    credits.composers = [...creditsNode.querySelectorAll("composer")].map(c=>c.textContent);
     credits.guests = [...creditsNode.querySelectorAll("guest")].map(c=>c.textContent);
   }
-
   return { start, stop, title, subTitle, theme, desc, icon, episode, rating, credits };
 }
 
@@ -911,21 +797,24 @@ function getEPGDateRange(programmes){
       if(!isNaN(d)) dates.push(d);
     }
   }
-
   if(dates.length===0) return "Programme chargé";
   dates.sort((a,b)=>a-b);
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
+// CORRECTION CLÉ VERSION 1.9.16 : On force ch.stream en priorité absolue s'il existe et n'est pas vide.
+// Ainsi, si la liste M3U a bien assigné un flux M6 à ch.stream, c'est obligatoirement lui qui est lancé.
 function buildChannelCellHtml(ch) {
   let actionsHtml = '';
-  if (ch.stream) {
+  
+  // Si le flux direct (stream) existe et n'est pas vide/dièse, on l'utilise. Sinon on bascule sur link.
+  const targetUrl = (ch.stream && ch.stream.trim() !== "" && ch.stream !== "#") ? ch.stream : ch.link;
+
+  if (targetUrl && targetUrl !== "#") {
     actionsHtml = `
       <div class="actions-container">
-        <!-- Bouton haut : MiniTV intégrée ou ouverture directe -->
-        <img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${ch.stream}')" title="Lancer le flux">
-        <!-- Bouton bas : Cône VLC Externe ou ouverture directe -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6.svg" onerror="this.src='coulisses/vlc.png'" class="channel-vlc-icon focusable" tabindex="0" onclick="playExternalVLC('${ch.stream}')" title="Ouvrir dans l'application VLC externe">
+        <img src="coulisses/tv-blue.png" class="channel-play-icon focusable" tabindex="0" onclick="playStream('${targetUrl}')" title="Lancer le flux direct">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6.svg" onerror="this.src='coulisses/vlc.png'" class="channel-vlc-icon focusable" tabindex="0" onclick="playExternalVLC('${targetUrl}')" title="Ouvrir le flux dans VLC">
       </div>
     `;
   }
@@ -938,13 +827,13 @@ function buildChannelCellHtml(ch) {
     <div class="channel-box">
       <div class="channel-row-top">
         <span style="display:flex; align-items:center; gap:4px;">
-          <span class="${starClass} focusable" tabindex="0" onclick="toggleFavorite('${ch.normId}')" title="Ajouter/Retirer des favoris" style="cursor:pointer; font-size:1.1rem; color:${isFav ? '#ff9800' : '#888'};">${starChar}</span>
+          <span class="${starClass} focusable" tabindex="0" onclick="toggleFavorite('${ch.normId}')" title="Favori" style="cursor:pointer; font-size:1.1rem; color:${isFav ? '#ff9800' : '#888'};">${starChar}</span>
           <span class="channel-num">#${ch.num}</span>
         </span>
         <a href="${ch.link}" target="_blank" class="channel-name-link focusable" tabindex="0">${ch.name}</a>${actionsHtml}
       </div>
       <div class="channel-row-bottom">
-        <img class="channel-logo-img focusable" tabindex="0" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')" alt="${ch.name}" title="Voir 7 jours">
+        <img class="channel-logo-img focusable" tabindex="0" src="${ch.logo}" onclick="openFullProgramForChannel('${ch.normId}')" alt="${ch.name}" title="Programme 7 jours">
       </div>
     </div>
   `;
@@ -955,22 +844,11 @@ function renderEvening(channels){
   const today = new Date().toLocaleDateString("fr-FR");
   const now = new Date();
 
-  let html = `
-  <div class="table-wrapper"><table>
-  <thead><tr>
-    <th>Chaîne</th>
-    <th>Début</th>
-    <th>Programme de la soirée</th>
-    <th>Thème</th>
-    <th>Durée</th>
-    <th>Début suiv.</th>
-    <th>Suivant</th>
-  </tr></thead><tbody>`;
+  let html = `<div class="table-wrapper"><table><thead><tr><th>Chaîne</th><th>Début</th><th>Programme de la soirée</th><th>Thème</th><th>Durée</th><th>Début suiv.</th><th>Suivant</th></tr></thead><tbody>`;
 
   TNT.forEach(ch=>{
     const list = channels[ch.normId];
     const chanCellHtml = buildChannelCellHtml(ch);
-
     if(!list){
       html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td></tr>`;
       return;
@@ -1006,20 +884,14 @@ function renderEvening(channels){
     const duration = Math.round((evening.stop-evening.start)/60000);
     let remainingText = "";
     if (now >= evening.start && now <= evening.stop) {
-      const remaining = Math.max(0, Math.round((evening.stop - now) / 60000));
-      remainingText = `Reste ${remaining} mn`;
+      remainingText = `Reste ${Math.max(0, Math.round((evening.stop - now) / 60000))} mn`;
     } else if (now > evening.stop) {
       remainingText = "Terminé";
     }
 
     let nextRemainingText = "";
-    if (next) {
-      if (now >= next.start && now <= next.stop) {
-        const nextRem = Math.max(0, Math.round((next.stop - now) / 60000));
-        nextRemainingText = `Reste ${nextRem} mn`;
-      } else if (now > next.stop) {
-        nextRemainingText = "Terminé";
-      }
+    if (next && now >= next.start && now <= next.stop) {
+      nextRemainingText = `Reste ${Math.max(0, Math.round((next.stop - now) / 60000))} mn`;
     }
 
     const eveningImgHtml = evening.icon ? `<img src="${evening.icon}" style="height:50px; border-radius:4px;" referrerpolicy="no-referrer">` : ``;
@@ -1057,7 +929,6 @@ function openFullProgramForChannel(normId) {
 
   const programmesNodes = xmlDocCache.querySelectorAll("programme");
   const fullList = [];
-
   for (let i = 0; i < programmesNodes.length; i++) {
     const p = programmesNodes[i];
     if (normalizeID(p.getAttribute("channel")) === normId) {
@@ -1067,13 +938,13 @@ function openFullProgramForChannel(normId) {
 
   let html = `
   <h3>Programme complet – <a href="${ch.link}" target="_blank" class="focusable" tabindex="0" style="font-weight:bold;">${ch.name}</a></h3>
-  <input id="searchProg" type="text" placeholder="Rechercher une émission / film..." class="focusable"
+  <input id="searchProg" type="text" placeholder="Rechercher..." class="focusable"
          style="padding:6px; width:100%; margin-bottom:12px; font-size:14px;"
          oninput="filterFullPrograms()">
   <div id="view-full">`;
 
   if (fullList.length === 0) {
-    html += `<p style="color:#888;">Aucune donnée XMLTV disponible pour cette chaîne.</p>`;
+    html += `<p style="color:#888;">Aucune donnée XMLTV disponible.</p>`;
   } else {
     fullList.sort((a, b) => a.start - b.start);
     fullList.forEach(p => {
@@ -1081,11 +952,9 @@ function openFullProgramForChannel(normId) {
       <div class="prog-item" style="margin-bottom:12px; display:flex; align-items:center; gap:12px;">
         ${p.icon ? `<img src="${p.icon}" referrerpolicy="no-referrer" style="height:60px; border-radius:6px; object-fit:cover;" onerror="this.style.display='none'">` : ""}
         <div>
-          <strong>${p.start.toLocaleDateString("fr-FR")}</strong> 
-          ${formatTime(p.start)}–${formatTime(p.stop)} 
-          (${Math.round((p.stop - p.start) / 60000)} min)
-          <br><em class="prog-title">${p.title}</em> ${p.episode ? `<span style="font-size:11px; background:#444; color:#fff; padding:2px 4px; border-radius:3px;">${p.episode}</span>` : ''}
-          <br><span class="prog-desc" style="color:#666; font-size:12px;">${p.theme} ${p.desc ? ' - ' + p.desc : ''}</span>
+          <strong>${p.start.toLocaleDateString("fr-FR")}</strong> ${formatTime(p.start)}–${formatTime(p.stop)} (${Math.round((p.stop - p.start) / 60000)} min)
+          <br><em>${p.title}</em> ${p.episode ? `<span style="font-size:11px; background:#444; color:#fff; padding:2px 4px; border-radius:3px;">${p.episode}</span>` : ''}
+          <br><span style="color:#666; font-size:12px;">${p.theme} ${p.desc ? ' - ' + p.desc : ''}</span>
         </div>
       </div>`;
     });
@@ -1093,7 +962,6 @@ function openFullProgramForChannel(normId) {
 
   html += "</div>";
   document.getElementById("full").innerHTML = html;
-
   const tab = document.getElementById("tab-full");
   tab.style.display = "inline-block";
   tab.textContent = "Complet – " + ch.name;
@@ -1103,8 +971,7 @@ function openFullProgramForChannel(normId) {
 function filterFullPrograms(){
   const query = document.getElementById("searchProg").value.toLowerCase().trim();
   document.querySelectorAll("#view-full .prog-item").forEach(item => {
-    const text = item.textContent.toLowerCase();
-    item.style.display = text.includes(query) ? "flex" : "none";
+    item.style.display = item.textContent.toLowerCase().includes(query) ? "flex" : "none";
   });
 }
 
@@ -1116,13 +983,11 @@ function filterChannels(){
     row.style.display = nameCell.textContent.toLowerCase().includes(q) ? "" : "none";
   });
 }
-
 document.getElementById("search").addEventListener("input", filterChannels);
 
 async function updateTV(){
   try{
     document.getElementById("status").textContent = "Chargement EPG (1/2)...";
-    
     const xmlTxt = await fetch(XML_URL + "?t=" + Date.now()).then(r=>r.text());
     xmlDocCache = new DOMParser().parseFromString(xmlTxt, "application/xml");
 
@@ -1131,13 +996,10 @@ async function updateTV(){
         document.getElementById("status").textContent = "Chargement EPG (2/2)...";
         const xmlTxt2 = await fetch(XML_URL2 + "?t=" + Date.now()).then(r=>r.text());
         const xmlDoc2 = new DOMParser().parseFromString(xmlTxt2, "application/xml");
-        
         const root = xmlDocCache.documentElement;
         xmlDoc2.querySelectorAll("programme").forEach(p => root.appendChild(xmlDocCache.importNode(p, true)));
         xmlDoc2.querySelectorAll("channel").forEach(c => root.appendChild(xmlDocCache.importNode(c, true)));
-      } catch(err) {
-        console.warn("Second fichier XML non chargé :", err);
-      }
+      } catch(err) {}
     }
 
     const programmesNodes = xmlDocCache.querySelectorAll("programme");
@@ -1262,7 +1124,6 @@ async function updateTV(){
     bindPopupEvents(".popup-evening", channelsToday);
 
   } catch(e){
-    console.error(e);
     document.getElementById("status").textContent = "Erreur de chargement des flux XML";
   }
 }
@@ -1273,16 +1134,9 @@ function bindPopupEvents(selector, channelsToday) {
     const idx = parseInt(cell.dataset.idx, 10);
     if (!channelsToday[chan] || !channelsToday[chan][idx]) return;
     const prog = channelsToday[chan][idx];
-
-    const openAction = (e) => {
-      e.preventDefault();
-      showProgramPopup(prog);
-    };
-
+    const openAction = (e) => { e.preventDefault(); showProgramPopup(prog); };
     cell.addEventListener("click", openAction);
-    cell.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.keyCode === 13) openAction(e);
-    });
+    cell.addEventListener("keydown", (e) => { if (e.key === "Enter") openAction(e); });
   });
 }
 
@@ -1296,9 +1150,7 @@ function bindPopupEvents(selector, channelsToday) {
     const list3 = M3U_URL3 ? await parseM3UContent(M3U_URL3) : [];
     rawM3UList = [...list1, ...list3];
     applyM3UFilter();
-  } catch(e){
-    console.warn("Erreur globale de chargement M3U", e);
-  }
+  } catch(e){}
 
   updateTV();
   setInterval(updateTV, 60000);
@@ -1308,7 +1160,6 @@ function showProgramPopup(prog){
   let detailsHtml = "";
   if (prog.subTitle) detailsHtml += `<p style="font-style:italic; font-size:15px; margin-top:-5px; color:#ddd;">${prog.subTitle}</p>`;
   detailsHtml += `<p><b>Horaire :</b> ${formatTime(prog.start)} – ${formatTime(prog.stop)} (${Math.round((prog.stop-prog.start)/60000)} min)</p>`;
-  
   if (prog.episode) detailsHtml += `<p><b>Épisode :</b> ${prog.episode}</p>`;
   if (prog.theme) detailsHtml += `<p><b>Thème :</b> ${prog.theme}</p>`;
   if (prog.rating) detailsHtml += `<p><b>Classification :</b> ${prog.rating}</p>`;
@@ -1320,8 +1171,6 @@ function showProgramPopup(prog){
     if (c.actors.length) creditsHtml += `<p><b>Avec :</b> ${c.actors.join(", ")}</p>`;
     if (c.guests.length) creditsHtml += `<p><b>Invités :</b> ${c.guests.join(", ")}</p>`;
     if (c.writers.length) creditsHtml += `<p><b>Scénario :</b> ${c.writers.join(", ")}</p>`;
-    if (c.producers.length) creditsHtml += `<p><b>Production :</b> ${c.producers.join(", ")}</p>`;
-    if (c.composers.length) creditsHtml += `<p><b>Musique :</b> ${c.composers.join(", ")}</p>`;
   }
 
   const html = `
@@ -1331,32 +1180,20 @@ function showProgramPopup(prog){
     ${creditsHtml}
     <p><b>Résumé :</b><br><span style="line-height:1.4; color:#ccc;">${prog.desc || "Aucune description disponible."}</span></p>
   `;
-
   document.getElementById("popupContent").innerHTML = html;
   document.getElementById("popup").style.display = "block";
   setTimeout(() => document.getElementById("popupCloseBtn").focus(), 100);
 }
 
-function closePopup(){
-  document.getElementById("popup").style.display = "none";
-}
+function closePopup(){ document.getElementById("popup").style.display = "none"; }
 
 const helpModal = document.getElementById("helpModal");
 const openHelpBtn = document.getElementById("openHelpBtn");
 const helpCloseBtn = document.getElementById("helpCloseBtn");
 
-openHelpBtn.addEventListener("click", () => {
-  helpModal.style.display = "block";
-  setTimeout(() => helpCloseBtn.focus(), 100);
-});
-
-helpCloseBtn.addEventListener("click", () => {
-  helpModal.style.display = "none";
-});
-
-window.addEventListener("click", (event) => {
-  if (event.target === helpModal) helpModal.style.display = "none";
-});
+openHelpBtn.addEventListener("click", () => { helpModal.style.display = "block"; setTimeout(() => helpCloseBtn.focus(), 100); });
+helpCloseBtn.addEventListener("click", () => { helpModal.style.display = "none"; });
+window.addEventListener("click", (event) => { if (event.target === helpModal) helpModal.style.display = "none"; });
 </script>
 
 </body>
