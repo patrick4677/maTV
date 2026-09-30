@@ -534,9 +534,14 @@ function makeDraggable(element, handle) {
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
-
-/* Mode 1 : Lecture dans la MiniTV intégrée */
+/* Mode 1 : Lecture dans la MiniTV intégrée (uniquement si c'est un flux compatible) ou ouverture directe */
 function playStream(url){
+  // Si ce n'est pas un flux direct (m3u8, mp4, etc.), on ouvre l'URL directement (lecteur dédié)
+  if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
+    window.open(url, '_blank');
+    return;
+  }
+
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -550,9 +555,7 @@ function playStream(url){
     hlsPlayer = null;
   }
 
-  const isHls = url.includes('.m3u8') || url.includes('m3u8');
-
-  if(Hls.isSupported() && isHls){
+  if(Hls.isSupported()){
     hlsPlayer = new Hls();
     hlsPlayer.loadSource(url);
     hlsPlayer.attachMedia(video);
@@ -563,9 +566,15 @@ function playStream(url){
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
 
-/* Mode 2 : Android (Intent rapide) & Windows (Popup 800x600 d'origine) - CORRIGÉ AVEC FERMETURE MINITV */
+/* Mode 2 : Lecteur externe ou ouverture directe du lien du lecteur dédié */
 function playExternalVLC(url){
-  closeMiniTV(); // Coupe la MiniTV pour qu'elle ne tourne plus en arrière-plan[span_0](start_span)[span_0](end_span)
+  closeMiniTV(); // Coupe la MiniTV
+
+  // Si c'est un lien de lecteur dédié (pas un flux direct), on l'ouvre dans une nouvelle fenêtre/onglet
+  if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
+    window.open(url, '_blank');
+    return;
+  }
 
   if (/Android/i.test(navigator.userAgent)) {
     const cleanStreamUrl = url.split('/:')[0]; 
@@ -589,6 +598,7 @@ function playExternalVLC(url){
     );
   }
 }
+
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
