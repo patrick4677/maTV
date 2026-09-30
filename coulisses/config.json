@@ -7,17 +7,17 @@
   "manual_channels": [
         {
             "name": "M6",
-            "url": "https://shls-m6-int-prod-dub.shahid.net/out/v1/a315ab77ee7343a7a17dbe7e32eee3ba/index_2.m3u8",
+            "url": "https://tv.orange.fr/lecture/en-direct/chaines/livetv_m6_umts",
             "logo": "coulisses/logos/m6.png"
         },
         {
             "name": "W9",
-            "url": "https://www.callofliberty.fr/tv/9-W9/9-W9.php",
+            "url": "https://tv.orange.fr/lecture/en-direct/chaines/livetv_w9",
             "logo": "coulisses/logos/w9.png"
         },
         {
             "name": "6ter",
-            "url": "https://www.callofliberty.fr/tv/22-6ter/22-6ter.php",
+            "url": "https://tv.orange.fr/lecture/en-direct/chaines/livetv_6ter",
             "logo": "coulisses/logos/6ter.png"
         }
     ]
