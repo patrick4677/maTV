@@ -1,13 +1,13 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.6.1 (Corrigé - MiniTV, VLC & M3U)
+     VERSION : 1.9.7 (TNT + M3U + Manuel)
      ============================================================ -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>TNT + M3U – Version 1.9.6.1</title>
+<title>TNT + M3U – Version 1.9.7</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -338,7 +338,7 @@ body.dark .help-list li {
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;" title="Rechercher sur YouTube">YouTube</button>
 </div>
 
-<h1>Programme TV v1.9.6.1</h1>
+<h1>Programme TV v1.9.7</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -429,6 +429,7 @@ let XML_URL = "";
 let XML_URL2 = ""; 
 let M3U_URL = "";
 let M3U_URL3 = ""; 
+let MANUAL_CHANNELS = []; // Stockage des flux manuels issus du config.json
 let hlsPlayer = null;
 let WHITELIST = [];
 let useWhitelist = true;
@@ -451,11 +452,13 @@ async function loadConfig(){
     XML_URL2 = cfg.xml2 || "coulisses/ina70.xml";
     M3U_URL = cfg.m3u || "coulisses/tvrz.m3u";
     M3U_URL3 = cfg.m3u3 || "coulisses/pluto_fr.m3u"; 
+    MANUAL_CHANNELS = cfg.manual_channels || [];
   } catch(e){
     XML_URL = "coulisses/xmltv_tnt.xml";
     XML_URL2 = "coulisses/ina70.xml";
     M3U_URL = "coulisses/tvrz.m3u";
     M3U_URL3 = "coulisses/pluto_fr.m3u";
+    MANUAL_CHANNELS = [];
     document.getElementById("status").textContent = "Mode secours (config.json absent)";
   }
 }
@@ -562,7 +565,7 @@ function playStream(url){
 
 /* Mode 2 : Android (Intent rapide) & Windows (Popup 800x600 d'origine) - CORRIGÉ AVEC FERMETURE MINITV */
 function playExternalVLC(url){
-  closeMiniTV(); // Coupe la MiniTV pour qu'elle ne tourne plus en arrière-plan[span_2](start_span)[span_2](end_span)
+  closeMiniTV(); // Coupe la MiniTV pour qu'elle ne tourne plus en arrière-plan[span_0](start_span)[span_0](end_span)
 
   if (/Android/i.test(navigator.userAgent)) {
     const cleanStreamUrl = url.split('/:')[0]; 
@@ -617,10 +620,10 @@ let TNT = [
   {num:3, id:"France3.fr", name:"France 3", logo:"coulisses/logos/france3.png", link:"https://www.france.tv", aliases:["france3", "france3hd", "frfrance3"]},
   {num:4, id:"France4.fr", name:"France 4", logo:"coulisses/logos/france4.png", link:["https://www.france.tv"], aliases:["france4", "france4hd", "frfrance4"]},
   {num:5, id:"France5.fr", name:"France 5", logo:"coulisses/logos/france5.png", link:"https://www.france.tv", aliases:["france5", "france5hd", "frfrance5"]},
-  {num:6, id:"M6.fr", name:"M6", logo:"coulisses/logos/m6.png", link:"https://www.6play.fr", aliases:["m6", "m6hd"]},
+  {num:6, id:"M6.fr", name:"M6", logo:"coulisses/logos/m6.png", link:"https://www.m6.fr/m6/direct", aliases:["m6", "m6hd"]},
   {num:7, id:"Arte.fr", name:"Arte", logo:"coulisses/logos/arte.png", link:"https://www.arte.tv", aliases:["arte", "artefr"]},
   {num:8, id:"LaChaîneParlementaire.fr", name:"LCP", logo:"coulisses/logos/lcp.png", link:"https://www.lcp.fr", aliases:["lcppublicsenat", "lcp", "lcpsenat"]},
-  {num:9, id:"W9.fr", name:"W9", logo:"coulisses/logos/w9.png", link:"https://www.6play.fr", aliases:["w9"]},
+  {num:9, id:"W9.fr", name:"W9", logo:"coulisses/logos/w9.png", link:"https://www.m6.fr/w9/direct", aliases:["w9"]},
   {num:10, id:"TMC.fr", name:"TMC", logo:"coulisses/logos/tmc.png", link:"https://www.tf1.fr", aliases:["tmc"]},
   {num:11, id:"NT1.fr", name:"TFX", logo:"coulisses/logos/tfx.png", link:"https://www.tf1.fr", aliases:["tfx", "nt1"]},
   {num:12, id:"Gulli.fr", name:"Gulli", logo:"coulisses/logos/gulli.png", link:"https://www.gulli.fr", aliases:["gulli"]},
@@ -633,7 +636,7 @@ let TNT = [
   {num:19, id:"NOVO19.fr", name:"NOVO 19", logo:"coulisses/logos/novo19.png", link:"#", aliases:["novo19"]},
   {num:20, id:"TF1SeriesFilms.fr", name:"TF1 Séries Films", logo:"coulisses/logos/tf1seriesfilms.png", link:"https://www.tf1.fr", aliases:["tf1seriesfilms", "hd1"]},
   {num:21, id:"LEquipe21.fr", name:"L'Équipe", logo:"coulisses/logos/lequipe.png", link:"https://www.lequipe.fr", aliases:["lequipe21", "lequipe"]},
-  {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.6play.fr", aliases:["6ter"]},
+  {num:22, id:"6ter.fr", name:"6ter", logo:"coulisses/logos/6ter.png", link:"https://www.m6.fr/6ter/direct", aliases:["6ter"]},
   {num:23, id:"Numero23.fr", name:"RMC Story", logo:"coulisses/logos/rmcstory.png", link:"https://rmcstory.fr", aliases:["rmcstory", "numero23"]},
   {num:24, id:"RMCDecouverte.fr", name:"RMC Découverte", logo:"coulisses/logos/rmcdecouverte.png", link:"https://rmcdecouverte.bfmtv.com", aliases:["rmcdecouverte"]},
   {num:25, id:"Cherie25.fr", name:"RMC Life", logo:"coulisses/logos/rmclife.png", link:"#", aliases:["rmclife", "cherie25"]}
@@ -716,6 +719,39 @@ function applyM3UFilter() {
       stream: m.stream
     });
   });
+
+  // Injection des flux manuels (M6, W9, 6ter, etc.) définis dans config.json
+  if (MANUAL_CHANNELS && MANUAL_CHANNELS.length > 0) {
+    MANUAL_CHANNELS.forEach(manual => {
+      const key = normalizeID(manual.name);
+      const tntMatch = TNT.find(ch =>
+        normalizeID(ch.name) === key ||
+        normalizeID(ch.id) === key ||
+        ch.normId === key ||
+        (ch.aliases && ch.aliases.some(a => normalizeID(a) === key))
+      );
+
+      if (tntMatch) {
+        // Si la chaîne existe déjà dans la TNT, on lui injecte directement le flux manuel
+        tntMatch.stream = manual.url;
+        if (manual.logo) tntMatch.logo = manual.logo;
+      } else {
+        // Sinon on l'ajoute à la liste
+        const exists = TNT.find(ch => ch.normId === key);
+        if (!exists) {
+          TNT.push({
+            num: TNT.length + 1,
+            id: "MANUAL_" + key,
+            normId: key,
+            name: manual.name,
+            logo: manual.logo || "coulisses/tv-blue.png",
+            link: "#",
+            stream: manual.url
+          });
+        }
+      }
+    });
+  }
 }
 
 function toggleWhitelistFilter() {
