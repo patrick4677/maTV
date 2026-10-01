@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.16 (Correction priorisation stricte du Flux Stream)
+     VERSION : 1.9.16 (Noms de chaînes sur 2 lignes sans troncature)
      ============================================================ -->
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@ table { width:100%; border-collapse:collapse; background:#fff; font-size:13px; }
 th, td { border:1px solid #ccc; padding:4px; vertical-align:middle; }
 th { background:#eee; }
 
-/* En-tête de chaîne sur 2 Lignes */
+/* En-tête de chaîne sur 2 Lignes (Nom complet autorisé sur plusieurs lignes) */
 .channel-box {
   display: flex;
   flex-direction: column;
@@ -54,25 +54,32 @@ th { background:#eee; }
 
 .channel-row-top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 4px;
+  min-width: 0;
 }
 
 .channel-num {
   font-weight: bold;
   font-size: 0.85rem;
   color: #666;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .channel-name-link {
   font-weight: bold;
   color: #000;
   text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;      /* Autorise le retour à la ligne */
+  word-break: break-word;   /* Coupe proprement les mots longs si nécessaire */
+  overflow: visible;        /* Pas de masquage du texte */
+  text-overflow: clip;      /* Pas de points de suspension */
   font-size: 0.9rem;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.15;
 }
 
 .actions-container {
@@ -802,12 +809,9 @@ function getEPGDateRange(programmes){
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
-// CORRECTION CLÉ VERSION 1.9.16 : On force ch.stream en priorité absolue s'il existe et n'est pas vide.
-// Ainsi, si la liste M3U a bien assigné un flux M6 à ch.stream, c'est obligatoirement lui qui est lancé.
 function buildChannelCellHtml(ch) {
   let actionsHtml = '';
   
-  // Si le flux direct (stream) existe et n'est pas vide/dièse, on l'utilise. Sinon on bascule sur link.
   const targetUrl = (ch.stream && ch.stream.trim() !== "" && ch.stream !== "#") ? ch.stream : ch.link;
 
   if (targetUrl && targetUrl !== "#") {
