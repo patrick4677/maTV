@@ -557,10 +557,21 @@ makeDraggable(document.getElementById("popup"), document.getElementById("popupHe
 
 function playStream(url){
   if (!url || url === "#") return;
-  if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
-    window.open(url, '_blank');
+
+  // Si on est sur Fire TV ou mobile, on force l'ouverture dans VLC pour tous les flux (y compris vos flux personnalisés)
+  const isFireTVOrMobile = /Android|FireTV|AFT|iPhone|iPad|iPod/i.test(navigator.userAgent) || navigator.userAgent.includes('Silk');
+  
+  if (isFireTVOrMobile) {
+    playExternalVLC(url);
     return;
   }
+
+  // Si le flux n'est pas un flux direct standard (.m3u8/.mp4/manifest), on l'ouvre via l'external VLC ou en popup sur PC
+  if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
+    playExternalVLC(url);
+    return;
+  }
+
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -581,6 +592,7 @@ function playStream(url){
   video.muted = false;
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
+
 
 function playExternalVLC(url){
   if (!url || url === "#") return;
@@ -706,7 +718,7 @@ function applyM3UFilter() {
       );
 
       if (tntMatch) {
-        tntMatch.stream = manual.url;
+        tntMatch.stream = manual.stream;
         if (manual.logo) tntMatch.logo = manual.logo;
       } else {
         if (!TNT.find(ch => ch.normId === key)) {
@@ -717,7 +729,7 @@ function applyM3UFilter() {
             name: manual.name,
             logo: manual.logo || "coulisses/tv-blue.png",
             link: "#",
-            stream: manual.url
+            stream: manual.stream
           });
         }
       }
