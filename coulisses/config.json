@@ -32,5 +32,7 @@
     {"num": 25, "id": "Cherie25.fr", "name": "RMC Life", "logo": "coulisses/logos/rmclife.png", "link": "#", "aliases": ["rmclife", "cherie25"]}
   ],
   "manual_channels": [
+{"id": "missionimpossible.fr", "name": "Mission impossible", "stream": "https://www.callofliberty.fr/tv/443-MISSIONIMPOSSIBLE/443-MISSIONIMPOSSIBLE.php",  "aliases": ["missio impossible"]},
+{"id": "parispremiere.fr", "name": "Paris Première", "logo": "coulisses/logos/parispremiere.png", "link": "https://www.callofliberty.fr/tv/26-PARISPREMIERE/26-PARISPREMIERE.php", "stream": "https://www.callofliberty.fr/tv/26-PARISPREMIERE/26-PARISPREMIERE.php",  "aliases": ["parispremiere"]}
 ]
 }
