@@ -554,21 +554,13 @@ function makeDraggable(element, handle) {
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
-
 function playStream(url){
   if (!url || url === "#") return;
 
-  // Si on est sur Fire TV ou mobile, on force l'ouverture dans VLC pour tous les flux (y compris vos flux personnalisés)
-  const isFireTVOrMobile = /Android|FireTV|AFT|iPhone|iPad|iPod/i.test(navigator.userAgent) || navigator.userAgent.includes('Silk');
-  
-  if (isFireTVOrMobile) {
-    playExternalVLC(url);
-    return;
-  }
-
-  // Si le flux n'est pas un flux direct standard (.m3u8/.mp4/manifest), on l'ouvre via l'external VLC ou en popup sur PC
+  // Si le lien n'est pas un flux vidéo direct (.m3u8/.mp4/manifest) mais un lien web (ex: Orange TV, Call of Liberty...),
+  // on l'ouvre directement dans un nouvel onglet comme souhaité.
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
-    playExternalVLC(url);
+    window.open(url, '_blank');
     return;
   }
 
@@ -593,17 +585,19 @@ function playStream(url){
   video.play().catch(err => console.log("Lecture vidéo :", err));
 }
 
-
 function playExternalVLC(url){
   if (!url || url === "#") return;
   closeMiniTV(); 
 
+  // Si c'est un lien web classique et non un flux direct, on l'ouvre aussi dans un onglet
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
   }
 
-  if (/Android/i.test(navigator.userAgent)) {
+  const isFireTVOrAndroid = /Android|FireTV|AFT/i.test(navigator.userAgent) || navigator.userAgent.includes('Silk');
+
+  if (isFireTVOrAndroid) {
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
     const a = document.createElement('a');
@@ -615,6 +609,7 @@ function playExternalVLC(url){
     window.open(url, 'PopupVLC', 'width=800,height=600,resizable=yes,scrollbars=yes');
   }
 }
+
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
@@ -674,7 +669,7 @@ function applyM3UFilter() {
       if (!WHITELIST.some(w => normalizeID(w) === key)) return;
     }
 
-    const tntMatch = TNT.find(ch =>
+       const tntMatch = TNT.find(ch =>
       normalizeID(ch.name) === key ||
       normalizeID(ch.id) === key ||
       ch.normId === key ||
@@ -682,7 +677,10 @@ function applyM3UFilter() {
     );
 
     if (tntMatch) {
-      tntMatch.stream = m.stream;
+      // On ne remplace par le M3U QUE si aucun stream personnalisé n'a été défini dans config.json
+      if (!tntMatch.stream || tntMatch.stream.trim() === "") {
+        tntMatch.stream = m.stream;
+      }
       if (m.logo && m.logo.trim() !== "") tntMatch.logo = m.logo;
     } else {
       remainingM3U.push(m);
