@@ -509,7 +509,11 @@ function showTab(id){
 
 function toggleMiniTV(){
   const box = document.getElementById("playerBox");
-  box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+  if (box.style.display === "block") {
+    closeMiniTV(); // Ferme et coupe le son proprement
+  } else {
+    box.style.display = "block"; // L'affiche si elle était cachée
+  }
 }
 
 function closeMiniTV(){
