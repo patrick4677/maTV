@@ -29,7 +29,7 @@
     {"num": 22, "id": "6ter.fr", "name": "6ter", "logo": "coulisses/logos/6ter.png", "link": "https://www.m6.fr/6ter/direct","stream": "https://tv.orange.fr/lecture/en-direct/chaines/livetv_6ter", "aliases": ["6ter"]},
     {"num": 23, "id": "Numero23.fr", "name": "RMC Story", "logo": "coulisses/logos/rmcstory.png", "link": "https://rmcstory.fr", "aliases": ["rmcstory", "numero23"]},
     {"num": 24, "id": "RMCDecouverte.fr", "name": "RMC Découverte", "logo": "coulisses/logos/rmcdecouverte.png", "link": "https://rmcdecouverte.bfmtv.com", "aliases": ["rmcdecouverte"]},
-    {"num": 25, "id": "Cherie25.fr", "name": "RMC Life", "logo": "coulisses/logos/rmclife.png", "link": "#", "aliases": ["rmclife", "cherie25"]}, {"id": "parispremiere.fr", 
+    {"num": 25, "id": "Cherie25.fr", "name": "RMC Life", "logo": "coulisses/logos/rmclife.png", "link": "#", "aliases": ["rmclife", "cherie25"]}, {"num": 26, "id": "parispremiere.fr", 
 "name": "Paris Premiere", 
 "logo": "https://www.programme-tv.net/imgre/fit/~2~channel~ecf598fd002ccb9a.png/480x480/quality/100/paris-premiere.png", 
 "stream": "https://www.callofliberty.fr/tv/26-PARISPREMIERE/26-PARISPREMIERE.php",  "aliases": ["ParisPremière"]}
