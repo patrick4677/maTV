@@ -940,16 +940,23 @@ function renderEvening(channels){
   html += "</tbody></table></div>";
   container.innerHTML = html;
 }
-
 function openFullProgramForChannel(normId) {
   const ch = TNT.find(c => c.normId === normId);
   if (!ch || !xmlDocCache) return;
 
   const programmesNodes = xmlDocCache.querySelectorAll("programme");
   const fullList = [];
+  
+  // On prépare les identifiants possibles pour être sûr de capturer les programmes Pluto / M3U
+  const targetNormId = normalizeID(normId);
+  const targetXmlId = ch.xmlId ? normalizeID(ch.xmlId) : "";
+
   for (let i = 0; i < programmesNodes.length; i++) {
     const p = programmesNodes[i];
-    if (normalizeID(p.getAttribute("channel")) === normId) {
+    const pChan = normalizeID(p.getAttribute("channel"));
+    
+    // On vérifie si l'ID du programme correspond au normId ou au xmlId rattaché
+    if (pChan === targetNormId || (targetXmlId && pChan === targetXmlId)) {
       fullList.push(parseSingleProgrammeNode(p));
     }
   }
@@ -1048,11 +1055,13 @@ async function updateTV(){
       let icon = xmlChan.querySelector("icon")?.getAttribute("src") || "";
       if (icon.startsWith("http://")) icon = icon.replace("http://", "https://");
 
-      let match = TNT.find(ch => 
+            let match = TNT.find(ch => 
         ch.normId === normXmlId || 
         ch.normId === displayName ||
         normalizeID(ch.name) === displayName ||
         normXmlId.includes(normalizeID(ch.name)) ||
+        ch.normId === "m3u_" + normXmlId ||
+        ch.normId === "m3u_" + displayName ||
         (ch.aliases && ch.aliases.some(a => normalizeID(a) === normXmlId || normalizeID(a) === displayName))
       );
 
