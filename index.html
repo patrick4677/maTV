@@ -868,7 +868,7 @@ function renderEvening(channels){
     const list = channels[ch.normId];
     const chanCellHtml = buildChannelCellHtml(ch);
     if(!list){
-      html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td></tr>`;
+      html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de programme</td></tr>`;
       return;
     }
 
@@ -969,7 +969,7 @@ function openFullProgramForChannel(normId) {
   <div id="view-full">`;
 
   if (fullList.length === 0) {
-    html += `<p style="color:#888;">Aucune donnée XMLTV disponible.</p>`;
+    html += `<p style="color:#888;">Aucun programme disponible.</p>`;
   } else {
     fullList.sort((a, b) => a.start - b.start);
     fullList.forEach(p => {
@@ -1095,7 +1095,7 @@ async function updateTV(){
 
       if(!list){
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>`;
+        tr.innerHTML = `<td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de programme</td>`;
         tbody.appendChild(tr);
         return;
       }
