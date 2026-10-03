@@ -35,6 +35,8 @@
 "stream": "https://www.callofliberty.fr/tv/26-PARISPREMIERE/26-PARISPREMIERE.php",  "aliases": ["ParisPremière"]}
   ],
   "manual_channels": [
-{"id": "missionimpossible.fr", "name": "Mission impossible", "stream": "https://www.callofliberty.fr/tv/443-MISSIONIMPOSSIBLE/443-MISSIONIMPOSSIBLE.php",  "aliases": ["mission impossible"]}
+{"id": "missionimpossible.fr", "name": "Mission impossible", "stream": "https://www.callofliberty.fr/tv/443-MISSIONIMPOSSIBLE/443-MISSIONIMPOSSIBLE.php",  "aliases": ["mission impossible"]},
+{"id": "callofliberty.fr", "name": "call of liberty", "stream": "https://www.callofliberty.fr/tv/",  "aliases": ["callofliberty"]}
+
 ]
 }
