@@ -738,15 +738,25 @@ function applyM3UFilter() {
     });
   }
 
-  let nextExtraNum = 26;
+  // On trouve le plus grand numéro déjà attribué pour éviter les doublons
+  let maxNum = 0;
   TNT.forEach(ch => {
     const orig = originalTNT.find(o => o.normId === ch.normId);
     if (orig && (!useWhitelist || WHITELIST.length === 0 || WHITELIST.includes(orig.normId))) {
       ch.num = orig.num;
-    } else if (ch.num === 0 || !ch.num) {
+    }
+    if (ch.num && ch.num > maxNum) {
+      maxNum = ch.num;
+    }
+  });
+
+  let nextExtraNum = maxNum + 1;
+  TNT.forEach(ch => {
+    if (!ch.num || ch.num === 0) {
       ch.num = nextExtraNum++;
     }
   });
+  
   TNT.sort((a, b) => a.num - b.num);
 }
 
