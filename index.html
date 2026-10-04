@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.16 (Noms de chaînes sur 2 lignes sans troncature)
+     VERSION : 1.9.16 (Correction priorisation stricte du Flux Stream)
      ============================================================ -->
 
 <!DOCTYPE html>
@@ -15,7 +15,8 @@
 <!-- SDK GOOGLE CAST (Pour Chromecast / AirScreen Fire TV) -->
 <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 <!-- Lien vers le manifeste pour Android / PWA -->
-<link rel="manifest" href="manifest.json">     
+<link rel="manifest" href="manifest.json">
+
 <!-- Couleur de la barre d'outils du navigateur sur Android -->
 <meta name="theme-color" content="#ff9800">
 
@@ -41,7 +42,7 @@ table { width:100%; border-collapse:collapse; background:#fff; font-size:13px; }
 th, td { border:1px solid #ccc; padding:4px; vertical-align:middle; }
 th { background:#eee; }
 
-/* En-tête de chaîne sur 2 Lignes (Nom complet autorisé sur plusieurs lignes) */
+/* En-tête de chaîne sur 2 Lignes */
 .channel-box {
   display: flex;
   flex-direction: column;
@@ -53,32 +54,25 @@ th { background:#eee; }
 
 .channel-row-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 4px;
-  min-width: 0;
 }
 
 .channel-num {
   font-weight: bold;
   font-size: 0.85rem;
   color: #666;
-  flex-shrink: 0;
-  margin-top: 1px;
 }
 
 .channel-name-link {
   font-weight: bold;
   color: #000;
   text-decoration: none;
-  white-space: normal;      /* Autorise le retour à la ligne */
-  word-break: break-word;   /* Coupe proprement les mots longs si nécessaire */
-  overflow: visible;        /* Pas de masquage du texte */
-  text-overflow: clip;      /* Pas de points de suspension */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 0.9rem;
-  flex: 1;
-  min-width: 0;
-  line-height: 1.15;
 }
 
 .actions-container {
@@ -311,7 +305,7 @@ body.dark .help-list li { border-bottom-color: #444; }
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;">YouTube</button>
 </div>
 
-<h1>maTV v1.9.16</h1>
+<h1>Programme TV v1.9.16</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -508,11 +502,7 @@ function showTab(id){
 
 function toggleMiniTV(){
   const box = document.getElementById("playerBox");
-  if (box.style.display === "block") {
-    closeMiniTV(); // Ferme et coupe le son proprement
-  } else {
-    box.style.display = "block"; // L'affiche si elle était cachée
-  }
+  box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
 }
 
 function closeMiniTV(){
@@ -557,16 +547,13 @@ function makeDraggable(element, handle) {
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
 makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
+
 function playStream(url){
   if (!url || url === "#") return;
-
-  // Si le lien n'est pas un flux vidéo direct (.m3u8/.mp4/manifest) mais un lien web (ex: Orange TV, Call of Liberty...),
-  // on l'ouvre directement dans un nouvel onglet comme souhaité.
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
   }
-
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -592,15 +579,12 @@ function playExternalVLC(url){
   if (!url || url === "#") return;
   closeMiniTV(); 
 
-  // Si c'est un lien web classique et non un flux direct, on l'ouvre aussi dans un onglet
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
   }
 
-  const isFireTVOrAndroid = /Android|FireTV|AFT/i.test(navigator.userAgent) || navigator.userAgent.includes('Silk');
-
-  if (isFireTVOrAndroid) {
+  if (/Android/i.test(navigator.userAgent)) {
     const cleanStreamUrl = url.split('/:')[0]; 
     const intentUrl = `intent://${cleanStreamUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;package=org.videolan.vlc;type=video/*;end;`;
     const a = document.createElement('a');
@@ -612,7 +596,6 @@ function playExternalVLC(url){
     window.open(url, 'PopupVLC', 'width=800,height=600,resizable=yes,scrollbars=yes');
   }
 }
-
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
@@ -672,7 +655,7 @@ function applyM3UFilter() {
       if (!WHITELIST.some(w => normalizeID(w) === key)) return;
     }
 
-       const tntMatch = TNT.find(ch =>
+    const tntMatch = TNT.find(ch =>
       normalizeID(ch.name) === key ||
       normalizeID(ch.id) === key ||
       ch.normId === key ||
@@ -680,10 +663,7 @@ function applyM3UFilter() {
     );
 
     if (tntMatch) {
-      // On ne remplace par le M3U QUE si aucun stream personnalisé n'a été défini dans config.json
-      if (!tntMatch.stream || tntMatch.stream.trim() === "") {
-        tntMatch.stream = m.stream;
-      }
+      tntMatch.stream = m.stream;
       if (m.logo && m.logo.trim() !== "") tntMatch.logo = m.logo;
     } else {
       remainingM3U.push(m);
@@ -719,7 +699,7 @@ function applyM3UFilter() {
       );
 
       if (tntMatch) {
-        tntMatch.stream = manual.stream;
+        tntMatch.stream = manual.url;
         if (manual.logo) tntMatch.logo = manual.logo;
       } else {
         if (!TNT.find(ch => ch.normId === key)) {
@@ -730,32 +710,22 @@ function applyM3UFilter() {
             name: manual.name,
             logo: manual.logo || "coulisses/tv-blue.png",
             link: "#",
-            stream: manual.stream
+            stream: manual.url
           });
         }
       }
     });
   }
 
-  // On trouve le plus grand numéro déjà attribué pour éviter les doublons
-  let maxNum = 0;
+  let nextExtraNum = 26;
   TNT.forEach(ch => {
     const orig = originalTNT.find(o => o.normId === ch.normId);
     if (orig && (!useWhitelist || WHITELIST.length === 0 || WHITELIST.includes(orig.normId))) {
       ch.num = orig.num;
-    }
-    if (ch.num && ch.num > maxNum) {
-      maxNum = ch.num;
-    }
-  });
-
-  let nextExtraNum = maxNum + 1;
-  TNT.forEach(ch => {
-    if (!ch.num || ch.num === 0) {
+    } else if (ch.num === 0 || !ch.num) {
       ch.num = nextExtraNum++;
     }
   });
-  
   TNT.sort((a, b) => a.num - b.num);
 }
 
@@ -832,9 +802,12 @@ function getEPGDateRange(programmes){
   return `Programmes du ${dates[0].toLocaleDateString("fr-FR")} au ${dates[dates.length-1].toLocaleDateString("fr-FR")}`;
 }
 
+// CORRECTION CLÉ VERSION 1.9.16 : On force ch.stream en priorité absolue s'il existe et n'est pas vide.
+// Ainsi, si la liste M3U a bien assigné un flux M6 à ch.stream, c'est obligatoirement lui qui est lancé.
 function buildChannelCellHtml(ch) {
   let actionsHtml = '';
   
+  // Si le flux direct (stream) existe et n'est pas vide/dièse, on l'utilise. Sinon on bascule sur link.
   const targetUrl = (ch.stream && ch.stream.trim() !== "" && ch.stream !== "#") ? ch.stream : ch.link;
 
   if (targetUrl && targetUrl !== "#") {
@@ -877,7 +850,7 @@ function renderEvening(channels){
     const list = channels[ch.normId];
     const chanCellHtml = buildChannelCellHtml(ch);
     if(!list){
-      html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de programme</td></tr>`;
+      html += `<tr><td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td></tr>`;
       return;
     }
 
@@ -949,23 +922,16 @@ function renderEvening(channels){
   html += "</tbody></table></div>";
   container.innerHTML = html;
 }
+
 function openFullProgramForChannel(normId) {
   const ch = TNT.find(c => c.normId === normId);
   if (!ch || !xmlDocCache) return;
 
   const programmesNodes = xmlDocCache.querySelectorAll("programme");
   const fullList = [];
-  
-  // On prépare les identifiants possibles pour être sûr de capturer les programmes Pluto / M3U
-  const targetNormId = normalizeID(normId);
-  const targetXmlId = ch.xmlId ? normalizeID(ch.xmlId) : "";
-
   for (let i = 0; i < programmesNodes.length; i++) {
     const p = programmesNodes[i];
-    const pChan = normalizeID(p.getAttribute("channel"));
-    
-    // On vérifie si l'ID du programme correspond au normId ou au xmlId rattaché
-    if (pChan === targetNormId || (targetXmlId && pChan === targetXmlId)) {
+    if (normalizeID(p.getAttribute("channel")) === normId) {
       fullList.push(parseSingleProgrammeNode(p));
     }
   }
@@ -978,7 +944,7 @@ function openFullProgramForChannel(normId) {
   <div id="view-full">`;
 
   if (fullList.length === 0) {
-    html += `<p style="color:#888;">Aucun programme disponible.</p>`;
+    html += `<p style="color:#888;">Aucune donnée XMLTV disponible.</p>`;
   } else {
     fullList.sort((a, b) => a.start - b.start);
     fullList.forEach(p => {
@@ -1064,13 +1030,11 @@ async function updateTV(){
       let icon = xmlChan.querySelector("icon")?.getAttribute("src") || "";
       if (icon.startsWith("http://")) icon = icon.replace("http://", "https://");
 
-            let match = TNT.find(ch => 
+      let match = TNT.find(ch => 
         ch.normId === normXmlId || 
         ch.normId === displayName ||
         normalizeID(ch.name) === displayName ||
         normXmlId.includes(normalizeID(ch.name)) ||
-        ch.normId === "m3u_" + normXmlId ||
-        ch.normId === "m3u_" + displayName ||
         (ch.aliases && ch.aliases.some(a => normalizeID(a) === normXmlId || normalizeID(a) === displayName))
       );
 
@@ -1104,7 +1068,7 @@ async function updateTV(){
 
       if(!list){
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de programme</td>`;
+        tr.innerHTML = `<td>${chanCellHtml}</td><td colspan="6" style="text-align:center;color:#888;">Pas de données XMLTV</td>`;
         tbody.appendChild(tr);
         return;
       }
