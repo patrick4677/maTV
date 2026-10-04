@@ -1209,11 +1209,12 @@ function showProgramPopup(prog){
     if (c.writers.length) creditsHtml += `<p><b>Scénario :</b> ${c.writers.join(", ")}</p>`;
   }
 
+  // Image positionnée en bas du popup, juste avant le résumé
   const html = `
     <h2 style="margin-top:0; color:#4caf50;">${prog.title}</h2>
     ${detailsHtml}
-    ${prog.icon ? `<img src="${prog.icon}" referrerpolicy="no-referrer" style="max-width:100%; max-height:220px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
     ${creditsHtml}
+    ${prog.icon ? `<div style="text-align:center; margin:15px 0;"><img src="${prog.icon}" referrerpolicy="no-referrer" style="max-width:100%; max-height:180px; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'"></div>` : ""}
     <p><b>Résumé :</b><br><span style="line-height:1.4; color:#ccc;">${prog.desc || "Aucune description disponible."}</span></p>
   `;
   document.getElementById("popupContent").innerHTML = html;
