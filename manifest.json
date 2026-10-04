@@ -1,6 +1,6 @@
 {
   "name": "Programme TV",
-  "short_name": "maTV",
+  "short_name": "ma.TV",
   "start_url": "./index.html?v=new"
   "display": "standalone",
   "background_color": "#ffffff",
