@@ -1,7 +1,7 @@
 {
-  "name": "Programme TV 2026",
-  "short_name": "maTV 26",
-  "start_url": "./index.html"
+  "name": "Programme de TV",
+  "short_name": "maTV",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff9800",
