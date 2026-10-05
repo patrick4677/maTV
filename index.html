@@ -1,13 +1,13 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.19 (Correction chargement + Fire TV + Lancement Live TV)
+     VERSION : 1.9.18 (Correction blocage chargement + Fire TV)
      ============================================================ -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Programme TV v1.9.19</title>
+<title>Programme TV v1.9.18</title>
 
 <!-- LIBRAIRIE HLS.js : lecture des flux HLS/M3U -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -287,7 +287,7 @@ body.dark .help-list li { border-bottom-color: #444; }
   <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;">YouTube</button>
 </div>
 
-<h1>maTV v1.9.19</h1>
+<h1>maTV v1.9.18</h1>
 <p id="status">Chargement…</p>
 
 <button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
@@ -297,7 +297,6 @@ body.dark .help-list li { border-bottom-color: #444; }
 <button class="focusable" onclick="exportWhitelist()">💾 Exporter Whitelist</button>
 <google-cast-launcher class="focusable" title="Caster vers TV"></google-cast-launcher>
 <button class="focusable" id="openHelpBtn">❓ Mode d'emploi</button>
-<button class="focusable" onclick="launchLiveTV()">📺 Lancer TNT / Direct</button>
 
 <input id="search" type="text" placeholder="Rechercher une chaîne..." class="focusable"
        style="padding:6px; width:100%; margin:10px 0; font-size:16px;">
@@ -590,21 +589,6 @@ function playExternalVLC(url){
     document.body.removeChild(a);
   } else {
     window.open(url, 'PopupVLC', 'width=800,height=600,resizable=yes,scrollbars=yes');
-  }
-}
-
-function launchLiveTV() {
-  const isFireTVOrAndroid = /Android|FireTV|AFT/i.test(navigator.userAgent) || navigator.userAgent.includes('Silk');
-  
-  if (isFireTVOrAndroid) {
-    const intentUrl = "intent://#Intent;package=com.amazon.tv.livetv;end;";
-    const a = document.createElement('a');
-    a.href = intentUrl;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  } else {
-    alert("Cette fonction est réservée à un usage direct sur la Fire TV.");
   }
 }
 
