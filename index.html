@@ -1,6 +1,6 @@
 <!-- ============================================================
      FICHIER : index.html
-     VERSION : 1.9.16 (Noms de chaînes sur 2 lignes sans troncature)
+     VERSION : 1.9.16 (Adaptée Fire TV / Navigation par Vues Dédiées)
      ============================================================ -->
 
 <!DOCTYPE html>
@@ -204,50 +204,6 @@ google-cast-launcher {
   font-size: 13px;
 }
 
-#popup {
-  display: none;
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  max-width: 700px;
-  max-height: 85vh;
-  overflow-y: auto;
-  background: #1e1e1e;
-  color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 10000;
-  box-shadow: 0 0 30px rgba(0,0,0,0.9);
-  border: 1px solid #555;
-}
-
-#popupHeader {
-  width: 100%;
-  padding-bottom: 10px;
-  cursor: move;
-  background: #2c2c2c;
-  margin: -15px -15px 15px -15px;
-  padding: 10px 15px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.popup-close-btn {
-  background: #e53935;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 #helpModal {
   display: none;
   position: fixed;
@@ -307,35 +263,36 @@ body.dark .help-list li { border-bottom-color: #444; }
 <body>
 
 <div class="search-container">
-  <input type="text" id="ext-search-input" placeholder="Recherche..." class="focusable">
-  <button onclick="searchExternal('odysee')" class="focusable" style="background-color:#ef1c43;">Odysee</button>
-  <button onclick="searchExternal('youtube')" class="focusable" style="background-color:#ff0000;">YouTube</button>
+  <input type="text" id="ext-search-input" placeholder="Recherche..." class="focusable" tabindex="0">
+  <button onclick="searchExternal('odysee')" class="focusable" tabindex="0" style="background-color:#ef1c43;">Odysee</button>
+  <button onclick="searchExternal('youtube')" class="focusable" tabindex="0" style="background-color:#ff0000;">YouTube</button>
 </div>
 
 <h1>maTV v1.9.16</h1>
 <p id="status">Chargement…</p>
 
-<button class="focusable" onclick="toggleDark()">🌙 Mode sombre</button>
-<button class="focusable" onclick="updateTV()">🔄 Recharger</button>
-<button class="focusable" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
-<button class="focusable" id="filterBtn" onclick="toggleWhitelistFilter()">⭐ Sélection TV</button>
-<button class="focusable" onclick="exportWhitelist()">💾 Exporter Whitelist</button>
-<google-cast-launcher class="focusable" title="Caster vers TV"></google-cast-launcher>
-<button class="focusable" id="openHelpBtn">❓ Mode d'emploi</button>
+<button class="focusable" tabindex="0" onclick="toggleDark()">🌙 Mode sombre</button>
+<button class="focusable" tabindex="0" onclick="updateTV()">🔄 Recharger</button>
+<button class="focusable" tabindex="0" onclick="toggleMiniTV()">📺 MiniTV ON/OFF</button>
+<button class="focusable" tabindex="0" id="filterBtn" onclick="toggleWhitelistFilter()">⭐ Sélection TV</button>
+<button class="focusable" tabindex="0" onclick="exportWhitelist()">💾 Exporter Whitelist</button>
+<google-cast-launcher class="focusable" tabindex="0" title="Caster vers TV"></google-cast-launcher>
+<button class="focusable" tabindex="0" id="openHelpBtn">❓ Mode d'emploi</button>
 
-<input id="search" type="text" placeholder="Rechercher une chaîne..." class="focusable"
+<input id="search" type="text" placeholder="Rechercher une chaîne..." class="focusable" tabindex="0"
        style="padding:6px; width:100%; margin:10px 0; font-size:16px;">
 
 <div class="tabs">
   <div class="tab active focusable" tabindex="0" onclick="showTab('compact')">Maintenant</div>
   <div class="tab focusable" tabindex="0" onclick="showTab('evening')">Soirée</div>
   <div class="tab focusable" tabindex="0" id="tab-full" onclick="showTab('full')" style="display:none;">Complet</div>
+  <div class="tab focusable" tabindex="0" id="tab-details" onclick="showTab('details')" style="display:none;">Détails</div>
 </div>
 
 <div id="playerBox">
   <div id="dragBar">
     MiniTV
-    <google-cast-launcher class="focusable" title="Caster la vidéo"></google-cast-launcher>
+    <google-cast-launcher class="focusable" tabindex="0" title="Caster la vidéo"></google-cast-launcher>
   </div>
   <video id="player" controls autoplay playsinline></video>
 </div>
@@ -361,22 +318,15 @@ body.dark .help-list li { border-bottom-color: #444; }
 
 <div id="evening" class="section"></div>
 <div id="full" class="section"></div>
-
-<div id="popup">
-  <div id="popupHeader">
-    <span style="font-weight:bold;">Détails du programme</span>
-    <button class="popup-close-btn focusable" id="popupCloseBtn" onclick="closePopup()">✕</button>
-  </div>
-  <div id="popupContent"></div>
-</div>
+<div id="details" class="section"></div>
 
 <div id="helpModal" class="modal">
   <div class="help-modal-content">
-    <button class="popup-close-btn focusable" id="helpCloseBtn" style="position:absolute; top:12px; right:15px;">✕</button>
+    <button class="popup-close-btn focusable" tabindex="0" id="helpCloseBtn" style="position:absolute; top:12px; right:15px;">✕</button>
     <h2>💡 Mode d'emploi</h2>
     <ul class="help-list">
       <li><strong>Étoile (⭐/☆) :</strong> Ajouter ou retirer des favoris</li>
-      <li><strong>Icône de la chaîne :</strong> Programme complet</li>
+      <li><strong>Icône de la chaîne :</strong> Programme complet sur l'onglet dédié</li>
       <li><strong>Nom de la chaîne :</strong> Lien vers le site de la chaîne</li>
       <li><strong>Icône Bleue / VLC :</strong> Lancement prioritaire du flux vidéo direct (stream)</li>
     </ul>
@@ -503,16 +453,18 @@ function toggleDark(){ document.body.classList.toggle("dark"); }
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
-  document.getElementById(id).classList.add('active');
+  const targetTab = document.querySelector(`.tab[onclick="showTab('${id}')"]`);
+  if (targetTab) targetTab.classList.add('active');
+  const targetSec = document.getElementById(id);
+  if (targetSec) targetSec.classList.add('active');
 }
 
 function toggleMiniTV(){
   const box = document.getElementById("playerBox");
   if (box.style.display === "block") {
-    closeMiniTV(); // Ferme et coupe le son proprement
+    closeMiniTV(); 
   } else {
-    box.style.display = "block"; // L'affiche si elle était cachée
+    box.style.display = "block"; 
   }
 }
 
@@ -557,17 +509,13 @@ function makeDraggable(element, handle) {
 }
 
 makeDraggable(document.getElementById("playerBox"), document.getElementById("dragBar"));
-makeDraggable(document.getElementById("popup"), document.getElementById("popupHeader"));
+
 function playStream(url){
   if (!url || url === "#") return;
-
-  // Si le lien n'est pas un flux vidéo direct (.m3u8/.mp4/manifest) mais un lien web (ex: Orange TV, Call of Liberty...),
-  // on l'ouvre directement dans un nouvel onglet comme souhaité.
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
   }
-
   if (window.location.protocol === 'https:' && url.startsWith('http://')) {
     url = url.replace('http://', 'https://');
   }
@@ -592,8 +540,6 @@ function playStream(url){
 function playExternalVLC(url){
   if (!url || url === "#") return;
   closeMiniTV(); 
-
-  // Si c'est un lien web classique et non un flux direct, on l'ouvre aussi dans un onglet
   if (!url.includes('.m3u8') && !url.includes('.mp4') && !url.includes('manifest')) {
     window.open(url, '_blank');
     return;
@@ -613,7 +559,6 @@ function playExternalVLC(url){
     window.open(url, 'PopupVLC', 'width=800,height=600,resizable=yes,scrollbars=yes');
   }
 }
-
 
 function searchExternal(platform) {
   const queryInput = document.getElementById('ext-search-input');
@@ -673,7 +618,7 @@ function applyM3UFilter() {
       if (!WHITELIST.some(w => normalizeID(w) === key)) return;
     }
 
-       const tntMatch = TNT.find(ch =>
+    const tntMatch = TNT.find(ch =>
       normalizeID(ch.name) === key ||
       normalizeID(ch.id) === key ||
       ch.normId === key ||
@@ -681,7 +626,6 @@ function applyM3UFilter() {
     );
 
     if (tntMatch) {
-      // On ne remplace par le M3U QUE si aucun stream personnalisé n'a été défini dans config.json
       if (!tntMatch.stream || tntMatch.stream.trim() === "") {
         tntMatch.stream = m.stream;
       }
@@ -738,7 +682,6 @@ function applyM3UFilter() {
     });
   }
 
-  // On trouve le plus grand numéro déjà attribué pour éviter les doublons
   let maxNum = 0;
   TNT.forEach(ch => {
     const orig = originalTNT.find(o => o.normId === ch.normId);
@@ -835,7 +778,6 @@ function getEPGDateRange(programmes){
 
 function buildChannelCellHtml(ch) {
   let actionsHtml = '';
-  
   const targetUrl = (ch.stream && ch.stream.trim() !== "" && ch.stream !== "#") ? ch.stream : ch.link;
 
   if (targetUrl && targetUrl !== "#") {
@@ -950,6 +892,7 @@ function renderEvening(channels){
   html += "</tbody></table></div>";
   container.innerHTML = html;
 }
+
 function openFullProgramForChannel(normId) {
   const ch = TNT.find(c => c.normId === normId);
   if (!ch || !xmlDocCache) return;
@@ -957,7 +900,6 @@ function openFullProgramForChannel(normId) {
   const programmesNodes = xmlDocCache.querySelectorAll("programme");
   const fullList = [];
   
-  // On prépare les identifiants possibles pour être sûr de capturer les programmes Pluto / M3U
   const targetNormId = normalizeID(normId);
   const targetXmlId = ch.xmlId ? normalizeID(ch.xmlId) : "";
 
@@ -965,18 +907,19 @@ function openFullProgramForChannel(normId) {
     const p = programmesNodes[i];
     const pChan = normalizeID(p.getAttribute("channel"));
     
-    // On vérifie si l'ID du programme correspond au normId ou au xmlId rattaché
     if (pChan === targetNormId || (targetXmlId && pChan === targetXmlId)) {
       fullList.push(parseSingleProgrammeNode(p));
     }
   }
 
   let html = `
-  <h3>Programme complet – <a href="${ch.link}" target="_blank" class="focusable" tabindex="0" style="font-weight:bold;">${ch.name}</a></h3>
-  <input id="searchProg" type="text" placeholder="Rechercher..." class="focusable"
-         style="padding:6px; width:100%; margin-bottom:12px; font-size:14px;"
-         oninput="filterFullPrograms()">
-  <div id="view-full">`;
+  <div style="background:#1e1e1e; color:#fff; padding:15px; border-radius:8px;">
+    <button class="focusable" tabindex="0" onclick="showTab('compact')" style="margin-bottom:12px; padding:6px 12px; background:#444; color:#fff; border:none; border-radius:4px; cursor:pointer; font-weight:bold;">⬅ Retour au programme</button>
+    <h3 style="margin-top:0;">Programme complet – <a href="${ch.link}" target="_blank" class="focusable" tabindex="0" style="color:#4caf50; font-weight:bold;">${ch.name}</a></h3>
+    <input id="searchProg" type="text" placeholder="Rechercher..." class="focusable" tabindex="0"
+           style="padding:6px; width:100%; margin-bottom:12px; font-size:14px; box-sizing:border-box;"
+           oninput="filterFullPrograms()">
+    <div id="view-full">`;
 
   if (fullList.length === 0) {
     html += `<p style="color:#888;">Aucun programme disponible.</p>`;
@@ -984,18 +927,18 @@ function openFullProgramForChannel(normId) {
     fullList.sort((a, b) => a.start - b.start);
     fullList.forEach(p => {
       html += `
-      <div class="prog-item" style="margin-bottom:12px; display:flex; align-items:center; gap:12px;">
+      <div class="prog-item" style="margin-bottom:12px; display:flex; align-items:center; gap:12px; border-bottom:1px solid #333; padding-bottom:8px;">
         ${p.icon ? `<img src="${p.icon}" referrerpolicy="no-referrer" style="height:60px; border-radius:6px; object-fit:cover;" onerror="this.style.display='none'">` : ""}
         <div>
           <strong>${p.start.toLocaleDateString("fr-FR")}</strong> ${formatTime(p.start)}–${formatTime(p.stop)} (${Math.round((p.stop - p.start) / 60000)} min)
           <br><em>${p.title}</em> ${p.episode ? `<span style="font-size:11px; background:#444; color:#fff; padding:2px 4px; border-radius:3px;">${p.episode}</span>` : ''}
-          <br><span style="color:#666; font-size:12px;">${p.theme} ${p.desc ? ' - ' + p.desc : ''}</span>
+          <br><span style="color:#aaa; font-size:12px;">${p.theme} ${p.desc ? ' - ' + p.desc : ''}</span>
         </div>
       </div>`;
     });
   }
 
-  html += "</div>";
+  html += "</div></div>";
   document.getElementById("full").innerHTML = html;
   const tab = document.getElementById("tab-full");
   tab.style.display = "inline-block";
@@ -1008,6 +951,41 @@ function filterFullPrograms(){
   document.querySelectorAll("#view-full .prog-item").forEach(item => {
     item.style.display = item.textContent.toLowerCase().includes(query) ? "flex" : "none";
   });
+}
+
+function showProgramDetailsView(prog){
+  let detailsHtml = "";
+  if (prog.subTitle) detailsHtml += `<p style="font-style:italic; font-size:15px; margin-top:-5px; color:#ddd;">${prog.subTitle}</p>`;
+  detailsHtml += `<p><b>Horaire :</b> ${formatTime(prog.start)} – ${formatTime(prog.stop)} (${Math.round((prog.stop-prog.start)/60000)} min)</p>`;
+  if (prog.episode) detailsHtml += `<p><b>Épisode :</b> ${prog.episode}</p>`;
+  if (prog.theme) detailsHtml += `<p><b>Thème :</b> ${prog.theme}</p>`;
+  if (prog.rating) detailsHtml += `<p><b>Classification :</b> ${prog.rating}</p>`;
+
+  let creditsHtml = "";
+  if (prog.credits) {
+    const c = prog.credits;
+    if (c.directors.length) creditsHtml += `<p><b>Réalisation :</b> ${c.directors.join(", ")}</p>`;
+    if (c.actors.length) creditsHtml += `<p><b>Avec :</b> ${c.actors.join(", ")}</p>`;
+    if (c.guests.length) creditsHtml += `<p><b>Invités :</b> ${c.guests.join(", ")}</p>`;
+    if (c.writers.length) creditsHtml += `<p><b>Scénario :</b> ${c.writers.join(", ")}</p>`;
+  }
+
+  const html = `
+    <div style="background:#1e1e1e; color:#fff; padding:20px; border-radius:8px; border:2px solid #ff9800;">
+      <button class="focusable" tabindex="0" onclick="showTab('compact')" style="margin-bottom:15px; padding:8px 14px; background:#444; color:#fff; border:none; border-radius:4px; cursor:pointer; font-weight:bold;">⬅ Retour au programme</button>
+      <h2 style="margin-top:0; color:#4caf50;">${prog.title}</h2>
+      ${detailsHtml}
+      ${prog.icon ? `<img src="${prog.icon}" referrerpolicy="no-referrer" style="max-width:100%; max-height:220px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
+      ${creditsHtml}
+      <p><b>Résumé :</b><br><span style="line-height:1.4; color:#ccc;">${prog.desc || "Aucune description disponible."}</span></p>
+    </div>
+  `;
+  
+  document.getElementById("details").innerHTML = html;
+  const tabDet = document.getElementById("tab-details");
+  tabDet.style.display = "inline-block";
+  tabDet.textContent = "Détails";
+  showTab("details");
 }
 
 function filterChannels(){
@@ -1065,7 +1043,7 @@ async function updateTV(){
       let icon = xmlChan.querySelector("icon")?.getAttribute("src") || "";
       if (icon.startsWith("http://")) icon = icon.replace("http://", "https://");
 
-            let match = TNT.find(ch => 
+      let match = TNT.find(ch => 
         ch.normId === normXmlId || 
         ch.normId === displayName ||
         normalizeID(ch.name) === displayName ||
@@ -1171,7 +1149,7 @@ function bindPopupEvents(selector, channelsToday) {
     const idx = parseInt(cell.dataset.idx, 10);
     if (!channelsToday[chan] || !channelsToday[chan][idx]) return;
     const prog = channelsToday[chan][idx];
-    const openAction = (e) => { e.preventDefault(); showProgramPopup(prog); };
+    const openAction = (e) => { e.preventDefault(); showProgramDetailsView(prog); };
     cell.addEventListener("click", openAction);
     cell.addEventListener("keydown", (e) => { if (e.key === "Enter") openAction(e); });
   });
@@ -1192,37 +1170,6 @@ function bindPopupEvents(selector, channelsToday) {
   updateTV();
   setInterval(updateTV, 60000);
 })();
-
-function showProgramPopup(prog){
-  let detailsHtml = "";
-  if (prog.subTitle) detailsHtml += `<p style="font-style:italic; font-size:15px; margin-top:-5px; color:#ddd;">${prog.subTitle}</p>`;
-  detailsHtml += `<p><b>Horaire :</b> ${formatTime(prog.start)} – ${formatTime(prog.stop)} (${Math.round((prog.stop-prog.start)/60000)} min)</p>`;
-  if (prog.episode) detailsHtml += `<p><b>Épisode :</b> ${prog.episode}</p>`;
-  if (prog.theme) detailsHtml += `<p><b>Thème :</b> ${prog.theme}</p>`;
-  if (prog.rating) detailsHtml += `<p><b>Classification :</b> ${prog.rating}</p>`;
-
-  let creditsHtml = "";
-  if (prog.credits) {
-    const c = prog.credits;
-    if (c.directors.length) creditsHtml += `<p><b>Réalisation :</b> ${c.directors.join(", ")}</p>`;
-    if (c.actors.length) creditsHtml += `<p><b>Avec :</b> ${c.actors.join(", ")}</p>`;
-    if (c.guests.length) creditsHtml += `<p><b>Invités :</b> ${c.guests.join(", ")}</p>`;
-    if (c.writers.length) creditsHtml += `<p><b>Scénario :</b> ${c.writers.join(", ")}</p>`;
-  }
-
-  const html = `
-    <h2 style="margin-top:0; color:#4caf50;">${prog.title}</h2>
-    ${detailsHtml}
-    ${prog.icon ? `<img src="${prog.icon}" referrerpolicy="no-referrer" style="max-width:100%; max-height:220px; display:block; margin:12px 0; border-radius:6px; object-fit:contain;" onerror="this.style.display='none'">` : ""}
-    ${creditsHtml}
-    <p><b>Résumé :</b><br><span style="line-height:1.4; color:#ccc;">${prog.desc || "Aucune description disponible."}</span></p>
-  `;
-  document.getElementById("popupContent").innerHTML = html;
-  document.getElementById("popup").style.display = "block";
-  setTimeout(() => document.getElementById("popupCloseBtn").focus(), 100);
-}
-
-function closePopup(){ document.getElementById("popup").style.display = "none"; }
 
 const helpModal = document.getElementById("helpModal");
 const openHelpBtn = document.getElementById("openHelpBtn");
