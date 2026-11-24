@@ -34,8 +34,7 @@
 "logo": "https://www.programme-tv.net/imgre/fit/~2~channel~ecf598fd002ccb9a.png/480x480/quality/100/paris-premiere.png", 
 "stream": "https://www.callofliberty.fr/tv/26-PARISPREMIERE/26-PARISPREMIERE.php",  "aliases": ["ParisPremière"]},
 {"num": 27, "id": "TvBreizh.fr", 
-"name": "TV Breizh", " logo":"https://i.imgur.com/O8W4yhn.png", " stream":" 
-https://r.eu.cdn-redge.media/livehls/oeu/mt/live/tv_breizh/live.livx/playlist.m3u8"}
+"name": "TV Breizh", " logo":"https://i.imgur.com/O8W4yhn.png", " stream": "https://r.eu.cdn-redge.media/livehls/oeu/mt/live/tv_breizh/live.livx/playlist.m3u8"}
 ],
   "manual_channels": [
 {"id": "missionimpossible.fr", "name": "Mission impossible", "stream": "https://www.callofliberty.fr/tv/443-MISSIONIMPOSSIBLE/443-MISSIONIMPOSSIBLE.php",  "aliases": ["mission impossible"]},
